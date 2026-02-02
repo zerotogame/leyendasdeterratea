@@ -1,0 +1,133 @@
+{
+    "id": 4,
+    "name": "Badwolf Paulaner Heineken",
+    "user": 7,
+    "campaign_id": 4,
+    "created_at": "2024-06-15T12:34:56Z",
+    "clases": {
+        "id": id_class,
+        "nombre": "Berserker"
+    },
+    "Raza": {
+        "id": id_race,
+        "nombre": "Humano"
+    },
+    "Alineamiento": "Neutral caotico",
+    "Altura":2,
+    "Peso": 100,
+    "Sexo": "Hombre",
+    "Edad": 63,
+    "Cabello": "Castaño",
+    "Ojos": "Castaño",
+    "Marcas:": "",
+    "Nivel": 7,
+    "Exp": 105.550,
+    "Exp_Nec": 120.000,
+    "Carga":{
+        "Actual": 9.25,
+        "Maxima": 50
+    },
+    "Tesoro": {
+        "Oro": 250,
+        "Plata": 100,
+        "Cobre": 75,
+        "Gemas": 5
+    },
+    "Características": {
+        "Fuerza": 13,
+        "Destreza": 13,
+        "Constitución": 14,
+        "Inteligencia": 10,
+        "Sabiduría": 9,
+        "Carisma": 12
+    },
+    "Modificadores": {
+        "Fuerza": 1,
+        "Destreza": 1,
+        "Constitución": 1,
+        "Inteligencia": 0,
+        "Sabiduría": 0,
+        "Carisma": 0
+    },
+    "Salvacion":{
+        "veneno": 14,
+        "magia": 15,
+        "Petrificacion": 16,
+        "Quemaduras": 17,
+        "Sortifegios": 18
+    },
+    "Movimiento": {
+        "Base": 4,
+        "Combate": 4,
+        "Carrera": 7,
+        "Sobrepeso": 2,
+        "Huida": 2
+    },
+    "Armadura": {
+        "CA": 9,
+        "Esquiva": 1,
+        "Cabeza": 0,
+        "Piernas": 0,
+        "Pecho": 0,
+        "Brazaletes": 0,
+        "Espalda": 0,
+        "Escudo": 0,
+        "Anillo": 0,
+        "Pies": 0,
+        "Colgante": 0,
+        "Manos": 0,
+        "Municion": [
+            {
+                "id": 1,
+                "nombre": "Flechas de acero",
+                "cantidad": 20,
+                "peso": 0.1
+            }
+        ],
+        "Rango": "1-2"
+    },
+    "Atributo_Especial":[
+        {
+            "id": 1,
+            "nombre": "Furia Berserker",
+            "descripcion": "Puede entrar en un estado de furia que le otorga +2 a la fuerza y resistencia durante 1 minuto."
+        }
+    ],
+    "Armamento":[
+        {
+            "id": id_weapon
+            "nombre": "Tomahawk",
+            "Magia": 0,
+            "Elemento": 0,
+            "Maldicion": 0,
+            "Peso": 0.5,
+            "Mano": 2,
+            "Especial": "Contundente"
+        }
+    ],
+    "Vitalidad": {
+      "pv": 41,
+      "herida": [
+        {"nivel": 1, "penalizacion": -1},
+        {"nivel": 2, "penalizacion": -2},
+        {"nivel": 3, "penalizacion": -4},
+        {"nivel": 4, "penalizacion": "Inconsciente"}
+      ]
+    },
+    "Habilidades especiales":[
+        {
+            "id": id_special_skill,
+            "nombre": "Visión nocturna",
+            "descripcion": "Puede ver en la oscuridad hasta 18 metros."
+        }
+    ],
+    "Equipo": [
+        {
+            "id": id_item,
+            "nombre": "Petate",
+            "cantidad": 1,
+            "peso": 3,
+            "descripcion": "Una espada larga de acero afilada."
+        }
+    ]
+}
