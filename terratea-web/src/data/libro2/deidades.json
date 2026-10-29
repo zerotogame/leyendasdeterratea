@@ -1,0 +1,2572 @@
+{
+ "introduccion": "En el tejido de la realidad, existen múltiples planos existenciales. Entre ellos, el Plano Sagrado se distingue por la presencia de deidades benevolentes que infunden esperanza y claridad, mientras que el Plano Infernal está dominado por gobernantes malignos que moldean la existencia a su voluntad. En un plano, la luz divina irradia benevolencia y guía, y en el otro, las sombras conspiran en siniestro caos. A continuación, exploraremos estos diversos planos para desentrañar los misterios y fuerzas que configuran nuestra épica travesía. Aunque estas deidades se basan en mitologías conocidas, en este multiverso se presentan adaptadas y transformadas, reflejando cómo los relatos y las historias pueden alterar su esencia a través de diferentes planos y narrativas contadas REY DIOS SUPREMO L Poder, Sagrado, Liderazgo. Representa al creador de las divinidades y el poder sagrado supremo.",
+ "abreviaturas_alineamiento": {
+  "L": "Legal",
+  "N": "Neutral",
+  "C": "Caótico",
+  "NL": "Neutral Legal",
+  "NC": "Neutral Caótico",
+  "CN": "Caótico Neutral",
+  "LN": "Legal Neutral",
+  "N/C": "Neutral o Caótico",
+  "N/L": "Neutral o Legal"
+ },
+ "grupos": [
+  {
+   "id": "supremo",
+   "nombre": "Deidad suprema"
+  },
+  {
+   "id": "norte",
+   "nombre": "Dioses del norte"
+  },
+  {
+   "id": "este",
+   "nombre": "Dioses del este"
+  },
+  {
+   "id": "oeste",
+   "nombre": "Dioses del oeste"
+  },
+  {
+   "id": "sur",
+   "nombre": "Dioses del sur"
+  },
+  {
+   "id": "paganos",
+   "nombre": "Dioses paganos"
+  },
+  {
+   "id": "infernales",
+   "nombre": "Dioses infernales de los círculos infernales"
+  },
+  {
+   "id": "titanes",
+   "nombre": "Titanes primigenios"
+  }
+ ],
+ "colores_astrales": [
+  {
+   "tirada": 1,
+   "plano": "Plano Terrenal",
+   "color": "Marron"
+  },
+  {
+   "tirada": 2,
+   "plano": "Plano Infernal",
+   "color": "Rojo"
+  },
+  {
+   "tirada": 3,
+   "plano": "Plano Abisal",
+   "color": "Morado"
+  },
+  {
+   "tirada": 4,
+   "plano": "Plano Sagrado",
+   "color": "Amarillo"
+  },
+  {
+   "tirada": 5,
+   "plano": "Plano Arcano",
+   "color": "Azul"
+  },
+  {
+   "tirada": 6,
+   "plano": "Plano Espíritual",
+   "color": "Blanco"
+  },
+  {
+   "tirada": 7,
+   "plano": "Plano Atemporal",
+   "color": "Naranja"
+  },
+  {
+   "tirada": 8,
+   "plano": "Plano Elemental",
+   "color": "Gris"
+  },
+  {
+   "tirada": 9,
+   "plano": "Plano De Ensueño",
+   "color": "Rosa"
+  },
+  {
+   "tirada": 10,
+   "plano": "Plano Desconocido",
+   "color": "Verde"
+  }
+ ],
+ "deidades": [
+  {
+   "id": "rey-dios-supremo",
+   "nombre": "Rey Dios Supremo",
+   "grupo": "supremo",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Poder",
+    "Sagrado",
+    "Liderazgo"
+   ],
+   "descripcion": "Representa al creador de las divinidades y el poder sagrado supremo.",
+   "simbolo": "img/deidades/rey-dios-supremo.webp",
+   "pagina": 522,
+   "nombre_libro": "REY DIOS SUPREMO"
+  },
+  {
+   "id": "aegir",
+   "nombre": "Aegir",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Hospitalidad",
+    "Generosidad",
+    "Acogida"
+   ],
+   "descripcion": "Dios que acoge a los mortales en su hogar el plano sagrado.",
+   "simbolo": "img/deidades/aegir.webp",
+   "pagina": 523,
+   "nombre_libro": "AEGIR"
+  },
+  {
+   "id": "balder",
+   "nombre": "Balder",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Belleza",
+    "Pureza",
+    "Amor"
+   ],
+   "descripcion": "Dios considerado el dios más hermoso y benevolente.",
+   "simbolo": "img/deidades/balder.webp",
+   "pagina": 523,
+   "nombre_libro": "BALDER"
+  },
+  {
+   "id": "brigid",
+   "nombre": "Brigid",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Inspiración",
+    "Artes",
+    "Sanación"
+   ],
+   "descripcion": "Diosa asociada a la inspiración y las artes.",
+   "simbolo": "img/deidades/brigid.webp",
+   "pagina": 523,
+   "nombre_libro": "BRIGID"
+  },
+  {
+   "id": "dagda",
+   "nombre": "Dagda",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Protección",
+    "Seguridad",
+    "Patrón"
+   ],
+   "descripcion": "El dios protector del reino de Stungerb.",
+   "simbolo": "img/deidades/dagda.webp",
+   "pagina": 523,
+   "nombre_libro": "DAGDA"
+  },
+  {
+   "id": "eir",
+   "nombre": "Eir",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Paz",
+    "Tranquilidad",
+    "Euforia"
+   ],
+   "descripcion": "Diosa valquiria de la paz y encargada de seleccionar a los héroes caídos en batalla, considerada la madre de las valquirias.",
+   "simbolo": "img/deidades/eir.webp",
+   "pagina": 524,
+   "nombre_libro": "EIR"
+  },
+  {
+   "id": "freya",
+   "nombre": "Freya",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Amor",
+    "Fertilidad",
+    "Valentía"
+   ],
+   "descripcion": "Diosa guerrera, patrona del amor por el pueblo y la fertilidad.",
+   "simbolo": "img/deidades/freya.webp",
+   "pagina": 524,
+   "nombre_libro": "FREYA"
+  },
+  {
+   "id": "frigg",
+   "nombre": "Frigg",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Maternidad",
+    "Sabiduría",
+    "Amor Maternal"
+   ],
+   "descripcion": "Diosa conocida por su sabiduría y amor maternal.",
+   "simbolo": "img/deidades/frigg.webp",
+   "pagina": 524,
+   "nombre_libro": "FRIGG"
+  },
+  {
+   "id": "heimdall",
+   "nombre": "Heimdall",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Vigilancia",
+    "Lealtad",
+    "Protección"
+   ],
+   "descripcion": "Dios conocido por vigilar la entrada al plano sagrado y proteger a los dioses.",
+   "simbolo": "img/deidades/heimdall.webp",
+   "pagina": 524,
+   "nombre_libro": "HEIMDALL"
+  },
+  {
+   "id": "hela",
+   "nombre": "Hela",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Gobernante del Inframundo",
+    "Necesidad",
+    "Transformación"
+   ],
+   "descripcion": "Diosa cuyo papel en el inframundo es la transición del plano terrenal al plano espiritual.",
+   "simbolo": "img/deidades/hela.webp",
+   "pagina": 525,
+   "nombre_libro": "HELA"
+  },
+  {
+   "id": "lada",
+   "nombre": "Lada",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Matrimonio",
+    "Hogar",
+    "Fidelidad"
+   ],
+   "descripcion": "Diosa asociada con el matrimonio y el hogar.",
+   "simbolo": "img/deidades/lada.webp",
+   "pagina": 525,
+   "nombre_libro": "LADA"
+  },
+  {
+   "id": "loki",
+   "nombre": "Loki",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Astucia",
+    "Cambio",
+    "Transformación"
+   ],
+   "descripcion": "Dios que desempeña un papel importante en el cambio y la transformación.",
+   "simbolo": "img/deidades/loki.webp",
+   "pagina": 525,
+   "nombre_libro": "LOKI"
+  },
+  {
+   "id": "mimir",
+   "nombre": "Mimir",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Sabiduría",
+    "Conocimiento",
+    "Clarividencia"
+   ],
+   "descripcion": "Dios consultado por los dioses y mortales para obtener conocimiento.",
+   "simbolo": "img/deidades/mimir.webp",
+   "pagina": 525,
+   "nombre_libro": "MIMIR"
+  },
+  {
+   "id": "njord",
+   "nombre": "Njord",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Mar",
+    "Pesca",
+    "Prosperidad"
+   ],
+   "descripcion": "Dios asociado con el mar, la navegación y la pesca.",
+   "simbolo": "img/deidades/njord.webp",
+   "pagina": 526,
+   "nombre_libro": "NJORD"
+  },
+  {
+   "id": "noctiluca",
+   "nombre": "Noctiluca",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Luz Nocturna",
+    "Oscuridad",
+    "Misterio"
+   ],
+   "descripcion": "Diosa representante de la luz nocturna y la oscuridad.",
+   "simbolo": "img/deidades/noctiluca.webp",
+   "pagina": 526,
+   "nombre_libro": "NOCTILUCA"
+  },
+  {
+   "id": "odin",
+   "nombre": "Odin",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Sabiduría",
+    "Liderazgo",
+    "Conocimiento"
+   ],
+   "descripcion": "Dios de la magia, ambición de conocimiento a través de sacrificios y la guerra salvaje.",
+   "simbolo": "img/deidades/odin.webp",
+   "pagina": 526,
+   "nombre_libro": "ODIN"
+  },
+  {
+   "id": "parom",
+   "nombre": "Parom",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Poder del Rayo",
+    "Vida",
+    "Muerte"
+   ],
+   "descripcion": "Representa el rayo sagrado, capaz de dar vida y quitarla.",
+   "simbolo": "img/deidades/parom.webp",
+   "pagina": 526,
+   "nombre_libro": "PAROM"
+  },
+  {
+   "id": "sif",
+   "nombre": "Sif",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Lealtad",
+    "Fertilidad",
+    "Tierra Cultivada"
+   ],
+   "descripcion": "Diosa, esposa de Thor, asociada con la fertilidad y la tierra cultivada.",
+   "simbolo": "img/deidades/sif.webp",
+   "pagina": 527,
+   "nombre_libro": "SIF"
+  },
+  {
+   "id": "skadi",
+   "nombre": "Skadi",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Nieve",
+    "Hielo",
+    "Caza"
+   ],
+   "descripcion": "Diosa y señora de la nieve, el hielo y la caza con arco.",
+   "simbolo": "img/deidades/skadi.webp",
+   "pagina": 527,
+   "nombre_libro": "SKADI"
+  },
+  {
+   "id": "surt",
+   "nombre": "Surt",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Fuego",
+    "Destrucción",
+    "Apocalipsis"
+   ],
+   "descripcion": "Dios gigante de fuego asociado con el fin del mundo.",
+   "simbolo": "img/deidades/surt.webp",
+   "pagina": 527,
+   "nombre_libro": "SURT"
+  },
+  {
+   "id": "svarog",
+   "nombre": "Svarog",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Sol",
+    "Herrería",
+    "Fuego"
+   ],
+   "descripcion": "Dios herrero, representante del sol y la herrería.",
+   "simbolo": "img/deidades/svarog.webp",
+   "pagina": 527,
+   "nombre_libro": "SVAROG"
+  },
+  {
+   "id": "thor",
+   "nombre": "Thor",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Valor",
+    "Fuerza",
+    "Protección"
+   ],
+   "descripcion": "Dios guerrero, hacedor de las tormentas y protector de los dioses y la humanidad.",
+   "simbolo": "img/deidades/thor.webp",
+   "pagina": 528,
+   "nombre_libro": "THOR"
+  },
+  {
+   "id": "tung-ak",
+   "nombre": "Tung-Ak",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Protección",
+    "Defensa",
+    "Comunidad"
+   ],
+   "descripcion": "Dios fundador de aldeas y prosperidad para las comunas.",
+   "simbolo": "img/deidades/tung-ak.webp",
+   "pagina": 528,
+   "nombre_libro": "TUNG-AK"
+  },
+  {
+   "id": "tyr",
+   "nombre": "Tyr",
+   "grupo": "norte",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Justicia",
+    "Valentía",
+    "Honor"
+   ],
+   "descripcion": "Dios de la guerra estratégica, conocido por su valentía y patrocinador de la justicia.",
+   "simbolo": "img/deidades/tyr.webp",
+   "pagina": 528,
+   "nombre_libro": "TYR"
+  },
+  {
+   "id": "amaterasu",
+   "nombre": "Amaterasu",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Sabiduría",
+    "Luz",
+    "Iluminación"
+   ],
+   "descripcion": "Diosa del sol que simboliza la luz y la sabiduría.",
+   "simbolo": "img/deidades/amaterasu.webp",
+   "pagina": 529,
+   "nombre_libro": "AMATERASU"
+  },
+  {
+   "id": "brahma",
+   "nombre": "Brahma",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Creación",
+    "Conocimiento",
+    "Sabiduría"
+   ],
+   "descripcion": "Dios creador asociado con la sabiduría y la creación del universo.",
+   "simbolo": "img/deidades/brahma.webp",
+   "pagina": 529,
+   "nombre_libro": "BRAHMA"
+  },
+  {
+   "id": "cai-shen",
+   "nombre": "Cai Shen",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Salud",
+    "Bienestar",
+    "Prosperidad"
+   ],
+   "descripcion": "Dios de la salud y el bienestar, representante de la riqueza y la prosperidad.",
+   "simbolo": "img/deidades/cai-shen.webp",
+   "pagina": 529,
+   "nombre_libro": "CAI SHEN"
+  },
+  {
+   "id": "chalchiuhtlicue",
+   "nombre": "Chalchiuhtlicue",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Lagos",
+    "Corrientes de Agua",
+    "Nacimientos"
+   ],
+   "descripcion": "Dios representante de los lagos y corrientes de agua, asociada a los nacimientos.",
+   "simbolo": "img/deidades/chalchiuhtlicue.webp",
+   "pagina": 529,
+   "nombre_libro": "CHALCHIUHTLICUE"
+  },
+  {
+   "id": "el-emperador-de-jade",
+   "nombre": "El Emperador de Jade",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Equilibrio",
+    "Armonía",
+    "Orden Cósmico"
+   ],
+   "descripcion": "Simboliza el orden cósmico y la armonía en todo.",
+   "simbolo": "img/deidades/el-emperador-de-jade.webp",
+   "pagina": 530,
+   "nombre_libro": "EL EMPERADOR DE JADE"
+  },
+  {
+   "id": "fujin",
+   "nombre": "Fujin",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Viento",
+    "Tempestades",
+    "Naturaleza"
+   ],
+   "descripcion": "Dios del viento y las tempestades, representado junto a Raijin.",
+   "simbolo": "img/deidades/fujin.webp",
+   "pagina": 530,
+   "nombre_libro": "FUJIN"
+  },
+  {
+   "id": "gahe",
+   "nombre": "Gahe",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Montaña",
+    "Sanación de Espíritus",
+    "Danza"
+   ],
+   "descripcion": "Dios de la montaña y sanador de espíritus, invocado por los enfermos en lo alto de las montañas.",
+   "simbolo": "img/deidades/gahe.webp",
+   "pagina": 530,
+   "nombre_libro": "GAHE"
+  },
+  {
+   "id": "ganesha",
+   "nombre": "Ganesha",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Sabiduría",
+    "Superación de Obstáculos",
+    "Conocimiento"
+   ],
+   "descripcion": "Dios asociado con la sabiduría a través de la experiencia y dedicación.",
+   "simbolo": "img/deidades/ganesha.webp",
+   "pagina": 530,
+   "nombre_libro": "GANESHA"
+  },
+  {
+   "id": "hachiman",
+   "nombre": "Hachiman",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Lealtad",
+    "Valentía",
+    "Honor"
+   ],
+   "descripcion": "Dios de la guerra y patrón de los samurái.",
+   "simbolo": "img/deidades/hachiman.webp",
+   "pagina": 531,
+   "nombre_libro": "HACHIMAN"
+  },
+  {
+   "id": "inari",
+   "nombre": "Inari",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Fertilidad",
+    "Desarrollo",
+    "Prosperidad"
+   ],
+   "descripcion": "Deidad de la fertilidad, el arroz, la agricultura, los zorros, la industria y el éxito en general.",
+   "simbolo": "img/deidades/inari.webp",
+   "pagina": 531,
+   "nombre_libro": "INARI"
+  },
+  {
+   "id": "kaiti",
+   "nombre": "Kaiti",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Bestias Salvajes",
+    "Naturaleza",
+    "Fuerza"
+   ],
+   "descripcion": "Dios oso, representante de las bestias salvajes del mundo.",
+   "simbolo": "img/deidades/kaiti.webp",
+   "pagina": 531,
+   "nombre_libro": "KAITI"
+  },
+  {
+   "id": "mah-ih",
+   "nombre": "Mah-Ih",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Estrellas",
+    "Cielo Nocturno",
+    "Engaño"
+   ],
+   "descripcion": "Señor de las estrellas y el cielo nocturno, conocido como el dios Coyote, creador de las estrellas a través de engaños.",
+   "simbolo": "img/deidades/mah-ih.webp",
+   "pagina": 531,
+   "nombre_libro": "MAH-IH"
+  },
+  {
+   "id": "mictlatecuhtli",
+   "nombre": "Mictlatecuhtli",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Inframundo",
+    "Almas de los Muertos",
+    "Destino"
+   ],
+   "descripcion": "Dios señor de las almas de los muertos y gobernante de los ríos del inframundo, seleccionador de los destinos de las almas.",
+   "simbolo": "img/deidades/mictlatecuhtli.webp",
+   "pagina": 532,
+   "nombre_libro": "MICTLATECUHTLI"
+  },
+  {
+   "id": "pangu",
+   "nombre": "Pangu",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Creación",
+    "Equilibrio",
+    "Patrón"
+   ],
+   "descripcion": "Dios asociado con la creación y patrón del reino de Revelfbolth.",
+   "simbolo": "img/deidades/pangu.webp",
+   "pagina": 532,
+   "nombre_libro": "PANGU"
+  },
+  {
+   "id": "parvati",
+   "nombre": "Parvati",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Amor",
+    "Devoción",
+    "Maternidad"
+   ],
+   "descripcion": "Diosa del amor y la devoción, consorte de Shiva.",
+   "simbolo": "img/deidades/parvati.webp",
+   "pagina": 532,
+   "nombre_libro": "PARVATI"
+  },
+  {
+   "id": "pele",
+   "nombre": "Pele",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Fuego",
+    "Volcanes",
+    "Violencia"
+   ],
+   "descripcion": "Diosa del fuego, los volcanes, la danza intensa y la violencia, habita en los volcanes.",
+   "simbolo": "img/deidades/pele.webp",
+   "pagina": 532,
+   "nombre_libro": "PELE"
+  },
+  {
+   "id": "raijin",
+   "nombre": "Raijin",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Control",
+    "Protección",
+    "Poder"
+   ],
+   "descripcion": "Dios del trueno y los relámpagos, asociado con el control sobre estos elementos.",
+   "simbolo": "img/deidades/raijin.webp",
+   "pagina": 533,
+   "nombre_libro": "RAIJIN"
+  },
+  {
+   "id": "shiva",
+   "nombre": "Shiva",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Transformación",
+    "Destrucción",
+    "Renovación"
+   ],
+   "descripcion": "Dios destructor que representa la transformación y la renovación.",
+   "simbolo": "img/deidades/shiva.webp",
+   "pagina": 533,
+   "nombre_libro": "SHIVA"
+  },
+  {
+   "id": "susanoo",
+   "nombre": "Susanoo",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Valor",
+    "Fuerza",
+    "Tormenta"
+   ],
+   "descripcion": "Dios de la tormenta y el mar, conocido por sus actos valientes.",
+   "simbolo": "img/deidades/susanoo.webp",
+   "pagina": 533,
+   "nombre_libro": "SUSANOO"
+  },
+  {
+   "id": "tsukuyomi",
+   "nombre": "Tsukuyomi",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Sabiduría",
+    "Observación",
+    "Reflexión"
+   ],
+   "descripcion": "Dios de la lunas, asociado con la reflexión y la observación.",
+   "simbolo": "img/deidades/tsukuyomi.webp",
+   "pagina": 533,
+   "nombre_libro": "TSUKUYOMI"
+  },
+  {
+   "id": "vishnu",
+   "nombre": "Vishnu",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Preservación",
+    "Bondad",
+    "Equilibrio"
+   ],
+   "descripcion": "Dios preservador que mantiene el equilibrio cósmico y la bondad.",
+   "simbolo": "img/deidades/vishnu.webp",
+   "pagina": 534,
+   "nombre_libro": "VISHNU"
+  },
+  {
+   "id": "yutu",
+   "nombre": "Yutu",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Mascotas",
+    "Aprendizaje",
+    "experimentación"
+   ],
+   "descripcion": "Dios de los animales y en especial de las mascotas, de la sabiduria experimental, del amor por el aprendizaje y experimentar",
+   "simbolo": "img/deidades/yutu.webp",
+   "pagina": 534,
+   "nombre_libro": "YUTU"
+  },
+  {
+   "id": "zao-shen",
+   "nombre": "Zao Shen",
+   "grupo": "este",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Cocina",
+    "Hogar",
+    "Alimentación"
+   ],
+   "descripcion": "Dios de la cocina, del hogar y de los productos de alimentación.",
+   "simbolo": "img/deidades/zao-shen.webp",
+   "pagina": 534,
+   "nombre_libro": "ZAO SHEN"
+  },
+  {
+   "id": "anu",
+   "nombre": "Anu",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Cielo",
+    "Autoridad",
+    "Orden Divino"
+   ],
+   "descripcion": "Dios del cielo, representa la autoridad y el orden divino.",
+   "simbolo": "img/deidades/anu.webp",
+   "pagina": 534,
+   "nombre_libro": "ANU"
+  },
+  {
+   "id": "anubis",
+   "nombre": "Anubis",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Guía en el Más Allá",
+    "Muerte",
+    "Momificación"
+   ],
+   "descripcion": "Dios de la muerte, guía a los muertos en su viaje al plano espiritual.",
+   "simbolo": "img/deidades/anubis.webp",
+   "pagina": 535,
+   "nombre_libro": "ANUBIS"
+  },
+  {
+   "id": "bastet",
+   "nombre": "Bastet",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Protección",
+    "Hogar",
+    "Maternidad"
+   ],
+   "descripcion": "Diosa gato de la protección, el hogar y la maternidad.",
+   "simbolo": "img/deidades/bastet.webp",
+   "pagina": 535,
+   "nombre_libro": "BASTET"
+  },
+  {
+   "id": "enki",
+   "nombre": "Enki",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Sabiduría",
+    "Creatividad",
+    "Magia"
+   ],
+   "descripcion": "Dios de la sabiduría y purificación sagrada.",
+   "simbolo": "img/deidades/enki.webp",
+   "pagina": 535,
+   "nombre_libro": "ENKI"
+  },
+  {
+   "id": "enlil",
+   "nombre": "Enlil",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Climas",
+    "Tormentas",
+    "Poder"
+   ],
+   "descripcion": "Dios de los diferentes climas y las estaciones, capaz de formar peligrosas tormentas y otros fenómenos climáticos.",
+   "simbolo": "img/deidades/enlil.webp",
+   "pagina": 535,
+   "nombre_libro": "ENLIL"
+  },
+  {
+   "id": "haoma",
+   "nombre": "Haoma",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Cosecha",
+    "Agricultura",
+    "Plantas"
+   ],
+   "descripcion": "Dios de la cosecha, personificación de las plantas y los agricultores.",
+   "simbolo": "img/deidades/haoma.webp",
+   "pagina": 536,
+   "nombre_libro": "HAOMA"
+  },
+  {
+   "id": "horus",
+   "nombre": "Horus",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Protección",
+    "Realeza",
+    "Guerra"
+   ],
+   "descripcion": "Dios de la guerra, asociado con la protección y la realeza.",
+   "simbolo": "img/deidades/horus.webp",
+   "pagina": 536,
+   "nombre_libro": "HORUS"
+  },
+  {
+   "id": "ilucia",
+   "nombre": "Ilucia",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Luz",
+    "Dimensiones",
+    "Amor Verdadero"
+   ],
+   "descripcion": "Diosa de la luz y los distintos planos existenciales, puede ver entre dimensiones.",
+   "simbolo": "img/deidades/ilucia.webp",
+   "pagina": 536,
+   "nombre_libro": "ILUCIA"
+  },
+  {
+   "id": "isthar",
+   "nombre": "Isthar",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Amor",
+    "Fertilidad",
+    "Guerra"
+   ],
+   "descripcion": "Diosa del amor y la fertilidad, también asociada con el placer.",
+   "simbolo": "img/deidades/isthar.webp",
+   "pagina": 537,
+   "nombre_libro": "ISTHAR"
+  },
+  {
+   "id": "isis",
+   "nombre": "Isis",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Maternidad",
+    "Amor",
+    "Magia"
+   ],
+   "descripcion": "Diosa de la maternidad y la magia, conocida por su amor y devoción.",
+   "simbolo": "img/deidades/isis.webp",
+   "pagina": 537,
+   "nombre_libro": "ISIS"
+  },
+  {
+   "id": "kanaloa",
+   "nombre": "Kanaloa",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Viajes",
+    "Mar",
+    "Curación"
+   ],
+   "descripcion": "Dios asociado a los viajes de larga duración, el mar, los océnaos y la curación.",
+   "simbolo": "img/deidades/kanaloa.webp",
+   "pagina": 537,
+   "nombre_libro": "KANALOA"
+  },
+  {
+   "id": "maat",
+   "nombre": "Maat",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Verdad",
+    "Equilibrio",
+    "Justicia"
+   ],
+   "descripcion": "Dios personificación de la verdad y la justicia cósmica, así como el equilibrio en la vida.",
+   "simbolo": "img/deidades/maat.webp",
+   "pagina": 537,
+   "nombre_libro": "MAAT"
+  },
+  {
+   "id": "melkart",
+   "nombre": "Melkart",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Patrón",
+    "Humanidad",
+    "Héroes"
+   ],
+   "descripcion": "Dios creador y patrón de Maurizanian, creador de la humanidad y los héroes.",
+   "simbolo": "img/deidades/melkart.webp",
+   "pagina": 538,
+   "nombre_libro": "MELKART"
+  },
+  {
+   "id": "neftis",
+   "nombre": "Neftis",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Momificación",
+    "Protección",
+    "Divinidad"
+   ],
+   "descripcion": "Diosa representante y protectora de las momias, esposa de Seth y protectora del panteón divino.",
+   "simbolo": "img/deidades/neftis.webp",
+   "pagina": 538,
+   "nombre_libro": "NEFTIS"
+  },
+  {
+   "id": "osiris",
+   "nombre": "Osiris",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Justicia",
+    "Resurrección",
+    "Juicio"
+   ],
+   "descripcion": "Dios de la resurrección y el juicio después de la muerte.",
+   "simbolo": "img/deidades/osiris.webp",
+   "pagina": 538,
+   "nombre_libro": "OSIRIS"
+  },
+  {
+   "id": "ptah",
+   "nombre": "Ptah",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Creación",
+    "Artesanía",
+    "Sabiduría"
+   ],
+   "descripcion": "Dios de la creación, la artesanía y la imaginación, asociado con la creación del mundo.",
+   "simbolo": "img/deidades/ptah.webp",
+   "pagina": 538,
+   "nombre_libro": "PTAH"
+  },
+  {
+   "id": "ra",
+   "nombre": "Ra",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Poder",
+    "Creatividad",
+    "Fuerza"
+   ],
+   "descripcion": "Dios del sol y la creación, simbolizando la fuerza y el poder creador.",
+   "simbolo": "img/deidades/ra.webp",
+   "pagina": 539,
+   "nombre_libro": "RA"
+  },
+  {
+   "id": "reshef",
+   "nombre": "Reshef",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Arenas",
+    "Fuego",
+    "Peste"
+   ],
+   "descripcion": "Representante de las arenas, el fuego y la peste.",
+   "simbolo": "img/deidades/reshef.webp",
+   "pagina": 539,
+   "nombre_libro": "RESHEF"
+  },
+  {
+   "id": "sekhmet",
+   "nombre": "Sekhmet",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Fuerza",
+    "Poder",
+    "Majestuosidad"
+   ],
+   "descripcion": "Diosa gemela del sol, representa el poder desmedido y exuberante, la majestad y la fiereza de una leona.",
+   "simbolo": "img/deidades/sekhmet.webp",
+   "pagina": 539,
+   "nombre_libro": "SEKHMET"
+  },
+  {
+   "id": "seth",
+   "nombre": "Seth",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Poder",
+    "Caos",
+    "Tormenta"
+   ],
+   "descripcion": "Dios del caos y la tormenta de arenas, simboliza fuerzas destructivas y poder.",
+   "simbolo": "img/deidades/seth.webp",
+   "pagina": 539,
+   "nombre_libro": "SETH"
+  },
+  {
+   "id": "sobek",
+   "nombre": "Sobek",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Vida",
+    "Aguas",
+    "Vegetación"
+   ],
+   "descripcion": "Dios creador de ríos y de la vida natural.",
+   "simbolo": "img/deidades/sobek.webp",
+   "pagina": 540,
+   "nombre_libro": "SOBEK"
+  },
+  {
+   "id": "thot",
+   "nombre": "Thot",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Sabiduría",
+    "Conocimiento",
+    "Escritura"
+   ],
+   "descripcion": "Dios escriba, representante de la escritura, del conocimiento y la magia creativa.",
+   "simbolo": "img/deidades/thot.webp",
+   "pagina": 540,
+   "nombre_libro": "THOT"
+  },
+  {
+   "id": "zurvan-akarana",
+   "nombre": "Zurvan Akarana",
+   "grupo": "oeste",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Tiempo",
+    "Eternidad",
+    "Infinito"
+   ],
+   "descripcion": "Dios del tiempo, personificación del Tiempo Infinito.",
+   "simbolo": "img/deidades/zurvan-akarana.webp",
+   "pagina": 540,
+   "nombre_libro": "ZURVAN AKARANA"
+  },
+  {
+   "id": "afrodita",
+   "nombre": "Afrodita",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Amor",
+    "Belleza",
+    "Fertilidad",
+    "Seducción"
+   ],
+   "descripcion": "Diosa del amor y la belleza, asociada con la fertilidad y el deseo.",
+   "simbolo": "img/deidades/afrodita.webp",
+   "pagina": 540,
+   "nombre_libro": "AFRODITA"
+  },
+  {
+   "id": "apolo",
+   "nombre": "Apolo",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Arte",
+    "Música",
+    "Poesía",
+    "Profecía",
+    "Curación"
+   ],
+   "descripcion": "Dios de la música, las artes y la medicina.",
+   "simbolo": "img/deidades/apolo.webp",
+   "pagina": 541,
+   "nombre_libro": "APOLO"
+  },
+  {
+   "id": "ares",
+   "nombre": "Ares",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Guerra",
+    "Valentía",
+    "Fuerza Militar",
+    "Lucha Salvaje"
+   ],
+   "descripcion": "Dios de la guerra y la valentía, simboliza la fuerza y la brutalidad del combate.",
+   "simbolo": "img/deidades/ares.webp",
+   "pagina": 541,
+   "nombre_libro": "ARES"
+  },
+  {
+   "id": "artemisa",
+   "nombre": "Artemisa",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Caza",
+    "Naturaleza Salvaje",
+    "Protección de la Vida Silvestre"
+   ],
+   "descripcion": "Diosa de la caza y la naturaleza, protectora de los animales salvajes y de la vida silvestre.",
+   "simbolo": "img/deidades/artemisa.webp",
+   "pagina": 541,
+   "nombre_libro": "ARTEMISA"
+  },
+  {
+   "id": "atenea",
+   "nombre": "Atenea",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Sabiduría",
+    "Estrategia",
+    "Protección de las Artes y la Civilización"
+   ],
+   "descripcion": "Diosa de la sabiduría, la estrategia militar y la civilización, protectora de las artes y las ciencias.",
+   "simbolo": "img/deidades/atenea.webp",
+   "pagina": 541,
+   "nombre_libro": "ATENEA"
+  },
+  {
+   "id": "avesta",
+   "nombre": "Avesta",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Ética",
+    "Espiritualidad",
+    "Enseñanzas"
+   ],
+   "descripcion": "Representación de las enseñanzas éticas y espirituales.",
+   "simbolo": "img/deidades/avesta.webp",
+   "pagina": 542,
+   "nombre_libro": "AVESTA"
+  },
+  {
+   "id": "beleno",
+   "nombre": "Beleno",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Sol",
+    "Calor",
+    "Vitalidad"
+   ],
+   "descripcion": "Representante del sol y del calor, simboliza la vitalidad y la energía solar.",
+   "simbolo": "img/deidades/beleno.webp",
+   "pagina": 542,
+   "nombre_libro": "BELENO"
+  },
+  {
+   "id": "demeter",
+   "nombre": "Demeter",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Agricultura",
+    "Fertilidad",
+    "Madre de la Tierra"
+   ],
+   "descripcion": "Diosa de la agricultura y la cosecha, protectora de la fertilidad de la tierra.",
+   "simbolo": "img/deidades/demeter.webp",
+   "pagina": 542,
+   "nombre_libro": "DEMETER"
+  },
+  {
+   "id": "endovelico",
+   "nombre": "Endovelico",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Purificación",
+    "Curación",
+    "Oráculos"
+   ],
+   "descripcion": "Dios de la purificación y la curación. asociado con los oráculos.",
+   "simbolo": "img/deidades/endovelico.webp",
+   "pagina": 542,
+   "nombre_libro": "ENDOVELICO"
+  },
+  {
+   "id": "gea",
+   "nombre": "Gea",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Tierra",
+    "Fertilidad",
+    "Creación"
+   ],
+   "descripcion": "Diosa personificación de la propia tierra, madre de todos los seres vivos.",
+   "simbolo": "img/deidades/gea.webp",
+   "pagina": 543,
+   "nombre_libro": "GEA"
+  },
+  {
+   "id": "hades",
+   "nombre": "Hades",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Gobernante del Inframundo",
+    "Justicia",
+    "Muerte"
+   ],
+   "descripcion": "Dios del inframundo y de los muertos, asociado con la justicia en el más allá.",
+   "simbolo": "img/deidades/hades.webp",
+   "pagina": 543,
+   "nombre_libro": "HADES"
+  },
+  {
+   "id": "hera",
+   "nombre": "Hera",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Matrimonio",
+    "Lealtad",
+    "Protección del Hogar"
+   ],
+   "descripcion": "Diosa del matrimonio y la familia, protectora del hogar y de las mujeres casadas.",
+   "simbolo": "img/deidades/hera.webp",
+   "pagina": 543,
+   "nombre_libro": "HERA"
+  },
+  {
+   "id": "hermes",
+   "nombre": "Hermes",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Comercio",
+    "Viajes",
+    "Astucia",
+    "Mensajero de los Dioses"
+   ],
+   "descripcion": "Dios de los comerciantes y los viajeros, conocido por su astucia y rapidez como mensajero de los dioses.",
+   "simbolo": "img/deidades/hermes.webp",
+   "pagina": 543,
+   "nombre_libro": "HERMES"
+  },
+  {
+   "id": "hestia",
+   "nombre": "Hestia",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Hogar",
+    "Familia",
+    "Fuego Sagrado"
+   ],
+   "descripcion": "Diosa del hogar y la familia, protectora del fuego sagrado y del hogar familiar.",
+   "simbolo": "img/deidades/hestia.webp",
+   "pagina": 544,
+   "nombre_libro": "HESTIA"
+  },
+  {
+   "id": "mitra",
+   "nombre": "Mitra",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Luz",
+    "Verdad",
+    "Justicia"
+   ],
+   "descripcion": "Dios de la luz, asociado con la verdad y la justicia.",
+   "simbolo": "img/deidades/mitra.webp",
+   "pagina": 544,
+   "nombre_libro": "MITRA"
+  },
+  {
+   "id": "morfeo",
+   "nombre": "Morfeo",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Sueños",
+    "Descanso",
+    "Sueño Reparador"
+   ],
+   "descripcion": "Dios de los sueños, asociado con el descanso y el sueño reparador.",
+   "simbolo": "img/deidades/morfeo.webp",
+   "pagina": 544,
+   "nombre_libro": "MORFEO"
+  },
+  {
+   "id": "nox",
+   "nombre": "Nox",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Noche",
+    "Oscuridad",
+    "Misterio"
+   ],
+   "descripcion": "Diosa de la noche, personificación de la oscuridad y de los misterios nocturnos.",
+   "simbolo": "img/deidades/nox.webp",
+   "pagina": 544,
+   "nombre_libro": "NOX"
+  },
+  {
+   "id": "persefone",
+   "nombre": "Perséfone",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Cambio de Estaciones",
+    "Renacimiento",
+    "Transformación"
+   ],
+   "descripcion": "Diosa hija de Deméter y esposa de Hades, simboliza el cambio de estaciones y el renacimiento.",
+   "simbolo": "img/deidades/persefone.webp",
+   "pagina": 545,
+   "nombre_libro": "PERSÉFONE"
+  },
+  {
+   "id": "poseidon",
+   "nombre": "Poseidon",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Control sobre los Mares",
+    "Terremotos",
+    "Fuerza"
+   ],
+   "descripcion": "Dios del mar y de los terremotos, simboliza la fuerza y el poder sobre los océanos.",
+   "simbolo": "img/deidades/poseidon.webp",
+   "pagina": 545,
+   "nombre_libro": "POSEIDON"
+  },
+  {
+   "id": "prometeo",
+   "nombre": "Prometeo",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Conocimiento",
+    "Creatividad",
+    "Innovación"
+   ],
+   "descripcion": "Dios del conocimiento y la creatividad, conocido por haber entregado el fuego de la llama sagrada a la humanidad.",
+   "simbolo": "img/deidades/prometeo.webp",
+   "pagina": 545,
+   "nombre_libro": "PROMETEO"
+  },
+  {
+   "id": "silvanus",
+   "nombre": "Silvanus",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Naturaleza",
+    "Bosques",
+    "Vida Silvestre"
+   ],
+   "descripcion": "Representante de la naturaleza, los bosques y la vida silvestre.",
+   "simbolo": "img/deidades/silvanus.webp",
+   "pagina": 545,
+   "nombre_libro": "SILVANUS"
+  },
+  {
+   "id": "tutatis",
+   "nombre": "Tutatis",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Patrón",
+    "Protección",
+    "Patrono de los Guerreros"
+   ],
+   "descripcion": "Dios creador y patrón de Lusitanius, protector de los guerreros y forjador de los héroes.",
+   "simbolo": "img/deidades/tutatis.webp",
+   "pagina": 546,
+   "nombre_libro": "TUTATIS"
+  },
+  {
+   "id": "zeus",
+   "nombre": "Zeus",
+   "grupo": "sur",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Liderazgo",
+    "Justicia",
+    "Poder Divino"
+   ],
+   "descripcion": "Dios del cielo y del trueno, conocido por su liderazgo y poder divino.",
+   "simbolo": "img/deidades/zeus.webp",
+   "pagina": 546,
+   "nombre_libro": "ZEUS"
+  },
+  {
+   "id": "alpha",
+   "nombre": "Alpha",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Organización",
+    "Estructura",
+    "Neutralidad"
+   ],
+   "descripcion": "Dios vinculado con una neutralidad legal, representa un enfoque estructurado y organizado en sus acciones.",
+   "simbolo": "img/deidades/alpha.webp",
+   "pagina": 546,
+   "nombre_libro": "ALPHA"
+  },
+  {
+   "id": "amari",
+   "nombre": "Amari",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Naturaleza",
+    "Maternidad",
+    "Vida"
+   ],
+   "descripcion": "Diosa pagana y Madre Naturaleza, una de las más antiguas deidades conocida por los mortales, a veces referida como “La Madre”.",
+   "simbolo": "img/deidades/amari.webp",
+   "pagina": 546,
+   "nombre_libro": "AMARI"
+  },
+  {
+   "id": "baron-samedi",
+   "nombre": "Barón Samedi",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Espiritualidad",
+    "Patronazgo",
+    "Muerte"
+   ],
+   "descripcion": "Deidad espiritual patrón de todos los Bokores y seguidores del vudú, representación de los diferentes planos de la muerte, los vicios y la mala vida.",
+   "simbolo": "img/deidades/baron-samedi.webp",
+   "pagina": 547,
+   "nombre_libro": "BARÓN SAMEDI"
+  },
+  {
+   "id": "belafonte",
+   "nombre": "Belafonte",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Artes",
+    "Música",
+    "Danza"
+   ],
+   "descripcion": "Deidad pagana de las artes, la música y la danza y el desenfreno creativo.",
+   "simbolo": "img/deidades/belafonte.webp",
+   "pagina": 547,
+   "nombre_libro": "BELAFONTE"
+  },
+  {
+   "id": "belobog",
+   "nombre": "Belobog",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Paz",
+    "Luz Celeste",
+    "Armonía"
+   ],
+   "descripcion": "Dios pagano de la paz y de la luz celeste, hermano y contraparte de Chernabog.",
+   "simbolo": "img/deidades/belobog.webp",
+   "pagina": 547,
+   "nombre_libro": "BELOBOG"
+  },
+  {
+   "id": "chernabog",
+   "nombre": "Chernabog",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Guerra",
+    "Oscuridad",
+    "Poder"
+   ],
+   "descripcion": "Dios pagano de la guerra y la oscuridad apabullante, hermano y contraparte de Belobog.",
+   "simbolo": "img/deidades/chernabog.webp",
+   "pagina": 548,
+   "nombre_libro": "CHERNABOG"
+  },
+  {
+   "id": "cplatb",
+   "nombre": "Cplatb",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Neutralidad",
+    "Imparcialidad",
+    "Objetividad"
+   ],
+   "descripcion": "Dios que representa la capacidad para mantener la imparcialidad y la objetividad.",
+   "simbolo": "img/deidades/cplatb.webp",
+   "pagina": 548,
+   "nombre_libro": "CPLATB"
+  },
+  {
+   "id": "demorox",
+   "nombre": "Demorox",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Libertad",
+    "Expresión Sin Restricciones",
+    "Caos"
+   ],
+   "descripcion": "Dios asociado con la esencia caótica y la libertad, simboliza la expresión sin restricciones.",
+   "simbolo": "img/deidades/demorox.webp",
+   "pagina": 548,
+   "nombre_libro": "DEMOROX"
+  },
+  {
+   "id": "epona",
+   "nombre": "Epona",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Fertilidad",
+    "caballos",
+    "Conexión"
+   ],
+   "descripcion": "Diosa protectora de las bestias nobles. Venerada por jinetes, guardianes de establos y clanes nómadas que ven en el caballo un símbolo de conexión con los planos superiores.",
+   "simbolo": "img/deidades/epona.webp",
+   "pagina": 548,
+   "nombre_libro": "EPONA"
+  },
+  {
+   "id": "erlik",
+   "nombre": "Erlik",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Nigromancia",
+    "corrupción del alma",
+    "dominio de la muerte"
+   ],
+   "descripcion": "Dios oscuro que reina sobre las almas condenadas, los secretos de la no vida y la resurrección no natural.",
+   "simbolo": "img/deidades/erlik.webp",
+   "pagina": 549,
+   "nombre_libro": "ERLIK"
+  },
+  {
+   "id": "erridoritx",
+   "nombre": "Erridoritx",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Justicia",
+    "Equilibrio",
+    "Integridad"
+   ],
+   "descripcion": "Dios asociado con la búsqueda de la justicia y el equilibrio.",
+   "simbolo": "img/deidades/erridoritx.webp",
+   "pagina": 549,
+   "nombre_libro": "ERRIDORITX"
+  },
+  {
+   "id": "indra",
+   "nombre": "Indra",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "N/C",
+   "alineamiento_nombre": "Neutral o Caótico",
+   "virtudes": [
+    "Gloria en batalla",
+    "muerte honorable",
+    "fuerza marcial"
+   ],
+   "descripcion": "Dios de los gladiadores y de la muerte en combate, patrono de aquellos que buscan la victoria o una caída gloriosa. Es venerado en arenas de sangre, campos de guerra y por guerreros que viven para luchar y morir con honor.",
+   "simbolo": "img/deidades/indra.webp",
+   "pagina": 549,
+   "nombre_libro": "INDRA"
+  },
+  {
+   "id": "ko-kosth",
+   "nombre": "Ko Kosth",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Adaptabilidad",
+    "Resiliencia",
+    "Flexibilidad"
+   ],
+   "descripcion": "Dios que simboliza la capacidad para adaptarse y prosperar en entornos cambiantes.",
+   "simbolo": "img/deidades/ko-kosth.webp",
+   "pagina": 549,
+   "nombre_libro": "KO KOSTH"
+  },
+  {
+   "id": "lilith",
+   "nombre": "Lilith",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Independencia",
+    "Autonomía",
+    "Fuerza Personal"
+   ],
+   "descripcion": "Diosa conocida por su independencia y resistencia a la sumisión, simboliza la autonomía y la fuerza personal.",
+   "simbolo": "img/deidades/lilith.webp",
+   "pagina": 550,
+   "nombre_libro": "LILITH"
+  },
+  {
+   "id": "maitsoh",
+   "nombre": "Ma’Itsoh",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Lunas",
+    "Bestialidad",
+    "Transformación"
+   ],
+   "descripcion": "Dios pagano de la licantropía, el instinto salvaje y la caza bajo la luna. Aquel que otorga la bendición y la maldición de la bestia, guiando a sus hijos entre la sinrazón y la voracidad.",
+   "simbolo": "img/deidades/maitsoh.webp",
+   "pagina": 550,
+   "nombre_libro": "MA’ITSOH"
+  },
+  {
+   "id": "morgana",
+   "nombre": "Morgana",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Magia Negra",
+    "Conjuros",
+    "Maldiciones"
+   ],
+   "descripcion": "Diosa pagana de la magia negra, los conjuros, maldiciones, males de ojo, odio y traición.",
+   "simbolo": "img/deidades/morgana.webp",
+   "pagina": 550,
+   "nombre_libro": "MORGANA"
+  },
+  {
+   "id": "morgos",
+   "nombre": "Morgos",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "N",
+   "alineamiento_nombre": "Neutral",
+   "virtudes": [
+    "Minería",
+    "Mundo Subterraneo",
+    "Guía"
+   ],
+   "descripcion": "Dios pagano de los mineros, minas y canteras, representado como un minero, Morgos guía a los mineros para encontrar riquezas.",
+   "simbolo": "img/deidades/morgos.webp",
+   "pagina": 550,
+   "nombre_libro": "MORGOS"
+  },
+  {
+   "id": "morrigan",
+   "nombre": "Morrigan",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "NC",
+   "alineamiento_nombre": "Neutral Caótico",
+   "virtudes": [
+    "Guerra",
+    "Destino",
+    "Muerte"
+   ],
+   "descripcion": "Diosa triple de la guerra, el presagio y la soberanía. Se manifiesta como tres aspectos: Macha, Badb y Nemain, representando la furia del combate, la profecía de la muerte y el caos de la batalla.",
+   "simbolo": "img/deidades/morrigan.webp",
+   "pagina": 551,
+   "nombre_libro": "MORRIGAN"
+  },
+  {
+   "id": "oberon",
+   "nombre": "Oberón",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "N/L",
+   "alineamiento_nombre": "Neutral o Legal",
+   "virtudes": [
+    "Magia de naturaleza",
+    "autoridad feérica",
+    "pactos antiguos oníricos"
+   ],
+   "descripcion": "Dios Feérico de las hadas y los seres magicos del bosque.",
+   "simbolo": "img/deidades/oberon.webp",
+   "pagina": 551,
+   "nombre_libro": "OBERÓN"
+  },
+  {
+   "id": "pazuzu",
+   "nombre": "Pazuzu",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Viento",
+    "Tormentas",
+    "Peste"
+   ],
+   "descripcion": "Dios representante del viento del suroeste, que trae tormentas, y es portador de la peste y las plagas, del delirio y de la fiebre.",
+   "simbolo": "img/deidades/pazuzu.webp",
+   "pagina": 551,
+   "nombre_libro": "PAZUZU"
+  },
+  {
+   "id": "pirfos",
+   "nombre": "Pirfos",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "NL",
+   "alineamiento_nombre": "Neutral Legal",
+   "virtudes": [
+    "Luz Divina",
+    "Guía del Alba",
+    "Amanecer"
+   ],
+   "descripcion": "Diosa pagana de la luz divina, guía del alba y el amanecer.",
+   "simbolo": "img/deidades/pirfos.webp",
+   "pagina": 551,
+   "nombre_libro": "PIRFOS"
+  },
+  {
+   "id": "sgyrrion",
+   "nombre": "Sgyrrion",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Creatividad",
+    "Innovación",
+    "Ingenio"
+   ],
+   "descripcion": "Diosa asociada con una creatividad sin restricciones y la capacidad de encontrar soluciones innovadoras.",
+   "simbolo": "img/deidades/sgyrrion.webp",
+   "pagina": 552,
+   "nombre_libro": "SGYRRION"
+  },
+  {
+   "id": "strum",
+   "nombre": "Strum",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Lealtad",
+    "Principios",
+    "Valores Establecidos"
+   ],
+   "descripcion": "Dios asociado con la lealtad a principios y valores establecidos, es el dios pagano adorado por los Orcos mas antiguos.",
+   "simbolo": "img/deidades/strum.webp",
+   "pagina": 552,
+   "nombre_libro": "STRUM"
+  },
+  {
+   "id": "z",
+   "nombre": "Z",
+   "grupo": "paganos",
+   "circulo": null,
+   "alineamiento": "L",
+   "alineamiento_nombre": "Legal",
+   "virtudes": [
+    "Precognición",
+    "Previsión",
+    "Clarividencia"
+   ],
+   "descripcion": "Supuesto dios con habilidad para prever el futuro, sugiriendo una virtud de previsión y preparación para lo que vendrá.",
+   "simbolo": "img/deidades/z.webp",
+   "pagina": 552,
+   "nombre_libro": "Z"
+  },
+  {
+   "id": "samaras",
+   "nombre": "Samaras",
+   "grupo": "infernales",
+   "circulo": "Primer Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Desesperación",
+    "Sufrimiento",
+    "Desdicha"
+   ],
+   "descripcion": "Gobernante del primer círculo infernal, personifica la desesperación, el sufrimiento y la desdicha, atormentando a las almas con tormentos emocionales y angustias interminables.",
+   "simbolo": "img/deidades/samaras.webp",
+   "pagina": 553,
+   "nombre_libro": "SAMARAS"
+  },
+  {
+   "id": "hulu",
+   "nombre": "Hulu",
+   "grupo": "infernales",
+   "circulo": "Segundo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Seducción",
+    "Lujuria",
+    "Manipulación Emocional"
+   ],
+   "descripcion": "Gobernante del segundo círculo, conocida como el súcubo infernal, simboliza la seducción, la lujuria y la manipulación emocional, infligiendo tormento a las almas a través de deseos insaciables y engaños.",
+   "simbolo": "img/deidades/hulu.webp",
+   "pagina": 553,
+   "nombre_libro": "HULU"
+  },
+  {
+   "id": "kiht",
+   "nombre": "Kiht",
+   "grupo": "infernales",
+   "circulo": "Tercer Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Consumo de Almas",
+    "Oscuridad Espiritual",
+    "Recolectora de Almas"
+   ],
+   "descripcion": "Gobernante del tercer círculo, se enfoca en el consumo y la recolección de almas, sumergiendo a los condenados en la oscuridad espiritual y el vacío.",
+   "simbolo": "img/deidades/kiht.webp",
+   "pagina": 553,
+   "nombre_libro": "KIHT"
+  },
+  {
+   "id": "shikiburlitai",
+   "nombre": "Shikiburlitai",
+   "grupo": "infernales",
+   "circulo": "Cuarto Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Ambición Desenfrenada",
+    "Poder",
+    "Deseo"
+   ],
+   "descripcion": "Gobernante del cuarto círculo, encarna la ambición sin límites y el deseo de poder a cualquier costo, sometiendo a las almas a un ciclo interminable de ansias insaciables.",
+   "simbolo": "img/deidades/shikiburlitai.webp",
+   "pagina": 554,
+   "nombre_libro": "SHIKIBURLITAI"
+  },
+  {
+   "id": "aku",
+   "nombre": "Aku",
+   "grupo": "infernales",
+   "circulo": "Quinto Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Asesinatos",
+    "Traiciones",
+    "Violencia"
+   ],
+   "descripcion": "Gobernante del quinto círculo, personifica la violencia, los asesinatos y las degradaciones, torturando y verdugo de las almas con la perpetuación de la violencia y la ira.",
+   "simbolo": "img/deidades/aku.webp",
+   "pagina": 554,
+   "nombre_libro": "AKU"
+  },
+  {
+   "id": "rhoden",
+   "nombre": "Rhoden",
+   "grupo": "infernales",
+   "circulo": "Sexto Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Redención a través de la Corrupción",
+    "Decadencia",
+    "Nueva Existencia"
+   ],
+   "descripcion": "Gobernante del sexto círculo, representa la capacidad de redimir a través de la corrupción y el cambio hacia una nueva existencia, fomentando la decadencia y el cambio.",
+   "simbolo": "img/deidades/rhoden.webp",
+   "pagina": 554,
+   "nombre_libro": "RHODEN"
+  },
+  {
+   "id": "arthox",
+   "nombre": "Arthox",
+   "grupo": "infernales",
+   "circulo": "Séptimo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Caos",
+    "Destrucción",
+    "Guerra Infernal"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el séptimo círculo, simboliza el caos, la destrucción y la guerra infernal, luchando por el control en este nivel de tormento.",
+   "simbolo": "img/deidades/arthox.webp",
+   "pagina": 555,
+   "nombre_libro": "ARTHOX"
+  },
+  {
+   "id": "maphiriom",
+   "nombre": "Maphiriom",
+   "grupo": "infernales",
+   "circulo": "Séptimo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Fuego Infernal",
+    "Destrucción Ardiente",
+    "Tormento"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el séptimo círculo, representa el fuego infernal, la destrucción ardiente y el tormento, gobernando con llamas y devastación.",
+   "simbolo": "img/deidades/maphiriom.webp",
+   "pagina": 555,
+   "nombre_libro": "MAPHIRIOM"
+  },
+  {
+   "id": "marnan",
+   "nombre": "Marnan",
+   "grupo": "infernales",
+   "circulo": "Séptimo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Rencor",
+    "Destrucción",
+    "Venganza"
+   ],
+   "descripcion": "Diosa infernal en conflicto por la supremacía en el séptimo círculo, personifica el consumo de rencor y la destrucción, alimentándose de emociones negativas y deseos de venganza.",
+   "simbolo": "img/deidades/marnan.webp",
+   "pagina": 555,
+   "nombre_libro": "MARNAN"
+  },
+  {
+   "id": "mafomiph",
+   "nombre": "Mafomiph",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Magia Oscura",
+    "Maldiciones",
+    "Corrupción"
+   ],
+   "descripcion": "Diosa infernal en conflicto por la supremacía en el octavo círculo, representa la magia oscura, las maldiciones y la corrupción, dominando el tormento a través de hechizos y corrupción.",
+   "simbolo": "img/deidades/mafomiph.webp",
+   "pagina": 555,
+   "nombre_libro": "MAFOMIPH"
+  },
+  {
+   "id": "lezeth",
+   "nombre": "Lezeth",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Corrupción Moral",
+    "Tentación",
+    "Perdición"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el octavo círculo, personifica la corrupción moral y la tentación, llevando a las almas a la perdición y el desvío moral.",
+   "simbolo": "img/deidades/lezeth.webp",
+   "pagina": 556,
+   "nombre_libro": "LEZETH"
+  },
+  {
+   "id": "belveroni",
+   "nombre": "Belveroni",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Enfermedad",
+    "Pestilencia",
+    "Descomposición"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el octavo círculo, simboliza la enfermedad, la pestilencia y la descomposición, infligiendo sufrimiento a través de plagas y enfermedades.",
+   "simbolo": "img/deidades/belveroni.webp",
+   "pagina": 556,
+   "nombre_libro": "BELVERONI"
+  },
+  {
+   "id": "huriondas",
+   "nombre": "Huriondas",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Pesadillas",
+    "Terror",
+    "Tormento Mental"
+   ],
+   "descripcion": "Diosa infernal en conflicto por la supremacía en el octavo círculo, reina de las pesadillas, representa el terror y el tormento mental, causando angustias y temores interminables en las almas.",
+   "simbolo": "img/deidades/huriondas.webp",
+   "pagina": 556,
+   "nombre_libro": "HURIONDAS"
+  },
+  {
+   "id": "xhebyhan",
+   "nombre": "Xhebyhan",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Pecados Capitales",
+    "Tentación",
+    "Desviación Moral"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el octavo círculo, Personifica los siete pecados capitales, siendo una constante tentación y desviación moral para las almas en el octavo círculo.",
+   "simbolo": "img/deidades/xhebyhan.webp",
+   "pagina": 557,
+   "nombre_libro": "XHEBYHAN"
+  },
+  {
+   "id": "zzhotmentul",
+   "nombre": "Z’Zhotmentul",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Oscuridad Primordial",
+    "Caída",
+    "Criaturas Infernales"
+   ],
+   "descripcion": "Diosa infernal en conflicto por la supremacía en el octavo círculo, madre de los abismos, encarna la oscuridad primordial y la creación de criaturas infernales, dominando el caos y el vacío.",
+   "simbolo": "img/deidades/zzhotmentul.webp",
+   "pagina": 557,
+   "nombre_libro": "Z’ZHOTMENTUL"
+  },
+  {
+   "id": "alucard",
+   "nombre": "Alucard",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Despertar Oscuro",
+    "Revelación",
+    "Oscuridad Interior"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el octavo círculo, simboliza el despertar de almas impías y el poder oscuro, revelando y aprovechando la oscuridad interior de los seres.",
+   "simbolo": "img/deidades/alucard.webp",
+   "pagina": 557,
+   "nombre_libro": "ALUCARD"
+  },
+  {
+   "id": "setpenthin",
+   "nombre": "Setpenthin",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Dominación Implacable",
+    "Voluntad",
+    "Imposición"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el octavo círculo, encarnación de la voluntad implacable, representa la dominación y la imposición sin piedad, imponiendo su voluntad sobre todo.",
+   "simbolo": "img/deidades/setpenthin.webp",
+   "pagina": 558,
+   "nombre_libro": "SETPENTHIN"
+  },
+  {
+   "id": "shaag",
+   "nombre": "Shaag",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Ruido Infernal",
+    "Caos Abismal",
+    "Desorden"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el octavo círculo, encarna el ruido infernal y el caos abismal, creando desorden y tumulto en el círculo infernal.",
+   "simbolo": "img/deidades/shaag.webp",
+   "pagina": 558,
+   "nombre_libro": "SHAAG"
+  },
+  {
+   "id": "almax-tofix",
+   "nombre": "Almax-Tofix",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Desesperanza",
+    "Descomposición Mental",
+    "Devastación"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el octavo círculo, señor del caos y la desesperanza, representa la descomposición mental y la devastación emocional en las almas condenadas.",
+   "simbolo": "img/deidades/almax-tofix.webp",
+   "pagina": 558,
+   "nombre_libro": "ALMAX-TOFIX"
+  },
+  {
+   "id": "el-devorador",
+   "nombre": "El Devorador",
+   "grupo": "infernales",
+   "circulo": "Octavo Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Inevitabilidad del Fin",
+    "Desintegración",
+    "Destrucción"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el octavo círculo, encarnación del fin inevitable, representa la desintegración y la destrucción final, mostrando que todo debe ceder ante su abrazo.",
+   "simbolo": "img/deidades/el-devorador.webp",
+   "pagina": 559,
+   "nombre_libro": "EL DEVORADOR"
+  },
+  {
+   "id": "enaik",
+   "nombre": "Enaik",
+   "grupo": "infernales",
+   "circulo": "Noveno Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Engaño Sutil",
+    "Belleza Engañosa",
+    "Seducción"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el noveno círculo, simboliza el engaño oculto detrás de la belleza y la seducción, manipulando a través de promesas falsas y apariencias atractivas.",
+   "simbolo": "img/deidades/enaik.webp",
+   "pagina": 559,
+   "nombre_libro": "ENAIK"
+  },
+  {
+   "id": "hanma",
+   "nombre": "Hanma",
+   "grupo": "infernales",
+   "circulo": "Noveno Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Infidelidad Intencionada",
+    "Traición",
+    "Discordia"
+   ],
+   "descripcion": "Diosa infernal en conflicto por la supremacía en el noveno círculo, personifica la traición intencionada y la discordia, sembrando conflictos a través de la infidelidad y la traición.",
+   "simbolo": "img/deidades/hanma.webp",
+   "pagina": 559,
+   "nombre_libro": "HANMA"
+  },
+  {
+   "id": "olmideo",
+   "nombre": "Olmideo",
+   "grupo": "infernales",
+   "circulo": "Noveno Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Intriga",
+    "Manipulación",
+    "Oscuridad"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el noveno círculo, maestro de las sombras, representa la intriga y la manipulación en la oscuridad, controlando los hilos detrás de las maquinaciones.",
+   "simbolo": "img/deidades/olmideo.webp",
+   "pagina": 560,
+   "nombre_libro": "OLMIDEO"
+  },
+  {
+   "id": "marduk",
+   "nombre": "Marduk",
+   "grupo": "infernales",
+   "circulo": "Noveno Círculo Infernal",
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Engaño",
+    "Ilusiones",
+    "Confusión"
+   ],
+   "descripcion": "Dios infernal en conflicto por la supremacía en el noveno círculo, señor de los engaños y las ilusiones, infunde confusión y desorientación en las almas, haciendo que pierdan su rumbo y claridad.",
+   "simbolo": "img/deidades/marduk.webp",
+   "pagina": 560,
+   "nombre_libro": "MARDUK"
+  },
+  {
+   "id": "aqua",
+   "nombre": "Aqua",
+   "grupo": "titanes",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Agua primordial",
+    "fluidez",
+    "purificación"
+   ],
+   "descripcion": "Titán primigenia del agua, cuyo flujo da vida a los ríos y mares, y cuya presencia purifica el alma y el cuerpo. Es la más calmada de los cuatro titanes, cuyo abrazo sereno calma o aviva tanto las mareas de los mundos como las del espíritu.",
+   "simbolo": "img/deidades/aqua.webp",
+   "pagina": 560,
+   "nombre_libro": "AQUA"
+  },
+  {
+   "id": "autros",
+   "nombre": "Autros",
+   "grupo": "titanes",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Viento primordial",
+    "caos",
+    "libertad"
+   ],
+   "descripcion": "Titán primigenio del viento, cuyo aliento arrastra las tormentas y da forma a los cielos. Es el más impetuoso de los cuatro titanes, conocido por su incontrolable furia y su capacidad para liberar el caos en cualquier parte.",
+   "simbolo": "img/deidades/autros.webp",
+   "pagina": 561,
+   "nombre_libro": "AUTROS"
+  },
+  {
+   "id": "gaia",
+   "nombre": "Gaia",
+   "grupo": "titanes",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Tierra primordial",
+    "creación",
+    "equilibrio natural"
+   ],
+   "descripcion": "Titán primigenia de la tierra, madre y forjadora de la tierra misma donde se hallan los seres vivos, cuyo cuerpo sostiene la vida sobre su superficie. Es la más serena de los cuatro titanes.",
+   "simbolo": "img/deidades/gaia.webp",
+   "pagina": 561,
+   "nombre_libro": "GAIA"
+  },
+  {
+   "id": "phyros",
+   "nombre": "Phyros",
+   "grupo": "titanes",
+   "circulo": null,
+   "alineamiento": "C",
+   "alineamiento_nombre": "Caótico",
+   "virtudes": [
+    "Fuego primordial",
+    "destrucción",
+    "renacimiento ígneo"
+   ],
+   "descripcion": "Titán primigenio del fuego, cuyo aliento dio forma a la vida y cuyo furor forja y arrasa por igual. Originario de la llama primigenia y el más caótico de los titanes.",
+   "simbolo": "img/deidades/phyros.webp",
+   "pagina": 561,
+   "nombre_libro": "PHYROS"
+  }
+ ]
+}

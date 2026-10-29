@@ -1,0 +1,56 @@
+{
+  "_nota": "Fuente: reglas de creacion de personaje de Terratea. null = sin limite definido en las reglas (ver terratea-reglas.md, seccion Dudas).",
+  "razas": {
+    "Humano":      { "altura_m": [1.50, 2.00],  "peso_kg": [60, 100],    "esperanza_vida_anios": [90, 100] },
+    "Elfo":        { "altura_m": [1.75, 2.10],  "peso_kg": [50, 75],     "esperanza_vida_anios": [800, 1250] },
+    "Orco":        { "altura_m": [1.80, 2.20],  "peso_kg": [70, 125],    "esperanza_vida_anios": [60, 75] },
+    "Semielfo":    { "altura_m": [1.60, 2.00],  "peso_kg": [55, 80],     "esperanza_vida_anios": [250, 300] },
+    "Semiorco":    { "altura_m": [1.75, 2.00],  "peso_kg": [65, 100],    "esperanza_vida_anios": [80, 90] },
+    "Troloide":    { "altura_m": [2.00, 2.50],  "peso_kg": [80, 200],    "esperanza_vida_anios": [500, 600] },
+    "No-Muerto":   { "altura_m": null,          "peso_kg": null,         "esperanza_vida_anios": null, "nota": "Variable segun la raza no muerta; algunos renegados viven eternamente" },
+    "Hombre-Lobo": { "altura_m": [3.00, 4.00],  "peso_kg": [120, 200],   "esperanza_vida_anios": null, "nota": "Edad depende de la raza del portador de la Maldicion" },
+    "Semidemonio": { "altura_m": [1.70, 1.95],  "peso_kg": [55, 80],     "esperanza_vida_anios": [400, 600] },
+    "Elfo Oscuro": { "altura_m": [1.80, 2.30],  "peso_kg": [55, 100],    "esperanza_vida_anios": [1000, 1250] },
+    "Reptiliano":  { "altura_m": [1.50, 1.80],  "peso_kg": [80, 150],    "esperanza_vida_anios": [75, 100] },
+    "Nahiaride":   { "altura_m": [0.80, 1.25],  "peso_kg": [30, 50],     "esperanza_vida_anios": [600, 800] },
+    "Enano":       { "altura_m": [1.00, 1.25],  "peso_kg": [80, 120],    "esperanza_vida_anios": [250, 300] },
+    "Gnomo":       { "altura_m": [0.50, 0.75],  "peso_kg": [20, 40],     "esperanza_vida_anios": [50, 60] },
+    "Felino":      { "altura_m": [1.50, 1.95],  "peso_kg": [50, 100],    "esperanza_vida_anios": [75, 100] },
+    "Jotun":       { "altura_m": [3.00, 20.00], "peso_kg": [200, 1500],  "esperanza_vida_anios": [1500, 2000] },
+    "Goblin":      { "altura_m": [0.45, 0.80],  "peso_kg": [15, 40],     "esperanza_vida_anios": [40, 60] },
+    "Satiro":      { "altura_m": [1.20, 1.60],  "peso_kg": [40, 65],     "esperanza_vida_anios": [150, 200] },
+    "Aviroide":    { "altura_m": [1.90, 2.20],  "peso_kg": [70, 100],    "esperanza_vida_anios": [25, 35] },
+    "Automata":    { "altura_m": null,          "peso_kg": null,         "esperanza_vida_anios": null, "nota": "Sin altura/peso especificados; viven eternamente con mantenimiento" }
+  },
+  "alineamientos": [
+    { "id": "legal",             "nombre": "Legal",             "descripcion": "Busca la paz, aborrece la violencia, no tolera la injusticia ni las acciones caoticas" },
+    { "id": "legal_neutral",     "nombre": "Legal/Neutral",     "descripcion": "Desea la paz por violencia o diplomacia; evita la tirania y acciones malas" },
+    { "id": "neutral",           "nombre": "Neutral",           "descripcion": "Punto medio; acciones legales o caoticas segun la situacion" },
+    { "id": "neutral_caotico",   "nombre": "Neutral/Caotico",   "descripcion": "Centrado en su propio beneficio; actua de forma rastrera si le conviene" },
+    { "id": "caotico",           "nombre": "Caotico",           "descripcion": "Anhela el caos, actua por malicia y busca desorden y destruccion" }
+  ],
+  "tiradas_salvacion": [
+    { "id": "venenos_toxicos",            "nombre": "Venenos y Toxicos",                              "modificador": "sabiduria" },
+    { "id": "magias_maldiciones",         "nombre": "Magias y Maldiciones",                           "modificador": "sabiduria" },
+    { "id": "petrificacion_paralisis",    "nombre": "Petrificaciones, Paralisis y Control Mental",    "modificador": "sabiduria" },
+    { "id": "quemaduras_desangrados",     "nombre": "Quemaduras y Desangrados",                       "modificador": "sabiduria" },
+    { "id": "sortilegios_trampas",        "nombre": "Sortilegios, Encantamientos y Trampas",          "modificador": "sabiduria" }
+  ],
+  "vitalidad": {
+    "inicial": { "dado": "1d12", "suma": "modificador_constitucion", "minimo_tirada": 3 },
+    "estados": { "inconsciente_en": 0, "muerte_si_menor_que": -3 },
+    "por_nivel": [
+      { "niveles": [1, 9],   "vitalidad_extra": 5 },
+      { "niveles": [10, 19], "vitalidad_extra": 10 },
+      { "niveles": [20, 20], "vitalidad_extra": 25 }
+    ],
+    "puntos_caracteristica": [
+      { "nivel": 10, "puntos": 1, "elige": "jugador" },
+      { "nivel": 20, "puntos": 2, "elige": "jugador" }
+    ]
+  },
+  "alcance": {
+    "minimo": 1,
+    "penalizacion_por_casilla_extra": { "tirada_accion": -5, "tirada_dano_o_sanacion": -4 }
+  }
+}

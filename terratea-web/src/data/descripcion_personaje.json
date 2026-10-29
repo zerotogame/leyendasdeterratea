@@ -1,0 +1,588 @@
+{
+  "capitulo": "Descripción del personaje",
+  "alineamientos": [
+    {
+      "nombre": "Legales",
+      "descripcion": "Buscan la paz en el mundo, aborrecen la violencia y no toleran la injusticia ni las acciones caóticas."
+    },
+    {
+      "nombre": "Legales/Neutrales",
+      "descripcion": "Desean la paz en el mundo, ya sea mediante el uso de la violencia o a través de la diplomacia. Evitan la tiranía y acciones que puedan ser interpretadas como malas."
+    },
+    {
+      "nombre": "Neutrales",
+      "descripcion": "Viven en el punto medio, realizando acciones legales y caóticas según la situación lo requiera."
+    },
+    {
+      "nombre": "Neutrales/Caóticos",
+      "descripcion": "Centrados en su propio beneficio, no dudan en actuar de manera rastrera o maliciosa si eso les proporciona ventajas personales."
+    },
+    {
+      "nombre": "Caóticos",
+      "descripcion": "Anhelan el caos, actúan impulsados por la malicia y la perversidad, buscando desorden y destrucción en el mundo."
+    }
+  ],
+  "tiradas_salvacion": [
+    {
+      "id": "venenos_toxicos",
+      "nombre": "Venenos y tóxicos"
+    },
+    {
+      "id": "magia_maldiciones",
+      "nombre": "Magia y maldiciones"
+    },
+    {
+      "id": "paralisis_petrificacion_control_mental",
+      "nombre": "Parálisis o petrificación y control mental"
+    },
+    {
+      "id": "quemadura_desangrado",
+      "nombre": "Quemadura y desangrado"
+    },
+    {
+      "id": "sortilegios_encantamientos_trampas",
+      "nombre": "Sortilegios, encantamientos y trampas"
+    }
+  ],
+  "tiradas_salvacion_descripcion": [
+    {
+      "nombre": "Venenos y Tóxicos",
+      "descripcion": "Cuando te enfrentas a sustancias venenosas, tu resistencia física y astucia son clave. Tu sabiduría influirá en tu capacidad para neutralizar los efectos dañinos."
+    },
+    {
+      "nombre": "Magias y Maldiciones",
+      "descripcion": "La resistencia ante hechizos y maldiciones requiere agudeza mental y fuerza de voluntad. Tu sabiduría desempeñará un papel crucial en tu capacidad para repeler estas influencias arcanas."
+    },
+    {
+      "nombre": "Petrificaciónes, Parálisis y Control Mental",
+      "descripcion": "Superar situaciones que amenazan tu libertad de movimiento y voluntad demanda coraje y determinación. La sabiduría te ayudará a mantener el control sobre tu propia mente."
+    },
+    {
+      "nombre": "Quemaduras y Desangrados",
+      "descripcion": "Enfrentarte al daño físico extremo, como quemaduras o pérdida de sangre, requerirá resistencia y fortaleza. Tu sabiduría contribuirá a tu capacidad para soportar estas adversidades."
+    },
+    {
+      "nombre": "Sortilegios, Encantamientos y Trampas",
+      "descripcion": "Desafíos que involucran ilusiones, engaños y astutas trampas pondrán a prueba tu perspicacia. Tu sabiduría será esencial para discernir la verdad y evitar caer en artimañas."
+    }
+  ],
+  "instalaciones_offrol": [
+    {
+      "clase": "Alquimista",
+      "instalacion": "Laboratorio de alquimia",
+      "clase_id": "alquimista"
+    },
+    {
+      "clase": "Amazona",
+      "instalacion": "Invernáculo",
+      "clase_id": "amazona"
+    },
+    {
+      "clase": "Argonauta",
+      "instalacion": "Mesa de cartografía",
+      "clase_id": "argonauta"
+    },
+    {
+      "clase": "Bardo",
+      "instalacion": "Escenario con instrumentos musicales variados",
+      "clase_id": "bardo"
+    },
+    {
+      "clase": "Berserker",
+      "instalacion": "Muñeco de practica",
+      "clase_id": "berserker"
+    },
+    {
+      "clase": "Bokor",
+      "instalacion": "Invernadero",
+      "clase_id": "bokor"
+    },
+    {
+      "clase": "Brujo",
+      "instalacion": "Biblioteca",
+      "clase_id": "brujo"
+    },
+    {
+      "clase": "Caballero de la llama",
+      "instalacion": "Capilla",
+      "clase_id": "caballero-de-la-llama"
+    },
+    {
+      "clase": "Cazador de las sombras",
+      "instalacion": "Muñeco práctica, capilla, biblioteca",
+      "clase_id": "cazador-de-sombras"
+    },
+    {
+      "clase": "Cazador",
+      "instalacion": "Diana",
+      "clase_id": "cazador"
+    },
+    {
+      "clase": "Cazarecompensas",
+      "instalacion": "Muñeco de práctica, diana",
+      "clase_id": "cazarecompensas"
+    },
+    {
+      "clase": "Chamán",
+      "instalacion": "Sala de hábitat elemental",
+      "clase_id": "chaman"
+    },
+    {
+      "clase": "Clérigo",
+      "instalacion": "Capilla",
+      "clase_id": "clerigo"
+    },
+    {
+      "clase": "Druida",
+      "instalacion": "Invernáculo",
+      "clase_id": "druida"
+    },
+    {
+      "clase": "Espadachín",
+      "instalacion": "Muñeco de práctica",
+      "clase_id": "espadachin"
+    },
+    {
+      "clase": "Explorador",
+      "instalacion": "Sala de simulación de alteración del terreno",
+      "clase_id": "explorador"
+    },
+    {
+      "clase": "Forajido",
+      "instalacion": "Muñeco de práctica, diana",
+      "clase_id": "forajido"
+    },
+    {
+      "clase": "Gladiador",
+      "instalacion": "Muñeco de práctica",
+      "clase_id": "gladiador"
+    },
+    {
+      "clase": "Guardabosques",
+      "instalacion": "Diana",
+      "clase_id": "guardabosques"
+    },
+    {
+      "clase": "Guerrero Arcano",
+      "instalacion": "Sala de hábitat elemental",
+      "clase_id": "guerrero-runico"
+    },
+    {
+      "clase": "Guerrero Nórdico",
+      "instalacion": "Muñeco de práctica",
+      "clase_id": "guerrero-nordico"
+    },
+    {
+      "clase": "Guerrero",
+      "instalacion": "Muñeco de práctica",
+      "clase_id": "guerrero"
+    },
+    {
+      "clase": "Ingeniero",
+      "instalacion": "Forja o taller de ingeniería",
+      "clase_id": "ingeniero"
+    },
+    {
+      "clase": "Invocador",
+      "instalacion": "Biblioteca",
+      "clase_id": "invocador"
+    },
+    {
+      "clase": "Jinete Luxo",
+      "instalacion": "Establos",
+      "clase_id": "jinete-luxo"
+    },
+    {
+      "clase": "Ladrón",
+      "instalacion": "Muñeco de práctica",
+      "clase_id": "ladron"
+    },
+    {
+      "clase": "Legionario",
+      "instalacion": "Muñeco de práctica",
+      "clase_id": "legionario"
+    },
+    {
+      "clase": "Mago",
+      "instalacion": "Biblioteca",
+      "clase_id": "mago-arcano"
+    },
+    {
+      "clase": "Místico",
+      "instalacion": "Biblioteca/Observatorio",
+      "clase_id": "mistico"
+    },
+    {
+      "clase": "Monje",
+      "instalacion": "Centro de meditación",
+      "clase_id": "monje"
+    },
+    {
+      "clase": "Nigromante",
+      "instalacion": "Biblioteca",
+      "clase_id": "nigromante"
+    },
+    {
+      "clase": "Ninja",
+      "instalacion": "Muñeco de práctica",
+      "clase_id": "ninja-kunoichi"
+    },
+    {
+      "clase": "Nómada semita",
+      "instalacion": "Sala de simulación de alteración del terreno",
+      "clase_id": "nomada-del-desierto"
+    },
+    {
+      "clase": "Paladín",
+      "instalacion": "Capilla",
+      "clase_id": "paladin"
+    },
+    {
+      "clase": "Pirata",
+      "instalacion": "Mesa de cartografía",
+      "clase_id": "pirata"
+    },
+    {
+      "clase": "Piromántico",
+      "instalacion": "Biblioteca",
+      "clase_id": "piromantico"
+    },
+    {
+      "clase": "Ronin",
+      "instalacion": "Muñeco de practica",
+      "clase_id": "ronin"
+    },
+    {
+      "clase": "Samurái",
+      "instalacion": "Muñeco de practica",
+      "clase_id": "samurai"
+    },
+    {
+      "clase": "Shirkan",
+      "instalacion": "Muñeco de practica",
+      "clase_id": "sirkhan"
+    },
+    {
+      "clase": "Vagabundo",
+      "instalacion": "Muñeco de practica",
+      "clase_id": "vagabundo"
+    }
+  ],
+  "secciones": [
+    {
+      "titulo": null,
+      "parrafos": [
+        "¡Es hora de dar vida a tu héroe en las páginas de Terratea! A continuación, proporciona la información esencial para la creación de la ficha de tu personaje:",
+        "Nombre del Personaje: Elige un nombre apropiado y memorable para tu héroe.",
+        "Nombre del Jugador: Indica tu propio nombre para identificar la ficha de personaje.",
+        "Clase del Personaje: Define la clase a la que pertenece tu personaje, determinando así sus habilidades y habilidades especiales.",
+        "Raza del Personaje: Selecciona la raza que dará forma a la identidad de tu héroe, influyendo en su apariencia, cultura y atributos raciales.",
+        "Alineamiento del Personaje: Establece el alineamiento moral y ético de tu personaje, reflejando sus principios y valores.",
+        "Altura del Personaje: Determina la altura de tu personaje siguiendo los estándares de su raza.",
+        "Peso del Personaje: Indica el peso de tu personaje de acuerdo con los estándares de su raza.",
+        "Sexo del Personaje: Especifica el género de tu héroe.",
+        "Edad del Personaje: Define la edad de tu personaje de acuerdo con los estándares de su raza.",
+        "Cabello del Personaje: Describa el estilo y color del cabello de tu personaje.",
+        "Ojos del Personaje: Especifica el color y características de los ojos de tu héroe.",
+        "Marcas del Personaje: Si tu personaje tiene alguna marca distintiva, como cicatrices, tatuajes o peculiaridades físicas, descríbelas aquí.",
+        "¡Con esta información, tu personaje cobrará vida en las páginas de Terratea!"
+      ],
+      "imagenes": [
+        "img/descripcion-personaje/descripcion-personaje-01.webp"
+      ]
+    },
+    {
+      "titulo": "ALINEAMIENTOS",
+      "parrafos": [
+        "El alineamiento de tu personaje refleja sus principios éticos y morales en el vasto mundo de Terratea. Elige una de las siguientes categorías que mejor describa la orientación moral de tu héroe:",
+        "Legales: Buscan la paz en el mundo, aborrecen la violencia y no toleran la injusticia ni las acciones caóticas.",
+        "Legales/Neutrales: Desean la paz en el mundo, ya sea mediante el uso de la violencia o a través de la diplomacia. Evitan la tiranía y acciones que puedan ser interpretadas como malas.",
+        "Neutrales: Viven en el punto medio, realizando acciones legales y caóticas según la situación lo requiera.",
+        "Neutrales/Caóticos: Centrados en su propio beneficio, no dudan en actuar de manera rastrera o maliciosa si eso les proporciona ventajas personales.",
+        "Caóticos: Anhelan el caos, actúan impulsados por la malicia y la perversidad, buscando desorden y destrucción en el mundo.",
+        "Es importante tener en cuenta que algunas clases imponen restricciones sobre los alineamientos que pueden adoptar los personajes. Asegúrate de revisar las restricciones de alineamiento asociadas con la clase que has elegido para tu héroe. Estas restricciones pueden influir en las decisiones morales y éticas que tome tu personaje durante su viaje en Terratea.",
+        "Selecciona la categoría que mejor se alinee con la filosofía moral de tu personaje en Terratea."
+      ]
+    },
+    {
+      "titulo": "TIRADAS DE SALVACIÓN",
+      "parrafos": [
+        "En Terratea, las situaciones peligrosas pueden manifestarse de diversas maneras, y tu personaje debe estar preparado para enfrentarlas. Aquí están las cinco clases de tiradas de salvación, cada una asociada con diferentes tipos de desafíos:",
+        "En el fascinante mundo de Terratea, las amenazas pueden adoptar diversas formas, y tu personaje debe estar listo para enfrentarlas. Aquí te presentamos las cinco clases de tiradas de salvación, cada una vinculada a desafíos específicos:",
+        "Venenos y Tóxicos: Cuando te enfrentas a sustancias venenosas, tu resistencia física y astucia son clave. Tu sabiduría influirá en tu capacidad para neutralizar los efectos dañinos.",
+        "Magias y Maldiciones: La resistencia ante hechizos y maldiciones requiere agudeza mental y fuerza de voluntad. Tu sabiduría desempeñará un papel crucial en tu capacidad para repeler estas influencias arcanas.",
+        "Petrificaciónes, Parálisis y Control Mental: Superar situaciones que amenazan tu libertad de movimiento y voluntad demanda coraje y determinación. La sabiduría te ayudará a mantener el control sobre tu propia mente.",
+        "Quemaduras y Desangrados: Enfrentarte al daño físico extremo, como quemaduras o pérdida de sangre, requerirá resistencia y fortaleza. Tu sabiduría contribuirá a tu capacidad para soportar estas adversidades.",
+        "Sortilegios, Encantamientos y Trampas: Desafíos que involucran ilusiones, engaños y astutas trampas pondrán a prueba tu perspicacia. Tu sabiduría será esencial para discernir la verdad y evitar caer en artimañas.",
+        "Recuerda que, en cada situación, tu sabiduría modifica las tiradas de salvación. Así que, mantente alerta y confía en la agudeza de tu personaje para superar los desafíos que le depara."
+      ]
+    },
+    {
+      "titulo": "PUNTOS DE EXPERIENCIA",
+      "parrafos": [
+        "Cada victoria en Terratea no solo agrega tesoros y monedas a tu bolsa, sino también Puntos de Experiencia (EXP) que impulsan tu progreso. Aquí te presento una guía para entender cómo se asignan estos valiosos EXP:",
+        "Derrota de Enemigos: Cada enemigo abatido otorga EXP, con un valor específico asignado. Aquellos que participen en la lucha obtendrán la mitad de los EXP del valor asignado al enemigo.",
+        "Proyección al Próximo Nivel: La tabla NEC. (Puntos Necesarios para el Próximo Nivel) indica cuántos EXP necesitas para alcanzar el siguiente nivel. Al subir de nivel, tu vitalidad aumenta y obtienes un punto adicional para tus características.",
+        "Subir de Nivel 1-9: +5 punto de vitalidad extra.",
+        "Llegar al Nivel 10-19:",
+        "+10 puntos de vitalidad extra.",
+        "+1 punto extra en una característica seleccionada por el jugador. (solo al nivel 10)",
+        "Llegar al Nivel 20:",
+        "+2 punto extra en una característica seleccionada por el jugador.",
+        "+25 puntos de vitalidad extra.",
+        "Misiones Cumplidas: Además de las batallas, el éxito en misiones cumplidas también otorga EXP, además de reputación y fama, reconociendo tus habilidades más allá del campo de batalla.",
+        "¡Recuerda que cada victoria y misión cumplida no solo te acercan a la victoria, sino también al crecimiento personal y a desafíos aún mayores en tu viaje por Terratea!"
+      ]
+    },
+    {
+      "titulo": "MEDIDAS, PESO Y ESPERANZA DE VIDA SEGÚN LA RAZA",
+      "parrafos": [
+        "La diversidad de razas se refleja en sus diferentes estaturas. A continuación, te proporciono una guía que establece las medidas estándar para cada raza:",
+        "Humanos: 1.50 a 2.00 metros.",
+        "Elfos: 1.75 a 2.10 metros.",
+        "Orcos: 1.80 a 2.20 metros.",
+        "Semielfos: 1.60 a 2.00 metros.",
+        "Semiorcos: 1.75 a 2.00 metros.",
+        "Troloides: 2.00 a 2.50 metros.",
+        "No-Muertos: Altura variable según la raza no muerta",
+        "Hombres-lobo: 3.00 a 4.00 metros",
+        "Semidemonios: 1.70 a 1.95 metros",
+        "Elfos Oscuros: 1.80 a 2.30 metros.",
+        "Reptilianos: 1.50 a 1.80 metros.",
+        "Nahiaride: 0.80 a 1.25 metros.",
+        "Enanos: 1.00 a 1.25 metros.",
+        "Gnomos: 0.50 a 0.75 metros.",
+        "Felinos: 1.50 a 1.95 metros.",
+        "Jotuns: 3.00 a 20.00 metros.",
+        "Goblins: 0.45 a 0.80 metros.",
+        "Sátiros: 1.20 a 1.60 metros.",
+        "Aviroides: 1.90 a 2.20 metros.",
+        "Autómatas: No tienen altura especificada.",
+        "Estos valores de peso proporcionan una referencia general para cada raza en Terratea, aunque ten en cuenta que siempre puede haber variaciones individuales. Ahora pasemos al peso:",
+        "Humanos: 60 a 100 kg.",
+        "Elfos: 50 a 75 kg.",
+        "Orcos: 70 a 125 kg.",
+        "Semielfos: 55 a 80 kg.",
+        "Semiorcos: 65 a 100 kg.",
+        "Troloides: 80 a 200 kg.",
+        "No-Muerto: Variable según la raza no muerta",
+        "Hombres-lobo: 120 a 200 kg",
+        "Semidemonios: 55 a 80 kg.",
+        "Elfos Oscuros: 55 a 100 kg.",
+        "Reptilianos: 80 a 150 kg.",
+        "Nahiaride: 30 a 50 kg.",
+        "Enanos: 80 a 120 kg.",
+        "Gnomos: 20 a 40 kg.",
+        "Felinos: 50 a 100 kg.",
+        "Jotuns: 200 a 1.500 kg.",
+        "Goblins: 15 a 40 kg.",
+        "Sátiros: 40 a 65 kg.",
+        "Aviroides: 70 a 100 kg.",
+        "Autómata: Peso Variable.",
+        "Estos son los valores de la media de edad de las diferentes razas:",
+        "Humano: Alrededor de 90-100 años.",
+        "Elfo: Alrededor de 800-1250 años.",
+        "Orco: Alrededor de 60-75 años.",
+        "Troloide: 500-600 años.",
+        "Semielfo: Alrededor de 250-300 años.",
+        "Semiorco: Alrededor de 80-90 años.",
+        "No-Muerto: algunos renegados pueden vivir eternamente",
+        "Hombre-Lobo: Depende de la raza del portador de la Maldición.",
+        "Semidemonio: 400 a 600 Años.",
+        "Elfo Oscuro: Similar a los elfos, alrededor de 1000-1250 años.",
+        "Reptiliano: Alrededor de 75-100 años.",
+        "Nahiaride: 600-800 años.",
+        "Enano: Alrededor de 250-300 años.",
+        "Gnomo: Alrededor de 50-60 años.",
+        "Felino: Alrededor de 75-100 años.",
+        "Jotuns: 1500-2000 años.",
+        "Goblins: Alrededor de 40-60 años.",
+        "Sátiro: Alrededor de 150-200 años.",
+        "Aviroide: Alrededor de 25-35 años.",
+        "Autómata: pueden llegar a vivir eternamente, siempre y cuando se realice un correcto mantenimiento",
+        "Estos valores son promedios que pueden variar según la constitución y otros factores individuales. Utilízalos como una guía general para la creación de personajes en Terratea."
+      ]
+    },
+    {
+      "titulo": "MIEMBRO DEL GREMIO, RANGO Y REPUTACIÓN EN EL GREMIO",
+      "parrafos": [
+        "Dentro del vibrante tejido social de Terratea, los gremios desempeñan un papel crucial. Ser miembro de un gremio puede brindar beneficios significativos, pero también impone responsabilidades y expectativas. Aquí te explicamos cómo gestionar esta parte clave de tu identidad:",
+        "Miembro del Gremio: Indica el nombre del gremio al que perteneces. Los gremios pueden variar desde organizaciones de comerciantes hasta sociedades de aventureros o cultos místicos.",
+        "Rango: Representa tu posición dentro del gremio. Puedes ascender en rango realizando misiones para el gremio, mostrando habilidades excepcionales o contribuyendo de manera destacada.",
+        "Reputación: La reputación es esencial en el mundo de los gremios. Cada barra completa de reputación te acerca a un ascenso de rango. Las acciones heroicas, misiones exitosas y comportamiento ejemplar aumentarán tu reputación.",
+        "Recuerda que cada gremio tiene sus propias reglas y valores, así que elige sabiamente y actúa con diligencia para ganarte un lugar destacado entre tus compañeros de gremio. ¡Que tu nombre resuene con honor en los salones de la hermandad gremial!"
+      ]
+    },
+    {
+      "titulo": "MOVIMIENTOS",
+      "parrafos": [
+        "En el escenario de Terratea, la movilidad desempeña un papel crucial que puede determinar el desenlace entre el triunfo y la derrota. A continuación, te presentamos los cinco movimientos fundamentales que definirán tu agilidad y destreza en diversas situaciones:",
+        "Movimiento Base: Este es tu movimiento estándar durante el juego. Representa tu capacidad para desplazarte en general por el mundo de Terratea.",
+        "Movimiento en Combate: En el calor de la batalla, la agilidad puede marcar la diferencia.",
+        "Este movimiento refleja tu capacidad para maniobrar durante un enfrentamiento, evitando golpes y posicionándote estratégicamente, además debes añadirle el movimiento base.",
+        "Movimiento en Carrera (fatigado): Cuando la situación requiere velocidad extrema, puedes combinar movimientos en carrera, movimiento en combate y movimiento base. Ten en cuenta que, al hacerlo, te expones a un mayor riesgo ya que te encontraras fatigado y después tendrás que descansar durante un turno.",
+        "Movimiento Cargado (Sobrecarga): Este movimiento no solo es una carga física, sino también una carga emocional. Representa tu capacidad para cargar con un compañero herido o llevar a un enemigo abatido a un lugar seguro en el campo de batalla. Del mismo modo, que representa tu movimiento cuando tienes más carga de la que puede soportar tu raza.",
+        "Movimiento para Huir: La retirada estratégica es una táctica sabia en ciertas situaciones.",
+        "El movimiento para huir te permite alejarte del peligro y reevaluar tu enfoque, si consigues un destrabe en combate, esta acción es gratuita."
+      ]
+    },
+    {
+      "titulo": "Consideraciones Especiales",
+      "parrafos": [
+        "Los personajes infatigables no se ven afectados por la fatiga del movimiento en carrera.",
+        "Un personaje puede moverse y atacar, pero si agota los movimientos, no podrá atacar ya que requiere gastar un movimiento para realizar un ataque. Excepción: aquellos con ataques de carga, que pueden atacar al final de su movimiento.",
+        "Recuerda siempre planificar tus acciones con astucia, ¡y que tus movimientos sean rápidos y precisos, Héroe!"
+      ]
+    },
+    {
+      "titulo": "ARMAS Y MUNICIÓN",
+      "parrafos": [
+        "En el arsenal de Terratea, te encuentras con una variada colección de armas, cada una con sus propias peculiaridades. Sin embargo, es crucial entender la distinción entre las armas de una mano y las de dos. No se permite la combinación de armas de dos manos con otras de una mano o escudos, a menos que tu clase permita lo contrario. Al realizar un ataque, debes elegir un arma, incluso si tienes dos de una mano, a menos que las reglas de tu clase permitan otra cosa.",
+        "En cuanto a las armas, es esencial considerar el rango de distancia en relación con la visión de tu personaje. Cada arma tiene su propio valor de daño, susceptible a modificaciones por factores como ingeniería, hechizos, elementos, maldiciones, entre otros. Además, se incluye una sección de categoría especial para agregar descripciones adicionales; por ejemplo, indicando que un arma puede ignorar la constitución del enemigo. ¡Elige sabiamente!"
+      ]
+    },
+    {
+      "titulo": "HABILIDADES ESPECIALES Y RACIALES",
+      "parrafos": [
+        "Dentro de este apartado, encontrarás un abanico de habilidades únicas que definen las capacidades excepcionales de tu personaje en Terratea. Debes de añadir las habilidades raciales que son innatas, reflejando las características distintivas de tu raza. Además, a medida que avances en tu aventura, tendrás la oportunidad de adquirir nuevas habilidades especiales, ya sea por eventos específicos o entrenamiento dedicado.",
+        "Estas habilidades ofrecen ventajas tácticas en combate y también pueden influir en la resolución de eventos, interacciones sociales y desafíos específicos del mundo. Explora estas destrezas únicas y descubre cómo pueden potenciar tu personaje y contribuir a la narrativa dinámica de tu historia en Terratea.",
+        "Cuando una de esta habilidad coincide con otra habilidad de clase, la habilidad racial no es acumulativa y es suprimida."
+      ]
+    },
+    {
+      "titulo": "RANGO DE ALCANCE",
+      "parrafos": [
+        "El rango de alcance es una característica crucial que define hasta qué distancia puedes ejercer tu influencia o llevar a cabo acciones específicas en el campo de batalla. Este parámetro está directamente vinculado a tu clase y establece la distancia la máxima desde la cual puedes interactuar con objetivos, siendo siempre el mínimo 1.",
+        "Sin embargo, para aquellos personajes a distancia que deseen desafiar los límites, existe la posibilidad de extender su alcance. No obstante, ten en cuenta que esta táctica no viene sin sacrificios. Por cada casilla adicional más allá de tu rango de alcance, enfrentarás una penalización de -5 a la tirada de acción y una resolución menos efectiva, disminuyendo en -4 cada tirada de daño o sanación. Explora estratégicamente hasta dónde estás dispuesto a llegar para alcanzar tus objetivos en Terratea."
+      ]
+    },
+    {
+      "titulo": "EQUIPO Y PESO",
+      "parrafos": [
+        "Vamos a continuar explorando el fascinante mundo de Terratea. En esta sección, nos sumergiremos en el aspecto práctico y logístico de tu personaje: su equipo y el peso que puede soportar. Cada arma, munición, armadura, tesoro y objeto tiene su propio peso asignado. Ten en cuenta que cada raza tiene sus propias limitaciones en cuanto al peso que puede llevar un personaje.",
+        "El equipo es esencial para la supervivencia y el éxito en tus aventuras, así que asegúrate de llevar contigo todo lo necesario. A la derecha de cada objeto en tu inventario, se indica su peso correspondiente. La gestión adecuada del peso es crucial para tu movilidad y eficacia en el campo de juego. No olvides considerar opciones de almacenamiento y transporte para garantizar que puedas llevar todo lo necesario sin afectar negativamente tu desempeño en Terratea. ¡Prepárate para cargar con la responsabilidad de tu equipo y emprender tu viaje!"
+      ]
+    },
+    {
+      "titulo": "TESOROS",
+      "parrafos": [
+        "Adentrémonos en el fascinante mundo del tesoro. Aquí, en Terratea, el tesoro es mucho más que simples objetos de valor; son joyas, gemas, piedras preciosas, coronas y otros tesoros que puedes descubrir y acumular durante tus aventuras.",
+        "Cada pieza de tesoro tiene su propio valor, ya sea monetario o simbólico, y puede desempeñar un papel crucial en tu viaje. Ya sea para comerciar, mejorar tu equipo o para llevar a cabo transacciones en los diversos mercados de Terratea, el tesoro puede abrir puertas y proporcionarte recursos para enfrentar los desafíos que te esperan.",
+        "Explora con astucia y cautela, ¡quién sabe qué tesoros aguardan tu descubrimiento en este intrincado y misterioso mundo!"
+      ]
+    },
+    {
+      "titulo": "HABILIDADES",
+      "parrafos": [
+        "En la rica amalgama de habilidades, bonificaciones y restricciones que acompañan a la elección de tu clase, descubrirás un conjunto distintivo que define las capacidades y especialidades de tu personaje. Estas habilidades no solo son cruciales para tu avance, sino que también desempeñan un papel vital a la hora de afrontar los diversos desafíos que Terratea tiene reservados para ti.",
+        "A medida que avanzas en tu travesía, perfeccionarás y desbloquearás nuevas habilidades. Se convertirán en el recurso fundamental que te brindará la destreza necesaria para enfrentarte a criaturas poderosas, resolver intrincados enigmas y superar los obstáculos que se crucen en tu camino.",
+        "Cada habilidad en tu repertorio tiene su singularidad y contribuye de manera crucial al enfrentar los desafíos en Terratea. Identificar si una habilidad requiere una tirada de dado de acción es tan simple como observar si hay un símbolo de suma (+) al final de su nombre. Por ejemplo, \"Hurto (+3 a la tirada)\" indica que necesitas realizar una tirada de dado de acción, mientras que \"Leer lenguas\" se ejecuta de manera automática.",
+        "Luego de llevar a cabo la acción, entra en juego la tirada de resultado, empleando un sistema de porcentajes. Un ejemplo para la habilidad \"Premonición\" sería:",
+        "Tirada de 20: Tu visión está nublada, y no observas nada de valor.",
+        "Tirada de 50: Puedes divisar mesas, comida y dos manos cogiendo una jarra de cerveza",
+        "Tirada de 90: Visualizas que detrás de esa puerta hay dos guardias orcos bebiéndose una cerveza, armados con dos grandes espadas y con un ánimo muy subido.",
+        "¡Prepárate para sumergirte en las maravillas que descubrirás a medida que tu personaje avance de nivel, y disfruta explorando un conjunto de habilidades cada vez más asombroso para enfrentar los desafíos que el destino tiene reservados para ti!"
+      ]
+    },
+    {
+      "titulo": "RETRATO",
+      "parrafos": [
+        "Capturar la esencia visual de tu personaje, pinta un lienzo en constante evolución. A medida que tu héroe avanza en su odisea, su retrato se transforma, narrando visualmente las vicisitudes y transformaciones que experimenta en Terratea."
+      ]
+    },
+    {
+      "titulo": "ARMA Y EQUIPAMIENTO ESPECIAL",
+      "parrafos": [
+        "En este apartado, inmortalizamos las posesiones que distinguen a tu héroe del resto. Se trata de armas y equipamiento únicos, piezas extraordinarias que solo unos pocos afortunados pueden llegar a poseer. ¿Serás capaz de adquirir una de estas distinguidas posesiones y marcar tu lugar en la Leyendas de Terratea?"
+      ]
+    },
+    {
+      "titulo": "LA VITALIDAD",
+      "parrafos": [
+        "Representa los puntos de vida que tiene tu personaje. Durante la partida cuando los puntos de vida lleguen a cero queda inconsciente y cuando el daño sobrepasa el –3, entonces el personaje muere. Para determinar la vida de tu Héroe, se deberá de tirar 1d12, el resultado es la vida de tu Héroe, añadiendo el modificador de Constitución. La tirada mínima es de 3.",
+        "\"En este sistema de juego, al avanzar de nivel, la vitalidad del personaje aumenta. Durante los niveles del 1 al 9, el incremento en la vitalidad es de 5 puntos por nivel. Sin embargo, en los niveles 10 y 19, el aumento se duplica, alcanzando los 10 puntos por nivel en lugar de los 5 habituales. Por último, al llegar al nivel 20, se produce un incremento excepcional de 25 puntos de vida.\""
+      ]
+    },
+    {
+      "titulo": "NIVEL DE MONTURA/MASCOTA",
+      "parrafos": [
+        "Las monturas y mascotas aumentan su vitalidad a medida que su amo sube de nivel, permitiéndoles ser compañeros más resistentes y útiles en combate o en la exploración.",
+        "Cuando el personaje alcanza niveles del 2 al 9, la mascota o montura gana vitalidad en incrementos de 2 puntos por nivel, asegurando un crecimiento progresivo sin afectar demasiado el balance del juego.",
+        "Del nivel 10 al 19, la mascota o montura aumenta su vitalidad en 5 puntos por nivel, reflejando una evolución más notable y acorde a los desafíos que el amo enfrenta en esta etapa.",
+        "Al llegar al nivel 20, la mascota o montura obtiene un bono adicional de 10 puntos de vida, consolidándose como aliados poderosos y confiables.",
+        "Cuando tu personaje llegue al nivel 10, podrás mejorar en +1 uno de los modificadores de tu mascota o montura. Y cuando alcances el nivel 20, tendrás la oportunidad de sumar +2 puntos de modificador adicionales, haciendo de tu compañero un aliado aún más formidable.",
+        "Compañero animal:",
+        "Cualquier personaje puede adquirir o comprar una mascota de calidad común si lo desea. Sin embargo, solo el Cazador tiene la habilidad y el entrenamiento necesarios para manejarla y combatir junto a ella. En caso de que tu personaje no sea un Cazador y aun así quieras que tu mascota participe en combate, funcionará igual que un Séquito NPJ: será el Máster quien la controle, siguiendo siempre las indicaciones y directrices del líder.",
+        "Equitación:",
+        "Si tu personaje aprende la habilidad de Equitación, podrá montar un animal que se adapte a su tamaño y peso, siempre que sea de calidad común. La única excepción es el Jinete Luxo, que sigue sus propias reglas especiales a la hora de montar.",
+        "Además del aumento en vitalidad, algunas monturas y mascotas pueden desarrollar habilidades adicionales según su entrenamiento, mejorando su utilidad en distintas situaciones. Esto permite que cada jugador personalice su vínculo con su compañero, creando estrategias únicas en el transcurso de la aventura.",
+        "En el caso de las categorías 2, 3 y 4, las mascotas o monturas solo podrán realizar un ataque, excepto en ocasiones específicas o si su uso está relacionado directamente con la raza que sean."
+      ]
+    },
+    {
+      "titulo": "Sistema Off-Rol",
+      "parrafos": [
+        "¿Alguna vez te has preguntado qué hace tu personaje cuando no estás jugando? ¿Se queda mirando al vacío, se desconecta como si fuera una máquina, o simplemente se queda inmóvil? ¡Pues no tiene por qué ser así! En este juego, tu personaje puede seguir activo, incluso cuando no estés participando en una aventura.",
+        "Imagínate, mientras tú no juegas, tu personaje puede estar buscando un oficio, entrenando para mejorar sus habilidades, recopilando información valiosa para futuras misiones o ganando experiencia. Este sistema te da la posibilidad de que tu personaje siga evolucionando y contribuyendo al mundo, sin importar si estás presente o no.",
+        "¿Cómo funciona?",
+        "Es muy sencillo. Mientras estás \"fuera de juego\" u \"Off Rol\", tu personaje tiene la libertad de realizar actividades que lo mantendrán en movimiento dentro del mundo. Lo más curioso de todo es que, cuando vuelvas a jugar, una vez por sesión se lanzará un dado de 100 para ver cuánto ha progresado tu personaje en las actividades que estuvo haciendo. Ya sea trabajando, entrenando o recopilando información, tu personaje no será el mismo que cuando lo dejaste. Habrá hecho progresos, y quizás incluso haya cambiado un poco gracias a tus decisiones mientras estabas Off Rol.",
+        "Aquí te dejo algunas de las cosas que puede hacer tu personaje:",
+        "Buscar un oficio: ¿Tu personaje quiere ganarse la vida? Puede aprovechar el tiempo fuera de las misiones para aprender un oficio o trabajar en uno que ya tenga. Lo mejor es que otros jugadores pueden verlo por el mundo ejerciendo ese empleo, lo que hace que su presencia sea más real en el entorno.",
+        "Deberás decidir qué tipo de trabajo quieres que realice tu personaje mientras no estás en tus aventuras. Luego, tendrás que ir al lugar adecuado para rolear la contratación del oficio. Si tienes suerte, te contratarán; si no, tendrás que buscar en otro lugar u optar por un trabajo diferente. Lo interesante es que, a medida que avances en el oficio, tu eficiencia mejorará, y eso se reflejará en el salario.",
+        "Entrenamiento: Aunque necesitas una sede de gremio para esta acción, una vez que tengas los elementos necesarios, puedes usar el tiempo Off Rol para aprender nuevas habilidades. Desde combatir con dos manos, forjar armas, aprender nuevas habilidades o dominar técnicas especiales, ¡este es el momento ideal para que tu personaje crezca!",
+        "Una vez que tengas la sede de gremio y los objetos necesarios, podrás tirar un dado de 100 una vez al mes para ver cuánto progresa tu personaje en el aprendizaje de una nueva habilidad. Si sacas 100, habrás aprendido completamente la acción. Además, si tienes un instructor, puedes hacer otra tirada que aumente el progreso, y aquellos con la habilidad de \"aprendizaje avanzado\" tienen un bono de +10 en la primera tirada.",
+        "Recopilar información: ¿Te falta información crucial para la próxima aventura? Tu personaje puede estar investigando mientras tú no juegas. Puedes enviarlo a la biblioteca, los bajos fondos o a eventos donde pueda recolectar datos importantes para futuras misiones.",
+        "Esta opción es perfecta si necesitas datos fuera de la partida o si quieres manipular información para tus fines. Además, gracias a la información que obtengas, podrías descubrir oportunidades para nuevas aventuras secundarias.",
+        "Granjear experiencia: ¿Sientes que tu personaje evoluciona demasiado lento? Con el sistema Off-Rol, puedes aumentar tu experiencia fuera de las partidas. Cada clase tiene sus propios elementos necesarios para realizar esta actividad, y también necesitarás una sede de gremio. Aquí te dejo una lista de los objetos necesarios para cada clase:",
+        "Alquimista - Laboratorio de alquimia",
+        "Amazona - Invernáculo.",
+        "Argonauta - Mesa de cartografía",
+        "Bardo - Escenario con instrumentos musicales variados",
+        "Berserker - Muñeco de practica",
+        "Bokor - Invernadero",
+        "Brujo - Biblioteca",
+        "Caballero de la llama - Capilla",
+        "Cazador de las sombras - Muñeco práctica, capilla, biblioteca",
+        "Cazador - Diana",
+        "Cazarecompensas - Muñeco de práctica, diana",
+        "Chamán - Sala de hábitat elemental",
+        "Clérigo - Capilla",
+        "Druida - Invernáculo",
+        "Espadachín - Muñeco de práctica",
+        "Explorador - Sala de simulación de alteración del terreno.",
+        "Forajido - Muñeco de práctica, diana",
+        "Gladiador - Muñeco de práctica",
+        "Guardabosques - Diana",
+        "Guerrero Arcano - Sala de hábitat elemental",
+        "Guerrero Nórdico - Muñeco de práctica",
+        "Guerrero - Muñeco de práctica",
+        "Ingeniero - Forja o taller de ingeniería",
+        "Invocador - Biblioteca",
+        "Jinete Luxo - Establos",
+        "Ladrón - Muñeco de práctica",
+        "Legionario - Muñeco de práctica.",
+        "Mago - Biblioteca",
+        "Místico - Biblioteca/Observatorio.",
+        "Monje - Centro de meditación",
+        "Nigromante - Biblioteca",
+        "Ninja - Muñeco de práctica",
+        "Nómada semita - Sala de simulación de alteración del terreno.",
+        "Paladín - Capilla",
+        "Pirata - Mesa de cartografía",
+        "Piromántico - Biblioteca",
+        "Ronin - Muñeco de practica",
+        "Samurái - Muñeco de practica",
+        "Shirkan - Muñeco de practica",
+        "Vagabundo - Muñeco de practica",
+        "Para saber cuánta experiencia hemos generado, ve al apartado de \"Experiencia necesaria para el siguiente nivel\", divide esa cantidad a la mitad y luego lanza un dado de 100. El porcentaje del dado determinará cuánta experiencia ganas, siendo el 100% la mitad de la experiencia necesaria. Si tienes un instructor, en lugar de dividir por la mitad, divides por cuatro, y el máximo que puedes ganar es ese cuarto.",
+        "Ejemplo: Si necesitas 10.000 de experiencia para pasar del nivel 3 al nivel 4, toma la mitad (5.000) y lanza el dado. Si sacas un 100, habrás ganado 5.000 puntos de experiencia. Si tienes un instructor, divides 10.000 por cuatro (2.500), y si sacas otro 100, habrás ganado 2.500 puntos de experiencia adicionales, sumando un total de 7.500.",
+        "Restricciones por nivel:",
+        "Entre los niveles 10 y 18, la experiencia obtenida será equivalente a un cuarto de la requerida para subir de nivel.",
+        "Si el personaje cuenta con un instructor, este permitirá obtener un décimo de la experiencia necesaria para subir de nivel, aplicado según el porcentaje obtenido en la tirada.",
+        "¿Qué puedes lograr con el Sistema Off Rol?",
+        "Este sistema no solo hace que el mundo de tu personaje se sienta más vivo, sino que también te permite explorar distintas facetas de su personalidad y habilidades. Podrás ver a tu personaje desempeñando un rol en el mundo, como si fuera un NPC más, interactuando con el entorno como un lugareño. En lugar de esperar a la próxima gran aventura para desarrollarlo, puedes darle un empujón constante. Así, cuando estés listo para jugar de nuevo, sentirás que tu personaje está un paso más adelante, más preparado para lo que venga.",
+        "Recuerda que la vida de tu personaje sigue avanzando mientras no juegas, así que asegúrate de tener un lugar donde dormir y suficientes raciones de comida para subsistir: al menos cuatro raciones por mes, una ración por semana."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+[
+  {
+    "nombre": "AVENTURINA",
+    "valor": "1 MO",
+    "resistencia": "CALOR",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/aventurina.webp"
+  },
+  {
+    "nombre": "TURMALINA",
+    "valor": "25 MO",
+    "resistencia": "FRÍO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/turmalina.webp"
+  },
+  {
+    "nombre": "TOPACIO",
+    "valor": "50 MO",
+    "resistencia": "CORTANTE",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/topacio.webp"
+  },
+  {
+    "nombre": "MALAQUITA",
+    "valor": "75 MO",
+    "resistencia": "CONTUNDENTE",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/malaquita.webp"
+  },
+  {
+    "nombre": "SARDONYX",
+    "valor": "100 MO",
+    "resistencia": "PERFORANTE",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/sardonyx.webp"
+  },
+  {
+    "nombre": "ÓNICE",
+    "valor": "150 MO",
+    "resistencia": "OSCURO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/onice.webp"
+  },
+  {
+    "nombre": "JASPE",
+    "valor": "200 MO",
+    "resistencia": "DESANGRADO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/jaspe.webp"
+  },
+  {
+    "nombre": "PERLA BLANCA",
+    "valor": "300 MO",
+    "resistencia": "PARÁLISIS",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/perla-blanca.webp"
+  },
+  {
+    "nombre": "ÁMBAR",
+    "valor": "350 MO",
+    "resistencia": "PETRIFICACIÓN",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/ambar.webp"
+  },
+  {
+    "nombre": "PERIDOTO",
+    "valor": "500 MO",
+    "resistencia": "ÁCIDO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/peridoto.webp"
+  },
+  {
+    "nombre": "JADE",
+    "valor": "750 MO",
+    "resistencia": "NATURALEZA",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/jade.webp"
+  },
+  {
+    "nombre": "AMATISTA",
+    "valor": "1000 MO",
+    "resistencia": "VENENO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/amatista.webp"
+  },
+  {
+    "nombre": "RUBÍ",
+    "valor": "1250 MO",
+    "resistencia": "MALDICIONES",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/rubi.webp"
+  },
+  {
+    "nombre": "ESMERALDA",
+    "valor": "1500 MO",
+    "resistencia": "ARCANO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/esmeralda.webp"
+  },
+  {
+    "nombre": "ÓPALO",
+    "valor": "1750 MO",
+    "resistencia": "COSMICO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/opalo.webp"
+  },
+  {
+    "nombre": "ZAFIRO",
+    "valor": "2000 MO",
+    "resistencia": "TEMPORAL",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/zafiro.webp"
+  },
+  {
+    "nombre": "GRANATE",
+    "valor": "2500 MO",
+    "resistencia": "FUEGO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/granate.webp"
+  },
+  {
+    "nombre": "LAPISLÁZULI",
+    "valor": "3000 MO",
+    "resistencia": "AGUA",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/lapislazuli.webp"
+  },
+  {
+    "nombre": "AGUA MARINA",
+    "valor": "3500 MO",
+    "resistencia": "VIENTO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/agua-marina.webp"
+  },
+  {
+    "nombre": "LARIMAR",
+    "valor": "4000 MO",
+    "resistencia": "HIELO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/larimar.webp"
+  },
+  {
+    "nombre": "CITRINO",
+    "valor": "4500 MO",
+    "resistencia": "RELÁMPAGO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/citrino.webp"
+  },
+  {
+    "nombre": "ÁGATA",
+    "valor": "5000 MO",
+    "resistencia": "ESPIRITUAL",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/agata.webp"
+  },
+  {
+    "nombre": "CORNALINA",
+    "valor": "5250 MO",
+    "resistencia": "DEMONÍACA",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/cornalina.webp"
+  },
+  {
+    "nombre": "PERLA NEGRA",
+    "valor": "5500 MO",
+    "resistencia": "NECRÓTICO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/perla-negra.webp"
+  },
+  {
+    "nombre": "BERILIO",
+    "valor": "5750 MO",
+    "resistencia": "SAGRADO",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/berilio.webp"
+  },
+  {
+    "nombre": "ALEJANDRITA",
+    "valor": "6000 MO",
+    "resistencia": "GRAVEDAD",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/alejandrita.webp"
+  },
+  {
+    "nombre": "DIAMANTE",
+    "valor": "7500 MO",
+    "resistencia": "CONTROL MENTAL",
+    "categoria": "TABLA GEMAS",
+    "imagen": "img/equipo/gemas/diamante.webp"
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "nombre": "COMERCIANTE (MARITIMO)",
+    "coste_mantenimiento": "12 M.O. / MES",
+    "descripcion": "Navegante experto y negociador hábil, se especializa en el comercio a través de rutas marítimas, facilitando el intercambio de bienes y mercancías entre diferentes puertos.",
+    "imagen": "img/equipo/gremio/comerciante-maritimo.webp"
+  },
+  {
+    "nombre": "COMERCIANTE (TERRESTRE)",
+    "coste_mantenimiento": "10 M.O. / MES",
+    "descripcion": "Experto en el comercio terrestre, este individuo es astuto en la negociación y la logística, facilitando el movimiento eficiente de bienes y mercancías por tierra.",
+    "imagen": "img/equipo/gremio/comerciante-terrestre.webp"
+  },
+  {
+    "nombre": "MERCADER",
+    "coste_mantenimiento": "8 M.O. / MES",
+    "descripcion": "El hábil mercader ha establecido su puesto comercial en el corazón de la bulliciosa plaza de la ciudad, creando un punto focal vibrante y colorido que atrae a los ciudadanos y visitantes por igual.",
+    "imagen": "img/equipo/gremio/mercader.webp"
+  },
+  {
+    "nombre": "GALENO",
+    "coste_mantenimiento": "15 M.O. / MES",
+    "descripcion": "Un médico altamente capacitado, este galeno se especializa en cuidar de la salud y el bienestar del gremio, ofreciendo sus habilidades curativas y conocimientos médicos. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/galeno.webp"
+  },
+  {
+    "nombre": "INGENIERO",
+    "coste_mantenimiento": "20 M.O. / MES",
+    "descripcion": "Experto en la construcción y diseño, este ingeniero aporta sus habilidades para mejorar y mantener las instalaciones del gremio, así como para liderar proyectos de construcción. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/ingeniero.webp"
+  },
+  {
+    "nombre": "BARDO",
+    "coste_mantenimiento": "8 M.O. / MES",
+    "descripcion": "Artista itinerante, este bardo entretiene al gremio con música y actuaciones. Además de su destreza artística, puede ser difundir las hazañas del gremio por Terratea.",
+    "imagen": "img/equipo/gremio/bardo.webp"
+  },
+  {
+    "nombre": "ARTISTA",
+    "coste_mantenimiento": "8 M.O. / MES",
+    "descripcion": "dedicado a diversas formas de expresión artística, este artista contribuye a embellecer los espacios del gremio y aporta su creatividad a diversas actividades culturales.",
+    "imagen": "img/equipo/gremio/artista.webp"
+  },
+  {
+    "nombre": "HERRERO",
+    "coste_mantenimiento": "15 M.O. / MES",
+    "descripcion": "Maestro en la forja de metales, el herrero del gremio crea y mantiene armas, armaduras y otros objetos metálicos esenciales para la seguridad y el bienestar de los miembros.",
+    "imagen": "img/equipo/gremio/herrero.webp"
+  },
+  {
+    "nombre": "ALQUIMISTA",
+    "coste_mantenimiento": "18 M.O. / MES",
+    "descripcion": "Experto en la creación de pociones y elixires, el alquimista contribuye con sus habilidades para la curación, mejora de habilidades y otras necesidades místicas del gremio. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/alquimista.webp"
+  },
+  {
+    "nombre": "CLÉRIGO",
+    "coste_mantenimiento": "2 M.O. / MES",
+    "descripcion": "Guía espiritual del gremio, el clérigo ofrece orientación espiritual, realiza rituales y brinda apoyo emocional. Además, puede utilizar sus habilidades divinas para sanar a los miembros. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/clerigo.webp"
+  },
+  {
+    "nombre": "EXPLORADOR",
+    "coste_mantenimiento": "3 M.O. / MES",
+    "descripcion": "Experto en la exploración y el conocimiento del terreno. Puede proveer información valiosa sobre áreas desconocidas, facilitando el descubrimiento de recursos y rutas estratégicas.",
+    "imagen": "img/equipo/gremio/explorador.webp"
+  },
+  {
+    "nombre": "CAPITÁN DE BARCO",
+    "coste_mantenimiento": "50 M.O. / MES",
+    "descripcion": "Líder experto en la navegación marítima. Supervisa las operaciones de la flota, garantizando travesías seguras y exitosas. (no genera beneficios)",
+    "imagen": "img/equipo/gremio/capitan-de-barco.webp"
+  },
+  {
+    "nombre": "CURTIDOR DE PIELES",
+    "coste_mantenimiento": "12 M.O. / MES",
+    "descripcion": "Habilidoso en el procesamiento de pieles y cueros. Contribuye con la fabricación de armaduras, ropas y artículos de cuero. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/curtidor-de-pieles.webp"
+  },
+  {
+    "nombre": "ARQUITECTO",
+    "coste_mantenimiento": "20 M.O. / MES",
+    "descripcion": "Experto en diseño y construcción. Contribuye al desarrollo y mejora de las estructuras del gremio. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/arquitecto.webp"
+  },
+  {
+    "nombre": "CENTINELA",
+    "coste_mantenimiento": "10 M.O. / MES",
+    "descripcion": "Guardián dedicado a la seguridad del gremio. Supervisa la protección y defensa de los miembros. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/centinela.webp"
+  },
+  {
+    "nombre": "MARINERO",
+    "coste_mantenimiento": "3 M.P. / MES",
+    "descripcion": "Trabajador experto en tareas marítimas y mantenimiento de barcos. Contribuye al funcionamiento eficiente de la flota. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/marinero.webp"
+  },
+  {
+    "nombre": "ALBAÑIL",
+    "coste_mantenimiento": "3 M.P. / MES",
+    "descripcion": "Constructor y reparador de estructuras. Trabaja en la mejora y mantenimiento de edificaciones del gremio. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/albanil.webp"
+  },
+  {
+    "nombre": "BOTANICO",
+    "coste_mantenimiento": "5 M.O. / MES",
+    "descripcion": "Experto en plantas y cultivos. Contribuye al cultivo de hierbas e ingredientes importantes para pociones y alimentos. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/botanico.webp"
+  },
+  {
+    "nombre": "ESPÍA/LADRÓN",
+    "coste_mantenimiento": "30 M.O. /MES",
+    "descripcion": "Maestro en el arte del sigilo e infiltración. Proporciona información crucial sobre actividades y amenazas externas, además de robar algunos útiles asignados",
+    "imagen": "img/equipo/gremio/espia-ladron.webp"
+  },
+  {
+    "nombre": "BIBLIOTECARIO",
+    "coste_mantenimiento": "10 M.O. / MES",
+    "descripcion": "Custodio del conocimiento. Mantiene y organiza la biblioteca del gremio, proporcionando recursos valiosos. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/bibliotecario.webp"
+  },
+  {
+    "nombre": "ORACULO",
+    "coste_mantenimiento": "25 M.O. / MES",
+    "descripcion": "Poseedor de habilidades adivinatorias. Ofrece perspicacia sobre eventos futuros, proporcionando guía al gremio. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/oraculo.webp"
+  },
+  {
+    "nombre": "TATUADOR",
+    "coste_mantenimiento": "6 M.O./ MES",
+    "descripcion": "Artista especializado en tatuajes. Proporciona servicios de tatuaje.",
+    "imagen": "img/equipo/gremio/tatuador.webp"
+  },
+  {
+    "nombre": "ARQUEÓLOGO",
+    "coste_mantenimiento": "18 M.O. / MES",
+    "descripcion": "Explorador de ruinas antiguas. Descubre artefactos históricos y antiguos que pueden tener valor o propiedades místicas.",
+    "imagen": "img/equipo/gremio/arqueologo.webp"
+  },
+  {
+    "nombre": "CHEF",
+    "coste_mantenimiento": "1 M.O. / MES",
+    "descripcion": "Maestro culinario. Prepara comidas exquisitas para los miembros del gremio y puede ofrecer servicios de catering. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/chef.webp"
+  },
+  {
+    "nombre": "CONDUCTOR DE CARAVANAS",
+    "coste_mantenimiento": "7 M.O. / MES",
+    "descripcion": "Líder de caravanas comerciales. Organiza y dirige caravanas para el transporte seguro de bienes.",
+    "imagen": "img/equipo/gremio/conductor-de-caravanas.webp"
+  },
+  {
+    "nombre": "INSTRUCTOR",
+    "coste_mantenimiento": "20 M.O. / MES",
+    "descripcion": "Experto en la enseñanza de habilidades y conocimientos. Ofrece entrenamiento y mejora de habilidades para los miembros del gremio.\n(No genera beneficios)",
+    "imagen": "img/equipo/gremio/instructor.webp"
+  },
+  {
+    "nombre": "MAYORDOMO",
+    "coste_mantenimiento": "100 M.O. / MES",
+    "descripcion": "Administrador del gremio. Supervisa la logística interna, gestiona recursos y coordina actividades cotidianas. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/mayordomo.webp"
+  },
+  {
+    "nombre": "SERVICIO DE LIMPIEZA",
+    "coste_mantenimiento": "10 M.O. / MES",
+    "descripcion": "Equipo encargado de la limpieza y mantenimiento del gremio. Mantiene las instalaciones en condiciones óptimas. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/servicio-de-limpieza.webp"
+  },
+  {
+    "nombre": "BANQUERO",
+    "coste_mantenimiento": "25 M.O. / MES",
+    "descripcion": "Experto en finanzas y gestión de fondos. Gestiona las finanzas del gremio y ofrece servicios bancarios. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/banquero.webp"
+  },
+  {
+    "nombre": "MOZO DE CUADRA",
+    "coste_mantenimiento": "5 M.P. / MES",
+    "descripcion": "Encargado del cuidado de los animales y establos del gremio. Mantiene a los animales en condiciones óptimas.",
+    "imagen": "img/equipo/gremio/mozo-de-cuadra.webp"
+  },
+  {
+    "nombre": "SASTRE",
+    "coste_mantenimiento": "15 M.O/Mes",
+    "descripcion": "Especialista en confección y ajuste de ropa a medida, encargado de diseñar, crear y modificar prendas para satisfacer las necesidades del gremio. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/sastre.webp"
+  },
+  {
+    "nombre": "PESCADOR",
+    "coste_mantenimiento": "4 M.O./Mes",
+    "descripcion": "Encargado de capturar y suministrar pescado fresco y otros mariscos, asegurando el abastecimiento de productos acuáticos para el gremio. (No genera beneficios)",
+    "imagen": "img/equipo/gremio/pescador.webp"
+  },
+  {
+    "nombre": "CAZADOR",
+    "coste_mantenimiento": "7M.O./Mes",
+    "descripcion": "Responsable de la caza y provisión de carne de caza y recursos pieles, asegurando el suministro de estos productos para el gremio.",
+    "imagen": "img/equipo/gremio/cazador.webp"
+  },
+  {
+    "nombre": "GRANJERO",
+    "coste_mantenimiento": "2M.O./Mes",
+    "descripcion": "Encargado de cultivar y cosechar productos agrícolas, como frutas, verduras y cereales, para abastecer al gremio con alimentos frescos y otros recursos vegetales.",
+    "imagen": "img/equipo/gremio/granjero.webp"
+  },
+  {
+    "nombre": "ESCRIBA",
+    "coste_mantenimiento": "10 M.O./Mes",
+    "descripcion": "Encargado de registrar y transcribir documentos, mantener archivos organizados y gestionar la documentación escrita del gremio, incluyendo las aventuras e historial de todos sus miembros.",
+    "imagen": "img/equipo/gremio/escriba.webp"
+  },
+  {
+    "nombre": "LEÑADOR",
+    "coste_mantenimiento": "8M.P./Mes",
+    "descripcion": "Encargado de cortar y recolectar madera, suministrando los recursos necesarios para la construcción, calefacción y otras necesidades del gremio.",
+    "imagen": "img/equipo/gremio/lenador.webp"
+  },
+  {
+    "nombre": "JOYERO",
+    "coste_mantenimiento": "25M.O/Mes",
+    "descripcion": "Especialista en diseñar, crear y reparar joyas, encargado de trabajar con metales preciosos y piedras para satisfacer las demandas de diseño y restauración del gremio.",
+    "imagen": "img/equipo/gremio/joyero.webp"
+  },
+  {
+    "nombre": "CANTERO",
+    "coste_mantenimiento": "2 M.O./Mes",
+    "descripcion": "Especialista en el corte, tallado y ajuste de piedras y rocas, encargado de proporcionar materiales de construcción duraderos y detalles arquitectónicos para el gremio.",
+    "imagen": "img/equipo/gremio/cantero.webp"
+  },
+  {
+    "nombre": "NODRIZAS",
+    "coste_mantenimiento": "5M.P./Mes",
+    "descripcion": "Encargada de cuidar y alimentar a los miembros más jóvenes o dependientes del gremio, proporcionando atención y apoyo para su desarrollo y bienestar.",
+    "imagen": "img/equipo/gremio/nodrizas.webp"
+  },
+  {
+    "nombre": "PASTOR",
+    "coste_mantenimiento": "2M.O./Mes",
+    "descripcion": "Responsable de cuidar y gestionar el rebaño de animales, como ovejas o cabras, asegurando su bienestar, alimentación y salud, y proporcionando productos como lana o leche al gremio.",
+    "imagen": "img/equipo/gremio/pastor.webp"
+  },
+  {
+    "nombre": "CARPINTERO",
+    "coste_mantenimiento": "3 M.P/Mes",
+    "descripcion": "Encargado de diseñar, construir y reparar estructuras y muebles de madera, proporcionando soluciones de carpintería personalizadas y mantenimiento para las necesidades del gremio.",
+    "imagen": "img/equipo/gremio/carpintero.webp"
+  },
+  {
+    "nombre": "BUFÓN",
+    "coste_mantenimiento": "2 M.O./Mes",
+    "descripcion": "Encargado de entretener y divertir a los miembros del gremio a través de actuaciones cómicas, chistes y habilidades de entretenimiento, contribuyendo al ambiente alegre y ameno del gremio.",
+    "imagen": "img/equipo/gremio/bufon.webp"
+  },
+  {
+    "nombre": "INSTITUTRIZ",
+    "coste_mantenimiento": "5 M.O/MES",
+    "descripcion": "Encargada de la educación y formación de los jóvenes miembros del gremio, asegurando que adquieran conocimientos en lectura, escritura, cálculo y otras disciplinas útiles. También inculca disciplina, modales y principios fundamentales para la vida en el gremio.",
+    "imagen": "img/equipo/gremio/institutriz.webp"
+  },
+  {
+    "nombre": "BAILARINA",
+    "coste_mantenimiento": "15 M.O/MES",
+    "descripcion": "Especialistas en el arte de la danza, encargadas de entretener, animar eventos y espectáculos del gremio, elevando la moral de sus miembros y mejorando la reputación del lugar.",
+    "imagen": "img/equipo/gremio/bailarina.webp"
+  },
+  {
+    "nombre": "MINERO",
+    "coste_mantenimiento": "7 M.P/MES",
+    "descripcion": "Responsable de la extracción de minerales, piedras preciosas y otros recursos del subsuelo. Su labor es fundamental para el abastecimiento del gremio en materiales de construcción, forja y comercio. Posee resistencia física y conocimientos básicos de excavación y seguridad minera.",
+    "imagen": "img/equipo/gremio/minero.webp"
+  }
+]

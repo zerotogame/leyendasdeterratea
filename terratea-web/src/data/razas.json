@@ -1,0 +1,1899 @@
+{
+  "intro": [
+    "¡Pues perfecto!, vamos a empezar por la elección de raza para tu personaje. La raza que selecciones jugará un papel esencial en la definición de la identidad de tu héroe. A parte de una sola cuestión de apariencia externa, también influirá en la cultura a la que perteneces y en los atributos específicos que te distinguirán, así como en las desventajas que podrías encontrar en tu camino.",
+    "Cada raza viene acompañada de una descripción detallada que sumergirá a tu personaje en su rica historia y contexto dentro de Terratea. Además, obtendrás información sobre la capacidad de carga única de esa raza, sus habilidades y debilidades raciales que deberás tener en cuenta. Por último, encontrarás una lista de clases jugables con esa raza en particular."
+  ],
+  "razas": [
+    {
+      "id": "automata",
+      "nombre": "Autómata",
+      "descripcion": [
+        "Los Autómatas, aunque algunos no los consideran una raza en el sentido convencional, para ellos y sus creadores, representan una forma única de vida. Nacidos de la maestría del CITB, estos seres mecánicos han logrado desarrollar una consciencia propia, superando las expectativas de sus creadores. Aunque poseen una complexión más débil en comparación con otras razas, los Autómatas compensan esta debilidad con su vínculo especial con la magia y la brujería.",
+        "Distinguiéndose del resto de razas por su naturaleza no orgánica, los Autómatas no necesitan alimentarse ni beber, pues su existencia se sostiene gracias a un torrente constante de magia que fluye en su interior. Sus canalizadores de energía, incrustados dentro de su armazón, podrían considerarse el auténtico núcleo de su vida. Esta particularidad los vuelve inmunes al envenenamiento y al miedo, ya que carecen de órganos vulnerables y su mente lógica, diseñada para la estabilidad, no conoce las debilidades de la carne ni las flaquezas del ánimo.",
+        "Recientemente, algunos Autómatas han comenzado a explorar el mundo más allá de su lugar de creación, liberados del yugo de sus amos. Aunque la sociedad los mira con recelo debido a su naturaleza única, estos Autómatas están decididos a luchar por la aceptación y la integración en un mundo que aún está aprendiendo a entender su presencia. Su camino hacia la aceptación promete desafíos, pero también la oportunidad de demostrar que la diversidad puede enriquecer la sociedad de Terratea."
+      ],
+      "peso_max_carga_kg": 50,
+      "fortalezas": [
+        {
+          "nombre": "No puede ser envenenado",
+          "efecto": null,
+          "texto": "No puede ser envenenado"
+        },
+        {
+          "nombre": "No puede ser atemorizados",
+          "efecto": null,
+          "texto": "No puede ser atemorizados"
+        },
+        {
+          "nombre": "No sufren de hambre ni sed",
+          "efecto": null,
+          "texto": "No sufren de hambre ni sed"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Complexión muy débil",
+          "efecto": "-3 de constitución",
+          "texto": "Complexión muy débil (-3 de constitución)"
+        },
+        {
+          "nombre": "Engaño fácil",
+          "efecto": "-2 en ante tiradas de engaño",
+          "texto": "Engaño fácil (-2 en ante tiradas de engaño)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-10",
+          "venenos_toxicos": 1,
+          "magia_maldiciones": 16,
+          "paralisis_petrificacion_control_mental": 7,
+          "quemadura_desangrado": 1,
+          "sortilegios_encantamientos_trampas": 19
+        },
+        {
+          "niveles": "11+",
+          "venenos_toxicos": 1,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 4,
+          "quemadura_desangrado": 1,
+          "sortilegios_encantamientos_trampas": 7
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/automata-titulo.webp",
+        "ilustraciones": [
+          "img/razas/automata-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "No tienen altura especificada",
+        "peso": "Peso Variable",
+        "esperanza_vida": "pueden llegar a vivir eternamente, siempre y cuando se realice un correcto mantenimiento"
+      }
+    },
+    {
+      "id": "aviroide",
+      "nombre": "Aviroide",
+      "descripcion": [
+        "Los Aviroides, una raza singular de hombres pájaro, se distribuyen por todo Terratea, pero encuentran su mayor predominancia en los reinos de Revelfbotlth, donde surcan los cielos en todo su esplendor. Habitan en bulliciosas y grandes capitales, y algunos se ven obligados a abandonarlas para cumplir con sus responsabilidades asignadas.",
+        "Con plumajes que resisten las bajas temperaturas, los Aviroides se destacan por su capacidad para volar, un rasgo que define su identidad y les otorga una conexión única con los cielos.",
+        "Sin embargo, esta raza emplumada muestra una vulnerabilidad notable frente a los ataques de rayos, razón por la cual prefieren evitar volar cuando las tormentas amenazan el cielo. A pesar de esta limitación, los Aviroides son seres que coexisten en plena libertad con otras razas del mundo, y gran parte de su sociedad se integra en la intrincada red social de Terratea. Para ellos, la senda espiritual es un camino de disciplina y armonía interior que guía cada aspecto de su vida."
+      ],
+      "peso_max_carga_kg": 50,
+      "fortalezas": [
+        {
+          "nombre": "Pueden Volar",
+          "efecto": null,
+          "texto": "Pueden Volar"
+        },
+        {
+          "nombre": "Valor",
+          "efecto": "+2 en las tiradas de iniciativa",
+          "texto": "Valor (+2 en las tiradas de iniciativa)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Debilidad ante el rayo",
+          "efecto": "+2 de daño",
+          "texto": "Debilidad ante el rayo (+2 de daño)"
+        },
+        {
+          "nombre": "Debilidad ante temperaturas frías",
+          "efecto": "-1",
+          "texto": "Debilidad ante temperaturas frías (-1)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 10,
+          "magia_maldiciones": 16,
+          "paralisis_petrificacion_control_mental": 14,
+          "quemadura_desangrado": 14,
+          "sortilegios_encantamientos_trampas": 13
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 13,
+          "paralisis_petrificacion_control_mental": 12,
+          "quemadura_desangrado": 13,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 5,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 12,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "10-12",
+          "venenos_toxicos": 5,
+          "magia_maldiciones": 10,
+          "paralisis_petrificacion_control_mental": 9,
+          "quemadura_desangrado": 11,
+          "sortilegios_encantamientos_trampas": 9
+        },
+        {
+          "niveles": "13-15",
+          "venenos_toxicos": 5,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 7,
+          "quemadura_desangrado": 8,
+          "sortilegios_encantamientos_trampas": 6
+        },
+        {
+          "niveles": "16-18",
+          "venenos_toxicos": 5,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 6,
+          "sortilegios_encantamientos_trampas": 4
+        },
+        {
+          "niveles": "19+",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 4,
+          "paralisis_petrificacion_control_mental": 4,
+          "quemadura_desangrado": 3,
+          "sortilegios_encantamientos_trampas": 4
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/aviroide-titulo.webp",
+        "ilustraciones": [
+          "img/razas/aviroide-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.90 a 2.20 metros",
+        "peso": "70 a 100 kg",
+        "esperanza_vida": "Alrededor de 25-35 años"
+      }
+    },
+    {
+      "id": "elfo-oscuro",
+      "nombre": "Elfo Oscuro",
+      "descripcion": [
+        "Los Elfos Oscuros, también conocidos como Elfos Nocturnos, son criaturas de la noche dotadas de aguda visión en la oscuridad, un instinto innato para el camuflaje y una perspicacia asombrosa. Aunque detestan la luz del fuego, prosperan en las tinieblas de los bosques, donde habitan en casas elevadas entre los árboles, especialmente en el Bosque Oscuro.",
+        "Con el paso del tiempo, los Elfos Oscuros han desarrollado una sociedad intrincada y singular. Su destreza en las artes de la guerra de guerrillas y el sigilo los convierte en adversarios formidables, especialmente en emboscadas. A pesar de su naturaleza nocturna, es posible encontrarlos en ciudades, pues algunos buscan aventurarse tras motivaciones personales; sin embargo, son seres que prefieren los rincones más sombríos y discretos.",
+        "Aunque mantienen una conexión distante con sus primos lejanos, los Elfos, sienten hacia ellos un cierto resquemor. Aun así, evitan los conflictos abiertos y, cuando las circunstancias lo requieren, no dudan en aportar su astucia y habilidades al servicio de causas mayores.",
+        "A diferencia de los Elfos, cuya sociedad está marcada por intrincadas relaciones políticas y familiares, los Elfos Oscuros han forjado una cultura propia. Sus clanes no compiten por el poder, sino que mantienen un vínculo fraternal que les permite apoyarse mutuamente en tiempos de necesidad.",
+        "A pesar de su aura de misterio y la sombra de malevolencia que otros les atribuyen, los Elfos Oscuros son una fuerza a tener en cuenta en Terratea. Su habilidad innata para la supervivencia y el combate los convierte en piezas clave dentro de los acontecimientos que forjan el destino del continente."
+      ],
+      "peso_max_carga_kg": 40,
+      "fortalezas": [
+        {
+          "nombre": "Visión nocturna",
+          "efecto": null,
+          "texto": "Visión nocturna"
+        },
+        {
+          "nombre": "Camuflaje",
+          "efecto": null,
+          "texto": "Camuflaje"
+        },
+        {
+          "nombre": "Bonificación en bosques",
+          "efecto": "+1 en tirada de iniciativa",
+          "texto": "Bonificación en bosques (+1 en tirada de iniciativa)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Debilidad ante el fuego",
+          "efecto": "+2 de daño recibido por fuego",
+          "texto": "Debilidad ante el fuego (+2 de daño recibido por fuego)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-5",
+          "venenos_toxicos": 13,
+          "magia_maldiciones": 13,
+          "paralisis_petrificacion_control_mental": 13,
+          "quemadura_desangrado": 16,
+          "sortilegios_encantamientos_trampas": 14
+        },
+        {
+          "niveles": "6-10",
+          "venenos_toxicos": 11,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 11,
+          "quemadura_desangrado": 14,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "11-15",
+          "venenos_toxicos": 9,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 9,
+          "quemadura_desangrado": 12,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "16-18",
+          "venenos_toxicos": 7,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 8,
+          "sortilegios_encantamientos_trampas": 6
+        },
+        {
+          "niveles": "19+",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 4,
+          "paralisis_petrificacion_control_mental": 5,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 4
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/elfo-oscuro-titulo.webp",
+        "ilustraciones": [
+          "img/razas/elfo-oscuro-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.80 a 2.30 metros",
+        "peso": "55 a 100 kg",
+        "esperanza_vida": "Similar a los elfos, alrededor de 1000-1250 años"
+      }
+    },
+    {
+      "id": "elfo",
+      "nombre": "Elfo",
+      "descripcion": [
+        "Los elfos, una raza noble y altiva, se alzan con gracia y elegancia en los reinos de Terratea. Su linaje ancestral y su conexión innata con la magia los distinguen como una presencia predominante en el mundo. Con una longevidad que supera a muchas otras razas, los elfos llevan consigo la carga de la historia, siendo testigos de épocas pasadas y forjadores de futuros aún no escritos.",
+        "Dotados de una belleza innata, los rasgos elfos son esculpidos con precisión, sus ojos chispean con sabiduría y sus orejas puntiagudas capturan la atención de aquellos que los rodean. Su porte es majestuoso, a menudo proyectando una imagen de autoridad natural. Sin embargo, esta nobleza a veces se ve eclipsada por una arrogancia que puede resultar desconcertante para aquellos que no comparten su legado.",
+        "Los elfos tienen una conexión innata con la magia, siendo capaces de manipularla con una facilidad que otros solo pueden soñar. Esta afinidad mágica se manifiesta en su habilidad para explorar las artes arcanas, ya sea como maestros hechiceros. Esta conexión también se refleja en la arquitectura de sus ciudades donde son compartidos con los humanos en una mezcla multicultural de todas las razas de Terratea.",
+        "A pesar de su renombre y posición elevada, los elfos enfrentan desafíos internos y externos. Sus relaciones con otras razas, a veces marcadas por la desconfianza debido a su actitud altiva, son un reflejo de la complejidad de sus vidas. Internamente, luchan con la carga de la inmortalidad, viendo pasar los siglos mientras mantienen su juventud, enfrentándose a la pérdida de seres queridos y a la soledad que a menudo acompaña a la larga vida."
+      ],
+      "peso_max_carga_kg": 40,
+      "fortalezas": [
+        {
+          "nombre": "Detectar magia",
+          "efecto": null,
+          "texto": "Detectar magia."
+        },
+        {
+          "nombre": "Propenso a la magia",
+          "efecto": "+1 de daño por ataque mágico",
+          "texto": "Propenso a la magia (+1 de daño por ataque mágico)"
+        },
+        {
+          "nombre": "Resistencia Élfica",
+          "efecto": "-1 de daño ante la magia Arcana",
+          "texto": "Resistencia Élfica (-1 de daño ante la magia Arcana)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Arrogancia",
+          "efecto": "-1 a las tiradas de Engaño",
+          "texto": "Arrogancia (-1 a las tiradas de Engaño)"
+        },
+        {
+          "nombre": "Complexión débil",
+          "efecto": "+1 de daño recibido por ataque físico",
+          "texto": "Complexión débil (+1 de daño recibido por ataque físico)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 12,
+          "magia_maldiciones": 13,
+          "paralisis_petrificacion_control_mental": 13,
+          "quemadura_desangrado": 15,
+          "sortilegios_encantamientos_trampas": 15
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 10,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 11,
+          "quemadura_desangrado": 13,
+          "sortilegios_encantamientos_trampas": 13
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 9,
+          "quemadura_desangrado": 9,
+          "sortilegios_encantamientos_trampas": 11
+        },
+        {
+          "niveles": "10+",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 7,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 9
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/elfo-titulo.webp",
+        "ilustraciones": [
+          "img/razas/elfo-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.75 a 2.10 metros",
+        "peso": "50 a 75 kg",
+        "esperanza_vida": "Alrededor de 800-1250 años"
+      }
+    },
+    {
+      "id": "enano",
+      "nombre": "Enano",
+      "descripcion": [
+        "Los Enanos, de estatura similar a los Nahirades, son maestros artesanos con cuerpos esculpidos en la dura labor de la minería. Aunque suelen ser beligerantes y no toleran insultos, los enanos son apasionados por su oficio y se enorgullecen de cada obra que crean. Algunos pueden ser avaros, imponiendo su criterio enano sobre otros, especialmente cuando se trata de los elfos, con quienes tienen cierta rivalidad.",
+        "Los enanos sufren una intolerancia a la magia, prefiriendo las herramientas y la forja a los sortilegios. Su amor por el trabajo manual y la creación los lleva a destacar en la forja y la construcción. Se les puede encontrar en ciudades, pero predominan en asentamientos subterráneos, donde sus habilidades mineras son especialmente útiles.",
+        "La cultura y artesanía enana proliferan por todo Terratea, dejando una marca indeleble en la historia del continente. Los enanos, con sus barbas imponentes y su dedicación al trabajo duro, son una presencia valiosa y respetada en cualquier sociedad en la que se encuentren."
+      ],
+      "peso_max_carga_kg": 60,
+      "fortalezas": [
+        {
+          "nombre": "Artesanos",
+          "efecto": "+1 a la tirada de habilidad para crear objetos",
+          "texto": "Artesanos (+1 a la tirada de habilidad para crear objetos)"
+        },
+        {
+          "nombre": "Terráneos",
+          "efecto": "+2 de resistencia a daño elemental",
+          "texto": "Terráneos (+2 de resistencia a daño elemental)"
+        },
+        {
+          "nombre": "Mineros",
+          "efecto": "Encontrar objeto extra",
+          "texto": "Mineros (Encontrar objeto extra)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Beligerantes",
+          "efecto": "-3 de resistencia a las tiradas para ser provocados",
+          "texto": "Beligerantes (-3 de resistencia a las tiradas para ser provocados)"
+        },
+        {
+          "nombre": "Aversión a la magia",
+          "efecto": "penalización de -2 al uso de cualquier objeto mágico",
+          "texto": "Aversión a la magia (penalización de -2 al uso de cualquier objeto mágico)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 13,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 10,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "10+",
+          "venenos_toxicos": 2,
+          "magia_maldiciones": 3,
+          "paralisis_petrificacion_control_mental": 4,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 6
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/enano-titulo.webp",
+        "ilustraciones": [
+          "img/razas/enano-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.00 a 1.25 metros",
+        "peso": "80 a 120 kg",
+        "esperanza_vida": "Alrededor de 250-300 años"
+      }
+    },
+    {
+      "id": "felino",
+      "nombre": "Felino",
+      "descripcion": [
+        "Los Felinos, criaturas de grácil estampa y pelaje exquisito, deslumbran con su presencia en Terratea. Este linaje felino no solo cautiva con su apariencia, sino que también despierta admiración por sus habilidades naturales. Su densa capa de pelaje no solo sirve como una defensa contra las bajas temperaturas, sino que también destaca por su exquisita textura y variedad de patrones y colores, dotándolos de una elegancia única.",
+        "Armados con garras afiladas y retráctiles, los Felinos llevan consigo un arma natural que no solo es formidable en la caza, sino que también se convierte en un medio efectivo de autodefensa. Esta característica, combinada con su agilidad y destreza innatas, los convierte en adversarios respetados en cualquier situación.",
+        "Aunque su predilección por climas más frescos los ha llevado a establecerse predominantemente en regiones como Stungerb, donde el frío es una constante, los Felinos no temen explorar tierras diversas. Esta disposición aventurera, sumada a su creciente presencia en la sociedad, ha catapultado a esta raza a un papel relevante en el panorama de Terratea en el último siglo.",
+        "Los Felinos, lejos de ser simples observadores, han comenzado a influir activamente en los acontecimientos del mundo. Su capacidad para adaptarse, su conexión con la naturaleza y su innata curiosidad los posicionan como participantes clave en el tapiz en constante evolución que es la historia de Terratea."
+      ],
+      "peso_max_carga_kg": 50,
+      "fortalezas": [
+        {
+          "nombre": "Pelaje felino",
+          "efecto": "resistencia al frío +1",
+          "texto": "Pelaje felino (resistencia al frío +1)"
+        },
+        {
+          "nombre": "Garras",
+          "efecto": "ataque sin armas 1d6",
+          "texto": "Garras (ataque sin armas 1d6)"
+        },
+        {
+          "nombre": "Visión Nocturna",
+          "efecto": null,
+          "texto": "Visión Nocturna"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Ralentización de movimiento en calor",
+          "efecto": "-1 movimiento",
+          "texto": "Ralentización de movimiento en calor (-1 movimiento)"
+        },
+        {
+          "nombre": "Hidrofóbicos",
+          "efecto": "-1 al movimiento en el agua",
+          "texto": "Hidrofóbicos (-1 al movimiento en el agua)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 9,
+          "magia_maldiciones": 14,
+          "paralisis_petrificacion_control_mental": 13,
+          "quemadura_desangrado": 16,
+          "sortilegios_encantamientos_trampas": 14
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 13,
+          "paralisis_petrificacion_control_mental": 12,
+          "quemadura_desangrado": 13,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 5,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 12,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "10-12",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 8,
+          "paralisis_petrificacion_control_mental": 9,
+          "quemadura_desangrado": 11,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "13-15",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 8,
+          "sortilegios_encantamientos_trampas": 6
+        },
+        {
+          "niveles": "16-18",
+          "venenos_toxicos": 2,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 5,
+          "quemadura_desangrado": 6,
+          "sortilegios_encantamientos_trampas": 4
+        },
+        {
+          "niveles": "19+",
+          "venenos_toxicos": 2,
+          "magia_maldiciones": 3,
+          "paralisis_petrificacion_control_mental": 3,
+          "quemadura_desangrado": 5,
+          "sortilegios_encantamientos_trampas": 4
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/felino-titulo.webp",
+        "ilustraciones": [
+          "img/razas/felino-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.50 a 1.95 metros",
+        "peso": "50 a 100 kg",
+        "esperanza_vida": "Alrededor de 75-100 años"
+      }
+    },
+    {
+      "id": "gnomo",
+      "nombre": "Gnomo",
+      "descripcion": [
+        "Los gnomos, apasionados adoradores de la ciencia y la tecnología, llevan consigo la llama de la innovación y el ingenio. A pesar de su estatura diminuta, su agilidad en el campo de batalla y su habilidad para moverse con destreza les otorgan una ventaja táctica sorprendente. No obstante, su constitución física extremadamente débil los deja expuestos a golpes físicos de gran intensidad.",
+        "El amor de los gnomos por la ciencia se manifiesta de diversas maneras, desde la creación de artefactos mecánicos hasta la exploración de magias arcanas y oscuras. Esta diversidad en sus enfoques, combinada con su meticulosidad y enfoque metódico, los convierte en una raza intrigante y versátil, capaz de adaptarse a distintas situaciones y desafíos.",
+        "La CITB (Ciudad de la Innovación y Tecnología Beimax), fundada por los propios gnomos, es un crisol de conocimiento y progreso. En este epicentro de investigación, coexisten no solo los propios gnomos, sino también autómatas e ingenieros de diversas disciplinas y razas. Los laboratorios y talleres rebosan de inventos fascinantes y artilugios vanguardistas, consolidando su reputación como pioneros en el desarrollo de nuevas tecnologías."
+      ],
+      "peso_max_carga_kg": 35,
+      "fortalezas": [
+        {
+          "nombre": "Ágiles",
+          "efecto": "+1 de dificultad al recibir daños a distancia",
+          "texto": "Ágiles (+1 de dificultad al recibir daños a distancia)"
+        },
+        {
+          "nombre": "Inventores",
+          "efecto": "+2 a la tirada de elaborar objetos",
+          "texto": "Inventores (+2 a la tirada de elaborar objetos)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Complexión muy débil",
+          "efecto": "+ 2 al recibir daños físicos y +1 al recibir daños mágicos",
+          "texto": "Complexión muy débil (+ 2 al recibir daños físicos y +1 al recibir daños mágicos)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-4",
+          "venenos_toxicos": 16,
+          "magia_maldiciones": 15,
+          "paralisis_petrificacion_control_mental": 13,
+          "quemadura_desangrado": 16,
+          "sortilegios_encantamientos_trampas": 14
+        },
+        {
+          "niveles": "5-8",
+          "venenos_toxicos": 14,
+          "magia_maldiciones": 13,
+          "paralisis_petrificacion_control_mental": 11,
+          "quemadura_desangrado": 14,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "9-12",
+          "venenos_toxicos": 12,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 9,
+          "quemadura_desangrado": 12,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "13-16",
+          "venenos_toxicos": 10,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 7,
+          "quemadura_desangrado": 10,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "17+",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 5,
+          "quemadura_desangrado": 8,
+          "sortilegios_encantamientos_trampas": 5
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/gnomo-titulo.webp",
+        "ilustraciones": [
+          "img/razas/gnomo-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "0.50 a 0.75 metros",
+        "peso": "20 a 40 kg",
+        "esperanza_vida": "Alrededor de 50-60 años"
+      }
+    },
+    {
+      "id": "goblin",
+      "nombre": "Goblin",
+      "descripcion": [
+        "Los Goblins, con dimensiones y habilidades ingenieriles similares a las de los Gnomos, se destacan por su marcada codicia y la preferencia por la creación de invenciones de naturaleza destructiva. Esta codicia a menudo los impulsa a embarcarse en proyectos arriesgados y peligrosos, compitiendo constantemente con sus contrapartes gnomas en la CITB. A pesar de su agilidad y destreza, los Goblins muestran una inclinación innata hacia el papel de zapadores, utilizando sus habilidades para crear dispositivos explosivos y maquinaria destructiva.",
+        "Aunque comparten algunas similitudes con los Gnomos, los Goblins son más temidos que respetados, pues sus experimentos rara vez buscan la perfección y casi siempre priorizan la inmediatez y el poder destructivo. Sus talleres suelen estar llenos de humo, chispas y estruendos inesperados, producto de pruebas que muchas veces terminan en explosiones accidentales. Esta naturaleza impredecible los ha convertido en aliados poco confiables, pero también en piezas clave en situaciones de guerra, donde sus inventos improvisados pueden inclinar el rumbo de una batalla, a menudo por encima de los inventos de los Gnomos."
+      ],
+      "peso_max_carga_kg": 35,
+      "fortalezas": [
+        {
+          "nombre": "Ágiles",
+          "efecto": "+1 de dificultad al recibir daño a distancia",
+          "texto": "Ágiles (+1 de dificultad al recibir daño a distancia)"
+        },
+        {
+          "nombre": "Zapadores",
+          "efecto": "+2 al daño con explosivos",
+          "texto": "Zapadores (+2 al daño con explosivos)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Complexión muy débil (+ 2 al recibir daños físicos y +1 al recibir daños mágicos",
+          "efecto": null,
+          "texto": "Complexión muy débil (+ 2 al recibir daños físicos y +1 al recibir daños mágicos"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-4",
+          "venenos_toxicos": 15,
+          "magia_maldiciones": 16,
+          "paralisis_petrificacion_control_mental": 14,
+          "quemadura_desangrado": 15,
+          "sortilegios_encantamientos_trampas": 14
+        },
+        {
+          "niveles": "5-8",
+          "venenos_toxicos": 12,
+          "magia_maldiciones": 12,
+          "paralisis_petrificacion_control_mental": 12,
+          "quemadura_desangrado": 14,
+          "sortilegios_encantamientos_trampas": 13
+        },
+        {
+          "niveles": "9-12",
+          "venenos_toxicos": 11,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 11,
+          "quemadura_desangrado": 12,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "13-16",
+          "venenos_toxicos": 9,
+          "magia_maldiciones": 8,
+          "paralisis_petrificacion_control_mental": 7,
+          "quemadura_desangrado": 10,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "17+",
+          "venenos_toxicos": 7,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 5
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/goblin-titulo.webp",
+        "ilustraciones": [
+          "img/razas/goblin-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "0.45 a 0.80 metros",
+        "peso": "15 a 40 kg",
+        "esperanza_vida": "Alrededor de 40-60 años"
+      }
+    },
+    {
+      "id": "humano",
+      "nombre": "Humano",
+      "descripcion": [
+        "Los Humanos, es la raza soberana y omnipresente de Terratea, destacan por su versatilidad y capacidad de adaptación. Su influencia se extiende por todos los rincones del mundo, reflejando una asombrosa diversidad en tonos de piel, rasgos faciales, alturas y costumbres. Esta variedad es el reflejo de las innumerables culturas y regiones donde han prosperado, lo que les ha permitido aclimatarse a casi cualquier entorno y consolidarse como la raza dominante.",
+        "En el ámbito intelectual, los humanos se distinguen por su curiosidad innata y su inagotable deseo de aprender. Esta mentalidad exploratoria ha impulsado grandes avances en la ciencia, la magia y las artes. Su habilidad para colaborar y construir comunidades diversas ha fomentado el intercambio de conocimientos y el florecimiento de sociedades prósperas.",
+        "La sociedad humana abarca desde pequeñas aldeas hasta grandes imperios, con estructuras políticas y sociales que varían según la cultura. Esta flexibilidad les ha permitido adoptar distintos sistemas de gobierno, enriqueciendo la complejidad del mundo de Terratea.",
+        "En el plano espiritual, los humanos practican una amplia gama de creencias y rituales. Su conexión con lo divino y lo místico es tan diversa como sus pueblos, pero en casi todas las comunidades la espiritualidad ocupa un lugar esencial.",
+        "Las expresiones artísticas y creativas de los humanos también han dejado una huella profunda: desde la música y la literatura hasta la arquitectura y las artes visuales, su ingenio refleja la riqueza de sus experiencias. En conjunto, los humanos son la columna vertebral de Terratea, aportando adaptabilidad, creatividad y una capacidad única para prosperar en entornos de toda clase."
+      ],
+      "peso_max_carga_kg": 50,
+      "fortalezas": [
+        {
+          "nombre": "Aprendizaje avanzado",
+          "efecto": "+10 a la tirada de aprendizaje",
+          "texto": "Aprendizaje avanzado (+10 a la tirada de aprendizaje)"
+        },
+        {
+          "nombre": "Polivalente",
+          "efecto": "pueden aprender cualquier clase",
+          "texto": "Polivalente (pueden aprender cualquier clase)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Debilidad ante maldiciones",
+          "efecto": "+1 de daño oscuro",
+          "texto": "Debilidad ante maldiciones (+1 de daño oscuro)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 14,
+          "magia_maldiciones": 15,
+          "paralisis_petrificacion_control_mental": 16,
+          "quemadura_desangrado": 17,
+          "sortilegios_encantamientos_trampas": 18
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 12,
+          "magia_maldiciones": 13,
+          "paralisis_petrificacion_control_mental": 14,
+          "quemadura_desangrado": 15,
+          "sortilegios_encantamientos_trampas": 16
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 10,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 12,
+          "quemadura_desangrado": 13,
+          "sortilegios_encantamientos_trampas": 14
+        },
+        {
+          "niveles": "10-12",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 9,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "13-15",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "16-18",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 5,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "19+",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 3,
+          "paralisis_petrificacion_control_mental": 4,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 6
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/humano-titulo.webp",
+        "ilustraciones": [
+          "img/razas/humano-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.50 a 2.00 metros",
+        "peso": "60 a 100 kg",
+        "esperanza_vida": "Alrededor de 90-100 años"
+      }
+    },
+    {
+      "id": "jotun",
+      "nombre": "Jotun",
+      "descripcion": [
+        "Los Jotuns, gigantes colosales que se elevan desde los 3 hasta los 20 metros de altura, son una presencia imponente en Terratea. Aunque en tiempos pasados eran la raza dominante, su número ha ido disminuyendo con el tiempo, convirtiéndolos en una vista cada vez más rara. Su fuerza y constitución son envidiables, dotándolos de una presencia imponente.",
+        "Aunque su gran altura les otorga una fuerza considerable, también los hace un tanto torpes y sus movimientos menos fluidos. La dificultad para zafarse de los combates es evidente debido a su imponente tamaño. Sin embargo, su presencia sigue siendo asombrosa y deja una impresión duradera en aquellos que tienen la fortuna de encontrarse con ellos.",
+        "Es bien sabido que uno de los motivos de la disminución de los Jotuns fue la lucha primigenia contra los Centimanos, un conflicto tan colosal que alteró la topografía de todo el continente de Terratea. De los Jotuns, además, se derivaron otras razas, como los elfos y los enanos, dejando su legado vivo en la diversidad del mundo actual.",
+        "Los Jotuns, reservados y herméticos respecto a sus orígenes, envuelven su historia en un misterio impenetrable. Se especula que poseen conocimiento de una ciudad ancestral, un legado exclusivo de su raza, pero guardan celosamente ese secreto y nunca comparten detalles con aquellos fuera de su linaje. Esta ciudad oculta, envuelta en el velo del misterio, permanece como un enigma insondable para las demás razas de Terratea. Sin embargo, muchos de los Jotuns que viven están tan arraigados en el mundo libre que han olvidado casi por completo la existencia de aquella ciudad ancestral. Con el paso del tiempo, incluso entre los suyos, la historia de ese lugar se ha desdibujado hasta el punto de que muchos la consideran poco más que un mito antiguo, una leyenda perdida entre los ecos del pasado."
+      ],
+      "peso_max_carga_kg": 85,
+      "fortalezas": [
+        {
+          "nombre": "Cuerpo Colosal",
+          "efecto": "+2Constitución",
+          "texto": "Cuerpo Colosal (+2Constitución)"
+        },
+        {
+          "nombre": "Fuerza sobrehumana",
+          "efecto": "+2 de fuerza",
+          "texto": "Fuerza sobrehumana (+2 de fuerza)"
+        },
+        {
+          "nombre": "+1 de alcance",
+          "efecto": null,
+          "texto": "+1 de alcance"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Reflejos bajos",
+          "efecto": "-2 destreza",
+          "texto": "Reflejos bajos (-2 destreza)"
+        },
+        {
+          "nombre": "Blanco Fácil",
+          "efecto": "-2 al trabarse en combate",
+          "texto": "Blanco Fácil (-2 al trabarse en combate)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 7,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 7,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 7
+        },
+        {
+          "niveles": "4-8",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 6,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 6,
+          "sortilegios_encantamientos_trampas": 6
+        },
+        {
+          "niveles": "9-15",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 4,
+          "paralisis_petrificacion_control_mental": 4,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 4
+        },
+        {
+          "niveles": "15+",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 3,
+          "paralisis_petrificacion_control_mental": 3,
+          "quemadura_desangrado": 3,
+          "sortilegios_encantamientos_trampas": 3
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/jotun-titulo.webp",
+        "ilustraciones": [
+          "img/razas/jotun-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "3.00 a 20.00 metros",
+        "peso": "200 a 1.500 kg",
+        "esperanza_vida": "1500-2000 años"
+      }
+    },
+    {
+      "id": "nahiaride",
+      "nombre": "Nahiaride",
+      "descripcion": [
+        "Los nahiarades son los descendientes de las shides, hadas malvadas que seducen a hombres insatisfechos en sus matrimonios, llevándolos a una vida de intensidad y pasión efímera, al precio de su vitalidad. Fruto de estas relaciones fatídicas, los nahiarades nacen sin padres presentes y sin un lugar claro en el mundo.",
+        "Abandonados desde pequeños, crecen en una comuna oculta en el Valle del Sosiego, donde solo encuentran a otros como ellos, aprendiendo a desenvolverse en una realidad marcada por la ausencia y el misterio. Este origen distante y aislado los ha vuelto profundamente introspectivos y reservados, conscientes de la oscuridad que rodea su linaje y del peso de la herencia de sus madres.",
+        "Su vida en aislamiento los ha hecho cautos y desconfiados, evitando abrirse a extraños y protegiendo sus secretos con gran celo. Sin embargo, la ascendencia de hada les ha otorgado una conexión profunda e inquebrantable con la naturaleza. Los nahiarades sienten y comprenden los ritmos de la tierra y el susurro de los vientos, siendo capaces de percibir fluctuaciones malvadas con la flora y la fauna de una manera que pocos pueden comprender.",
+        "Este vínculo natural los convierte en protectores de su entorno, aunque prefieren observar y preservar en lugar de intervenir abiertamente. En Terratea, los nahiarades representan el misterio de los vínculos invisibles que nos atan, la lucha por la identidad en medio de un legado oscuro y la búsqueda de armonía en un mundo al que pertenecen de forma tan única como distante."
+      ],
+      "peso_max_carga_kg": 37.5,
+      "fortalezas": [
+        {
+          "nombre": "Gran salto y planear en el aire",
+          "efecto": null,
+          "texto": "Gran salto y planear en el aire"
+        },
+        {
+          "nombre": "+2 a las tiradas de hechizos de naturaleza",
+          "efecto": null,
+          "texto": "+2 a las tiradas de hechizos de naturaleza"
+        },
+        {
+          "nombre": "+1 de Daño contra enemigos de gran tamaño",
+          "efecto": null,
+          "texto": "+1 de Daño contra enemigos de gran tamaño"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "+2 de daño de fuego recibido",
+          "efecto": null,
+          "texto": "+2 de daño de fuego recibido"
+        },
+        {
+          "nombre": "Herméticos",
+          "efecto": "-1 a las tiradas de convencimiento o persuasión",
+          "texto": "Herméticos (-1 a las tiradas de convencimiento o persuasión)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 13,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 10,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "7+",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 8
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/nahiaride-titulo.webp",
+        "ilustraciones": [
+          "img/razas/nahiaride-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "0.80 a 1.25 metros",
+        "peso": "30 a 50 kg",
+        "esperanza_vida": "600-800 años"
+      }
+    },
+    {
+      "id": "orco",
+      "nombre": "Orco",
+      "descripcion": [
+        "Con una fortaleza física imponente y un código de honor arraigado en su ser, los orcos son una presencia impresionante en el mundo de Terratea. Aunque a veces su reputación puede verse empañada por malentendidos, los orcos valoran la lealtad y la fuerza, características que han dado forma a su sociedad y su papel en el mundo.",
+        "Estos guerreros infatigables han ayudado a construir ciudades y puestos avanzados que reflejan su robustez y determinación. Aunque a menudo se les asocia con la guerra, los orcos mantienen comunidades vibrantes y diversas, donde la camaradería y el respeto mutuo son fundamentales.",
+        "Algunas razas desconfían de la magia arcana, los orcos adoptan esta postura. Aunque no tienen una afinidad particular por los estudios arcanos, no temen la presencia de magos y hechiceros en sus ciudades, más le infunden cierto respeto. La coexistencia armoniosa con otras razas en sus asentamientos demuestra la diversidad y la apertura de mente de los orcos.",
+        "El fuerte sentido del honor de los orcos a veces puede llevar a conflictos, especialmente cuando se sienten agraviados. Sin embargo, este mismo código ético también los hace aliados valiosos y compañeros leales en la batalla. La fidelidad y la camaradería son virtudes que los orcos valoran profundamente."
+      ],
+      "peso_max_carga_kg": 65,
+      "fortalezas": [
+        {
+          "nombre": "Infatigable",
+          "efecto": null,
+          "texto": "Infatigable"
+        },
+        {
+          "nombre": "Robustez",
+          "efecto": "+ 1 de bloqueo de daño físico",
+          "texto": "Robustez (+ 1 de bloqueo de daño físico)"
+        },
+        {
+          "nombre": "Fuerte sentido del honor",
+          "efecto": null,
+          "texto": "Fuerte sentido del honor"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Fuerte sentido del honor",
+          "efecto": null,
+          "texto": "Fuerte sentido del honor"
+        },
+        {
+          "nombre": "Debilidad ante la magia",
+          "efecto": "+1 de daño por ataque mágico recibido",
+          "texto": "Debilidad ante la magia (+1 de daño por ataque mágico recibido)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 12,
+          "magia_maldiciones": 13,
+          "paralisis_petrificacion_control_mental": 14,
+          "quemadura_desangrado": 15,
+          "sortilegios_encantamientos_trampas": 15
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 10,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 12,
+          "quemadura_desangrado": 13,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 9,
+          "sortilegios_encantamientos_trampas": 11
+        },
+        {
+          "niveles": "10-12",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "13-15",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 7,
+          "quemadura_desangrado": 5,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "16-18",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 5,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 7
+        },
+        {
+          "niveles": "19+",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 4,
+          "paralisis_petrificacion_control_mental": 4,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 5
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/orco-titulo.webp",
+        "ilustraciones": [
+          "img/razas/orco-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.80 a 2.20 metros",
+        "peso": "70 a 125 kg",
+        "esperanza_vida": "Alrededor de 60-75 años"
+      }
+    },
+    {
+      "id": "renegado",
+      "nombre": "Renegado",
+      "descripcion": [
+        "Los Renegados, una raza impía que engloba a no muertos, hombres lobo y semidemonios. Seres oscuros y peligrosos que caminan entre las sombras de la noche, pero cuya existencia se ve limitada por la luz del día. Estos seres malditos, a pesar de su formidable poder, son despreciados en todo Terratea.",
+        "Lejos de formar una sociedad unificada, los Renegados viven dispersos, algunos ocultos, otros errantes y otros intentando pasar desapercibido en aldeas o pequeñas ciudades, guiados por su instinto y su propia naturaleza corrupta. Algunos vagan sin rumbo, buscando redención o venganza; otros se agrupan en pequeñas bandas que persiguen sus propios fines. Pese a sus diferencias, todos comparten una conexión inevitable con la oscuridad, una marca indeleble que los separa del resto de las razas.",
+        "Sin embargo, su poder no viene sin consecuencias. Durante el combate, los Renegados pierden la consciencia, poniendo en peligro incluso a aquellos que podrían considerarse aliados. Esta falta de control ha llevado a numerosos encuentros mortales con grupos de aventureros que intentan contener la amenaza que representan.",
+        "A pesar de su fuerza, la ética del mundo de Terratea cuestiona si tanto poder justifica el precio a pagar. La hostilidad hacia los Renegados no solo proviene de la maldad que desprenden, sino también de los estragos y la destrucción que pueden causar, incluso entre aquellos que buscan el bien.",
+        "Así, los Renegados son parias, repudiados por la sociedad y considerados una amenaza constante. Su existencia es un recordatorio sombrío de los peligros que acechan en las sombras de Terratea, y muchos se preguntan si alguna vez encontrarán redención o si siempre serán esclavos de su propia oscuridad."
+      ],
+      "peso_max_carga_kg": 55,
+      "fortalezas": [],
+      "debilidades": [],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 10,
+          "magia_maldiciones": 18,
+          "paralisis_petrificacion_control_mental": 15,
+          "quemadura_desangrado": 18,
+          "sortilegios_encantamientos_trampas": 19
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 17,
+          "paralisis_petrificacion_control_mental": 13,
+          "quemadura_desangrado": 15,
+          "sortilegios_encantamientos_trampas": 18
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 15,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 10,
+          "sortilegios_encantamientos_trampas": 16
+        },
+        {
+          "niveles": "10-12",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 12,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 8,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "13-15",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 6,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "16-18",
+          "venenos_toxicos": 2,
+          "magia_maldiciones": 6,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 6,
+          "sortilegios_encantamientos_trampas": 6
+        },
+        {
+          "niveles": "19+",
+          "venenos_toxicos": 1,
+          "magia_maldiciones": 3,
+          "paralisis_petrificacion_control_mental": 3,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 4
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/renegado-titulo.webp",
+        "ilustraciones": []
+      },
+      "subrazas": [
+        {
+          "id": "hombre-lobo",
+          "nombre": "Hombre lobo",
+          "fortalezas": [
+            {
+              "nombre": "Seguir rastros",
+              "efecto": null,
+              "texto": "Seguir rastros."
+            },
+            {
+              "nombre": "Superfuerza",
+              "efecto": "+2 fuerza",
+              "texto": "Superfuerza (+2 fuerza)"
+            },
+            {
+              "nombre": "Regeneración +1 por turno",
+              "efecto": null,
+              "texto": "Regeneración +1 por turno"
+            },
+            {
+              "nombre": "Agilidad",
+              "efecto": "+2 a la esquiva",
+              "texto": "Agilidad (+2 a la esquiva)"
+            },
+            {
+              "nombre": "Sentidos agudizados",
+              "efecto": "+1 a la percepción",
+              "texto": "Sentidos agudizados (+1 a la percepción)"
+            },
+            {
+              "nombre": "Infatigable",
+              "efecto": null,
+              "texto": "Infatigable"
+            },
+            {
+              "nombre": "Aullido aterrador",
+              "efecto": "+2 a intimidación",
+              "texto": "Aullido aterrador (+2 a intimidación)"
+            },
+            {
+              "nombre": "+15 de Vitalidad en transformación",
+              "efecto": null,
+              "texto": "+15 de Vitalidad en transformación"
+            },
+            {
+              "nombre": "Garras y mordiscos de lobo (nivel 1 al 5 2D6, nivel 6 al 10 2D10, nivel 11 al 18 2D12 y nivel 19-20 2D20) más modificador de fuerza",
+              "efecto": null,
+              "texto": "Garras y mordiscos de lobo (nivel 1 al 5 2D6, nivel 6 al 10 2D10, nivel 11 al 18 2D12 y nivel 19-20 2D20) más modificador de fuerza."
+            }
+          ],
+          "debilidades": [
+            {
+              "nombre": "Las habilidades solo se pueden activar de noche",
+              "efecto": null,
+              "texto": "Las habilidades solo se pueden activar de noche"
+            },
+            {
+              "nombre": "Inconsciencia",
+              "efecto": "Tirada de salvación por Magia y Maldiciones",
+              "texto": "Inconsciencia (Tirada de salvación por Magia y Maldiciones)"
+            },
+            {
+              "nombre": "Odiados",
+              "efecto": "Las demás razas sienten odio o miedo ante estos seres, obtienen un -2 en el modificador de carisma",
+              "texto": "Odiados (Las demás razas sienten odio o miedo ante estos seres, obtienen un -2 en el modificador de carisma)"
+            },
+            {
+              "nombre": "Vulnerabilidad ante la plata",
+              "efecto": "+3 de daño recibido e interrumpe la regeneración",
+              "texto": "Vulnerabilidad ante la plata (+3 de daño recibido e interrumpe la regeneración)"
+            },
+            {
+              "nombre": "No puede usar ropas, ni armas",
+              "efecto": null,
+              "texto": "No puede usar ropas, ni armas"
+            },
+            {
+              "nombre": "Rango de alcance reducido a 1",
+              "efecto": null,
+              "texto": "Rango de alcance reducido a 1."
+            }
+          ],
+          "imagenes": {
+            "titulo": null,
+            "ilustraciones": [
+              "img/razas/renegado-hombre-lobo-ilustracion-1.webp"
+            ]
+          },
+          "medidas": {
+            "altura": "3.00 a 4.00 metros",
+            "peso": "120 a 200 kg",
+            "esperanza_vida": "Depende de la raza del portador de la Maldición"
+          }
+        },
+        {
+          "id": "no-muerto",
+          "nombre": "No-Muerto",
+          "fortalezas": [
+            {
+              "nombre": "Inmortalidad",
+              "efecto": "No puede morir por el paso del tiempo",
+              "texto": "Inmortalidad (No puede morir por el paso del tiempo)"
+            },
+            {
+              "nombre": "Infatigable",
+              "efecto": null,
+              "texto": "Infatigable"
+            },
+            {
+              "nombre": "No necesita alimentarse, ni saciarse",
+              "efecto": null,
+              "texto": "No necesita alimentarse, ni saciarse"
+            },
+            {
+              "nombre": "No necesita dormir",
+              "efecto": null,
+              "texto": "No necesita dormir"
+            },
+            {
+              "nombre": "Maldito",
+              "efecto": "+3 al daño por maldiciones o magia oscura",
+              "texto": "Maldito (+3 al daño por maldiciones o magia oscura)"
+            },
+            {
+              "nombre": "Regeneración rápida",
+              "efecto": "+1 de curación cada turno",
+              "texto": "Regeneración rápida (+1 de curación cada turno)"
+            },
+            {
+              "nombre": "Consciencia Perenne",
+              "efecto": "al llegar a 0 no se queda inconsciente",
+              "texto": "Consciencia Perenne (al llegar a 0 no se queda inconsciente)"
+            },
+            {
+              "nombre": "Telepatía No muerta",
+              "efecto": "puede comunicarse con entidades zombis o no muertas",
+              "texto": "Telepatía No muerta (puede comunicarse con entidades zombis o no muertas)"
+            }
+          ],
+          "debilidades": [
+            {
+              "nombre": "Radiación.",
+              "efecto": "durante el día el daño por maldiciones en vez de ser +3, será de +1",
+              "texto": "Radiación. (durante el día el daño por maldiciones en vez de ser +3, será de +1)"
+            },
+            {
+              "nombre": "Odiados",
+              "efecto": "Las demás razas sienten odio o miedo ante estos seres, obtienen un -2 en el modificador de carisma",
+              "texto": "Odiados (Las demás razas sienten odio o miedo ante estos seres, obtienen un -2 en el modificador de carisma)"
+            },
+            {
+              "nombre": "Debilidad racial",
+              "efecto": "es más vulnerable al control mental por parte de nigromantes, liche u otras entidades de control de no muertos",
+              "texto": "Debilidad racial (es más vulnerable al control mental por parte de nigromantes, liche u otras entidades de control de no muertos)"
+            },
+            {
+              "nombre": "Vulnerabilidad al daño sagrado",
+              "efecto": "recibe +2 de daño por ataque sagrado",
+              "texto": "Vulnerabilidad al daño sagrado (recibe +2 de daño por ataque sagrado)"
+            },
+            {
+              "nombre": "Ocultación",
+              "efecto": "debido a su naturaleza no muerta, debe de ocultar su rostro en sitios públicos",
+              "texto": "Ocultación (debido a su naturaleza no muerta, debe de ocultar su rostro en sitios públicos)"
+            }
+          ],
+          "imagenes": {
+            "titulo": null,
+            "ilustraciones": [
+              "img/razas/renegado-no-muerto-ilustracion-1.webp"
+            ]
+          },
+          "medidas": {
+            "altura": "Altura variable según la raza no muerta",
+            "peso": "Variable según la raza no muerta",
+            "esperanza_vida": "algunos renegados pueden vivir eternamente"
+          }
+        },
+        {
+          "id": "semidemonio",
+          "nombre": "Semidemonio",
+          "fortalezas": [
+            {
+              "nombre": "Fuerza sobrehumana",
+              "efecto": "+1 a la fuerza",
+              "texto": "Fuerza sobrehumana: (+1 a la fuerza)"
+            },
+            {
+              "nombre": "Regeneración demoníaca",
+              "efecto": "+1 de recuperación de vida cada turno",
+              "texto": "Regeneración demoníaca (+1 de recuperación de vida cada turno)"
+            },
+            {
+              "nombre": "Resistencia demoníaca",
+              "efecto": "-2 al daño por habilidades demoníacas",
+              "texto": "Resistencia demoníaca (-2 al daño por habilidades demoníacas)"
+            },
+            {
+              "nombre": "Visión térmica",
+              "efecto": null,
+              "texto": "Visión térmica"
+            },
+            {
+              "nombre": "Inmunidad parcial al daño de fuego",
+              "efecto": "-2 daño recibido por fuego",
+              "texto": "Inmunidad parcial al daño de fuego (-2 daño recibido por fuego)"
+            },
+            {
+              "nombre": "Alma de demonio",
+              "efecto": "+1 daño por habilidad de fuego o maldiciones",
+              "texto": "Alma de demonio (+1 daño por habilidad de fuego o maldiciones)"
+            },
+            {
+              "nombre": "Aprendizaje avanzado",
+              "efecto": "+10 a la tirada de aprendizaje",
+              "texto": "Aprendizaje avanzado (+10 a la tirada de aprendizaje)"
+            },
+            {
+              "nombre": "Inmunidad a las pesadillas",
+              "efecto": null,
+              "texto": "Inmunidad a las pesadillas"
+            }
+          ],
+          "debilidades": [
+            {
+              "nombre": "Parte humana",
+              "efecto": "+1 recibido por daño oscuro",
+              "texto": "Parte humana (+1 recibido por daño oscuro)"
+            },
+            {
+              "nombre": "Odiados",
+              "efecto": "Las demás razas sienten odio o miedo ante estos seres, obtienen un -2 en el modificador de carisma",
+              "texto": "Odiados (Las demás razas sienten odio o miedo ante estos seres, obtienen un -2 en el modificador de carisma)"
+            },
+            {
+              "nombre": "Inconsciencia",
+              "efecto": "después de cada combate, se debe de tirar una tirada de salvación de control mental para que tu parte demonio no se apodere de ti y ataque a tus compañeros",
+              "texto": "Inconsciencia (después de cada combate, se debe de tirar una tirada de salvación de control mental para que tu parte demonio no se apodere de ti y ataque a tus compañeros)"
+            },
+            {
+              "nombre": "Debilidad a la luz sagrada",
+              "efecto": "+1 de daño recibido por ataque sagrado",
+              "texto": "Debilidad a la luz sagrada (+1 de daño recibido por ataque sagrado)"
+            },
+            {
+              "nombre": "Parte demonio",
+              "efecto": "resistencia reducida a la seducción a -2",
+              "texto": "Parte demonio (resistencia reducida a la seducción a -2)"
+            }
+          ],
+          "imagenes": {
+            "titulo": null,
+            "ilustraciones": [
+              "img/razas/renegado-semidemonio-ilustracion-1.webp"
+            ]
+          },
+          "medidas": {
+            "altura": "1.70 a 1.95 metros",
+            "peso": "55 a 80 kg",
+            "esperanza_vida": "400 a 600 Años"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reptiliano",
+      "nombre": "Reptiliano",
+      "descripcion": [
+        "Los Reptilianos son humanoides con apariencia de reptil, poseen características únicas que los distinguen en el mundo de Terratea. Su capacidad para respirar bajo el agua, su bilis venenosa y la regeneración de miembros cortados los hacen notables en la diversidad de razas.",
+        "Estos seres reptiles son adaptables a entornos cálidos y húmedos, pero son particularmente predominantes en el reino de Maurizanian. En esta región, los Reptilianos son conocidos por su hospitalidad, creando una atmósfera acogedora que contrasta con su apariencia exótica.",
+        "La huella de los Reptilianos se extiende más allá de su mera presencia, ya que han desempeñado un papel fundamental en la formación de varias ciudades y han dejado su marca en batallas legendarias que han forjado la historia de Terratea.",
+        "A nivel cultural, los Reptilianos valoran el poder y la jerarquía. Su profunda conexión con los ríos los ha llevado a construir canales de agua y pozos en numerosas aldeas y ciudades del reino, manteniendo así su vínculo con el elemento que consideran fuente de vida y equilibrio. Aunque suelen ser vistos como seres fríos e impasibles, los Reptilianos son guardianes de antiguas tradiciones y conocimientos que pocos forasteros han llegado a comprender del todo, pero que siempre están dispuestos a compartir con aquellos que se ganan su respeto."
+      ],
+      "peso_max_carga_kg": 50,
+      "fortalezas": [
+        {
+          "nombre": "Respiración acuática",
+          "efecto": null,
+          "texto": "Respiración acuática"
+        },
+        {
+          "nombre": "Bilis Venenosa",
+          "efecto": "El personaje puede envenenar a un enemigo, el daño es igual al modificador de sabiduría",
+          "texto": "Bilis Venenosa (El personaje puede envenenar a un enemigo, el daño es igual al modificador de sabiduría)"
+        },
+        {
+          "nombre": "Regeneración de miembros",
+          "efecto": "El personaje puede recuperar, con el paso del tiempo, aquellos miembros perdidos que no sean vitales.",
+          "texto": "Regeneración de miembros (El personaje puede recuperar, con el paso del tiempo, aquellos miembros perdidos que no sean vitales.)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Debilidad ante el rayo",
+          "efecto": "+2 de daño",
+          "texto": "Debilidad ante el rayo (+2 de daño)"
+        },
+        {
+          "nombre": "Ralentización de movimiento en frio",
+          "efecto": "-1 movimiento",
+          "texto": "Ralentización de movimiento en frio (-1 movimiento)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 15,
+          "paralisis_petrificacion_control_mental": 14,
+          "quemadura_desangrado": 15,
+          "sortilegios_encantamientos_trampas": 14
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 13,
+          "paralisis_petrificacion_control_mental": 12,
+          "quemadura_desangrado": 13,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 5,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 12,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "10-12",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 10,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "13-15",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 8,
+          "sortilegios_encantamientos_trampas": 6
+        },
+        {
+          "niveles": "16-18",
+          "venenos_toxicos": 2,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 5,
+          "quemadura_desangrado": 6,
+          "sortilegios_encantamientos_trampas": 4
+        },
+        {
+          "niveles": "19+",
+          "venenos_toxicos": 2,
+          "magia_maldiciones": 4,
+          "paralisis_petrificacion_control_mental": 4,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 3
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/reptiliano-titulo.webp",
+        "ilustraciones": [
+          "img/razas/reptiliano-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.50 a 1.80 metros",
+        "peso": "80 a 150 kg",
+        "esperanza_vida": "Alrededor de 75-100 años"
+      }
+    },
+    {
+      "id": "satiro",
+      "nombre": "Sátiro",
+      "descripcion": [
+        "Los sátiros, una raza extraordinariamente rara de encontrar en los diversos rincones de Terratea, prefieren mantenerse alejados de las sociedades establecidas. Sin embargo, ocasionalmente se puede avistar a algunos sátiros que se aventuran en gremios o grupos de aventureros, y son recibidos con curiosidad y aceptación. Su conexión única con la naturaleza les permite camuflarse hábilmente en su entorno, lo que los convierte en individuos fascinantes para aquellos que tienen el privilegio de conocerlos.",
+        "Aunque suelen ser esquivos, los sátiros son bienvenidos en la sociedad gracias a sus habilidades y dones particulares. Son reconocidos por sus fantásticas recetas culinarias, que aprovechan los sabores naturales y los ingredientes del bosque. Además, su alegre música es apreciada y celebrada, inyectando vida y energía positiva donde quiera que vayan.",
+        "Esta raza encarna la esencia más misteriosa y salvaje de los bosques, llevando consigo un aura de enigma y magia. Aunque su presencia es escasa, los sátiros dejan una impresión duradera en aquellos que tienen la suerte de cruzarse con ellos, convirtiéndolos en seres inolvidables en la vasta diversidad de Terratea."
+      ],
+      "peso_max_carga_kg": 40,
+      "fortalezas": [
+        {
+          "nombre": "Camuflaje",
+          "efecto": null,
+          "texto": "Camuflaje"
+        },
+        {
+          "nombre": "Cocineros",
+          "efecto": "todas las comidas restauran salud",
+          "texto": "Cocineros (todas las comidas restauran salud)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Dependencia de la naturaleza",
+          "efecto": "-1 a las tiradas de destreza fuera de bosque",
+          "texto": "Dependencia de la naturaleza (-1 a las tiradas de destreza fuera de bosque)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-5",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 11,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "6-10",
+          "venenos_toxicos": 7,
+          "magia_maldiciones": 8,
+          "paralisis_petrificacion_control_mental": 9,
+          "quemadura_desangrado": 8,
+          "sortilegios_encantamientos_trampas": 7
+        },
+        {
+          "niveles": "10+",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 6
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/satiro-titulo.webp",
+        "ilustraciones": [
+          "img/razas/satiro-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.20 a 1.60 metros",
+        "peso": "40 a 65 kg",
+        "esperanza_vida": "Alrededor de 150-200 años"
+      }
+    },
+    {
+      "id": "semielfo",
+      "nombre": "Semielfo",
+      "descripcion": [
+        "Los semielfos, son el fruto de la unión entre humanos y elfos, encarnan el vínculo entre las dos razas mas proliferas del mundo de Terratea, aunque a menudo enfrentan el temor de no pertenecer completamente a ninguno de estos dos mundos. Heredan la versatilidad polifacética de los humanos y la destreza en la naturaleza mágica característica de los elfos. Sin embargo, comparten con los humanos la debilidad ante la magia oscura.",
+        "Aunque no constituyen una raza predominante, los semielfos no son rareza en Terratea, ya que su presencia se extiende por todo el continente. Su comprensión única de ambas culturas les otorga una perspectiva única, aunque a menudo luchan con la sensación de no pertenecer por completo a ninguno de los dos mundos que los engendraron.",
+        "Los semielfos poseen la complexión humana y a menudo proyectan una falsa aura de altivez, heredada de la nobleza élfica. Este rasgo puede ser percibido como una máscara que oculta sus propias inseguridades y el constante deseo de encontrar su lugar en el mundo de Terratea."
+      ],
+      "peso_max_carga_kg": 45,
+      "fortalezas": [
+        {
+          "nombre": "Versátil",
+          "efecto": "pueden aprender cualquier clase",
+          "texto": "Versátil (pueden aprender cualquier clase)"
+        },
+        {
+          "nombre": "Aprendizaje avanzado",
+          "efecto": "+10 a la tirada de aprendizaje",
+          "texto": "Aprendizaje avanzado (+10 a la tirada de aprendizaje)"
+        },
+        {
+          "nombre": "Propenso a la magia",
+          "efecto": "+1 de daño por ataque mágico",
+          "texto": "Propenso a la magia (+1 de daño por ataque mágico)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Miedo al rechazo",
+          "efecto": "-2 ante tirada de engaño",
+          "texto": "Miedo al rechazo (-2 ante tirada de engaño)"
+        },
+        {
+          "nombre": "Debilidad ante las maldiciones",
+          "efecto": "+1 de daño recibido por ataques oscuros",
+          "texto": "Debilidad ante las maldiciones (+1 de daño recibido por ataques oscuros)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-4",
+          "venenos_toxicos": 11,
+          "magia_maldiciones": 12,
+          "paralisis_petrificacion_control_mental": 14,
+          "quemadura_desangrado": 16,
+          "sortilegios_encantamientos_trampas": 15
+        },
+        {
+          "niveles": "5-8",
+          "venenos_toxicos": 9,
+          "magia_maldiciones": 10,
+          "paralisis_petrificacion_control_mental": 12,
+          "quemadura_desangrado": 14,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "9-12",
+          "venenos_toxicos": 7,
+          "magia_maldiciones": 8,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 12,
+          "sortilegios_encantamientos_trampas": 9
+        },
+        {
+          "niveles": "13-16",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 4,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 8,
+          "sortilegios_encantamientos_trampas": 6
+        },
+        {
+          "niveles": "17+",
+          "venenos_toxicos": 2,
+          "magia_maldiciones": 4,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 6,
+          "sortilegios_encantamientos_trampas": 5
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/semielfo-titulo.webp",
+        "ilustraciones": [
+          "img/razas/semielfo-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.60 a 2.00 metros",
+        "peso": "55 a 80 kg",
+        "esperanza_vida": "Alrededor de 250-300 años"
+      }
+    },
+    {
+      "id": "semiorco",
+      "nombre": "Semiorco",
+      "descripcion": [
+        "Los semiorcos, producto de la fusión entre la robustez de los orcos y la versatilidad de los humanos, representan una raza única en Terratea. Esta combinación de características les otorga una fortaleza física impresionante y una adaptabilidad que los hace destacar en diversas situaciones.",
+        "A pesar de sus habilidades únicas, los semiorcos a menudo enfrentan el desafío del rechazo debido al código de honor arraigado en la cultura orca. Este código a veces desprecia a aquellos que no son de sangre pura, lo que puede hacer que los semiorcos se sientan marginados en ciertos círculos. A pesar de esto, la presencia de semiorcos se extiende por todo Terratea, demostrando su capacidad para superar obstáculos y encontrar su lugar en el mundo.",
+        "La mezcla de sangre humana y orca también ha llevado a los semiorcos a experimentar cierta debilidad ante la magia, una vulnerabilidad que deben abordar con astucia y precaución en su búsqueda de aceptación y reconocimiento.",
+        "Los semiorcos, con su fuerza heredada de los orcos y su adaptabilidad proveniente de los humanos, son una raza fascinante que desafía las expectativas y forja su propio camino en el complejo tapiz de Terratea."
+      ],
+      "peso_max_carga_kg": 60,
+      "fortalezas": [
+        {
+          "nombre": "Robustez",
+          "efecto": "+1 de bloqueo de daño físico",
+          "texto": "Robustez (+1 de bloqueo de daño físico)"
+        },
+        {
+          "nombre": "Versátil",
+          "efecto": "pueden aprender cualquier clase",
+          "texto": "Versátil (pueden aprender cualquier clase)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Miedo al rechazo",
+          "efecto": "-2 ante tirada de engaño",
+          "texto": "Miedo al rechazo (-2 ante tirada de engaño)"
+        },
+        {
+          "nombre": "Debilidad ante la magia",
+          "efecto": "-1 de daño de magia recibido",
+          "texto": "Debilidad ante la magia (-1 de daño de magia recibido)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 12,
+          "magia_maldiciones": 13,
+          "paralisis_petrificacion_control_mental": 14,
+          "quemadura_desangrado": 15,
+          "sortilegios_encantamientos_trampas": 16
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 10,
+          "magia_maldiciones": 11,
+          "paralisis_petrificacion_control_mental": 12,
+          "quemadura_desangrado": 13,
+          "sortilegios_encantamientos_trampas": 14
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 8,
+          "magia_maldiciones": 9,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 9,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "10-12",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 7,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 7,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "13-15",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 5,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "16-18",
+          "venenos_toxicos": 4,
+          "magia_maldiciones": 4,
+          "paralisis_petrificacion_control_mental": 5,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 7
+        },
+        {
+          "niveles": "19+",
+          "venenos_toxicos": 3,
+          "magia_maldiciones": 3,
+          "paralisis_petrificacion_control_mental": 4,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 6
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/semiorco-titulo.webp",
+        "ilustraciones": [
+          "img/razas/semiorco-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "1.75 a 2.00 metros",
+        "peso": "65 a 100 kg",
+        "esperanza_vida": "Alrededor de 80-90 años"
+      }
+    },
+    {
+      "id": "troloide",
+      "nombre": "Troloide",
+      "descripcion": [
+        "Los Troloides, una raza notable por su asombrosa capacidad de regeneración y una piel dura y gruesa que los protege en combate. Algunos han manifestado la habilidad de regenerar incluso pequeños miembros, demostrando una resistencia impresionante. Sin embargo, su debilidad ante ácidos y venenos puede ser explotada por aquellos que conocen sus vulnerabilidades.",
+        "A pesar de estas características únicas, los Troloides comparten sus ciudades con todas las razas de Terratea, especialmente en Lusitanius, donde son originarios. Su naturaleza amistosa y a veces incluso humorística los hace populares entre otras razas. Aunque a menudo son ingenuos, su disposición abierta y amigable los convierte en compañeros de confianza.",
+        "Los Troloides, a pesar de su resistencia, sienten una cierta inclinación por las batallas. Su valentía y fuerza en el campo de batalla los convierten en aliados respetados. Su participación en conflictos puede ser tanto una muestra de su deseo de proteger como una manifestación de su instinto guerrero innato."
+      ],
+      "peso_max_carga_kg": 50,
+      "fortalezas": [
+        {
+          "nombre": "Regeneración pasiva",
+          "efecto": "+1 de vida cada turno",
+          "texto": "Regeneración pasiva (+1 de vida cada turno)"
+        },
+        {
+          "nombre": "Gruesa piel",
+          "efecto": "+1 de bloqueo de daño físico",
+          "texto": "Gruesa piel (+1 de bloqueo de daño físico)"
+        },
+        {
+          "nombre": "Regeneración de miembros",
+          "efecto": "El personaje puede recuperar, con el paso del tiempo, aquellos miembros perdidos que no sean vitales.",
+          "texto": "Regeneración de miembros (El personaje puede recuperar, con el paso del tiempo, aquellos miembros perdidos que no sean vitales.)"
+        }
+      ],
+      "debilidades": [
+        {
+          "nombre": "Debilidad ante ácido y venenos",
+          "efecto": "+2 de daño",
+          "texto": "Debilidad ante ácido y venenos (+2 de daño)"
+        },
+        {
+          "nombre": "Ingenuidad",
+          "efecto": "-2 ante tirada de salvación por engaño",
+          "texto": "Ingenuidad (-2 ante tirada de salvación por engaño)"
+        }
+      ],
+      "tiradas_salvacion": [
+        {
+          "niveles": "1-3",
+          "venenos_toxicos": 15,
+          "magia_maldiciones": 14,
+          "paralisis_petrificacion_control_mental": 14,
+          "quemadura_desangrado": 14,
+          "sortilegios_encantamientos_trampas": 14
+        },
+        {
+          "niveles": "4-6",
+          "venenos_toxicos": 13,
+          "magia_maldiciones": 12,
+          "paralisis_petrificacion_control_mental": 12,
+          "quemadura_desangrado": 12,
+          "sortilegios_encantamientos_trampas": 12
+        },
+        {
+          "niveles": "7-9",
+          "venenos_toxicos": 11,
+          "magia_maldiciones": 10,
+          "paralisis_petrificacion_control_mental": 10,
+          "quemadura_desangrado": 10,
+          "sortilegios_encantamientos_trampas": 10
+        },
+        {
+          "niveles": "10-12",
+          "venenos_toxicos": 7,
+          "magia_maldiciones": 8,
+          "paralisis_petrificacion_control_mental": 8,
+          "quemadura_desangrado": 8,
+          "sortilegios_encantamientos_trampas": 8
+        },
+        {
+          "niveles": "13-15",
+          "venenos_toxicos": 6,
+          "magia_maldiciones": 6,
+          "paralisis_petrificacion_control_mental": 6,
+          "quemadura_desangrado": 6,
+          "sortilegios_encantamientos_trampas": 6
+        },
+        {
+          "niveles": "16-18",
+          "venenos_toxicos": 5,
+          "magia_maldiciones": 5,
+          "paralisis_petrificacion_control_mental": 5,
+          "quemadura_desangrado": 5,
+          "sortilegios_encantamientos_trampas": 4
+        },
+        {
+          "niveles": "19+",
+          "venenos_toxicos": 5,
+          "magia_maldiciones": 4,
+          "paralisis_petrificacion_control_mental": 3,
+          "quemadura_desangrado": 4,
+          "sortilegios_encantamientos_trampas": 3
+        }
+      ],
+      "imagenes": {
+        "titulo": "img/razas/troloide-titulo.webp",
+        "ilustraciones": [
+          "img/razas/troloide-ilustracion-1.webp"
+        ]
+      },
+      "medidas": {
+        "altura": "2.00 a 2.50 metros",
+        "peso": "80 a 200 kg",
+        "esperanza_vida": "500-600 años"
+      }
+    }
+  ]
+}

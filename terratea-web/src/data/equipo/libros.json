@@ -1,0 +1,100 @@
+[
+  {
+    "nombre": "ALQUIMIA PARA PRINCIPIANTES Y PATOSOS",
+    "coste": "50 M.O",
+    "peso": "0,25KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/alquimia-para-principiantes-y-patosos.webp"
+  },
+  {
+    "nombre": "RECETARIO",
+    "coste": "30 M.O.",
+    "peso": "3 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/recetario.webp"
+  },
+  {
+    "nombre": "LIBRO",
+    "coste": "25 M.O.",
+    "peso": "3 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/libro.webp"
+  },
+  {
+    "nombre": "LIBRO DE CONJUROS",
+    "coste": "50 M.O.",
+    "peso": "3 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/libro-de-conjuros.webp"
+  },
+  {
+    "nombre": "GUÍA DE SERES IMPÍOS",
+    "coste": "50 M.O.",
+    "peso": "3 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/guia-de-seres-impios.webp"
+  },
+  {
+    "nombre": "NECRONOMICON",
+    "coste": "50 M.O.",
+    "peso": "3 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/necronomicon.webp"
+  },
+  {
+    "nombre": "LIBRO SAGRADO",
+    "coste": "50 M.O.",
+    "peso": "3 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/libro-sagrado.webp"
+  },
+  {
+    "nombre": "LISTADO DE RECOMPENSAS",
+    "coste": "5 M.P.",
+    "peso": "0 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/listado-de-recompensas.webp"
+  },
+  {
+    "nombre": "GRIMORIO PARA INGENIERO (VACIO)",
+    "coste": "50 M.O.",
+    "peso": "3 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/grimorio-para-ingeniero-vacio.webp"
+  },
+  {
+    "nombre": "LIBRO VACÍO",
+    "coste": "5 M.O.",
+    "peso": "2 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/libro-vacio.webp"
+  },
+  {
+    "nombre": "PERIÓDICO",
+    "coste": "2 M.C.",
+    "peso": "0,25 KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/periodico.webp"
+  },
+  {
+    "nombre": "MAPA",
+    "coste": "1 M.O.",
+    "peso": "¼ KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/mapa.webp"
+  },
+  {
+    "nombre": "PAPEL (10 HOJAS)",
+    "coste": "1 M.P.",
+    "peso": "¼ KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/papel-10-hojas.webp"
+  },
+  {
+    "nombre": "PERGAMINO O PAPIRO",
+    "coste": "4 M.P.",
+    "peso": "¼ KG",
+    "categoria": "LIBRERÍA",
+    "imagen": "img/equipo/libros/pergamino-o-papiro.webp"
+  }
+]

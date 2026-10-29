@@ -1,0 +1,279 @@
+[
+  {
+    "nombre": "KEIKOGI",
+    "coste": "15\nM.O.",
+    "peso": "1 KG",
+    "ruido": "NO",
+    "categoria": "ARMADURA LIGERAS",
+    "imagen": "img/equipo/armaduras/keikogi.webp",
+    "clase_armadura": "Pecho: -0.20\npiernas: -0,15"
+  },
+  {
+    "nombre": "ARMADURA ACOLCHADA",
+    "coste": "20\nM.O.",
+    "peso": "5 KG",
+    "ruido": "NO",
+    "categoria": "ARMADURA LIGERAS",
+    "imagen": "img/equipo/armaduras/armadura-acolchada.webp",
+    "clase_armadura": "Pecho: -0,35\nPierna: -0,35\nZapatos: -0,25\nGuantes: -0,10"
+  },
+  {
+    "nombre": "ARMADURA DE PIELES",
+    "coste": "35\nM.O.",
+    "peso": "8 KG",
+    "ruido": "NO",
+    "categoria": "ARMADURA LIGERAS",
+    "imagen": "img/equipo/armaduras/armadura-de-pieles.webp",
+    "atributos_extra": "+2 De resistencia al frÍo\n1 De resistencia al calor",
+    "clase_armadura": "Pecho: -0,35\nCapa: -0,15\nCabeza: -0,20\nPiernas: -0,30\nZapatos: -0,25"
+  },
+  {
+    "nombre": "ROPAJES DE NÓMADA",
+    "coste": "35\nM.O.",
+    "peso": "3 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA LIGERAS",
+    "imagen": "img/equipo/armaduras/ropajes-de-nomada.webp",
+    "atributos_extra": "+2 de resistencia al calor\n1 de resistencia al frio",
+    "clase_armadura": "Pecho: -0,35\nPiernas: -0,25\nCabeza: -0,20\nZapatos: -0,20"
+  },
+  {
+    "nombre": "ARMADURA DE TELA",
+    "coste": "40\nM.O.",
+    "peso": "2 KG",
+    "ruido": "NO",
+    "categoria": "ARMADURA LIGERAS",
+    "imagen": "img/equipo/armaduras/armadura-de-tela.webp",
+    "atributos_extra": "Posibilidad de incluir una gema a la armadura",
+    "clase_armadura": "Pecho -0,15\nPiernas -0,15"
+  },
+  {
+    "nombre": "ARMADURA DE ANILLAS",
+    "coste": "50\nM.O.",
+    "peso": "6 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA LIGERAS",
+    "imagen": "img/equipo/armaduras/armadura-de-anillas.webp",
+    "clase_armadura": "Pecho: -0,85\nPiernas: -0,80\nBrazalete: -0,35\ncabeza: -0,50"
+  },
+  {
+    "nombre": "ARMADURA DE RAICES",
+    "coste": "70\nM.O.",
+    "peso": "4 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA LIGERAS",
+    "imagen": "img/equipo/armaduras/armadura-de-raices.webp",
+    "atributos_extra": "+2 De daño de naturaleza\n+1 De daño de fuego recibido",
+    "clase_armadura": "Pecho: -0,80\nPiernas: -0,75\nBrazalete: -0,50\nZapatos: -0,50"
+  },
+  {
+    "nombre": "TRAJE NINJUTSU",
+    "coste": "100 M.O.",
+    "peso": "3 KG",
+    "ruido": "NO",
+    "categoria": "ARMADURA LIGERAS",
+    "imagen": "img/equipo/armaduras/traje-ninjutsu.webp",
+    "clase_armadura": "Pecho: -0,30\nPiernas: -0,30\nCabeza: -0,25\nBrazaletes: -0,10\nZapatos: -0,25"
+  },
+  {
+    "nombre": "ARMADURA DE CUERO",
+    "coste": "40\nM.O.",
+    "peso": "10 KG",
+    "ruido": "NO",
+    "categoria": "ARMADURAS MEDIAS",
+    "imagen": "img/equipo/armaduras/armadura-de-cuero.webp",
+    "clase_armadura": "Pecho: -1,05\nPiernas: -1"
+  },
+  {
+    "nombre": "ARMADURA DE CUERO TACHONADO",
+    "coste": "50\nM.O.",
+    "peso": "12 KG",
+    "ruido": "NO",
+    "categoria": "ARMADURAS MEDIAS",
+    "imagen": "img/equipo/armaduras/armadura-de-cuero-tachonado.webp",
+    "clase_armadura": "Pecho: -1,10\nPiernas: -1\nBrazalete: -0,30\nCasco: -0,60"
+  },
+  {
+    "nombre": "ARMADURA DE MALLA",
+    "coste": "60\nM.O.",
+    "peso": "14 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURAS MEDIAS",
+    "imagen": "img/equipo/armaduras/armadura-de-malla.webp",
+    "clase_armadura": "Pecho: -1,25\nPiernas: -1,20\nCabeza: -1"
+  },
+  {
+    "nombre": "COTA DE MALLA GUARNECIDA",
+    "coste": "75\nM.O.",
+    "peso": "15 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURAS MEDIAS",
+    "imagen": "img/equipo/armaduras/cota-de-malla-guarnecida.webp",
+    "clase_armadura": "Pecho: -1,50\nCabeza: -1,05\nBrazalete: -0,30\nPiernas: -1,40"
+  },
+  {
+    "nombre": "ARMADURA DE CORAZA",
+    "coste": "80\nM.O.",
+    "peso": "15 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURAS MEDIAS",
+    "imagen": "img/equipo/armaduras/armadura-de-coraza.webp",
+    "clase_armadura": "Pecho: -2,50"
+  },
+  {
+    "nombre": "ARMADURA DE BRONCE",
+    "coste": "100 M.O.",
+    "peso": "17 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURAS MEDIAS",
+    "imagen": "img/equipo/armaduras/armadura-de-bronce.webp",
+    "clase_armadura": "PECHO: -2,25\nBRAZALETES: -0,70"
+  },
+  {
+    "nombre": "ARMADURA DE CONCHAS",
+    "coste": "135 M.O.",
+    "peso": "18 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURAS MEDIAS",
+    "imagen": "img/equipo/armaduras/armadura-de-conchas.webp",
+    "clase_armadura": "Pecho: -2\nBrazaletes: -0,65\nPiernas: -1,5"
+  },
+  {
+    "nombre": "ARMADURA DE TELA Y PLATA",
+    "coste": "150 M.O.",
+    "peso": "7 KG",
+    "ruido": "NO",
+    "categoria": "ARMADURAS MEDIAS",
+    "imagen": "img/equipo/armaduras/armadura-de-tela-y-plata.webp",
+    "atributos_extra": "+1 de visión en nocturnidad",
+    "clase_armadura": "Pecho: -1\nPiernas: -0,85\nBrazaletes: -0,75\nZapatos: -0,40"
+  },
+  {
+    "nombre": "ARMADURA CATAFRACTA",
+    "coste": "175 M.O.",
+    "peso": "22 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA PESADA",
+    "imagen": "img/equipo/armaduras/armadura-catafracta.webp",
+    "clase_armadura": "Pecho: -2.25\ncabeza: -1.50\nbrazaletes:-1,25"
+  },
+  {
+    "nombre": "ARMADURA DE VARILLAS",
+    "coste": "200 M.O.",
+    "peso": "20 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA PESADA",
+    "imagen": "img/equipo/armaduras/armadura-de-varillas.webp",
+    "clase_armadura": "Pecho: -1,60\nPiernas: -1,40\nBrazaletes: -1\nCabeza: -1,20\nPies: -0,80"
+  },
+  {
+    "nombre": "ARMADURA DE FERROXITA",
+    "coste": "300 M.O.",
+    "peso": "30 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA PESADA",
+    "imagen": "img/equipo/armaduras/armadura-de-ferroxita.webp",
+    "atributos_extra": "La armadura es inoxidable",
+    "clase_armadura": "Pecho: 1,35\nPiernas: 1,30\nCabeza: 1, 25\npies: 1,15\nBrazalete: 1,20"
+  },
+  {
+    "nombre": "ARMADURA DE ACERO TEMPLADO",
+    "coste": "355 M.O.",
+    "peso": "38 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA PESADA",
+    "imagen": "img/equipo/armaduras/armadura-de-acero-templado.webp",
+    "atributos_extra": "Resistencia la frio +1",
+    "clase_armadura": "Pecho: -1,85\nPiernas: -1,15\nCabeza: -1,35\nBrazaletes: -0,60\nCapa: -0,25\nZapatos: -0,85"
+  },
+  {
+    "nombre": "ARMADURA DE PLACAS",
+    "coste": "400 M.O.",
+    "peso": "25 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA PESADA",
+    "imagen": "img/equipo/armaduras/armadura-de-placas.webp",
+    "clase_armadura": "Pecho: -2,25\nCabeza: -1,80\nPiernas: -1,85"
+  },
+  {
+    "nombre": "ARMADURA DE ACERO Y ORO",
+    "coste": "572 M.O.",
+    "peso": "27 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA PESADA",
+    "imagen": "img/equipo/armaduras/armadura-de-acero-y-oro.webp",
+    "clase_armadura": "Pecho: -2\nPiernas: -1,05\nCabeza: -1,00\nBrazaletes: -1\nPies:-1,00"
+  },
+  {
+    "nombre": "ARMADURA DE ÉBANO",
+    "coste": "600 M.O.",
+    "peso": "40 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA PESADA",
+    "imagen": "img/equipo/armaduras/armadura-de-ebano.webp",
+    "atributos_extra": "Absorción de daño oscuro +3",
+    "clase_armadura": "Pecho: 2,00\nPiernas: 1,75\nCabeza: 1,35\nBrazaletes: 1,00\nZapatos: 1,05"
+  },
+  {
+    "nombre": "ARMADURA DE ESCAMAS DRAGON",
+    "coste": "1000 M.O.",
+    "peso": "50 KG",
+    "ruido": "SI",
+    "categoria": "ARMADURA PESADA",
+    "imagen": "img/equipo/armaduras/armadura-de-escamas-dragon.webp",
+    "atributos_extra": "+3 de absorción de daño de ataques de dragón y derivados de dragones",
+    "clase_armadura": "Pecho: 2,30\nPiernas: 2\nCabeza: 1,75\nBrazaletes: 1,20\nZapatos: 1,25"
+  },
+  {
+    "nombre": "RODELA",
+    "coste": "20 M.O.",
+    "peso": "2,5 KG",
+    "ruido": "NO",
+    "categoria": "ESCUDOS",
+    "imagen": "img/equipo/armaduras/rodela.webp",
+    "clase_armadura": "1"
+  },
+  {
+    "nombre": "ESCUDO TARJA",
+    "coste": "20 M.O.",
+    "peso": "4 KG",
+    "ruido": "SI",
+    "categoria": "ESCUDOS",
+    "imagen": "img/equipo/armaduras/escudo-tarja.webp",
+    "clase_armadura": "1,25"
+  },
+  {
+    "nombre": "ESCUDO DE LÁGRIMA",
+    "coste": "24 M.O.",
+    "peso": "5 KG",
+    "categoria": "ESCUDOS",
+    "imagen": "img/equipo/armaduras/escudo-de-lagrima.webp",
+    "clase_armadura": "1,50"
+  },
+  {
+    "nombre": "ESCUDO ARPIS",
+    "coste": "28 M.O.",
+    "peso": "5,5 KG",
+    "ruido": "SI",
+    "categoria": "ESCUDOS",
+    "imagen": "img/equipo/armaduras/escudo-arpis.webp",
+    "clase_armadura": "1,75"
+  },
+  {
+    "nombre": "SCUTUM",
+    "coste": "30 M.O.",
+    "peso": "6 KG",
+    "ruido": "SI",
+    "categoria": "ESCUDOS",
+    "imagen": "img/equipo/armaduras/scutum.webp",
+    "clase_armadura": "2"
+  },
+  {
+    "nombre": "ARMADURA PARA LA MONTURA",
+    "cantidad": "1",
+    "coste": "30 M.O.",
+    "peso": "20 KG",
+    "categoria": "MASCOTAS/MONTURAS",
+    "imagen": "img/equipo/armaduras/armadura-para-la-montura.webp"
+  }
+]

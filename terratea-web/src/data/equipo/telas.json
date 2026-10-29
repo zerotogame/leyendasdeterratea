@@ -1,0 +1,74 @@
+[
+  {
+    "nombre": "ESPARTO",
+    "descripcion": "Fibra vegetal tosca y rígida, difícil de manejar y poco flexible. El esparto ofrece una resistencia mínima y resulta incómodo para el combate prolongado, por lo que se utiliza únicamente en protecciones improvisadas o de baja calidad.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/esparto.webp"
+  },
+  {
+    "nombre": "CÁÑAMO",
+    "descripcion": "Material áspero y firme, con buena resistencia al desgaste. El cáñamo soporta tensiones moderadas y se mantiene estable incluso con humedad, siendo común en armaduras ligeras económicas y equipamiento básico de soldados rasos.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/canamo.webp"
+  },
+  {
+    "nombre": "ARPILLERA",
+    "descripcion": "Tejido grueso y basto, de fabricación sencilla y coste reducido. La arpillera proporciona una protección ligera y una buena transpirabilidad, aunque su durabilidad es limitada y su acabado es poco estético.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/arpillera.webp"
+  },
+  {
+    "nombre": "FIELTRO",
+    "descripcion": "Material compacto elaborado por presión, cálido y fácil de moldear. El fieltro amortigua impactos leves y proporciona aislamiento, siendo utilizado en armaduras ligeras o en equipamiento de clima frío.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/fieltro.webp"
+  },
+  {
+    "nombre": "ALGODÓN",
+    "descripcion": "Fibra suave y flexible, de tacto agradable y fabricación extendida. El algodón ofrece comodidad y buena movilidad, siendo ideal para atuendos ligeros, uniformes y capas acolchadas básicas.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/algodon.webp"
+  },
+  {
+    "nombre": "LINO",
+    "descripcion": "Tejido firme, fresco y resistente, con una excelente relación entre peso y durabilidad. El lino se mantiene estable incluso en climas húmedos, lo que lo convierte en una opción fiable para armaduras ligeras de mejor calidad.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/lino.webp"
+  },
+  {
+    "nombre": "LANA",
+    "descripcion": "Fibra cálida, elástica y cómoda, capaz de mantener el calor corporal incluso en condiciones extremas. La lana destaca por su capacidad aislante y su durabilidad, siendo empleada en túnicas reforzadas y protecciones de climas fríos.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/lana.webp"
+  },
+  {
+    "nombre": "GAMUZA",
+    "descripcion": "tela hecha de cuero suave y flexible obtenido de pieles finamente tratadas. La gamuza combina comodidad con una resistencia superior a la abrasión, siendo una opción apreciada para armaduras ligeras de alto rendimiento y ropa táctica.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/gamuza.webp"
+  },
+  {
+    "nombre": "GASA",
+    "descripcion": "Tejido extremadamente ligero, delicado y semitransparente. Aunque no ofrece gran protección física, la gasa es apreciada para ropajes ceremoniales, atuendos mágicos y vestimentas donde la movilidad y la elegancia son prioritarias.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/gasa.webp"
+  },
+  {
+    "nombre": "TERCIOPELO",
+    "descripcion": "Tela densa y de aspecto lujoso, con un acabado suave y brillante. El terciopelo es poco resistente al desgaste, pero su prestigio y presencia visual lo convierten en material frecuente en ropajes nobles y armaduras ceremoniales.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/terciopelo.webp"
+  },
+  {
+    "nombre": "SEDA",
+    "descripcion": "Fibra ligera, resistente y flexible, conocida por su tacto suave y su capacidad para disipar energía cinética, predilección para entornos desérticos. La seda mantiene su integridad bajo tensión y ofrece una sorprendente protección frente a cortes ligeros, siendo muy valorada para armaduras ligeras de élite.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/seda.webp"
+  },
+  {
+    "nombre": "CACHEMIRA",
+    "descripcion": "Fibra excepcionalmente fina y lujosa, suave al tacto y con gran capacidad térmica. La cachemira destaca por su confort superior y su elevada rareza, siendo utilizada en prendas nobles, armaduras mágicas y equipamiento de prestigio.",
+    "categoria": "TABLA DE TELAS",
+    "imagen": "img/equipo/telas/cachemira.webp"
+  }
+]

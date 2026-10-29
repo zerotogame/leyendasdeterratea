@@ -1,0 +1,737 @@
+[
+  {
+    "nombre": "ABACO",
+    "coste": "2 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/abaco.webp"
+  },
+  {
+    "nombre": "ABROJOS (BOLSA DE 20)",
+    "coste": "1 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/abrojos-bolsa-de-20.webp"
+  },
+  {
+    "nombre": "ACEITE (FRASCO)",
+    "coste": "1 M.P.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/aceite-frasco.webp"
+  },
+  {
+    "nombre": "ACIDO (VIAL)",
+    "coste": "23 M.O.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/acido-vial.webp"
+  },
+  {
+    "nombre": "AJO (3 CABEZAS)",
+    "coste": "5 M.C.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/ajo-3-cabezas.webp"
+  },
+  {
+    "nombre": "AGUA BENDITA (FRASCO)",
+    "coste": "25 M.O.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/agua-bendita-frasco.webp"
+  },
+  {
+    "nombre": "ALFORJAS",
+    "coste": "1 M.P.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/alforjas.webp"
+  },
+  {
+    "nombre": "ANTORCHAS (8)",
+    "coste": "2 M.P.",
+    "peso": "4 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/antorchas-8.webp"
+  },
+  {
+    "nombre": "BALANZA DE MERCADER",
+    "coste": "5 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/balanza-de-mercader.webp"
+  },
+  {
+    "nombre": "GRAN BARRIL",
+    "coste": "2 M.O.",
+    "peso": "25 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/gran-barril.webp"
+  },
+  {
+    "nombre": "BOLSA",
+    "coste": "5 M.P.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/bolsa.webp"
+  },
+  {
+    "nombre": "BRÚJULA",
+    "coste": "20 M.O.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/brujula.webp"
+  },
+  {
+    "nombre": "CADENA (10 M)",
+    "coste": "30 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cadena-10-m.webp"
+  },
+  {
+    "nombre": "CAMPANA",
+    "coste": "1 M.P.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/campana.webp"
+  },
+  {
+    "nombre": "CANALIZADORES DE ENERGIA",
+    "coste": "25 M.O.",
+    "peso": "4 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/canalizadores-de-energia.webp"
+  },
+  {
+    "nombre": "CÁNTARO",
+    "coste": "2 M.P.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cantaro.webp"
+  },
+  {
+    "nombre": "CANTIMPLORA (LLENA)",
+    "coste": "2 M.P.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cantimplora-llena.webp"
+  },
+  {
+    "nombre": "CAÑA DE PESCAR",
+    "coste": "1 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cana-de-pescar.webp"
+  },
+  {
+    "nombre": "CARCAJ",
+    "coste": "1 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/carcaj.webp"
+  },
+  {
+    "nombre": "CATALEJO",
+    "coste": "100 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/catalejo.webp"
+  },
+  {
+    "nombre": "CERROJO",
+    "coste": "20 M.O.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cerrojo.webp"
+  },
+  {
+    "nombre": "CESTA",
+    "coste": "4 M.P.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cesta.webp"
+  },
+  {
+    "nombre": "COFRE",
+    "coste": "5 M.O.",
+    "peso": "30 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cofre.webp"
+  },
+  {
+    "nombre": "CONJUNTOS DE PIEDRAS RUNICAS",
+    "coste": "100 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/conjuntos-de-piedras-runicas.webp"
+  },
+  {
+    "nombre": "CORREA PARA DOMESTICAR",
+    "coste": "1 M.O.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/correa-para-domesticar.webp"
+  },
+  {
+    "nombre": "CUERDA DE CAÑAMO (50 M)",
+    "coste": "1 M.O.",
+    "peso": "10 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cuerda-de-canamo-50-m.webp"
+  },
+  {
+    "nombre": "CUERDA DE SEDA (50 M)",
+    "coste": "10 M.O.",
+    "peso": "5 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cuerda-de-seda-50-m.webp"
+  },
+  {
+    "nombre": "CUBO",
+    "coste": "5 M.C.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/cubo.webp"
+  },
+  {
+    "nombre": "ESCALERA (10 M)",
+    "coste": "5 M.C.",
+    "peso": "10 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/escalera-10-m.webp"
+  },
+  {
+    "nombre": "ESPEJO",
+    "coste": "10 M.O.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/espejo.webp"
+  },
+  {
+    "nombre": "ESPEJO DE PLATA",
+    "coste": "75 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/espejo-de-plata.webp"
+  },
+  {
+    "nombre": "ESTACAS (3)",
+    "coste": "5 M.C.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/estacas-3.webp"
+  },
+  {
+    "nombre": "ESTUCHE PARA MAPAS O PERGAMINOS",
+    "coste": "1 M.O.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/estuche-para-mapas-o-pergaminos.webp"
+  },
+  {
+    "nombre": "ESTUCHE PARA VIROTES O ESTACAS",
+    "coste": "1 M.O.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/estuche-para-virotes-o-estacas.webp"
+  },
+  {
+    "nombre": "FAROL DE ACEITE",
+    "coste": "9 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/farol-de-aceite.webp"
+  },
+  {
+    "nombre": "FRASCO O JARRA (VACIO)",
+    "coste": "3 M.C.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/frasco-o-jarra-vacio.webp"
+  },
+  {
+    "nombre": "FILACTERIA",
+    "coste": "5000 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/filacteria.webp"
+  },
+  {
+    "nombre": "GARFIO DE ESCALADA",
+    "coste": "2 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/garfio-de-escalada.webp"
+  },
+  {
+    "nombre": "GRILLETES",
+    "coste": "15 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/grilletes.webp"
+  },
+  {
+    "nombre": "HERRAMIENTAS DE LADRÓN",
+    "coste": "30 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/herramientas-de-ladron.webp"
+  },
+  {
+    "nombre": "INSTRUMENTO MUSICAL",
+    "coste": "5 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/instrumento-musical.webp"
+  },
+  {
+    "nombre": "JABÓN",
+    "coste": "2 M.P.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/jabon.webp"
+  },
+  {
+    "nombre": "JUEGO DE ALQUIMIA",
+    "coste": "25 M.O.",
+    "peso": "10 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/juego-de-alquimia.webp"
+  },
+  {
+    "nombre": "JUEGO DE UNGÜENTOS",
+    "coste": "20 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/juego-de-unguentos.webp"
+  },
+  {
+    "nombre": "KIT DE ACAMPADA PARA EL DESIERTO",
+    "coste": "25 M.O.",
+    "peso": "25 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/kit-de-acampada-para-el-desierto.webp"
+  },
+  {
+    "nombre": "KIT DE MANITAS",
+    "coste": "35 M.O.",
+    "peso": "12 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/kit-de-manitas.webp"
+  },
+  {
+    "nombre": "LACRE",
+    "coste": "5 M.P.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/lacre.webp"
+  },
+  {
+    "nombre": "LÁMPARA",
+    "coste": "5 M.P.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/lampara.webp"
+  },
+  {
+    "nombre": "LUPA",
+    "coste": "100 M.O.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/lupa.webp"
+  },
+  {
+    "nombre": "MANTA",
+    "coste": "5 M.P.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/manta.webp"
+  },
+  {
+    "nombre": "MARTILLO",
+    "coste": "7 M.P.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/martillo.webp"
+  },
+  {
+    "nombre": "MAZO",
+    "coste": "4 M.P.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/mazo.webp"
+  },
+  {
+    "nombre": "MOCHILA (VACIA)",
+    "coste": "2 M.O.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/mochila-vacia.webp"
+  },
+  {
+    "nombre": "SILLA DE MONTAR",
+    "coste": "30 M.O.",
+    "peso": "10 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/silla-de-montar.webp"
+  },
+  {
+    "nombre": "ODRE",
+    "coste": "1 M.O.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/odre.webp"
+  },
+  {
+    "nombre": "SET DE COCINA PARA ACAMPADA",
+    "coste": "5 M.O.",
+    "peso": "5 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/set-de-cocina-para-acampada.webp"
+  },
+  {
+    "nombre": "PALANCA",
+    "coste": "2 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/palanca.webp"
+  },
+  {
+    "nombre": "PERFUME",
+    "coste": "15 M.O.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/perfume.webp"
+  },
+  {
+    "nombre": "PERTIGA (10 M)",
+    "coste": "4 M.P.",
+    "peso": "4 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/pertiga-10-m.webp"
+  },
+  {
+    "nombre": "PETATE",
+    "coste": "1 M.P.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/petate.webp"
+  },
+  {
+    "nombre": "PICA (ESCALADA)",
+    "coste": "3 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/pica-escalada.webp"
+  },
+  {
+    "nombre": "PIEDRA DE AFILAR",
+    "coste": "1 M.C.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/piedra-de-afilar.webp"
+  },
+  {
+    "nombre": "PIELES DE ANIMAL",
+    "coste": "15 M.O.",
+    "peso": "8 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/pieles-de-animal.webp"
+  },
+  {
+    "nombre": "ROYOS DE TELA",
+    "coste": "7 M.O.\n5 M.P.",
+    "peso": "8 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/royos-de-tela.webp"
+  },
+  {
+    "nombre": "PINCHOS DE HIERRO (10)",
+    "coste": "1 M.O.",
+    "peso": "3 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/pinchos-de-hierro-10.webp"
+  },
+  {
+    "nombre": "PITON (HERRAMIENTA)",
+    "coste": "5 M.C.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/piton-herramienta.webp"
+  },
+  {
+    "nombre": "PLUMA (ESCRIBIR)",
+    "coste": "1 M.P.",
+    "peso": "0 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/pluma-escribir.webp"
+  },
+  {
+    "nombre": "POLEA",
+    "coste": "4 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/polea.webp"
+  },
+  {
+    "nombre": "POLIPASTO",
+    "coste": "1 M.O.",
+    "peso": "5 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/polipasto.webp"
+  },
+  {
+    "nombre": "PÚAS (10)",
+    "coste": "1 M.O.",
+    "peso": "3 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/puas-10.webp"
+  },
+  {
+    "nombre": "RACIONES DE COMIDA",
+    "coste": "4 M.P.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/raciones-de-comida.webp"
+  },
+  {
+    "nombre": "RELOJ DE ARENA",
+    "coste": "35 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/reloj-de-arena.webp"
+  },
+  {
+    "nombre": "SACO GRANDE",
+    "coste": "2 M.P.",
+    "peso": "½ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/saco-grande.webp"
+  },
+  {
+    "nombre": "SACO PEQUEÑO",
+    "coste": "1 M.P.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/saco-pequeno.webp"
+  },
+  {
+    "nombre": "SEXTANTE",
+    "coste": "50 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/sextante.webp"
+  },
+  {
+    "nombre": "SILBATO",
+    "coste": "2 M.P.",
+    "peso": "0 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/silbato.webp"
+  },
+  {
+    "nombre": "TIENDA DE CAMPAÑA (2 PERSONAS)",
+    "coste": "5 M.O.",
+    "peso": "20 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/tienda-de-campana-2-personas.webp"
+  },
+  {
+    "nombre": "TINTA (VIAL)",
+    "coste": "8 M.O.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/tinta-vial.webp"
+  },
+  {
+    "nombre": "TIZA",
+    "coste": "1 M.C.",
+    "peso": "0 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/tiza.webp"
+  },
+  {
+    "nombre": "TRAMPA BÁSICA DE CAZA",
+    "coste": "10 M.O.",
+    "peso": "5 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/trampa-basica-de-caza.webp"
+  },
+  {
+    "nombre": "VELA (10)",
+    "coste": "1 M.P.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/vela-10.webp"
+  },
+  {
+    "nombre": "VIALES O RECIPIENTES ADECUADOS X 3 (VACIOS)",
+    "coste": "1 M.O.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/viales-o-recipientes-adecuados-x-3-vacios.webp"
+  },
+  {
+    "nombre": "VINO (2 PINTAS)",
+    "coste": "1 M.O.",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/vino-2-pintas.webp"
+  },
+  {
+    "nombre": "YESCA Y PEDERNAL",
+    "coste": "2 M.O.",
+    "peso": "¼ KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/yesca-y-pedernal.webp"
+  },
+  {
+    "nombre": "POLVORA (BARRIL)",
+    "coste": "10 M.O",
+    "peso": "1 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/polvora-barril.webp"
+  },
+  {
+    "nombre": "MECHAS (10M)",
+    "coste": "5 M.O",
+    "peso": "3KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/mechas-10m.webp"
+  },
+  {
+    "nombre": "JUGUETES",
+    "coste": "2 M.C.",
+    "peso": "0KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/juguetes.webp"
+  },
+  {
+    "nombre": "RACIONES DE ALIMENTO PARA MONTURAS",
+    "coste": "5 M.C/SEMANA",
+    "peso": "10KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/raciones-de-alimento-para-monturas.webp"
+  },
+  {
+    "nombre": "RACIONES DE ALIMENTO PARA MASCOTAS",
+    "coste": "3 M.C./SEMANA",
+    "peso": "5KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/raciones-de-alimento-para-mascotas.webp"
+  },
+  {
+    "nombre": "CAÑÓN",
+    "coste": "120 M.O.",
+    "peso": "5.000KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/canon.webp"
+  },
+  {
+    "nombre": "BALAS DE CAÑON",
+    "coste": "10 M.O.",
+    "peso": "10KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/balas-de-canon.webp"
+  },
+  {
+    "nombre": "BALISTA",
+    "coste": "40 M.O.",
+    "peso": "2.000KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/balista.webp"
+  },
+  {
+    "nombre": "VIROTES DE BALLESTA DE GUERRA",
+    "coste": "5 M.O.",
+    "peso": "5KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/virotes-de-ballesta-de-guerra.webp"
+  },
+  {
+    "nombre": "FALCONETE",
+    "coste": "80 M.O.",
+    "peso": "400KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/falconete.webp"
+  },
+  {
+    "nombre": "PROYECTILES DE FALCONETES (25)",
+    "coste": "8 M.O.",
+    "peso": "3KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/proyectiles-de-falconetes-25.webp"
+  },
+  {
+    "nombre": "ALCOHOL (BOTELLA 1L)",
+    "coste": "2 M.O.",
+    "peso": "2 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/alcohol-botella-1l.webp"
+  },
+  {
+    "nombre": "CLAVOS (BOLSA X20)",
+    "coste": "3 M.C.",
+    "peso": "0 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/clavos-bolsa-x20.webp"
+  },
+  {
+    "nombre": "ENGRANAJES (BOLSA X20)",
+    "coste": "3 M.C",
+    "peso": "0 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/engranajes-bolsa-x20.webp"
+  },
+  {
+    "nombre": "REMACHES (BOLSA X20)",
+    "coste": "3 M.C",
+    "peso": "0 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/remaches-bolsa-x20.webp"
+  },
+  {
+    "nombre": "BOTIQUÍN MEDICO",
+    "coste": "5 M.O.",
+    "peso": "4 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/botiquin-medico.webp"
+  },
+  {
+    "nombre": "LINGOTE DE HIERRO",
+    "coste": "5 M.O.",
+    "peso": "5 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/lingote-de-hierro.webp"
+  },
+  {
+    "nombre": "LINGOTE DE COBRE",
+    "coste": "2 M.O\n5 M.P",
+    "peso": "5 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/lingote-de-cobre.webp"
+  },
+  {
+    "nombre": "LINGOTE DE LATÓN",
+    "coste": "7 M.O.",
+    "peso": "5 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/lingote-de-laton.webp"
+  },
+  {
+    "nombre": "LINGOTE DE PLATA",
+    "coste": "25 M.O.",
+    "peso": "5 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/lingote-de-plata.webp"
+  },
+  {
+    "nombre": "LINGOTE DE ORO",
+    "coste": "100 M.O.",
+    "peso": "5 KG",
+    "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
+    "imagen": "img/equipo/objetos/lingote-de-oro.webp"
+  }
+]

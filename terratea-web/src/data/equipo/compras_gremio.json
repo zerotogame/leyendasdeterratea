@@ -1,0 +1,565 @@
+[
+  {
+    "nombre": "SILLAS Y MESAS DEL CONSEJO",
+    "precio": "5 M.O.",
+    "descripcion": "Elegantes sillas y mesas diseñadas para reuniones formales y discusiones estratégicas en el gremio.",
+    "imagen": "img/equipo/gremio/sillas-y-mesas-del-consejo.webp"
+  },
+  {
+    "nombre": "COFRES DE ALMACENAMIENTO",
+    "precio": "2 M.O.",
+    "descripcion": "Robustos cofres para almacenar y proteger objetos valiosos o suministros esenciales del gremio.",
+    "imagen": "img/equipo/gremio/cofres-de-almacenamiento.webp"
+  },
+  {
+    "nombre": "ESPEJO DE COMUNICACIÓN MÍSTICA",
+    "precio": "50 M.O.",
+    "descripcion": "Un espejo mágico que permite la comunicación a larga distancia, facilitando la conexión entre miembros del gremio.",
+    "imagen": "img/equipo/gremio/espejo-de-comunicacion-mistica.webp"
+  },
+  {
+    "nombre": "FUENTE DE AGUA CURATIVA",
+    "precio": "200 M.O.",
+    "descripcion": "Una fuente mágica que emana agua con propiedades curativas, proporcionando un lugar de descanso y revitalización.",
+    "imagen": "img/equipo/gremio/fuente-de-agua-curativa.webp"
+  },
+  {
+    "nombre": "ESTABLOS",
+    "precio": "150 M.O.",
+    "descripcion": "Instalaciones para albergar y cuidar de las monturas de los miembros del gremio.",
+    "imagen": "img/equipo/gremio/establos.webp"
+  },
+  {
+    "nombre": "RELOJ ASTRAL",
+    "precio": "75 M.O.",
+    "descripcion": "Un reloj mágico que muestra la hora de diferentes regiones o planos, facilitando la coordinación temporal.",
+    "imagen": "img/equipo/gremio/reloj-astral.webp"
+  },
+  {
+    "nombre": "BIBLIOTECA (VACIA)",
+    "precio": "25 M.O.",
+    "descripcion": "Una biblioteca vacía lista para ser llenada con conocimientos, registros históricos y textos importantes.",
+    "imagen": "img/equipo/gremio/biblioteca-vacia.webp"
+  },
+  {
+    "nombre": "LABORATORIO (ALQUIMIA)",
+    "precio": "25 M.O.",
+    "descripcion": "Un espacio equipado para realizar experimentos alquímicos y crear pociones mágicas y elixires.",
+    "imagen": "img/equipo/gremio/laboratorio-alquimia.webp"
+  },
+  {
+    "nombre": "TALLER DE INGENIERIA",
+    "precio": "30 M.O.",
+    "descripcion": "Un lugar donde los miembros del gremio pueden fabricar y reparar herramientas, armas y dispositivos mecánicos.",
+    "imagen": "img/equipo/gremio/taller-de-ingenieria.webp"
+  },
+  {
+    "nombre": "MESA DE CARTOGRAFÍA",
+    "precio": "12 M.O.",
+    "descripcion": "Una mesa especializada para la creación y estudio de mapas detallados y estratégicos. También sirve para las anotaciones de interés para el Gremio.",
+    "imagen": "img/equipo/gremio/mesa-de-cartografia.webp"
+  },
+  {
+    "nombre": "CAPILLA",
+    "precio": "300 M.O.",
+    "descripcion": "Un lugar de culto para los miembros que buscan orientación espiritual y bendiciones divinas.",
+    "imagen": "img/equipo/gremio/capilla.webp"
+  },
+  {
+    "nombre": "CENTRO DE MEDITACIÓN",
+    "precio": "5 M.O.",
+    "descripcion": "Un espacio tranquilo para la meditación y el entrenamiento mental, promoviendo la paz interior y la concentración.",
+    "imagen": "img/equipo/gremio/centro-de-meditacion.webp"
+  },
+  {
+    "nombre": "ESTATUAS DE MIEMBROS (MÁRMOL)",
+    "precio": "125 M.O.",
+    "descripcion": "Esculturas dedicadas a destacar a miembros distinguidos del gremio por sus logros.",
+    "imagen": "img/equipo/gremio/estatuas-de-miembros-marmol.webp"
+  },
+  {
+    "nombre": "CUADROS",
+    "precio": "5 M.O.",
+    "descripcion": "Obras de arte que adornan las paredes, representando la historia y logros del gremio, o cuadros decorativos.",
+    "imagen": "img/equipo/gremio/cuadros.webp"
+  },
+  {
+    "nombre": "TRANSPORTADOR",
+    "precio": "300 M.O.",
+    "descripcion": "Un dispositivo mágico que permite viajar rápidamente entre diferentes ubicaciones.",
+    "imagen": "img/equipo/gremio/transportador.webp"
+  },
+  {
+    "nombre": "CAMA DE DESCANSO",
+    "precio": "7 M.O.",
+    "descripcion": "Camas cómodas destinadas al descanso y la recuperación de los miembros del gremio.",
+    "imagen": "img/equipo/gremio/cama-de-descanso.webp"
+  },
+  {
+    "nombre": "ARMARIO DE ROPA",
+    "precio": "5 M.O.",
+    "descripcion": "Almacén de vestimenta.",
+    "imagen": "img/equipo/gremio/armario-de-ropa.webp"
+  },
+  {
+    "nombre": "CANDELABRO MÁGICO",
+    "precio": "20 M.O.",
+    "descripcion": "Luces místicas suspendidas que proporcionan iluminación y ambiente especial.",
+    "imagen": "img/equipo/gremio/candelabro-magico.webp"
+  },
+  {
+    "nombre": "VITRINA",
+    "precio": "15 M.O.",
+    "descripcion": "Un mueble elegante para mostrar objetos valiosos o trofeos conseguidos por el gremio.",
+    "imagen": "img/equipo/gremio/vitrina.webp"
+  },
+  {
+    "nombre": "DISPOSITIVO DE ESCUDO PROTECTOR",
+    "precio": "500 M.O.",
+    "descripcion": "Un artefacto mágico que crea un escudo defensivo alrededor del gremio en caso de emergencia.",
+    "imagen": "img/equipo/gremio/dispositivo-de-escudo-protector.webp"
+  },
+  {
+    "nombre": "TAPIZ DE HISTORIA DEL GREMIO",
+    "precio": "12 M.O. EL METRO",
+    "descripcion": "Un tapiz que narra la historia y logros significativos del gremio.",
+    "imagen": "img/equipo/gremio/tapiz-de-historia-del-gremio.webp"
+  },
+  {
+    "nombre": "ESTANTERIAS",
+    "precio": "5 M.O.",
+    "descripcion": "Muebles para organizar libros, pergaminos y otros elementos importantes.",
+    "imagen": "img/equipo/gremio/estanterias.webp"
+  },
+  {
+    "nombre": "ALFOMBRAS",
+    "precio": "3 M.O.",
+    "descripcion": "Telas o pieles de animales que embellecen y dan confort a las áreas del gremio.",
+    "imagen": "img/equipo/gremio/alfombras.webp"
+  },
+  {
+    "nombre": "CORTINAS",
+    "precio": "3 M.O.",
+    "descripcion": "Telas que decoran ventanas y añaden un toque de privacidad y elegancia.",
+    "imagen": "img/equipo/gremio/cortinas.webp"
+  },
+  {
+    "nombre": "FLORES",
+    "precio": "7 M.P.",
+    "descripcion": "Elementos decorativos que aportan color y frescura al gremio.",
+    "imagen": "img/equipo/gremio/flores.webp"
+  },
+  {
+    "nombre": "ARBOLES Y ARBUSTOS",
+    "precio": "10 M.O.",
+    "descripcion": "Elementos naturales que proporcionan un ambiente fresco y armonioso.",
+    "imagen": "img/equipo/gremio/arboles-y-arbustos.webp"
+  },
+  {
+    "nombre": "DESPENSA",
+    "precio": "6 M.O.",
+    "descripcion": "Espacio de almacenamiento para alimentos y provisiones del gremio.",
+    "imagen": "img/equipo/gremio/despensa.webp"
+  },
+  {
+    "nombre": "TABLON DE ANUNCIOS DEL GREMIO",
+    "precio": "5 M.P.",
+    "descripcion": "Un lugar central para compartir información, anuncios y misiones.",
+    "imagen": "img/equipo/gremio/tablon-de-anuncios-del-gremio.webp"
+  },
+  {
+    "nombre": "CELDA",
+    "precio": "15 M.O.",
+    "descripcion": "Espacios seguros para retener temporalmente a prisioneros o criaturas capturadas.",
+    "imagen": "img/equipo/gremio/celda.webp"
+  },
+  {
+    "nombre": "INVERNADERO",
+    "precio": "25 M.O.",
+    "descripcion": "Un área especial para cultivar plantas y hierbas útiles para alquimia y pociones.",
+    "imagen": "img/equipo/gremio/invernadero.webp"
+  },
+  {
+    "nombre": "RECIPIENTE PARA INVERNADERO",
+    "precio": "2 M.P.",
+    "descripcion": "Contenedores especializados para el cuidado y crecimiento de plantas en el invernadero.",
+    "imagen": "img/equipo/gremio/recipiente-para-invernadero.webp"
+  },
+  {
+    "nombre": "TIERRA Y ABONO",
+    "precio": "8 M.C.",
+    "descripcion": "Suministros esenciales para mantener la fertilidad del suelo y asegurar un crecimiento saludable de las plantas.",
+    "imagen": "img/equipo/gremio/tierra-y-abono.webp"
+  },
+  {
+    "nombre": "MOBILIARIO PARA COCINA",
+    "precio": "10 M.O.",
+    "descripcion": "Equipamiento necesario para facilitar la preparación de alimentos y bebidas en la cocina del gremio.",
+    "imagen": "img/equipo/gremio/mobiliario-para-cocina.webp"
+  },
+  {
+    "nombre": "TODOS LOS UTENSILIOS PARA LA COCINA",
+    "precio": "15 M.O.",
+    "descripcion": "Una completa colección de utensilios de cocina, desde cucharones hasta cuchillos afilados.",
+    "imagen": "img/equipo/gremio/todos-los-utensilios-para-la-cocina.webp"
+  },
+  {
+    "nombre": "LETRINA",
+    "precio": "2 M.O.",
+    "descripcion": "Un espacio privado para las necesidades básicas de los miembros del gremio.",
+    "imagen": "img/equipo/gremio/letrina.webp"
+  },
+  {
+    "nombre": "DUCHA",
+    "precio": "8 M.O.",
+    "descripcion": "Áreas designadas para el aseo y el baño, proporcionando comodidad a los miembros del gremio.",
+    "imagen": "img/equipo/gremio/ducha.webp"
+  },
+  {
+    "nombre": "SILLÓN",
+    "precio": "15 M.O.",
+    "descripcion": "Asientos cómodos para descansar y relajarse después de largas jornadas de trabajo.",
+    "imagen": "img/equipo/gremio/sillon.webp"
+  },
+  {
+    "nombre": "SOFA",
+    "precio": "20 M.O.",
+    "descripcion": "Muebles acogedores para la socialización y el descanso en grupo.",
+    "imagen": "img/equipo/gremio/sofa.webp"
+  },
+  {
+    "nombre": "CHIMENEA",
+    "precio": "100 M.O.",
+    "descripcion": "Una fuente de calor y confort, que también sirve como punto focal en espacios comunes.",
+    "imagen": "img/equipo/gremio/chimenea.webp"
+  },
+  {
+    "nombre": "SOPORTE PARA ARMAS",
+    "precio": "9 M.P.",
+    "descripcion": "Un lugar designado para exhibir y almacenar armas de forma ordenada.",
+    "imagen": "img/equipo/gremio/soporte-para-armas.webp"
+  },
+  {
+    "nombre": "SOPORTE PARA ARMADURA",
+    "precio": "1 M.O.",
+    "descripcion": "Una estructura diseñada para mostrar y mantener en buen estado las armaduras.",
+    "imagen": "img/equipo/gremio/soporte-para-armadura.webp"
+  },
+  {
+    "nombre": "VITRINAS HORIZONALES",
+    "precio": "20 M.O.",
+    "descripcion": "Muebles de exhibición que resaltan objetos valiosos o colecciones del gremio.",
+    "imagen": "img/equipo/gremio/vitrinas-horizonales.webp"
+  },
+  {
+    "nombre": "BUZON",
+    "precio": "8 M.P.",
+    "descripcion": "Un punto central para recibir mensajes y correspondencia importante.",
+    "imagen": "img/equipo/gremio/buzon.webp"
+  },
+  {
+    "nombre": "SOPORTE PARA ESCUDOS",
+    "precio": "9 M.P.",
+    "descripcion": "Una instalación para organizar y mostrar escudos de manera elegante.",
+    "imagen": "img/equipo/gremio/soporte-para-escudos.webp"
+  },
+  {
+    "nombre": "SOPORTE PARA ESCUDA Y DOS ARMAS",
+    "precio": "1 M.O.",
+    "descripcion": "Un dispositivo que muestra de manera imponente un escudo y dos armas.",
+    "imagen": "img/equipo/gremio/soporte-para-escuda-y-dos-armas.webp"
+  },
+  {
+    "nombre": "SOPORTE PARA ALTAR",
+    "precio": "2 M.O.",
+    "descripcion": "Un espacio dedicado la colocación de estatuillas o altares de dioses o deidades.",
+    "imagen": "img/equipo/gremio/soporte-para-altar.webp"
+  },
+  {
+    "nombre": "SILLA",
+    "precio": "5 M.P.",
+    "descripcion": "Asiento básico y funcional para diversas áreas del gremio.",
+    "imagen": "img/equipo/gremio/silla.webp"
+  },
+  {
+    "nombre": "MESA",
+    "precio": "1 M.O.",
+    "descripcion": "Superficie de trabajo esencial para reuniones, comidas y actividades diversas.",
+    "imagen": "img/equipo/gremio/mesa.webp"
+  },
+  {
+    "nombre": "MESA BAJA",
+    "precio": "1 M.O.",
+    "descripcion": "Mueble más bajo, ideal para áreas de descanso y relajación",
+    "imagen": "img/equipo/gremio/mesa-baja.webp"
+  },
+  {
+    "nombre": "ESPEJO",
+    "precio": "4 M.O.",
+    "descripcion": "Reflectores que pueden tener funciones decorativas o prácticas, según su ubicación.",
+    "imagen": "img/equipo/gremio/espejo.webp"
+  },
+  {
+    "nombre": "DISTINTIVO DEL GREMIO",
+    "precio": "1 M.O.",
+    "descripcion": "Un emblema distintivo que representa la identidad y unidad del gremio.",
+    "imagen": "img/equipo/gremio/distintivo-del-gremio.webp"
+  },
+  {
+    "nombre": "ESTANDARTE DEL GREMIO",
+    "precio": "10 M.O.",
+    "descripcion": "Un estandarte grande que ondea con el emblema del gremio, visible desde lejos.",
+    "imagen": "img/equipo/gremio/estandarte-del-gremio.webp"
+  },
+  {
+    "nombre": "TABARDO DEL GREMIO",
+    "precio": "20 M.O.",
+    "descripcion": "Vestimenta distintiva con el símbolo y colores del gremio, usado con orgullo por los miembros.",
+    "imagen": "img/equipo/gremio/tabardo-del-gremio.webp"
+  },
+  {
+    "nombre": "FORJA Y YUNQUE",
+    "precio": "35 M.O.",
+    "descripcion": "Un espacio dedicado a la creación y mejora de armas y equipo.",
+    "imagen": "img/equipo/gremio/forja-y-yunque.webp"
+  },
+  {
+    "nombre": "CURTIDOR DE PIELES",
+    "precio": "20 M.O.",
+    "descripcion": "Un área especializada para preparar y tratar pieles y cueros.",
+    "imagen": "img/equipo/gremio/curtidor-de-pieles.webp"
+  },
+  {
+    "nombre": "SELLO DEL GREMIO",
+    "precio": "3 M.O.",
+    "descripcion": "Un distintivo oficial para autenticar documentos y comunicados del gremio.",
+    "imagen": "img/equipo/gremio/sello-del-gremio.webp"
+  },
+  {
+    "nombre": "COFRE DEL TESORO (VACIO)",
+    "precio": "50 M.O.",
+    "descripcion": "Un contenedor seguro para almacenar tesoros y objetos valiosos.",
+    "imagen": "img/equipo/gremio/cofre-del-tesoro-vacio.webp"
+  },
+  {
+    "nombre": "MEDALLA",
+    "precio": "1 M.O.",
+    "descripcion": "Reconocimientos otorgados a los miembros por logros destacados.",
+    "imagen": "img/equipo/gremio/medalla.webp"
+  },
+  {
+    "nombre": "EMBLEMA DE RANGOS",
+    "precio": "5 M.O.",
+    "descripcion": "Insignias que indican el rango y la posición dentro de la jerarquía del gremio.",
+    "imagen": "img/equipo/gremio/emblema-de-rangos.webp"
+  },
+  {
+    "nombre": "REGLAMENTO DEL GREMIO",
+    "precio": "8 M.P.",
+    "descripcion": "Un documento que establece las normas y directrices para los miembros del gremio.",
+    "imagen": "img/equipo/gremio/reglamento-del-gremio.webp"
+  },
+  {
+    "nombre": "OBSERVATORIO",
+    "precio": "42 M.O.",
+    "descripcion": "Una torre equipada para la observación astronómica y la planificación estratégica.",
+    "imagen": "img/equipo/gremio/observatorio.webp"
+  },
+  {
+    "nombre": "DIANA DE TIRO CON ARCO",
+    "precio": "7 M.O.",
+    "descripcion": "Una instalación para practicar y mejorar habilidades con el arco.",
+    "imagen": "img/equipo/gremio/diana-de-tiro-con-arco.webp"
+  },
+  {
+    "nombre": "MUÑECO DE PRACTICAS",
+    "precio": "10 M.O.",
+    "descripcion": "Un objetivo móvil para entrenamiento en combate y habilidades de ataque.",
+    "imagen": "img/equipo/gremio/muneco-de-practicas.webp"
+  },
+  {
+    "nombre": "HORNO DE PIEDRA",
+    "precio": "20 M.O.",
+    "descripcion": "Equipamiento para cocinar y hornear alimentos con métodos tradicionales.",
+    "imagen": "img/equipo/gremio/horno-de-piedra.webp"
+  },
+  {
+    "nombre": "FUNDICIÓN",
+    "precio": "25 M.O.",
+    "descripcion": "Instalación para fundir y dar forma a metales para la creación de armas y equipo.",
+    "imagen": "img/equipo/gremio/fundicion.webp"
+  },
+  {
+    "nombre": "RUECA",
+    "precio": "3 M.O.",
+    "descripcion": "Herramienta para hilar y tejer fibras naturales.",
+    "imagen": "img/equipo/gremio/rueca.webp"
+  },
+  {
+    "nombre": "VASOS (10)",
+    "precio": "1 M.P.",
+    "descripcion": "Conjunto de recipientes para bebidas y brindis en reuniones sociales.",
+    "imagen": "img/equipo/gremio/vasos-10.webp"
+  },
+  {
+    "nombre": "PLATOS (10)",
+    "precio": "1 M.P.",
+    "descripcion": "Vajilla para servir alimentos durante eventos y comidas formales.",
+    "imagen": "img/equipo/gremio/platos-10.webp"
+  },
+  {
+    "nombre": "CUBIERTOS (20)",
+    "precio": "8 M.C.",
+    "descripcion": "Juego completo de utensilios para comer.",
+    "imagen": "img/equipo/gremio/cubiertos-20.webp"
+  },
+  {
+    "nombre": "BOTELLERO",
+    "precio": "3 M.O.",
+    "descripcion": "Estante especializado para almacenar y exhibir botellas de bebidas.",
+    "imagen": "img/equipo/gremio/botellero.webp"
+  },
+  {
+    "nombre": "SOPORTE EN PAREDES",
+    "precio": "6 M.C.",
+    "descripcion": "Elementos decorativos y funcionales que sirve para colocar objetos que desean exhibirse",
+    "imagen": "img/equipo/gremio/soporte-en-paredes.webp"
+  },
+  {
+    "nombre": "LICENCIAS MARITIMA",
+    "precio": "100 M.O.",
+    "descripcion": "Documento oficial que permite al gremio operar en actividades marítimas.",
+    "imagen": "img/equipo/gremio/licencias-maritima.webp"
+  },
+  {
+    "nombre": "SEDE EN CAPITAL",
+    "precio": "2.000 M.O.",
+    "descripcion": "Una base secundaria del gremio ubicada en la capital, que sirve como centro de operaciones. (Vacía)",
+    "imagen": "img/equipo/gremio/sede-en-capital.webp"
+  },
+  {
+    "nombre": "SEDE EN ALDEA",
+    "precio": "1.000 M.O.",
+    "descripcion": "Una base secundaria del gremio en una aldea, proporcionando presencia en áreas remotas. (Vacía)",
+    "imagen": "img/equipo/gremio/sede-en-aldea.webp"
+  },
+  {
+    "nombre": "LICENCIA PARA CONSTRUIR",
+    "precio": "500 M.O.",
+    "descripcion": "Documento que autoriza al gremio a realizar construcciones y expansiones. (Se necesita la dirección de un Arquitecto para realizar estas operaciones)",
+    "imagen": "img/equipo/gremio/licencia-para-construir.webp"
+  },
+  {
+    "nombre": "MURO (POR SECCIÓN)",
+    "precio": "4 M.O.",
+    "descripcion": "Estructura delimita departamentos o estructuras que protege el perímetro del gremio."
+  },
+  {
+    "nombre": "PUERTA",
+    "precio": "2 M.O.",
+    "descripcion": "Entrada principal o de acceso controlado al gremio.",
+    "imagen": "img/equipo/gremio/puerta.webp"
+  },
+  {
+    "nombre": "VENTANA",
+    "precio": "5 M.O.",
+    "descripcion": "Aberturas en las paredes que permiten la entrada de luz natural y ventilación.",
+    "imagen": "img/equipo/gremio/ventana.webp"
+  },
+  {
+    "nombre": "SOLERÍA (POR SECCIÓN)",
+    "precio": "8 M.O.",
+    "descripcion": "Material de suelo resistente y decorativo para diferentes áreas del gremio.",
+    "imagen": "img/equipo/gremio/soleria-por-seccion.webp"
+  },
+  {
+    "nombre": "TEJADO (POR SECCIÓN)",
+    "precio": "10 M.O.",
+    "descripcion": "Cubierta superior que protege contra las inclemencias del tiempo y agrega estética arquitectónica.",
+    "imagen": "img/equipo/gremio/tejado-por-seccion.webp"
+  },
+  {
+    "nombre": "DISEÑO DE ARQUITECTO",
+    "precio": "100 M.O.",
+    "descripcion": "Planos y diagramas detallados creados por un arquitecto para guiar la construcción y remodelación.",
+    "imagen": "img/equipo/gremio/diseno-de-arquitecto.webp"
+  },
+  {
+    "nombre": "PIEDRA ANGULAR",
+    "precio": "5 M.P.",
+    "descripcion": "Una piedra de tele transporte individual e instantáneo que te devuelve a la sede central del Gremio.",
+    "imagen": "img/equipo/gremio/piedra-angular.webp"
+  },
+  {
+    "nombre": "SALA DE HABITAD ELEMENTAL",
+    "precio": "30 M.O.",
+    "descripcion": "Es un espacio meditativo que conecta a las personas con los elementos de tierra, agua, fuego y aire a través de estímulos sensoriales armoniosos.",
+    "imagen": "img/equipo/gremio/sala-de-habitad-elemental.webp"
+  },
+  {
+    "nombre": "ESCENARIO",
+    "precio": "18 M.O.",
+    "descripcion": "Es un lugar diseñado para la práctica y desempeño musical, ofreciendo un ambiente acústico y visualmente adecuado para la creación y presentación de música",
+    "imagen": "img/equipo/gremio/escenario.webp"
+  },
+  {
+    "nombre": "INVERNÁCULO",
+    "precio": "35 MO",
+    "descripcion": "Es un recinto exterior diseñado para recrear y mantener un bioma completo en condiciones controladas, permitiendo la coexistencia de flora y fauna.",
+    "imagen": "img/equipo/gremio/invernaculo.webp"
+  },
+  {
+    "nombre": "SALA DE SIMULACIÓN DE ALTERACION DE TERRENO",
+    "precio": "21 M.O.",
+    "descripcion": "Es un lugar para practicar y experimentar con cambios en el terreno, permitiendo la modelación y ajuste del paisaje en un entorno controlado para su uso y práctica.",
+    "imagen": "img/equipo/gremio/sala-de-simulacion-de-alteracion-de-terreno.webp"
+  },
+  {
+    "nombre": "LICENCIA DE COMPRA-VENTA",
+    "precio": "5 M.O.",
+    "descripcion": "Te permite establecer un puesto de venta en una ciudad de manera legal y sin pagar impuestos municipales.",
+    "imagen": "img/equipo/gremio/licencia-de-compra-venta.webp"
+  },
+  {
+    "nombre": "PUESTO COMERCIAL",
+    "precio": "8 M.O.",
+    "descripcion": "Es una tienda desmontable que proporciona un espacio dedicado para la venta de tus productos, permitiéndote exhibir y comercializar tus artículos directamente a los clientes en un entorno apropiado para el comercio.",
+    "imagen": "img/equipo/gremio/puesto-comercial.webp"
+  },
+  {
+    "nombre": "TALLER DE PELETERÍA",
+    "precio": "22 MO",
+    "descripcion": "Es un espacio especializado para la creación, reparación y diseño de productos de piel, que incluye herramientas y materiales necesarios para trabajar con diversos tipos de cuero y pelaje",
+    "imagen": "img/equipo/gremio/taller-de-peleteria.webp"
+  },
+  {
+    "nombre": "TELAR",
+    "precio": "12 MO",
+    "descripcion": "Instalación destinada al tejido, confección y ensamblaje de telas resistentes para la creación de armaduras ligeras, vestimentas reforzadas y equipo textil especializado.",
+    "imagen": "img/equipo/gremio/telar.webp"
+  },
+  {
+    "nombre": "SALA DE INTERROGATORIOS",
+    "precio": "33 M.O.",
+    "descripcion": "Instalación destinada a obtener información mediante entrevistas intensivas, observación detallada y técnicas de presión psicológica. Preparada para asegurar privacidad, control y seguridad durante los interrogatorios.",
+    "imagen": "img/equipo/gremio/sala-de-interrogatorios.webp"
+  },
+  {
+    "nombre": "FERMENTADORES",
+    "precio": "13 M.O.",
+    "descripcion": "Equipamiento destinado a la fermentación de alimentos y bebidas dentro del gremio, permitiendo la elaboración de cervezas, vinos y conservas fermentadas.",
+    "imagen": "img/equipo/gremio/fermentadores.webp"
+  },
+  {
+    "nombre": "DESTILERIA",
+    "precio": "11 M.O.",
+    "descripcion": "Equipamiento destinado a la destilación de bebidas y esencias, permitiendo la obtención de licores, alcoholes y extractos concentrados dentro del gremio.",
+    "imagen": "img/equipo/gremio/destileria.webp"
+  },
+  {
+    "nombre": "SALA DE CURAS",
+    "precio": "22 M.O.",
+    "descripcion": "Espacio equipado para la atención y tratamiento de heridas y enfermedades, facilitando la recuperación de miembros del gremio y visitantes.",
+    "imagen": "img/equipo/gremio/sala-de-curas.webp"
+  }
+]

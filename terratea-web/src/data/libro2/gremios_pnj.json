@@ -1,0 +1,131 @@
+{
+ "introduccion": "Te Informo que existen sociedades secretas y gremios misteriosos en el preámbulo de la historia Leyendas de Terratea. Te presentamos seis gremios que desempeñarán un papel en tu aventura. Sin embargo, ten en cuenta que en Terratea, los gremios no son entidades estáticas; son dinámicos y pueden surgir nuevos, florecer en la gloria o desvanecerse en las sombras a medida que la historia avanza. A continuación, pasamos a enumerarlas:",
+ "gremios": [
+  {
+   "nombre": "Gremio de los Nuevos Salvadores",
+   "descripcion": "Bajo la égida de Ole Munk Jr., vástago del antiguo líder de los Salvadores, emerge el Gremio de los Nuevos Salvadores. Con la firme determinación de redimir la reputación mancillada por su progenitor, Ole Munk Jr. ha emprendido la misión de reformar las acciones de su predecesor y restaurar la confianza en Stungerb. Con un cambio de nombre y un compromiso renovado, se esfuerzan por enmendar los errores pasados. ¿Será este un sincero intento de rectificación o simplemente una estratagema para cumplir con los oscuros designios de su difunto padre, derrotado por un grupo de intrépidos aventureros?",
+   "miembros": [
+    {
+     "cargo": "Líder del Gremio",
+     "nombre": "Olé Münk Jr.",
+     "raza": "Humano",
+     "descripcion": "Ole Jr. cargando consigo el peso de un pasado tormentoso, decidió superar la sombra que su progenitor arrojó sobre los Salvadores originales."
+    },
+    {
+     "cargo": "Lugarteniente",
+     "nombre": "Neyih Al-hama",
+     "raza": "Enano",
+     "descripcion": "Experimentado forajido, Neyih desempeña un papel crucial en la nueva dirección del gremio. Su astucia y experiencia en el submundo son activos valiosos en la búsqueda de redención del Gremio."
+    }
+   ],
+   "id": "gremio-de-los-nuevos-salvadores",
+   "emblema": "img/gremios/gremio-de-los-nuevos-salvadores.webp",
+   "pagina": 514
+  },
+  {
+   "nombre": "Gremio Jolly Royer",
+   "descripcion": "El Gremio Jolly Royer, portador de una patente de corso otorgada por el reino de Maurizanian, carga consigo la más siniestra de las reputaciones. A pesar de sus incursiones piratas y desafíos a la ley, la sede central de Gremios parece permitir sus acciones, ya que el gremio ejerce sanciones económicas al gremio y estos parecen abonarlas a rajatabla. Hasta el momento, los Argonautas han resultado impotentes para detenerlos, planteando la interrogante sobre ¿hasta qué punto se extenderá la influencia del gremio para eludir su captura?",
+   "miembros": [
+    {
+     "cargo": "Capitán",
+     "nombre": "Zith Thyr An",
+     "raza": "Semielfo",
+     "descripcion": "Con astucia desmesurada y una suerte acojonante, Zith se ha erigido en la élite de los piratas. Conocido en los océanos como Cuerpo Jota, lidera con audacia el Gremio Jolly Royer."
+    },
+    {
+     "cargo": "Almirante de Flota",
+     "nombre": "Uruk Deimón",
+     "raza": "Semiorco",
+     "descripcion": "Uru Deimon, Almirante de flota de renombre, ha labrado su reputación como cazador de Argonautas. Su habilidad para evadir a aquellos que buscan detener al gremio lo ha convertido en un personaje temido en las yeguas, contribuyendo a la leyenda de invencibilidad del Gremio Jolly Royer."
+    }
+   ],
+   "id": "gremio-jolly-royer",
+   "emblema": "img/gremios/gremio-jolly-royer.webp",
+   "pagina": 515
+  },
+  {
+   "nombre": "Gremio de Guante Marfil",
+   "descripcion": "En las penumbras de la sociedad, el Gremio de Guante Marfil desenvuelve su red de intrigas a plena vista; todos son conscientes de su afiliación a la ladronería, pero la falta de pruebas concluyentes los mantiene en la penumbra. Maestros en encomiendas de espionaje, sabotaje y el arte de obtener información, este gremio plantea una cuestión inquietante: ¿debería existir una entidad con tanto poder para moldear el devenir de la historia?",
+   "miembros": [
+    {
+     "cargo": "Líder del Gremio de Guante Marfil",
+     "nombre": "Nicolae Flamm",
+     "raza": "Gnomo",
+     "descripcion": "No te dejes engañar por su estatura; Nicolae Flamm, líder del Gremio de Guante Marfil, ha ejecutado hazañas que pocos en la historia podrían igualar. Su ingenio y astucia estratégica han llevado al gremio a nuevas cumbres, desafiando todas las expectativas."
+    },
+    {
+     "cargo": "Maestra de Alto Rango",
+     "nombre": "Kalangara Loma",
+     "raza": "Nahiaride",
+     "descripcion": "Posiblemente la mejor ladrona de su época, Kalangara Loma, la nahiaride astuta, es tan polifacética que se dice que ha engañado a reyes, princesas y aristócratas. Su habilidad para deslizarse entre las sombras y sortear situaciones comprometidas ha consolidado su estatus en la leyenda del Gremio de Guante Marfil."
+    }
+   ],
+   "id": "gremio-de-guante-marfil",
+   "emblema": "img/gremios/gremio-de-guante-marfil.webp",
+   "pagina": 516
+  },
+  {
+   "nombre": "Gremio Hijas de Lilith",
+   "descripcion": "Bajo la clara devoción a la deidad Lilith, las autoproclamadas Hijas de Lilith conforman un gremio exclusivamente femenino. Estas amazonas trabajan como una entidad única, demostrando impresionantes estrategias tanto en combate como en misiones. ¿De dónde obtienes esta destreza y comunión tan excepcionales entre ellas? ¿Qué sucede si una amazona se enamora de un individuo de género masculino?",
+   "miembros": [
+    {
+     "cargo": "Dirigente del Gremio",
+     "nombre": "Nyzkalí Jügg",
+     "raza": "Elfa Oscura",
+     "descripcion": "Nyzkalí Jügg, la líder del gremio, es la guerrera más poderosa entre sus filas y dirige con autoridad. Única entre las Hijas de Lilith, no ha sido sometida al rito de apareamiento bianual, destacando su posición dominante."
+    },
+    {
+     "cargo": "Superiora",
+     "nombre": "Rosmilda Tilreeses",
+     "raza": "Troloide",
+     "descripcion": "Rosmilda Tilreeses, la mente maestra del grupo, estuvo ausente durante un tiempo y, a su regreso, introdujo a una niña semitrol en el gremio. Aunque esta presencia desafía las normas, se mantiene gracias a las habilidades intelectuales de Rosmilda, quien aconseja a la dirigente con astucia y perspicacia"
+    }
+   ],
+   "id": "gremio-hijas-de-lilith",
+   "emblema": "img/gremios/gremio-hijas-de-lilith.webp",
+   "pagina": 517
+  },
+  {
+   "nombre": "Gremio La Secta",
+   "descripcion": "Este gremio, conocido como La Secta, congrega asesinos, acólitos y diversos miembros que profesan abiertamente su devoción al ocultismo y la adoración de deidades malévolas. Aunque no se han atribuido actos atroces, o al menos no se ha demostrado su culpabilidad, ocupan el segundo lugar en el ranking de gremios gracias a su gran influencia, reclutando principalmente aristócratas, comandantes y caudillos. ¿Será verdadero que no han llevado a cabo actos deleznables en nombre de sus deidades, o las apariencias acciones ocultan la verdad?",
+   "miembros": [
+    {
+     "cargo": "Señor del Gremio",
+     "nombre": "Luhnne Magnomoria",
+     "raza": "Renegado",
+     "descripcion": "Gobernando el gremio en función de sus intereses personales, Luhnne Magnomoria destaca como el único Renegado aceptado éticamente en la sociedad. Gracias a su notable influencia, persigue la posición número uno con determinación."
+    },
+    {
+     "cargo": "Patrón del Gremio",
+     "nombre": "Yorkipu Lissey",
+     "raza": "Felino",
+     "descripcion": "En la única expedición a la isla de Nox, Yorkipu Lissey fue el único que regresó con vida. Se rumorea que selló un pacto con el Archiliche que mora en la isla, ascendiendo desde entonces a la posición de Amo de los Nigromantes dentro de La Secta."
+    }
+   ],
+   "id": "gremio-la-secta",
+   "emblema": "img/gremios/gremio-la-secta.webp",
+   "pagina": 518
+  },
+  {
+   "nombre": "Orden de los Caballeros de la Lux Solar",
+   "descripcion": "Este noble gremio, denominado como la Orden de los Caballeros de la Lux Solar, mantiene con honor su distinguido lugar como el número 1, siendo el más extenso y codiciado por muchos. Son reconocidos como altruistas defensores del orden, adorados por la sociedad como si fueron enviados como ángeles por el dios supremo. La Orden de los Caballeros de la Lux Solar persiste en la lucha contra las injusticias, el hambre y las maldades que afligen la tierra. Sus filas, compuestas por héroes, escuderos, paladines, clérigos, Cazadores de las Sombras y caballeros de la llama, reflejan un carácter legal y lealtad al dios Omnipotente. ¿Será cierto que son tan nobles como aparentan? La historia es la única que puede dar respuesta.",
+   "miembros": [
+    {
+     "cargo": "Exarca de la Orden",
+     "nombre": "Judgzae Levenez De la Ras",
+     "raza": "Humana",
+     "descripcion": "Hermana del sumo pontífice y diligente líder de la orden, Judgzae Levenez De la Ras es reconocida por su benevolencia y firmeza en las decisiones. Aunque algunos comparan su divinidad con la del sumo pontífice, ella deja claro que su único servicio es a Terratea, por la gracia del dios Omnipotente."
+    },
+    {
+     "cargo": "Diacono de la Orden",
+     "nombre": "Rezgoras Filjara Blackchucina",
+     "raza": "Sátiro",
+     "descripcion": "Rezgoras, el Diacono de la Orden, Conocido por sus cánticos dulces y puros, capaces de curar incluso las maldiciones más difíciles, Rezgoras es una figura de luz y esperanza. Puro de cuerpo y espíritu, dedica su existencia a sanar tanto las heridas físicas como la corrupción del alma de la gente de Terratea. Además, su verdadera edad es un misterio. Según los relatos, Rezgoras luchó durante siglos en el plano sagrado al lado de diversos ángeles, enfrentándose a las interminables hordas infernales. Este vínculo con lo celestial no solo le otorgó una maestría incomparable en la magia sagrada, sino también una longevidad atípica que desafía el tiempo mismo."
+    }
+   ],
+   "id": "orden-de-los-caballeros-de-la-lux-solar",
+   "emblema": "img/gremios/orden-de-los-caballeros-de-la-lux-solar.webp",
+   "pagina": 519
+  }
+ ]
+}

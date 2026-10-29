@@ -1,0 +1,30 @@
+[
+  {
+    "nombre": "ROPAJES COMUNES",
+    "coste": "5 M.P.",
+    "peso": "3 KG",
+    "categoria": "OTROS ROPAJES",
+    "imagen": "img/equipo/armaduras/ropajes-comunes.webp"
+  },
+  {
+    "nombre": "ROPAJES DE VIAJERO",
+    "coste": "1 M.O.",
+    "peso": "4 KG",
+    "categoria": "OTROS ROPAJES",
+    "imagen": "img/equipo/armaduras/ropajes-de-viajero.webp"
+  },
+  {
+    "nombre": "DISFRAZ",
+    "coste": "10 M.O.",
+    "peso": "5 KG",
+    "categoria": "OTROS ROPAJES",
+    "imagen": "img/equipo/armaduras/disfraz.webp"
+  },
+  {
+    "nombre": "ROPAJES DE CALIDAD",
+    "coste": "30 M.O.",
+    "peso": "6 KG",
+    "categoria": "OTROS ROPAJES",
+    "imagen": "img/equipo/armaduras/ropajes-de-calidad.webp"
+  }
+]

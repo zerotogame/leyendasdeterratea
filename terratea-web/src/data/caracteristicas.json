@@ -1,0 +1,650 @@
+{
+  "capitulo": "Características principales",
+  "atributos": [
+    {
+      "id": "fuerza",
+      "nombre": "Fuerza",
+      "descripcion": [
+        "Representa el poderío físico de nuestro héroe, su musculatura y la potencia para infligir daño al enemigo. A continuación, la tabla:"
+      ],
+      "tabla_modificadores": {
+        "titulo": "TABLA DE FUERZA",
+        "columnas": [
+          "PUNTUACIÓN",
+          "MODIFICADOR ACCIONES DE FUERZA O DAÑO"
+        ],
+        "filas": [
+          {
+            "PUNTUACIÓN": "3",
+            "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "3"
+          },
+          {
+            "PUNTUACIÓN": "4-5",
+            "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "2"
+          },
+          {
+            "PUNTUACIÓN": "6-9",
+            "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "1"
+          },
+          {
+            "PUNTUACIÓN": "10-12",
+            "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "0"
+          },
+          {
+            "PUNTUACIÓN": "13-15",
+            "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "+1"
+          },
+          {
+            "PUNTUACIÓN": "16-17",
+            "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "+2"
+          },
+          {
+            "PUNTUACIÓN": "18 +",
+            "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "+3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "destreza",
+      "nombre": "Destreza",
+      "descripcion": [
+        "Representa la agilidad, la habilidad para conectar un golpe en combate, los reflejos para esquivar, la estabilidad en el terreno y la destreza general del personaje. A continuación, la tabla:"
+      ],
+      "tabla_modificadores": {
+        "titulo": "TABLA DE DESTREZA",
+        "columnas": [
+          "PUNTUACIÓN",
+          "MODIFICADOR ATAQUE"
+        ],
+        "filas": [
+          {
+            "PUNTUACIÓN": "3",
+            "MODIFICADOR ATAQUE": "3"
+          },
+          {
+            "PUNTUACIÓN": "4-5",
+            "MODIFICADOR ATAQUE": "2"
+          },
+          {
+            "PUNTUACIÓN": "6-9",
+            "MODIFICADOR ATAQUE": "1"
+          },
+          {
+            "PUNTUACIÓN": "10-12",
+            "MODIFICADOR ATAQUE": "0"
+          },
+          {
+            "PUNTUACIÓN": "13-15",
+            "MODIFICADOR ATAQUE": "+1"
+          },
+          {
+            "PUNTUACIÓN": "16-17",
+            "MODIFICADOR ATAQUE": "+2"
+          },
+          {
+            "PUNTUACIÓN": "18 +",
+            "MODIFICADOR ATAQUE": "+3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "constitucion",
+      "nombre": "Constitución",
+      "descripcion": [
+        "Representa la salud y resistencia del héroe. Cuanto mayor sea la constitución, mayor será su aguante. A continuación, la tabla:"
+      ],
+      "tabla_modificadores": {
+        "titulo": "TABLA DE CONSTITUCIÓN",
+        "columnas": [
+          "PUNTUACIÓN",
+          "MODIFICADOR DE BLOQUEO DE DAÑO"
+        ],
+        "filas": [
+          {
+            "PUNTUACIÓN": "3",
+            "MODIFICADOR DE BLOQUEO DE DAÑO": "3"
+          },
+          {
+            "PUNTUACIÓN": "4-5",
+            "MODIFICADOR DE BLOQUEO DE DAÑO": "2"
+          },
+          {
+            "PUNTUACIÓN": "6-8",
+            "MODIFICADOR DE BLOQUEO DE DAÑO": "1"
+          },
+          {
+            "PUNTUACIÓN": "9-12",
+            "MODIFICADOR DE BLOQUEO DE DAÑO": "0"
+          },
+          {
+            "PUNTUACIÓN": "13-15",
+            "MODIFICADOR DE BLOQUEO DE DAÑO": "+1"
+          },
+          {
+            "PUNTUACIÓN": "16-17",
+            "MODIFICADOR DE BLOQUEO DE DAÑO": "+2"
+          },
+          {
+            "PUNTUACIÓN": "18 +",
+            "MODIFICADOR DE BLOQUEO DE DAÑO": "+3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "inteligencia",
+      "nombre": "Inteligencia",
+      "descripcion": [
+        "Representa la capacidad de discernir, aprender, razonar, recordar, planificar, habilidad con la magia y las maldiciones. A continuación, la tabla:"
+      ],
+      "tabla_modificadores": {
+        "titulo": "TABLA DE INTELIGENCIA",
+        "columnas": [
+          "PUNTUACIÓN",
+          "MODIFICADO\nR",
+          "IDIOMAS ADICIONALES",
+          "COMUNICACIÓN"
+        ],
+        "filas": [
+          {
+            "PUNTUACIÓN": "3",
+            "MODIFICADO\nR": "1",
+            "IDIOMAS ADICIONALES": "1",
+            "COMUNICACIÓN": "INCAPAZ DE ESCRIBIR, LEER Y HABLAR"
+          },
+          {
+            "PUNTUACIÓN": "4-5",
+            "MODIFICADO\nR": "1",
+            "IDIOMAS ADICIONALES": "0",
+            "COMUNICACIÓN": "INCAPAZ DE ESCRIBIR Y LEER"
+          },
+          {
+            "PUNTUACIÓN": "6-9",
+            "MODIFICADO\nR": "0",
+            "IDIOMAS ADICIONALES": "0",
+            "COMUNICACIÓN": "INCAPAZ DE ESCRIBIR"
+          },
+          {
+            "PUNTUACIÓN": "10-12",
+            "MODIFICADO\nR": "0",
+            "IDIOMAS ADICIONALES": "0",
+            "COMUNICACIÓN": "CAPAZ DE LEER Y ESCRIBIR"
+          },
+          {
+            "PUNTUACIÓN": "13-15",
+            "MODIFICADO\nR": "+1",
+            "IDIOMAS ADICIONALES": "0",
+            "COMUNICACIÓN": "CAPAZ DE LEER Y ESCRIBIR"
+          },
+          {
+            "PUNTUACIÓN": "16-17",
+            "MODIFICADO\nR": "+2",
+            "IDIOMAS ADICIONALES": "+1",
+            "COMUNICACIÓN": "CAPAZ DE LEER Y ESCRIBIR"
+          },
+          {
+            "PUNTUACIÓN": "18 +",
+            "MODIFICADO\nR": "+3",
+            "IDIOMAS ADICIONALES": "+2",
+            "COMUNICACIÓN": "CAPAZ DE LEER Y ESCRIBIR"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sabiduria",
+      "nombre": "Sabiduría",
+      "descripcion": [
+        "Representa la experiencia, conocimiento general, sentido común, intuición, voluntad y se le atribuyen las tiradas de salvación y curación. A continuación, la tabla:"
+      ],
+      "tabla_modificadores": {
+        "titulo": "TABLA DE SABIDURIA",
+        "columnas": [
+          "PUNTUACIÓN",
+          "MODIFICADOR A LAS TIRADAS DE SALVACIÓN"
+        ],
+        "filas": [
+          {
+            "PUNTUACIÓN": "3",
+            "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "3"
+          },
+          {
+            "PUNTUACIÓN": "4-5",
+            "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "2"
+          },
+          {
+            "PUNTUACIÓN": "6-9",
+            "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "1"
+          },
+          {
+            "PUNTUACIÓN": "9-12",
+            "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "0"
+          },
+          {
+            "PUNTUACIÓN": "13-15",
+            "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "+1"
+          },
+          {
+            "PUNTUACIÓN": "16-17",
+            "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "+2"
+          },
+          {
+            "PUNTUACIÓN": "18 +",
+            "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "+3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "carisma",
+      "nombre": "Carisma",
+      "descripcion": [
+        "Representa el atractivo, la personalidad, el don de gentes, el magnetismo, el liderazgo, la persuasión, la seducción y cualquier tipo de habilidad social. A continuación, la tabla:"
+      ],
+      "tabla_modificadores": {
+        "titulo": "TABLA DE CARISMA",
+        "columnas": [
+          "PUNTUACIÓN",
+          "MODIFICADOR",
+          "SÉQUITO DE NPJ"
+        ],
+        "filas": [
+          {
+            "PUNTUACIÓN": "3",
+            "MODIFICADOR": "3",
+            "SÉQUITO DE NPJ": "0"
+          },
+          {
+            "PUNTUACIÓN": "4-5",
+            "MODIFICADOR": "2",
+            "SÉQUITO DE NPJ": "0"
+          },
+          {
+            "PUNTUACIÓN": "6-9",
+            "MODIFICADOR": "1",
+            "SÉQUITO DE NPJ": "0"
+          },
+          {
+            "PUNTUACIÓN": "10-13",
+            "MODIFICADOR": "0",
+            "SÉQUITO DE NPJ": "0"
+          },
+          {
+            "PUNTUACIÓN": "14-16",
+            "MODIFICADOR": "+1",
+            "SÉQUITO DE NPJ": "1"
+          },
+          {
+            "PUNTUACIÓN": "17",
+            "MODIFICADOR": "+2",
+            "SÉQUITO DE NPJ": "5"
+          },
+          {
+            "PUNTUACIÓN": "18 +",
+            "MODIFICADOR": "+3",
+            "SÉQUITO DE NPJ": "10+"
+          }
+        ]
+      }
+    }
+  ],
+  "secciones": [
+    {
+      "titulo": null,
+      "parrafos": [
+        "Ahora toca escoger los seis atributos necesarios para vuestro personaje, FUERZA, DESTREZA, CONSTITUCIÓN, INTELIGENCIA, SABIDURÍA Y CARISMA. La forma de realizar la atribución de características es la siguiente: se tirarán 4 dados de 6 y se descartará el dado con menos puntuación, añádelo a una hoja aparte, realízalo 7 veces, descarta el número más bajo y los restantes de tiradas repártelo de manera indivisible entre los 6 atributos (OJO: Muy importante que recuerdes los atributos necesarios para tu clase). Posteriormente añadiremos los Modificadores."
+      ],
+      "imagenes": [
+        "img/caracteristicas/caracteristicas-01.webp"
+      ]
+    },
+    {
+      "titulo": "LA FUERZA",
+      "parrafos": [
+        "Representa el poderío físico de nuestro héroe, su musculatura y la potencia para infligir daño al enemigo. A continuación, la tabla:"
+      ],
+      "tablas": [
+        {
+          "titulo": "TABLA DE FUERZA",
+          "columnas": [
+            "PUNTUACIÓN",
+            "MODIFICADOR ACCIONES DE FUERZA O DAÑO"
+          ],
+          "filas": [
+            {
+              "PUNTUACIÓN": "3",
+              "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "3"
+            },
+            {
+              "PUNTUACIÓN": "4-5",
+              "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "2"
+            },
+            {
+              "PUNTUACIÓN": "6-9",
+              "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "1"
+            },
+            {
+              "PUNTUACIÓN": "10-12",
+              "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "0"
+            },
+            {
+              "PUNTUACIÓN": "13-15",
+              "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "+1"
+            },
+            {
+              "PUNTUACIÓN": "16-17",
+              "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "+2"
+            },
+            {
+              "PUNTUACIÓN": "18 +",
+              "MODIFICADOR ACCIONES DE FUERZA O DAÑO": "+3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "LA DESTREZA",
+      "parrafos": [
+        "Representa la agilidad, la habilidad para conectar un golpe en combate, los reflejos para esquivar, la estabilidad en el terreno y la destreza general del personaje. A continuación, la tabla:"
+      ],
+      "tablas": [
+        {
+          "titulo": "TABLA DE DESTREZA",
+          "columnas": [
+            "PUNTUACIÓN",
+            "MODIFICADOR ATAQUE"
+          ],
+          "filas": [
+            {
+              "PUNTUACIÓN": "3",
+              "MODIFICADOR ATAQUE": "3"
+            },
+            {
+              "PUNTUACIÓN": "4-5",
+              "MODIFICADOR ATAQUE": "2"
+            },
+            {
+              "PUNTUACIÓN": "6-9",
+              "MODIFICADOR ATAQUE": "1"
+            },
+            {
+              "PUNTUACIÓN": "10-12",
+              "MODIFICADOR ATAQUE": "0"
+            },
+            {
+              "PUNTUACIÓN": "13-15",
+              "MODIFICADOR ATAQUE": "+1"
+            },
+            {
+              "PUNTUACIÓN": "16-17",
+              "MODIFICADOR ATAQUE": "+2"
+            },
+            {
+              "PUNTUACIÓN": "18 +",
+              "MODIFICADOR ATAQUE": "+3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "LA CONSTITUCIÓN",
+      "parrafos": [
+        "Representa la salud y resistencia del héroe. Cuanto mayor sea la constitución, mayor será su aguante. A continuación, la tabla:"
+      ],
+      "tablas": [
+        {
+          "titulo": "TABLA DE CONSTITUCIÓN",
+          "columnas": [
+            "PUNTUACIÓN",
+            "MODIFICADOR DE BLOQUEO DE DAÑO"
+          ],
+          "filas": [
+            {
+              "PUNTUACIÓN": "3",
+              "MODIFICADOR DE BLOQUEO DE DAÑO": "3"
+            },
+            {
+              "PUNTUACIÓN": "4-5",
+              "MODIFICADOR DE BLOQUEO DE DAÑO": "2"
+            },
+            {
+              "PUNTUACIÓN": "6-8",
+              "MODIFICADOR DE BLOQUEO DE DAÑO": "1"
+            },
+            {
+              "PUNTUACIÓN": "9-12",
+              "MODIFICADOR DE BLOQUEO DE DAÑO": "0"
+            },
+            {
+              "PUNTUACIÓN": "13-15",
+              "MODIFICADOR DE BLOQUEO DE DAÑO": "+1"
+            },
+            {
+              "PUNTUACIÓN": "16-17",
+              "MODIFICADOR DE BLOQUEO DE DAÑO": "+2"
+            },
+            {
+              "PUNTUACIÓN": "18 +",
+              "MODIFICADOR DE BLOQUEO DE DAÑO": "+3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "LA INTELIGENCIA",
+      "parrafos": [
+        "Representa la capacidad de discernir, aprender, razonar, recordar, planificar, habilidad con la magia y las maldiciones. A continuación, la tabla:"
+      ],
+      "tablas": [
+        {
+          "titulo": "TABLA DE INTELIGENCIA",
+          "columnas": [
+            "PUNTUACIÓN",
+            "MODIFICADO\nR",
+            "IDIOMAS ADICIONALES",
+            "COMUNICACIÓN"
+          ],
+          "filas": [
+            {
+              "PUNTUACIÓN": "3",
+              "MODIFICADO\nR": "1",
+              "IDIOMAS ADICIONALES": "1",
+              "COMUNICACIÓN": "INCAPAZ DE ESCRIBIR, LEER Y HABLAR"
+            },
+            {
+              "PUNTUACIÓN": "4-5",
+              "MODIFICADO\nR": "1",
+              "IDIOMAS ADICIONALES": "0",
+              "COMUNICACIÓN": "INCAPAZ DE ESCRIBIR Y LEER"
+            },
+            {
+              "PUNTUACIÓN": "6-9",
+              "MODIFICADO\nR": "0",
+              "IDIOMAS ADICIONALES": "0",
+              "COMUNICACIÓN": "INCAPAZ DE ESCRIBIR"
+            },
+            {
+              "PUNTUACIÓN": "10-12",
+              "MODIFICADO\nR": "0",
+              "IDIOMAS ADICIONALES": "0",
+              "COMUNICACIÓN": "CAPAZ DE LEER Y ESCRIBIR"
+            },
+            {
+              "PUNTUACIÓN": "13-15",
+              "MODIFICADO\nR": "+1",
+              "IDIOMAS ADICIONALES": "0",
+              "COMUNICACIÓN": "CAPAZ DE LEER Y ESCRIBIR"
+            },
+            {
+              "PUNTUACIÓN": "16-17",
+              "MODIFICADO\nR": "+2",
+              "IDIOMAS ADICIONALES": "+1",
+              "COMUNICACIÓN": "CAPAZ DE LEER Y ESCRIBIR"
+            },
+            {
+              "PUNTUACIÓN": "18 +",
+              "MODIFICADO\nR": "+3",
+              "IDIOMAS ADICIONALES": "+2",
+              "COMUNICACIÓN": "CAPAZ DE LEER Y ESCRIBIR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "LA SABIDURÍA",
+      "parrafos": [
+        "Representa la experiencia, conocimiento general, sentido común, intuición, voluntad y se le atribuyen las tiradas de salvación y curación. A continuación, la tabla:"
+      ],
+      "tablas": [
+        {
+          "titulo": "TABLA DE SABIDURIA",
+          "columnas": [
+            "PUNTUACIÓN",
+            "MODIFICADOR A LAS TIRADAS DE SALVACIÓN"
+          ],
+          "filas": [
+            {
+              "PUNTUACIÓN": "3",
+              "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "3"
+            },
+            {
+              "PUNTUACIÓN": "4-5",
+              "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "2"
+            },
+            {
+              "PUNTUACIÓN": "6-9",
+              "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "1"
+            },
+            {
+              "PUNTUACIÓN": "9-12",
+              "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "0"
+            },
+            {
+              "PUNTUACIÓN": "13-15",
+              "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "+1"
+            },
+            {
+              "PUNTUACIÓN": "16-17",
+              "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "+2"
+            },
+            {
+              "PUNTUACIÓN": "18 +",
+              "MODIFICADOR A LAS TIRADAS DE SALVACIÓN": "+3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "EL CARISMA",
+      "parrafos": [
+        "Representa el atractivo, la personalidad, el don de gentes, el magnetismo, el liderazgo, la persuasión, la seducción y cualquier tipo de habilidad social. A continuación, la tabla:"
+      ],
+      "tablas": [
+        {
+          "titulo": "TABLA DE CARISMA",
+          "columnas": [
+            "PUNTUACIÓN",
+            "MODIFICADOR",
+            "SÉQUITO DE NPJ"
+          ],
+          "filas": [
+            {
+              "PUNTUACIÓN": "3",
+              "MODIFICADOR": "3",
+              "SÉQUITO DE NPJ": "0"
+            },
+            {
+              "PUNTUACIÓN": "4-5",
+              "MODIFICADOR": "2",
+              "SÉQUITO DE NPJ": "0"
+            },
+            {
+              "PUNTUACIÓN": "6-9",
+              "MODIFICADOR": "1",
+              "SÉQUITO DE NPJ": "0"
+            },
+            {
+              "PUNTUACIÓN": "10-13",
+              "MODIFICADOR": "0",
+              "SÉQUITO DE NPJ": "0"
+            },
+            {
+              "PUNTUACIÓN": "14-16",
+              "MODIFICADOR": "+1",
+              "SÉQUITO DE NPJ": "1"
+            },
+            {
+              "PUNTUACIÓN": "17",
+              "MODIFICADOR": "+2",
+              "SÉQUITO DE NPJ": "5"
+            },
+            {
+              "PUNTUACIÓN": "18 +",
+              "MODIFICADOR": "+3",
+              "SÉQUITO DE NPJ": "10+"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Armadura",
+      "parrafos": [
+        "En el aparatado de Armadura de tu personaje, se divide en varias secciones: el C.A. (Clase de Armadura), las piezas de armadura y los Atributos Extras."
+      ]
+    },
+    {
+      "titulo": "C.A. (Clase de Armadura):",
+      "parrafos": [
+        "La C.A. es el valor numérico que determina la capacidad de tu personaje para esquivar o bloquear ataques durante el combate.",
+        "Para calcular la C.A., se suma el valor de cada una de las piezas de armadura y se incrementa al valor mínimo, que es siempre 9.",
+        "Si la suma de las piezas de armadura da como resultado un número decimal, se redondea hacia abajo. Por ejemplo, si la suma total de las piezas de armadura es -5,87, la C.A. se quedará en -5, y al incrementarse al valor mínimo 9, será de 4."
+      ]
+    },
+    {
+      "titulo": "Modificador de Esquiva",
+      "parrafos": [
+        "El modificador de Esquiva representa los bonos o penalizadores que afectan directamente a la probabilidad de que un enemigo logre golpearte. En combate, normalmente te vas a fijar en tu C.A. y en tu Esquiva para saber lo difícil que eres de acertar. Sin embargo, muchas habilidades, objetos, encantamientos o hechizos pueden aumentar tu Destreza, y ese aumento no siempre está pensado únicamente para defenderte. A veces mejora tu puntería, otras potencian una habilidad concreta, y en ocasiones solo influye en un tipo específico de acción. Por eso este modificador tiene su casilla propia: para que puedas registrar cualquier mejora permanente que altere tu Destreza y afecte a tu Esquiva real durante el combate, sin confundirla con otros valores."
+      ]
+    },
+    {
+      "titulo": "Piezas de armadura:",
+      "parrafos": [
+        "Por lo general, cada pieza de armadura tendrá un máximo de -3 punto en la C.A., excepto el escudo, que puede aportar hasta -2 puntos. Así mismo, el colgante, abalorio y anillo no afectarán a la C.A. y tendrán un valor de 0, pero proporcionarán otros atributos extras."
+      ]
+    },
+    {
+      "titulo": "Atributos extras:",
+      "parrafos": [
+        "Los atributos extras son beneficios adicionales que cada pieza de armadura puede otorgar.",
+        "Por ejemplo, un anillo podría aumentar la resistencia al daño por fuego, proporcionando +1 de absorción al daño por fuego."
+      ]
+    },
+    {
+      "titulo": "LA VITALIDAD",
+      "parrafos": [
+        "Representa los puntos de vida que tiene tu personaje. Cuando llegue a cero queda inconsciente y cuando sobre pase –3, entonces el personaje muere. Para determinar la vida de tu Héroe, se deberá de tirar 1d12, el resultado es la vida de tu Héroe, añadiendo el modificador de Constitución. La tirada mínima es de 3."
+      ]
+    },
+    {
+      "titulo": "¿Cómo saber si necesitas Destreza para acertar tus habilidades?",
+      "parrafos": [
+        "A partir de ahora, cada vez que lances cualquier hechizo o habilidad contra un enemigo, ya sea para hacer daño, controlarlo, debilitarlo o aplicarle algún efecto, vas a necesitar tu Destreza para acertar. No importa si es una bola de fuego o un hechizo de confusión: si va hacia un enemigo, requiere puntería. Una vez impacta, será tu estadística principal la que determine cuánta fuerza tiene el efecto: el daño adicional, la potencia del control, la intensidad del debilitamiento, etc. En cambio, cuando utilices una habilidad que beneficie a un aliado, no tendrás que preocuparte por acertar. Todo lo que hagas en apoyo a tus compañeros entra directamente, sin tiradas de Destreza.",
+        "Ejemplos rápidos:",
+        "Proyectil mágico:",
+        "Necesitas Destreza para acertar, y tu modificador de Inteligencia define el daño final.",
+        "Hechizo de Dormir:",
+        "También requiere Destreza, porque va hacia un enemigo; la Inteligencia determina su efectividad y dificultad de que el enemigo pueda lanzar tirada de salvación.",
+        "Curación a un aliado:",
+        "No necesitas tirar para acertar; se aplica automáticamente, y la cantidad curada se determina sumando el valor base del hechizo más el modificador de tu Sabiduría"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+ "fuente": "Leyendas de Terratéa – Libro 2 (Bestiario, Figuras Notables, Gremios y Deidades), págs. 3–7",
+ "introduccion": "Adentrémonos en el Bestiario de las Leyendas de Terratea, una obra dedicada a conocer sobre las criaturas que caminan en los límites de la realidad y la fantasía. Aunque, por supuesto que existen más seres que el que hay en bestiario, por ahora nos conformaremos con estos 444. En el multiverso de Leyendas de Terratea, los aventureros se encuentran con muchos tipos de enemigos. Para ayudarte a prepararte, hemos dividido estos peligros en cinco categorías, cada una más desafiante que la anterior.",
+ "nota_recuento": "El libro habla de «444» criaturas; la digitalización contiene 450 fichas (cada ficha con su propio bloque de estadísticas).",
+ "categorias": [
+  {
+   "id": 1,
+   "nombre": "Bestiario Común",
+   "titulo_intro": "Villanos Comunes",
+   "pagina_inicio": 8,
+   "caracteristicas": "Monstruos o enemigos básicos, con habilidades y poderes limitados. Son frecuentes y no requieren estrategias complejas para ser derrotados.",
+   "ejemplos": [
+    "Tragos",
+    "Kobolds",
+    "Bandidos",
+    "Hombres-Bestias"
+   ],
+   "desafios": "Requieren habilidades básicas y pueden ser derrotados por aventureros de bajo nivel o incluso personajes principiantes.",
+   "bonificacion_atributos": {
+    "min": 0,
+    "max": 3,
+    "texto": "Bonificaciones entre 0 a +3 adicionales a sus atributos."
+   },
+   "ejemplo_atributos": "Animales menores o criaturas de poca relevancia en combate, por ejemplo, un Kobold.",
+   "portada": "img/portadas/categoria-1.webp",
+   "total_criaturas": 185,
+   "rangos_observados": {
+    "ca": {
+     "min": 3,
+     "max": 19
+    },
+    "vitalidad": {
+     "min": 1,
+     "max": 100
+    },
+    "px": {
+     "min": 10,
+     "max": 38850
+    },
+    "movimiento_casillas": {
+     "min": 0,
+     "max": 11
+    },
+    "alcance_casillas": {
+     "min": 1,
+     "max": 10
+    },
+    "dano_maximo": {
+     "min": 4,
+     "max": 100
+    }
+   }
+  },
+  {
+   "id": 2,
+   "nombre": "Bestiario Poco Común",
+   "titulo_intro": "Reto Moderado",
+   "pagina_inicio": 194,
+   "caracteristicas": "Enemigos que presentan un desafío real, con habilidades y poderes que superan a los de la Categoría 1. Son menos comunes y requieren un poco más de estrategia o preparación.",
+   "ejemplos": [
+    "Dríadas",
+    "Gárgolas",
+    "Pseudodragones",
+    "Quimeras"
+   ],
+   "desafios": "Aventureros de nivel medio o superior necesitarán usar tácticas más elaboradas y coordinación para superar estos retos.",
+   "bonificacion_atributos": {
+    "min": 3,
+    "max": 6,
+    "texto": "Bonificaciones entre +3 a +6 puntos."
+   },
+   "ejemplo_atributos": "Un gigante podría contar con +2 en constitución, +3 en fuerza y +1 en destreza.",
+   "portada": "img/portadas/categoria-2.webp",
+   "total_criaturas": 95,
+   "rangos_observados": {
+    "ca": {
+     "min": 4,
+     "max": 18
+    },
+    "vitalidad": {
+     "min": 4,
+     "max": 232
+    },
+    "px": {
+     "min": 1550,
+     "max": 354700
+    },
+    "movimiento_casillas": {
+     "min": 1,
+     "max": 10
+    },
+    "alcance_casillas": {
+     "min": 1,
+     "max": 16
+    },
+    "dano_maximo": {
+     "min": 6,
+     "max": 100
+    }
+   }
+  },
+  {
+   "id": 3,
+   "nombre": "Bestiario Épico o Mítico",
+   "titulo_intro": "Desafío Alto",
+   "pagina_inicio": 290,
+   "caracteristicas": "Enemigos con habilidades sobresalientes y poderes significativos. Estos enemigos son mucho más raros y difíciles de derrotar.",
+   "ejemplos": [
+    "Señores del Abismo",
+    "Ángeles",
+    "Demonios",
+    "Necro-Bestias"
+   ],
+   "desafios": "Requieren una planificación exhaustiva, niveles altos y posiblemente la colaboración de varios aventureros bien equipados para tener alguna oportunidad de éxito.",
+   "bonificacion_atributos": {
+    "min": 7,
+    "max": 12,
+    "texto": "Bonificaciones que van de +7 a +12 puntos."
+   },
+   "ejemplo_atributos": "Un genio podría tener +5 en destreza, +6 en fuerza y +1 en carisma.",
+   "portada": "img/portadas/categoria-3.webp",
+   "total_criaturas": 120,
+   "rangos_observados": {
+    "ca": {
+     "min": 3,
+     "max": 17
+    },
+    "vitalidad": {
+     "min": 35,
+     "max": 333
+    },
+    "px": {
+     "min": 10000,
+     "max": 700000
+    },
+    "movimiento_casillas": {
+     "min": 1,
+     "max": 10
+    },
+    "alcance_casillas": {
+     "min": 1,
+     "max": 9
+    },
+    "dano_maximo": {
+     "min": 10,
+     "max": 64
+    }
+   }
+  },
+  {
+   "id": 4,
+   "nombre": "Bestiario Legendario",
+   "titulo_intro": "Potencia Imponente",
+   "pagina_inicio": 411,
+   "caracteristicas": "Monstruos o villanos de gran poder que pueden superar a un grupo de aventureros por sí mismos. Su derrota requiere habilidades avanzadas, estrategias complejas y una fuerte cooperación entre los personajes.",
+   "ejemplos": [
+    "Dragones",
+    "Liches",
+    "Licantroformes",
+    "Centimanos"
+   ],
+   "desafios": "Los aventureros deben estar bien preparados, contar con equipo excepcional y ser capaces de ejecutar tácticas avanzadas y precisas.",
+   "bonificacion_atributos": {
+    "min": 13,
+    "max": 25,
+    "texto": "Bonificaciones que varían entre +13 y +20 o incluso hasta +25 puntos."
+   },
+   "ejemplo_atributos": "Un dragón anciano podría contar con +8 en constitución, +6 en destreza y +7 en fuerza.",
+   "portada": "img/portadas/categoria-4.webp",
+   "total_criaturas": 40,
+   "rangos_observados": {
+    "ca": {
+     "min": 1,
+     "max": 18
+    },
+    "vitalidad": {
+     "min": 98,
+     "max": 873
+    },
+    "px": {
+     "min": 25998,
+     "max": 2500000
+    },
+    "movimiento_casillas": {
+     "min": 1,
+     "max": 18
+    },
+    "alcance_casillas": {
+     "min": 1,
+     "max": 12
+    },
+    "dano_maximo": {
+     "min": 32,
+     "max": 600
+    }
+   }
+  },
+  {
+   "id": 5,
+   "nombre": "Bestiario Cuasidivino",
+   "titulo_intro": "Entidades Cuasidivino o Divinas",
+   "pagina_inicio": 453,
+   "caracteristicas": "Seres de poder casi absoluto o divino, capaces de alterar realidades y desatar destrucción masiva. Son extremadamente únicos y, en la mayoría de los casos, prácticamente imposibles de derrotar por medios convencionales.",
+   "ejemplos": [
+    "Dioses",
+    "Entidades Cósmicas",
+    "Autoridades Temporales",
+    "Entidades Creadoras"
+   ],
+   "desafios": "Enfrentarse a estos seres puede requerir artefactos especiales, alianzas con otros poderosos seres o incluso la intervención de fuerzas divinas. Son desafíos diseñados más para crear historias épicas que para ser vencidos.",
+   "bonificacion_atributos": {
+    "min": null,
+    "max": null,
+    "texto": "Sin límites en cuanto a las bonificaciones de atributos; se diseñan según las necesidades de la historia."
+   },
+   "ejemplo_atributos": "Un ser de categoría 5 puede tener bonificaciones en cualquier atributo, sin restricción.",
+   "portada": "img/portadas/categoria-5.webp",
+   "total_criaturas": 10,
+   "rangos_observados": {
+    "ca": {
+     "min": 0,
+     "max": 3
+    },
+    "vitalidad": {
+     "min": 465,
+     "max": 1000
+    },
+    "px": {
+     "min": 2255500,
+     "max": 500000000
+    },
+    "movimiento_casillas": {
+     "min": 3,
+     "max": 7
+    },
+    "alcance_casillas": {
+     "min": 2,
+     "max": 15
+    },
+    "dano_maximo": {
+     "min": 68,
+     "max": 1000
+    }
+   }
+  }
+ ],
+ "tipos": [
+  {
+   "id": "bestias",
+   "nombre": "Bestias",
+   "icono": "img/tipos/bestias.webp",
+   "icono_png": "img/tipos/bestias.png",
+   "total_criaturas": 152
+  },
+  {
+   "id": "demoniacos",
+   "nombre": "Demoníacos",
+   "icono": "img/tipos/demoniacos.webp",
+   "icono_png": "img/tipos/demoniacos.png",
+   "total_criaturas": 61
+  },
+  {
+   "id": "divinos",
+   "nombre": "Divinos",
+   "icono": "img/tipos/divinos.webp",
+   "icono_png": "img/tipos/divinos.png",
+   "total_criaturas": 43
+  },
+  {
+   "id": "elementales",
+   "nombre": "Elementales",
+   "icono": "img/tipos/elementales.webp",
+   "icono_png": "img/tipos/elementales.png",
+   "total_criaturas": 48
+  },
+  {
+   "id": "espirituales",
+   "nombre": "Espirituales",
+   "icono": "img/tipos/espirituales.webp",
+   "icono_png": "img/tipos/espirituales.png",
+   "total_criaturas": 53
+  },
+  {
+   "id": "humanoides",
+   "nombre": "Humanoides",
+   "icono": "img/tipos/humanoides.webp",
+   "icono_png": "img/tipos/humanoides.png",
+   "total_criaturas": 228
+  },
+  {
+   "id": "seres-impios",
+   "nombre": "Seres Impíos",
+   "icono": "img/tipos/seres-impios.webp",
+   "icono_png": "img/tipos/seres-impios.png",
+   "total_criaturas": 48
+  },
+  {
+   "id": "mecanicos",
+   "nombre": "Mecánicos",
+   "icono": "img/tipos/mecanicos.webp",
+   "icono_png": "img/tipos/mecanicos.png",
+   "total_criaturas": 9
+  },
+  {
+   "id": "nexianos",
+   "nombre": "Nexianos",
+   "icono": "img/tipos/nexianos.webp",
+   "icono_png": "img/tipos/nexianos.png",
+   "total_criaturas": 37
+  }
+ ],
+ "nota_tipos": "Cada ficha muestra 1 o más iconos de tipo junto a la localización; una criatura puede pertenecer a varios tipos (p. ej. Ángel Tersediano = Divino + Humanoide). Los tipos se han leído de esos iconos.",
+ "ficha": {
+  "campos": [
+   {
+    "id": "dano",
+    "etiqueta": "Daño",
+    "descripcion": "Dados de daño del ataque principal con su nombre entre paréntesis. Ej.: «1D6 + 2D20 (Golpe Acuático Sagrado)». En el JSON: texto original en texto.dano y desglose en dano.dados / formula / promedio / maximo."
+   },
+   {
+    "id": "ca",
+    "etiqueta": "C.A.",
+    "descripcion": "Clase de Armadura de la criatura. Igual que la de los personajes del Libro 1 (C.A. base 9, ver caracteristicas.json del Libro 1): las criaturas más poderosas tienen valores MÁS BAJOS (Serafín 3, Señor del Abismo 1, Archiliche 0)."
+   },
+   {
+    "id": "vitalidad",
+    "etiqueta": "Vitalidad",
+    "descripcion": "Puntos de vida de la criatura."
+   },
+   {
+    "id": "px",
+    "etiqueta": "P.X.",
+    "descripcion": "Puntos de experiencia que otorga al ser derrotada. En el libro se escriben con coma o punto de miles (1,300 = 1300; 2.475,450 = 2475450)."
+   },
+   {
+    "id": "movimiento",
+    "etiqueta": "Movimiento en Combate",
+    "descripcion": "Casillas que se desplaza por turno en la cuadrícula de combate (ver efectos_mapa.json del Libro 1)."
+   },
+   {
+    "id": "alcance",
+    "etiqueta": "Rango de Alcance",
+    "descripcion": "Distancia en casillas a la que puede atacar."
+   },
+   {
+    "id": "fortalezas",
+    "etiqueta": "Fortalezas",
+    "descripcion": "Lista de ventajas/capacidades (normalmente 3). El Máster las aplica narrativamente o como ventajas."
+   },
+   {
+    "id": "debilidades",
+    "etiqueta": "Debilidades",
+    "descripcion": "Lista de vulnerabilidades (normalmente 3). Útil para vincular con daño vulnerable/resistente/inmune de reglas.json del Libro 1."
+   },
+   {
+    "id": "localizacion",
+    "etiqueta": "Localización",
+    "descripcion": "Plano de origen y hábitats. planos[] es un campo derivado para filtrar."
+   },
+   {
+    "id": "alineamiento",
+    "etiqueta": "Alineamiento",
+    "descripcion": "Texto original; alineamiento_ejes[] normalizado a legal/neutral/caotico."
+   },
+   {
+    "id": "categoria",
+    "etiqueta": "Categoría",
+    "descripcion": "1–5 según la sección del libro."
+   }
+  ],
+  "valores_desconocidos": "«¿?» o «???» en el libro (entidades de categoría 5) se guardan como null en los campos numéricos; el texto original sigue en texto.*"
+ },
+ "planos": [
+  "terrenal",
+  "espiritual",
+  "elemental",
+  "infernal",
+  "sagrado",
+  "abisal",
+  "arcano",
+  "atemporal",
+  "ensueno",
+  "astral",
+  "desconocido",
+  "multiples"
+ ],
+ "aviso_homenajes": "Este bestiario incluye homenajes a otras mitologías, juegos o libros, adaptados al libro de rol; algunos nombres pueden no ser exactamente los conocidos."
+}

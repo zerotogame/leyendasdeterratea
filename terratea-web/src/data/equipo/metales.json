@@ -1,0 +1,146 @@
+[
+  {
+    "nombre": "COBRE",
+    "descripcion": "Metal rojizo, flexible y de baja dureza. El cobre se utiliza en mecanismos sencillos, cables de ingeniería y piezas pequeñas de armería. No es adecuado para armas duraderas, pero su utilidad técnica lo convierte en un material indispensable en la artesanía común.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/cobre.webp"
+  },
+  {
+    "nombre": "ESTAÑO",
+    "descripcion": "Metal blando, maleable y muy fácil de fundir. El estaño no soporta grandes esfuerzos físicos, por lo que rara vez se emplea en armamento. Sin embargo, es esencial para la creación de aleaciones ligeras, recubrimientos anticorrosivos simples y piezas de ensamblaje que requieren flexibilidad y rapidez de fabricación. Combinado con cobre, da lugar al bronce, una aleación que mejora significativamente sus propiedades y en el caso del hierro, da lugar al acero.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/estano.webp"
+  },
+  {
+    "nombre": "HIERRO",
+    "descripcion": "Metal común, resistente y fácil de trabajar, utilizado en armaduras, armas básicas y herramientas de uso diario. Aunque carece de propiedades especiales, su abundancia y equilibrio entre dureza y peso lo convierten en el pilar fundamental de la forja en la mayoría de los reinos de Terratea.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/hierro.webp"
+  },
+  {
+    "nombre": "PLATA",
+    "descripcion": "Metal precioso de color blanco brillante, altamente valorado por su pureza y afinidad con la magia espiritual. No alcanza la dureza del hierro, pero es temido por criaturas impías o espectrales, por lo que se utiliza para crear amuletos, armas rituales y herramientas de purificación. Su brillo inalterable la hace ideal para ornamentos de prestigio y símbolos sagrados.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/plata.webp"
+  },
+  {
+    "nombre": "ORO",
+    "descripcion": "Metal noble, maleable y resistente al paso del tiempo. Su suavidad lo hace inadecuado para armas, pero aquellas armas que lo tienen es perfecto para demostrar poder adquisitivo o estatus real. Es símbolo universal de riqueza y se emplea en sellos regios, amuletos mayores, arte arcano y canalizadores ceremoniales de alto nivel.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/oro.webp"
+  },
+  {
+    "nombre": "FERROXITA",
+    "descripcion": "Metal de color claro, extremadamente resistente a la oxidación y a cualquier tipo de corrosión. La Ferroxita mantiene su integridad incluso bajo ambientes salinos, gemas o condiciones extremas. Es el material predilecto para armas y armaduras duraderas en Terratea, y su longevidad la convierte en un recurso estratégico de enorme valor militar.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/ferroxita.webp"
+  },
+  {
+    "nombre": "COBALTO",
+    "descripcion": "Metal de tono plateado azulado, muy estable y capaz de soportar temperaturas elevadas sin perder dureza. Se utiliza en aleaciones técnicas, baterías e imanes de precisión. Su capacidad para mantener energía cinética lo hace útil en balistas, relojes y maquinaria táctica.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/cobalto.webp"
+  },
+  {
+    "nombre": "ZINC",
+    "descripcion": "Metal de color gris azulado,\nutilizado principalmente en la\ngalvanización para proteger\notros metales de la corrosión,\nasí como en la fabricación de\naleaciones y pólvora.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/zinc.webp"
+  },
+  {
+    "nombre": "MERCURIO",
+    "descripcion": "Metal líquido a temperatura ambiente, de color plateado,\nutilizado en termómetros,\nbarómetros, y otras aplicaciones\nindustriales y alquímicas.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/mercurio.webp"
+  },
+  {
+    "nombre": "TEARRICUM",
+    "descripcion": "Metal extremadamente ligero, pero sorprendentemente resistente. Su estructura interna vibrante parece absorber impactos sin deformarse, lo que le otorga una estabilidad casi inmovible frente a vibraciones y sacudidas. Es muy utilizado por goblins, gnomos y enanos para fabricar armaduras flexibles, acorazadas pero silenciosas, ideales para trabajos delicados o en túneles estrechos.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/tearricum.webp"
+  },
+  {
+    "nombre": "PLATINO",
+    "descripcion": "Metal blanco grisáceo, denso y extremadamente resistente. Su característica más apreciada es su facilidad para conducir la magia, lo que lo convierte en el material predilecto para bastones, varas y armas de hechiceros, así como para artefactos que requieren estabilidad energética frente a hechizos poderosos. Su rareza y durabilidad lo hacen un recurso codiciado entre magos, nobles y arcanistas.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/platino.webp"
+  },
+  {
+    "nombre": "TITANIO",
+    "descripcion": "Metal ligero, extremadamente resistente y capaz de soportar temperaturas y condiciones extremas sin deformarse. Su resistencia al salitre y a la corrosión lo hace ideal para navíos, armaduras marinas y equipo expuesto al mar abierto. Además, su excelente relación entre peso y durabilidad lo convierte en el mejor material calidad-precio para armaduras técnicas y herramientas de uso prolongado.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/titanio.webp"
+  },
+  {
+    "nombre": "ORICALCO",
+    "descripcion": "Material antiguo de color rojo carmesí, mencionado en antiguos códices vinculados a los Centimanos. Su composición exacta sigue siendo un misterio. Es el metal más pesado existente, por lo que se emplea principalmente en armas grandes y pesadas, así como en artefactos mágicos de gran escala. Su rareza y poder mágico lo convierten en un recurso extremadamente codiciado por artesanos y herreros de élite.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/oricalco.webp"
+  },
+  {
+    "nombre": "SPECTRONO",
+    "descripcion": "Mineral de brillo espectral multicolor, capaz de refractar y almacenar luz mágica. Es esencial en dispositivos ópticos arcanos, cristales de enfoque y artefactos destinados a manipular ilusiones o energías lumínicas. Su estructura es frágil, pero su poder para concentrar y amplificar magia es único.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/spectrono.webp"
+  },
+  {
+    "nombre": "NEUTERALIS",
+    "descripcion": "Material bioluminiscente procedente de criaturas profundas del océano. Emite una luz suave y constante, y tiene afinidad con la magia del agua. Se emplea en armaduras y artefactos diseñados para exploraciones subacuáticas, así como en señales místicas que nunca se apagan.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/neuteralis.webp"
+  },
+  {
+    "nombre": "LIMONIUN",
+    "descripcion": "Cristal de intenso color anaranjado, con propiedades curativas naturales. Absorbe y estabiliza la energía vital del portador, actuando como amuleto protector, componente para pociones o núcleo de herramientas de sanación. Extremadamente valioso para sanadores y magos blancos.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/limoniun.webp"
+  },
+  {
+    "nombre": "ÉBANO",
+    "descripcion": "Metal oscuro, de densidad elevada y aspecto pulido. Reacciona excelentemente a tallados finos y mantiene una dureza excepcional. Es preferido en armas ornamentales, armaduras de élite, instrumentos musicales reforzados y obras de artesanía de alta calidad. Se dice que absorbe cualquier magia maligna o energía oscura, protegiendo al portador de hechizos dañinos y fuerzas corruptas, lo que lo convierte en un material extremadamente codiciado tanto por su resistencia como por su poder místico.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/ebano.webp"
+  },
+  {
+    "nombre": "ADAMAS",
+    "descripcion": "Conocido como el material más duro del mundo, capaz de soportar cualquier impacto sin deformarse. Armas hechas de Adamas se consideran irrompibles y normalmente se heredan por generaciones. Su extracción y forja son extremadamente complejas, reservadas solo para maestros artesanos y héroes míticos.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/adamas.webp"
+  },
+  {
+    "nombre": "COSMOTERIO",
+    "descripcion": "Metal extraño y denso, procedente de fragmentos caídos del cielo. Su estructura no corresponde a ningún material terrestre y posee una resistencia extraordinaria. Armas hechas con Cosmoteorito atraviesan armaduras convencionales con facilidad, y su durabilidad es atípica. Su origen extraterrestre lo convierte en un material único y sumamente codiciado. Aunque sus cualidades exactas siguen siendo un misterio, se sabe que inscribirle gemas o runas magnifica su poder, convirtiéndolo en la elección predilecta para artefactos mágicos y armas de alto nivel.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/cosmoterio.webp"
+  },
+  {
+    "nombre": "PROMETIO",
+    "descripcion": "Metal oscuro, con propiedades mágicas, se dice que es capaz de almacenar en su interior unas cantidades ingentes de energía de cualquier tipo.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/prometio.webp"
+  },
+  {
+    "nombre": "METAL INFERNAL",
+    "descripcion": "Un metal oscuro y maleable que se extrae del plano infernal, se dice que posee propiedades mágicas oscuras y una resistencia excepcional, a menudo utilizado en la forja de armas y artefactos relacionados con la magia negra o la guerra infernal.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/metal-infernal.webp"
+  },
+  {
+    "nombre": "ELEAMANTITA",
+    "descripcion": "Una sustancia dorada y cristalina que se extrae del plano elemental, la eleamantita es conocida por su capacidad para contener y canalizar energías elementales. Se utiliza comúnmente en la creación de objetos mágicos, encantamientos, joyería y herramientas relacionadas con el control de los elementos.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/eleamantita.webp"
+  },
+  {
+    "nombre": "DORADOS CELESTIALES",
+    "descripcion": "Un metal resplandeciente y luminoso que se extrae del plano sagrado, los dorados celestiales son considerados sagrados y puros. Se utilizan en la fabricación de artefactos religiosos, armaduras sagradas y objetos de poder destinados a la lucha contra el mal y la protección de la luz divina.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/dorados-celestiales.webp"
+  },
+  {
+    "nombre": "UBNIS",
+    "descripcion": "Un metal sombrío y ominoso que se extrae del plano abisal, el ubnis está impregnado de una energía maligna y corrupta. Se utiliza en la forja de armas y armaduras de aspecto oscuro, así como en la creación de artefactos vinculados al poder oscuro y la magia profana, se dice que no ningún ser de otro plano puede usar este tipo de material, por lo contrario, sería corrompido por la maldición de este.",
+    "categoria": "TABLA DE METALES",
+    "imagen": "img/equipo/metales/ubnis.webp"
+  }
+]

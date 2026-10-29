@@ -1,0 +1,100 @@
+[
+  {
+    "nombre": "SÍMBOLO OSCURO",
+    "coste": "10 M.O.",
+    "peso": "¼ KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/simbolo-oscuro.webp"
+  },
+  {
+    "nombre": "SÍMBOLO SAGRADO (MADERA)",
+    "coste": "1 M.P.",
+    "peso": "0 KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/simbolo-sagrado-madera.webp"
+  },
+  {
+    "nombre": "SÍMBOLO SAGRADO (PLATA)",
+    "coste": "25 M.O.",
+    "peso": "¼ KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/simbolo-sagrado-plata.webp"
+  },
+  {
+    "nombre": "SÍMBOLO SAGRADO (ORO)",
+    "coste": "100 M.O.",
+    "peso": "½ KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/simbolo-sagrado-oro.webp"
+  },
+  {
+    "nombre": "GARGANTILLA PROTECTORA",
+    "coste": "25 M.O.",
+    "peso": "¼ KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/gargantilla-protectora.webp"
+  },
+  {
+    "nombre": "DISTINTIVO",
+    "coste": "10 M.O.",
+    "peso": "¼ KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/distintivo.webp"
+  },
+  {
+    "nombre": "ESPEJITO DE MANO",
+    "coste": "12 M.O.",
+    "peso": "¼ KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/espejito-de-mano.webp"
+  },
+  {
+    "nombre": "ANILLO DE BRONCE",
+    "coste": "1 M.O.",
+    "peso": "0 KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/anillo-de-bronce.webp"
+  },
+  {
+    "nombre": "ANILLO DE PLATA",
+    "coste": "50 M.O.",
+    "peso": "0 KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/anillo-de-plata.webp"
+  },
+  {
+    "nombre": "ANILLO DE ORO",
+    "coste": "100 M.O.",
+    "peso": "0 KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/anillo-de-oro.webp"
+  },
+  {
+    "nombre": "COLGANTE DE BRONCE",
+    "coste": "5 M.O.",
+    "peso": "0 KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/colgante-de-bronce.webp"
+  },
+  {
+    "nombre": "COLGANTE DE PLATA",
+    "coste": "75 M.O.",
+    "peso": "0 KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/colgante-de-plata.webp"
+  },
+  {
+    "nombre": "COLGANTE DE ORO",
+    "coste": "125 M.O.",
+    "peso": "0 KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/colgante-de-oro.webp"
+  },
+  {
+    "nombre": "GUARDAPELO",
+    "coste": "55 M.O.",
+    "peso": "0 KG",
+    "categoria": "JOYERÍA/BISUTERÍA",
+    "imagen": "img/equipo/joyeria/guardapelo.webp"
+  }
+]

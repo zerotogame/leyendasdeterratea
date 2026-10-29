@@ -1,0 +1,1541 @@
+{
+ "reinos": [
+  {
+   "id": "stungerb",
+   "nombre": "Reino de Stungerb"
+  },
+  {
+   "id": "maurizanian",
+   "nombre": "Reino de Maurizanian"
+  },
+  {
+   "id": "lusitanius",
+   "nombre": "Reino de Lusitanius"
+  },
+  {
+   "id": "revelfbolth",
+   "nombre": "Reino de Revelfbolth"
+  },
+  {
+   "id": "overfield",
+   "nombre": "Ciudad Parlamento de Overfield"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "jarl-olaf-balder",
+   "nombre": "Jarl Olaf Balder",
+   "raza": "Humano",
+   "reino": "stungerb",
+   "descripcion": "Jarl Olaf Balder es el gobernante sabio y respetado del Reino de Stungerb. Con su barba pelirroja y canosa, pero bien cuidada, y una mirada firme que refleja su vasta experiencia, Olaf ha guiado a su reino a través de épocas tanto prósperas como desafiantes. Su presencia imponente y su postura digna muestran las marcas de honor de múltiples batallas, testificando su habilidad y valor en combate. Además de su destacada gestión en el campo de batalla y en la política, Olaf ha jugado un papel crucial en la normalización de las relaciones entre humanos y elfos, tras su matrimonio con una elfa, uniendo a ambas razas en un lazo de paz y cooperación. Su liderazgo equilibrado y su profundo entendimiento de la política y la guerra han cimentado su posición como una figura venerada y una autoridad respetada en todo el reino.",
+   "caracteristicas": "Edad avanzada, marca de honor en la batalla, pacificador.",
+   "rasgos": [
+    "Edad avanzada",
+    "marca de honor en la batalla",
+    "pacificador"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/jarl-olaf-balder.webp",
+   "pagina": 465
+  },
+  {
+   "id": "mago-de-la-corte-trygg-boldun",
+   "nombre": "Mago de la Corte Trygg Boldún",
+   "raza": "Elfo",
+   "reino": "stungerb",
+   "descripcion": "Mago de la Corte Trygg Boldún es el consejero mágico más leal al Jarl Olaf Balder, un experto en artefactos arcanos. Su figura esbelta está envuelta en elegantes túnicas élficas que fluyen con un aura de misterio y sofisticación. Sus ojos centellean con la sabiduría acumulada a lo largo de los siglos, reflejando su profundo conocimiento de las artes mágicas. Con un porte majestuoso y una presencia serena, Trygg es conocido por su habilidad para manejar poderosos artefactos y por su papel esencial en el consejo del Jarl, aportando perspectivas arcanas y estratégicas.",
+   "caracteristicas": "Sabio, elegante, experto en artefactos arcanos",
+   "rasgos": [
+    "Sabio",
+    "elegante",
+    "experto en artefactos arcanos"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/mago-de-la-corte-trygg-boldun.webp",
+   "pagina": 465
+  },
+  {
+   "id": "general-del-ejercito-grom-dahl",
+   "nombre": "General del Ejército Grom Dahl",
+   "raza": "Orco",
+   "reino": "stungerb",
+   "descripcion": "General del Ejército Grom Dahl es un líder estratégico y valiente en el campo de batalla. Con su piel verde marcada por cicatrices de guerra y una presencia imponente, Grom lleva con orgullo las huellas de su dedicación a la defensa del reino. Su cuerpo corpulento y musculoso destaca en la primera línea de combate, reflejando su fuerza y resistencia. Grom es conocido por su habilidad táctica y su capacidad para inspirar a sus tropas, manteniendo la moral alta y la estrategia en su punto. Su figura robusta y su actitud firme hacen de él un líder respetado y temido en el campo de batalla.",
+   "caracteristicas": "Cicatrices de guerra, imponente presencia, corpulento.",
+   "rasgos": [
+    "Cicatrices de guerra",
+    "imponente presencia",
+    "corpulento"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/general-del-ejercito-grom-dahl.webp",
+   "pagina": 466
+  },
+  {
+   "id": "hijo-del-jarl-erik-balder",
+   "nombre": "Hijo del Jarl: Erik Balder",
+   "raza": "Semielfo",
+   "reino": "stungerb",
+   "descripcion": "Erik Balder es el joven heredero del Jarl Olaf Balder, ansioso por demostrar su valía de manera prematura en el reino de Stungerb. Posee una combinación distintiva de la gracia élfica y la determinación humana, lo que le otorga una presencia notable para el pueblo. Erik se destaca por su destreza con la espada, y su impulso juvenil lo lleva a buscar oportunidades para probar su habilidad y coraje. Aunque a veces su impetuosidad lo lleva a actuar sin pensar, su deseo de honrar el legado de su padre lo convierten en una figura prometedora.",
+   "caracteristicas": "Impulsivo, habilidoso con la espada",
+   "rasgos": [
+    "Impulsivo",
+    "habilidoso con la espada"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/hijo-del-jarl-erik-balder.webp",
+   "pagina": 466
+  },
+  {
+   "id": "hija-del-jarl-aerith-balder",
+   "nombre": "Hija del Jarl Aerith Balder",
+   "raza": "Semielfa",
+   "reino": "stungerb",
+   "descripcion": "Aerith Balder es la hija del Jarl Olaf Balder, destacándose por su astucia y su dedicación al estudio de las habilidades diplomáticas para el reino de Stungerb. Con una presencia encantadora y grácil, su cabello albino y sus ojos penetrantes reflejan una gracia única que complementa su aguda percepción. Aunque aún está en proceso de experimentar en las intrigas políticas y en el arte de la negociación, Aerith utiliza su don para leer a las personas y dominar el discurso con habilidad, lo que le permitirá navegar con destreza en los complejos juegos políticos.",
+   "caracteristicas": "Elegante, lectora de personas",
+   "rasgos": [
+    "Elegante",
+    "lectora de personas"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/hija-del-jarl-aerith-balder.webp",
+   "pagina": 467
+  },
+  {
+   "id": "mujer-del-jarl-brunilda-balder",
+   "nombre": "Mujer del Jarl Brunilda Balder",
+   "raza": "Elfa",
+   "reino": "stungerb",
+   "descripcion": "Brunilda Balder es la mujer del Jarl Olaf Balder y matrona del reino de Stungerb. Con su elegancia élfica y su presencia serena, Brunilda apoya al Jarl con una sabiduría profunda y una visión clara. Su porte imponente de guerrera y su capacidad para transmitir calma y orientación son fundamentales para el equilibrio del reino. Además de su papel como consejera, Brunilda es una guerrera formidable; su relación con Olaf se forjó en el campo de batalla, donde ambos se enfrentaron en combate y se enamoraron de su arte marcial compartido. Su carácter sabio y su habilidad en la lucha hacen de ella una figura respetada y admirada.",
+   "caracteristicas": "Sabia, sádica en combate, guerrera",
+   "rasgos": [
+    "Sabia",
+    "sádica en combate",
+    "guerrera"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/mujer-del-jarl-brunilda-balder.webp",
+   "pagina": 467
+  },
+  {
+   "id": "capitana-de-la-guardia-ezkar-maldivar",
+   "nombre": "Capitana de la Guardia Ezkar Maldivar",
+   "raza": "Semiorco",
+   "reino": "stungerb",
+   "descripcion": "Capitana de la Guardia, Ezkar Maldivar es la protectora leal del Jarl Olaf Balder y una experta en combate cercano. Con su imponente figura semiorca y una presencia que inspira respeto, Ezkar lleva una armadura robusta que refleja su devoción y compromiso con la protección del reino de Stungerb. Su rostro lleva una cicatriz prominente que atestigua su experiencia y sacrificios hacia su Jarl. La devoción de Ezkar por su deber ha sido tan intensa que ha dejado de lado su vida personal para servir fervientemente al Jarl y al reino, siendo reconocida como la guardiana más dedicada y resoluta del reino.",
+   "caracteristicas": "Imponente, cicatriz en el rostro, la más protectora del reino",
+   "rasgos": [
+    "Imponente",
+    "cicatriz en el rostro",
+    "la más protectora del reino"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/capitana-de-la-guardia-ezkar-maldivar.webp",
+   "pagina": 468
+  },
+  {
+   "id": "diplomatica-sigrid-moen",
+   "nombre": "Diplomática: Sigrid Moen",
+   "raza": "Enana",
+   "reino": "stungerb",
+   "descripcion": "Experta en relaciones exteriores y negociaciones. Sigrid Moen, a pesar de su estatura, destaca por su aguda mente y habilidades diplomáticas.",
+   "caracteristicas": "Vestimenta elegante, lengua afilada.",
+   "rasgos": [
+    "Vestimenta elegante",
+    "lengua afilada"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/diplomatica-sigrid-moen.webp",
+   "pagina": 468
+  },
+  {
+   "id": "sacerdotisa-svanna-olsen",
+   "nombre": "Sacerdotisa: Svanna Olsen",
+   "raza": "Jotun",
+   "reino": "stungerb",
+   "descripcion": "Guía espiritual del reino, mediadora en conflictos. Svanna Olsen, con su imponente estatura Jotun, irradia una presencia tranquilizadora como líder espiritual.",
+   "caracteristicas": "Sabia, serena",
+   "rasgos": [
+    "Sabia",
+    "serena"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/sacerdotisa-svanna-olsen.webp",
+   "pagina": 469
+  },
+  {
+   "id": "noble-leifur-simonsen",
+   "nombre": "Noble: Leifur Simonsen",
+   "raza": "Humano",
+   "reino": "stungerb",
+   "descripcion": "Rico terrateniente, influyente en asuntos comerciales. Leifur Simonsen viste con lujo y tiene una perspicacia comercial que ha beneficiado al reino.",
+   "caracteristicas": "Vestimenta lujosa, conocedor del arte.",
+   "rasgos": [
+    "Vestimenta lujosa",
+    "conocedor del arte"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-leifur-simonsen.webp",
+   "pagina": 469
+  },
+  {
+   "id": "noble-valdemar-strom",
+   "nombre": "Noble: Valdemar Strom",
+   "raza": "Enano",
+   "reino": "stungerb",
+   "descripcion": "Intrigante cortesano, maestro en juegos políticos. Valdemar Strom, a pesar de su estatura, es un astuto cortesano con habilidades políticas excepcionales.",
+   "caracteristicas": "Sonrisa astuta, manejo magistral de la retórica.",
+   "rasgos": [
+    "Sonrisa astuta",
+    "manejo magistral de la retórica"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-valdemar-strom.webp",
+   "pagina": 470
+  },
+  {
+   "id": "noble-isak-ruud",
+   "nombre": "Noble: Isak Ruud",
+   "raza": "Felino",
+   "reino": "stungerb",
+   "descripcion": "Coleccionista de rarezas, apasionado por la historia antigua. Isak Ruud, con características felinas, es un noble excéntrico y curioso.",
+   "caracteristicas": "Vestimenta lujosa, conocedor del arte.",
+   "rasgos": [
+    "Vestimenta lujosa",
+    "conocedor del arte"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-isak-ruud.webp",
+   "pagina": 470
+  },
+  {
+   "id": "rector-del-colegio-de-magia-alam-holmes",
+   "nombre": "Rector del Colegio de Magia Alam Holmes",
+   "raza": "Humano",
+   "reino": "stungerb",
+   "descripcion": "Alam Holmes es el Rector del Colegio de Magia, un líder académico y ferviente defensor del conocimiento mágico. Con su apariencia elegante y meticulosa, Alam combina su estilo refinado con una capacidad inigualable para cautivar a su audiencia con su voz envolvente y locuaz. Su reputación se basa no solo en sus habilidades como educador, sino también en su pasado legendario como héroe que interrumpió la Segunda Era de los Dragones. Tras la retirada y fallecimiento del anterior director del colegio, Alam fue aclamado por la comunidad mágica para asumir el liderazgo, continuando su legado de excelencia y sabiduría en el campo de la magia.",
+   "caracteristicas": "Elegante, locuaz, voz cautivadora, ex-leyenda",
+   "rasgos": [
+    "Elegante",
+    "locuaz",
+    "voz cautivadora",
+    "ex-leyenda"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/rector-del-colegio-de-magia-alam-holmes.webp",
+   "pagina": 471
+  },
+  {
+   "id": "directora-de-magia-arcana-catherine-nobel",
+   "nombre": "Directora de Magia Arcana Catherine Nobel",
+   "raza": "Humana",
+   "reino": "stungerb",
+   "descripcion": "Catherine Nobel es la Directora de Magia Arcana, una maestra consumada de las artes arcanas y guardiana de los secretos más profundos de la magia. Con ojos que centellean con una intensidad mágica y túnicas elegantes bordadas con hechizos complejos, Catherine irradia una simpatía y respeto en el mundo mágico. Con su cuerpo ancho no es un impedimento para realizar sus funciones con eficiencia. Catherine ha acompañado a Alam Holmes en varias aventuras, demostrando su destreza mágica. Su relación con Alam no solo le proporcionó una educación excepcional, sino que también consolidó su reputación. Finalmente, fue reclamada por el Colegio de Magia para asumir en primera instancia profesora y en segunda instancia con el rol de Directora del departamento de Magia Arcana, donde continúa su legado de sabiduría y compromiso con el conocimiento arcano.",
+   "caracteristicas": "Ojos centelleantes, túnica bordada con hechizos, aventurera.",
+   "rasgos": [
+    "Ojos centelleantes",
+    "túnica bordada con hechizos",
+    "aventurera"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/directora-de-magia-arcana-catherine-nobel.webp",
+   "pagina": 471
+  },
+  {
+   "id": "directora-de-magia-mistica-otama-han-shawn",
+   "nombre": "Directora de Magia Mística Otama Han Shawn",
+   "raza": "Elfo",
+   "reino": "stungerb",
+   "descripcion": "Otama Han Shawn es la Directora del departamento de Magia Mística, una experimentada protectora experta de las artes místicas y profundamente conectada con las energías cósmicas. Su presencia es un reflejo de su entorno estelar, vestida con ropas de colores astrales que se integran constelaciones, destaca su conexión con el mundo terrenal y Onírico. Otama es conocida por su comprensión profunda y su dedicación apasionada a su campo de trabajo, manejando las artes místicas con una sensibilidad y sabiduría que resuenan con la estrellas misma.",
+   "caracteristicas": "Conexión con la naturaleza, comprensiva y dedicada a su campo de trabajo",
+   "rasgos": [
+    "Conexión con la naturaleza",
+    "comprensiva",
+    "dedicada a su campo de trabajo"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/directora-de-magia-mistica-otama-han-shawn.webp",
+   "pagina": 472
+  },
+  {
+   "id": "director-de-magia-de-invocacion-bromash-jkor",
+   "nombre": "Director de Magia de Invocación Bromash Jkör",
+   "raza": "Gnomo",
+   "reino": "stungerb",
+   "descripcion": "Bromash Jkör es el Director del departamento de Magia de Invocación, un maestro en el arte de las invocaciones y dominador de la magia temporal. Con un distintivo mostacho que siempre se está acicalando y un bastón de cristal que canaliza su poder del tiempo, Bromash es una figura destacada en el ámbito de la magia. Su bastón de cristal es un artefacto de gran poder y significado que se cuenta que lo halló más allá del tiempo mismo. Tan antiguo como los primeros estudiantes del Colegio de Magia, ha superado con creces su esperanza de vida, un hecho que ha llevado a rumores de que su longevidad podría estar relacionada con las prácticas y secretos de su departamento.",
+   "caracteristicas": "Marca de invocación, bastón de cristal, longevidad extraordinaria.",
+   "rasgos": [
+    "Marca de invocación",
+    "bastón de cristal",
+    "longevidad extraordinaria"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/director-de-magia-de-invocacion-bromash-jkor.webp",
+   "pagina": 472
+  },
+  {
+   "id": "sumo-pontifice-eustaquio-levenez-de-la-ras",
+   "nombre": "Sumo Pontífice Eustaquio Levenez De la Ras",
+   "raza": "Humano",
+   "reino": "stungerb",
+   "descripcion": "Eustaquio Levenez De la Ras es el Sumo Pontífice y la figura de liderazgo espiritual supremo de toda Terratea. Como guía moral y líder espiritual, Eustaquio irradia un aura sagrada y se presenta de vejez avanzada, con una vestimenta ceremonial que acentúa su estatus y autoridad. Sus poderes combinan influencia militar y espiritual, proporcionando un respaldo formidable a su liderazgo. A pesar de su gran respeto, su personalidad puede ser taimada y a veces predecible, lo que añade complejidad a su influencia sobre las ordenes bajo su mando. Se dice que tiene una hermana mucho menor que él, quien lidera el gremio de aventureros más prestigioso de Terratea. Este vínculo familiar está marcado por conflictos continuos, y la hermana a menudo se ve en la posición de cumplir órdenes que van en contra de las decisiones de Eustaquio.",
+   "caracteristicas": "Presencia sagrada, taimado y predecible a veces.",
+   "rasgos": [
+    "Presencia sagrada",
+    "taimado",
+    "predecible a veces"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/sumo-pontifice-eustaquio-levenez-de-la-ras.webp",
+   "pagina": 473
+  },
+  {
+   "id": "alto-exarca-viktor-de-la-fleur-paladin",
+   "nombre": "Alto Exarca Viktor De la Fleur (Paladín)",
+   "raza": "Humano",
+   "reino": "stungerb",
+   "descripcion": "Viktor De la Fleur es el Alto Exarca y un paladín de valiente honor, defensor incansable de la justicia. Su presencia imponente se manifiesta a través de una armadura resplandeciente que brilla con una luz divina, y empuña una espada divina, símbolo de su dedicación y poder. Conocido por su beligerancia contra todo lo impío o demoniaco, Viktor ha ganado renombre por sus hazañas heroicas, incluyendo una legendaria misión en la que entró en el plano infernal, enfrentándose y derrotando a más de 100 demonios en solitario antes de regresar triunfante, posteriormente fue nombrado como el líder de la Orden de los Paladines de Terratea. Su valentía y determinación en la lucha contra las fuerzas del mal lo han convertido en una figura reverenciada y temida en el ámbito de los paladines.",
+   "caracteristicas": "Armadura resplandeciente, espada divina, belicoso con lo impío o demoniaco",
+   "rasgos": [
+    "Armadura resplandeciente",
+    "espada divina",
+    "belicoso con lo impío o demoniaco"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/alto-exarca-viktor-de-la-fleur-paladin.webp",
+   "pagina": 473
+  },
+  {
+   "id": "arzobispo-gregori-manzano-clerigo",
+   "nombre": "Arzobispo Gregori Manzano (Clérigo)",
+   "raza": "Humano",
+   "reino": "stungerb",
+   "descripcion": "Gregori Manzano es el Arzobispo y líder espiritual, reconocido como sanador y guía moral en la Catedral de Notre Seigneur. Viste una túnica austeras y humildes que refleja su devoción religiosa. Conocido por su amabilidad y compasión, Gregori ha ganado el respeto y la admiración de muchos por su capacidad de sanar tanto física como espiritualmente. Como líder de la Orden de Clérigos de Terratea, se dice que alcanzó su alto estatus al contactar con el plano sagrado, una hazaña que se atribuye a su profunda bondad y pureza de corazón. Su conexión con lo divino y su dedicación a la ayuda de los demás han establecido su reputación como un líder espiritual excepcional.",
+   "caracteristicas": "Compasivo, líder, habilidad para contactar con el plano sagrado. El Gran Vicario Axel Van Hallen (Cazadores de las",
+   "rasgos": [
+    "Compasivo",
+    "líder",
+    "habilidad para contactar con el plano sagrado. El Gran Vicario Axel Van Hallen (Cazadores de las"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/arzobispo-gregori-manzano-clerigo.webp",
+   "pagina": 474
+  },
+  {
+   "id": "el-gran-vicario-axel-van-hallen-cazadores-de-las-sombras",
+   "nombre": "El Gran Vicario Axel Van Hallen (Cazadores de las Sombras)",
+   "raza": "Humano",
+   "reino": "stungerb",
+   "descripcion": "Axel Van Hallen, conocido como El Gran Vicario, es el líder de la Orden de los Cazadores de Sombras. Viste una armadura de cuero adornada con espinas y empuña una ristra de armas sagradas apabullante, proyectando una presencia imponente y respetada en el mundo de Terratea. Axel es famoso por su terquedad, su fidelidad inquebrantable a su devoción y su astuta estrategia. En su época de leyenda, Axel, junto con Alam Holmes, fue considerado uno de los mayores héroes vivos y desempeñó un papel crucial en la interrupción de la Segunda Era de los Dragones. También es el autor de la influyente \"Guía de los Seres Impíos y Cómo Acabar con Ellos\", un texto esencial para cazadores de sombras y defensores de la fe. Además, Axel se mantiene al tanto de las últimas novedades en ingeniería, incorporando innovaciones tecnológicas en su orden para mantenerse a la vanguardia en la lucha contra las fuerzas oscuras e impías.",
+   "caracteristicas": "Terco, astuto estratega, ex leyenda, autor",
+   "rasgos": [
+    "Terco",
+    "astuto estratega",
+    "ex leyenda",
+    "autor"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/el-gran-vicario-axel-van-hallen-cazadores-de-las-sombras.webp",
+   "pagina": 474
+  },
+  {
+   "id": "almirante-shillfield-ysolda-atardecer",
+   "nombre": "Almirante Shillfield Ysolda “Atardecer”",
+   "raza": "Felino",
+   "reino": "stungerb",
+   "descripcion": "Almirante del Norte, maestro naval y defensor del honor de las aguas dominio de Stungerb. Shillfield Ysolda es un felino imponente con pelaje multicolor y ojos verdes penetrantes. Porta ropajes de marinero norteño y su gran pelaje le confiere una presencia majestuosa. Empuña un tridente ancestral. Es conocido por su coraje feroz, lealtad incuestionable a su tripulación y por tener un carácter beligerante y ambicioso.",
+   "caracteristicas": "Beligerante, ambicioso.",
+   "rasgos": [
+    "Beligerante",
+    "ambicioso"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/almirante-shillfield-ysolda-atardecer.webp",
+   "pagina": 475
+  },
+  {
+   "id": "sultan-chaka-al-jaffar",
+   "nombre": "Sultán Chaka Al Jaffar",
+   "raza": "Humano",
+   "reino": "maurizanian",
+   "descripcion": "Chaka Al Jaffar es el Sultán de Maurizanian, un gobernante temido y respetado por igual, es conocido por su astucia política y liderazgo fuerte. Su figura imponente y su carisma natural han sido claves en la unificación de todos los reinos de Maurizanian bajo su mando. Chaka es famoso por fundar los soldados de élite de Shirkan, una fuerza temida y respetada en todo el continente. Considerado un rey guerrero, Chaka ha demostrado ser aún más astuto en la política y la estrategia militar, consolidando su poder mediante alianzas o destruyendo por completo a sus opositores.",
+   "caracteristicas": "Fundador de los Shirkan, rey guerrero y estratega astuto.",
+   "rasgos": [
+    "Fundador de los Shirkan",
+    "rey guerrero",
+    "estratega astuto"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/sultan-chaka-al-jaffar.webp",
+   "pagina": 475
+  },
+  {
+   "id": "hija-mayor-sherezade-al-jaffar",
+   "nombre": "Hija mayor Sherezade Al Jaffar",
+   "raza": "Humana",
+   "reino": "maurizanian",
+   "descripcion": "Sherezade Al Jaffar es la primogénita del sultán Chaka Al Jaffar, destinada a encontrar al futuro sucesor en la línea real del sultán. Conocida por su simpatía con la élite y su apatía hacia los de bajo estatus, Sherezade es una figura influyente en la corte. Su afán por organizar fiestas ostentosas para demostrar la riqueza y el poder de Maurizanian es una de sus características más destacadas. Además, desde el fallecimiento de su madre, Sherezade ha asumido la responsabilidad de unificar los califatos del reino de Maurizanian a través de estratégicos matrimonios, consolidando el poder y la cohesión del reino de su padre.",
+   "caracteristicas": "Fanática por organizar fiestas ostentosas, responsable con sus deberes y egocéntrica.",
+   "rasgos": [
+    "Fanática por organizar fiestas ostentosas",
+    "responsable con sus deberes",
+    "egocéntrica"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/hija-mayor-sherezade-al-jaffar.webp",
+   "pagina": 476
+  },
+  {
+   "id": "hija-mediana-dalia-al-jaffar",
+   "nombre": "Hija mediana Dalia Al Jaffar",
+   "raza": "Humana",
+   "reino": "maurizanian",
+   "descripcion": "Dalia Al Jaffar es la segunda hija del sultán Chaka Al Jaffar, conocida por su valentía y determinación obsesiva. Se ha dedicado a aprender las habilidades marciales de la guardia de élite y a estudiar la estrategia militar en la prestigiosa escuela de nobles y oficiales de Sidi'khan, ubicada dentro del enorme palacio del Sultán. Dalia aspira a emular los logros de su padre y se enfoca de una manera neurótica en convertirse en una figura emblemática en la guerra. Su compromiso con la disciplina y la preparación la distingue como una futura líder en los campos de batalla de Maurizanian.",
+   "caracteristicas": "Valiente, estratega militar, neurótica.",
+   "rasgos": [
+    "Valiente",
+    "estratega militar",
+    "neurótica"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/hija-mediana-dalia-al-jaffar.webp",
+   "pagina": 476
+  },
+  {
+   "id": "hija-menor-silka-al-jaffar",
+   "nombre": "Hija menor Silka Al Jaffar",
+   "raza": "Humana",
+   "reino": "maurizanian",
+   "descripcion": "Silka Al Jaffar es la hija menor del sultán Chaka Al Jaffar, la benjamina de la familia real de Maurizanian. Mimada y protegida, Silka nunca ha salido del palacio por decreto de su padre. A pesar de su juventud, posee un talento innato para las artes pirománticas, que ha comenzado a explorar con entusiasmo. Su carácter enamoradizo la lleva a sentirse atraída por aquellos que valora más allá de su riqueza, sin discriminar la raza o el sexo. Sin embargo, sus sentimientos nunca prosperan, ya que nadie se atreve a corresponderle por miedo a su padre. Su naturaleza juguetona la lleva a poner en compromisos morales a aquellos que la rodean, disfrutando de observar sus reacciones y decisiones.",
+   "caracteristicas": "Mimada, enamoradiza, talento en piromancia.",
+   "rasgos": [
+    "Mimada",
+    "enamoradiza",
+    "talento en piromancia"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/hija-menor-silka-al-jaffar.webp",
+   "pagina": 477
+  },
+  {
+   "id": "capitan-de-la-guardia-salem-de-travhes-almud",
+   "nombre": "Capitán de la Guardia Salem de Travhes Almud",
+   "raza": "Humano",
+   "reino": "maurizanian",
+   "descripcion": "Salem de Travhes Almud es el leal Capitán de la Guardia del sultán Chaka Al Jaffar y un protector devoto del reino de Maurizanian. Consistente y hábil en el combate, Salem ha demostrado ser un líder ejemplar y una figura idolatrada entre sus congéneres. Su dedicación y lealtad le han ganado la confianza absoluta del sultán, quien le ha encargado la seguridad de toda su familia. Como el primer Shirkan reclutado y el primer pupilo en esta prestigiosa disciplina, Salem es considerado la mano derecha del sultán y un ejemplo a seguir para todos los soldados de élite de Shirkan.",
+   "caracteristicas": "Hábil en combate, mano derecha del sultán, primer Shirkan reclutado.",
+   "rasgos": [
+    "Hábil en combate",
+    "mano derecha del sultán",
+    "primer Shirkan reclutado"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/capitan-de-la-guardia-salem-de-travhes-almud.webp",
+   "pagina": 477
+  },
+  {
+   "id": "general-del-ejercito-bekelengue-mina",
+   "nombre": "General del Ejército Bekelengue Mina",
+   "raza": "Reptiliano",
+   "reino": "maurizanian",
+   "descripcion": "Bekelengue Mina es el General del Ejército de Maurizanian y una figura clave en la unificación del reino bajo el sultán Chaka Al Jaffar. Respetado por su habilidad táctica y su mente estratégica, Bekelengue ha demostrado ser un comandante formidable en el campo de batalla. Con una astucia sin igual, ha acompañado al sultán en numerosas campañas, implementando estrategias despiadadas para asegurar la victoria. Su genio táctico y su implacable enfoque en la guerra lo han establecido como la mano izquierda del sultán, desempeñando un papel esencial en la consolidación del poder y la expansión del reino.",
+   "caracteristicas": "Estratega táctico, genio estratega, mano izquierda del sultán.",
+   "rasgos": [
+    "Estratega táctico",
+    "genio estratega",
+    "mano izquierda del sultán"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/general-del-ejercito-bekelengue-mina.webp",
+   "pagina": 478
+  },
+  {
+   "id": "gran-iman-fynn-ziade",
+   "nombre": "Gran Imán Fynn Ziade",
+   "raza": "Humano",
+   "reino": "maurizanian",
+   "descripcion": "Fynn Ziade es el Gran Imán de Maurizanian, una figura de liderazgo espiritual y guía religioso en el reino. Criado en los duros desiertos de Maurizanian, su experiencia de vida marcada por el sufrimiento le llevó a encontrar la iluminación y la sabiduría divina. Esta comprensión espiritual ha sido crucial para iluminar el camino del sultán Chaka Al Jaffar y su séquito. Fynn es conocido por su devoción inquebrantable y su capacidad para ofrecer orientación y poder celestial a los líderes y al pueblo de Maurizanian.",
+   "caracteristicas": "Devoto, iluminado a través del sufrimiento, guía espiritual del sultán y su corte.",
+   "rasgos": [
+    "Devoto",
+    "iluminado a través del sufrimiento",
+    "guía espiritual del sultán",
+    "su corte"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/gran-iman-fynn-ziade.webp",
+   "pagina": 478
+  },
+  {
+   "id": "lider-de-los-expedicionarios-emush-caltaveleth",
+   "nombre": "Líder de los Expedicionarios Emush Caltaveleth",
+   "raza": "Elfo",
+   "reino": "maurizanian",
+   "descripcion": "Emush Caltaveleth es el Líder de los Expedicionarios de Terratea, encargado de las exploraciones y expediciones en busca de conocimientos antiguos y tesoros perdidos. Con una vasta experiencia en aventuras, Emush se ha establecido como un aventurero experimentado y un experto en la preservación del conocimiento. Fundador de la Liga de Expedicionarios de Terratea, ha dedicado su vida a la investigación y la exploración, y su pasión por la historia y la preservación del saber lo convierten en una figura central en el ámbito de las expediciones.",
+   "caracteristicas": "Aventurero, amante de la historia, preservador del conocimiento",
+   "rasgos": [
+    "Aventurero",
+    "amante de la historia",
+    "preservador del conocimiento"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/lider-de-los-expedicionarios-emush-caltaveleth.webp",
+   "pagina": 479
+  },
+  {
+   "id": "hechicero-de-la-corte-ibrahim-belmano",
+   "nombre": "Hechicero de la Corte Ibrahim Belmano",
+   "raza": "Humano",
+   "reino": "maurizanian",
+   "descripcion": "Ibrahim Belmano es el Hechicero de la Corte del sultán de Maurizanian, un experto venerado en las artes pirománticas. Como miembro de élite del clan Zafiro, uno de los seis clanes pirománticos de Terratea, Ibrahim combina su vasta sabiduría mágica con una experiencia incomparable en su campo. Su brazo completamente quemado es un recordatorio de su ambición y de un incidente en su juventud, pero también simboliza su maestría y dedicación a la magia del fuego. A pesar de su avanzada edad, su dominio de las artes pirománticas sigue siendo sin igual, consolidándolo como una figura de gran respeto y autoridad en la corte.",
+   "caracteristicas": "Sabio en magia, miembro de élite del clan Zafiro, brazo quemado",
+   "rasgos": [
+    "Sabio en magia",
+    "miembro de élite del clan Zafiro",
+    "brazo quemado"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/hechicero-de-la-corte-ibrahim-belmano.webp",
+   "pagina": 479
+  },
+  {
+   "id": "gran-jefe-nomada-tarkus-allet",
+   "nombre": "Gran Jefe Nómada Tarkus Allet",
+   "raza": "Humano",
+   "reino": "maurizanian",
+   "descripcion": "Tarkus Allet es el Gran Jefe Nómada que lidera las tribus nómadas en los alrededores de Maurizanian. Aunque es un joven relativamente inexperto en la vida nómada, ha heredado el liderazgo tras la muerte de su progenitor, quien era el anterior líder de las tribus. Las tradiciones nómadas le han conferido este rol, y ahora enfrenta la presión de cumplir con las expectativas de sus clanes. Tarkus debe demostrar su habilidad para guiar a su gente y asegurar su supervivencia en un entorno desafiante. A pesar de su juventud, está en el camino de convertirse en un experto nómada y un conocedor profundo de las tradiciones que rigen su vida y la de sus clanes.",
+   "caracteristicas": "Joven inexperto, experto en tradiciones, bajo presión.",
+   "rasgos": [
+    "Joven inexperto",
+    "experto en tradiciones",
+    "bajo presión"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/gran-jefe-nomada-tarkus-allet.webp",
+   "pagina": 480
+  },
+  {
+   "id": "noble-glups-nalbareg",
+   "nombre": "Noble Glups Nalbareg",
+   "raza": "Goblin",
+   "reino": "maurizanian",
+   "descripcion": "Glups Nalbareg es una excepción notable en la nobleza de Maurizanian, siendo uno de los pocos goblins de Terratea que ha alcanzado un puesto de alto rango en la sociedad noble. Su ascenso se debe a su destacada carrera como comerciante, tanto en el ámbito marítimo como terrestre, donde ha acumulado una considerable fortuna y prestigio. Glups es conocido por su destreza en los negocios, su aguda astucia política y su habilidad para maniobrar en las intrincadas redes del poder. Su influencia en la política de Maurizanian es considerable, a pesar de las barreras culturales y sociales que ha tenido que superar para llegar a su posición actual.",
+   "caracteristicas": "Hábil comerciante, astuto político, influyente en la nobleza de Maurizanian.",
+   "rasgos": [
+    "Hábil comerciante",
+    "astuto político",
+    "influyente en la nobleza de Maurizanian"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-glups-nalbareg.webp",
+   "pagina": 480
+  },
+  {
+   "id": "noble-dackna",
+   "nombre": "Noble Dackna",
+   "raza": "Sátiro",
+   "reino": "maurizanian",
+   "descripcion": "Dackna es una figura notable en la nobleza de Maurizanian, cuya trayectoria destaca por su transición de aventurera a noble. Inicialmente, era una simple aventurera sin título, pero su heroica acción al salvar la capital Sidi'khan de un desastre sobrenatural la catapultó a la fama. Este acto valiente le otorgó un lugar prominente en la historia del reino. Tras su carrera como aventurera, Dackna se retiró para convertirse en una exitosa comerciante de armas y armaduras. Su influencia en la distribución de estos productos, especialmente entre la nobleza y el ejército de Maurizanian, ha consolidado su posición como una figura clave en el ámbito político y comercial del reino.",
+   "caracteristicas": "Hábil diplomática, exitosa en los negocios, ex aventurera.",
+   "rasgos": [
+    "Hábil diplomática",
+    "exitosa en los negocios",
+    "ex aventurera"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-dackna.webp",
+   "pagina": 481
+  },
+  {
+   "id": "noble-proccini-paola",
+   "nombre": "Noble Proccini Paola",
+   "raza": "Semielfo",
+   "reino": "maurizanian",
+   "descripcion": "Proccini Paola es una figura prominente en la aristocracia de Terratea, destacada por su significativa influencia en el comercio y su pasión por las artes. Como hábil comerciante de sus propios productos, ha acumulado una considerable riqueza y prestigio, lo que le ha permitido apoyar y patrocinar diversas disciplinas artísticas. Su talento como artista en sastrería, telar, pintura y escultura ha cimentado su reputación, no solo en su reino, sino a nivel mundial. En Sidi'khan, su fama y éxito le han permitido alcanzar un estatus noble, un privilegio que se puede comprar con riqueza y reconocimiento.",
+   "caracteristicas": "Apoyo a las artes, artista destacada, influyente en el comercio artístico.",
+   "rasgos": [
+    "Apoyo a las artes",
+    "artista destacada",
+    "influyente en el comercio artístico"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-proccini-paola.webp",
+   "pagina": 481
+  },
+  {
+   "id": "conservador-del-museo-arqueologico-hakim-ul-taric",
+   "nombre": "Conservador del Museo Arqueológico Hakim Ul Taric",
+   "raza": "Humano",
+   "reino": "maurizanian",
+   "descripcion": "Hakim Ul Taric es el Conservador del Museo Arqueológico, encargado de preservar la historia y las reliquias antiguas. Este puesto es único dentro de la liga de expedicionarios y actúa como un puente entre los expertos en arqueología y el público general que desea explorar el noble arte de la historia. Hakim es reconocido como el mayor erudito en su campo, y su profundo conocimiento de la arqueología es inigualable. Sin embargo, su personalidad puede volverse volátil si se le cuestiona o ignora durante sus explicaciones, especialmente por aquellos que no están bien versados en el tema.",
+   "caracteristicas": "Erudito en arqueología, personalidad volátil cuando es cuestionado, puente de unión entre expertos y público general",
+   "rasgos": [
+    "Erudito en arqueología",
+    "personalidad volátil cuando es cuestionado",
+    "puente de unión entre expertos",
+    "público general"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/conservador-del-museo-arqueologico-hakim-ul-taric.webp",
+   "pagina": 482
+  },
+  {
+   "id": "mujer-del-sultan-judith-sundiata-fallecida",
+   "nombre": "Mujer del Sultán Judith Sundiata (Fallecida)",
+   "raza": "Humana",
+   "reino": "maurizanian",
+   "descripcion": "Judith Sundiata fue la mujer del sultán Chaka Al Jaffar y es recordada con gran respeto y admiración. Aunque falleció durante el incidente sobrenatural en Sidi'khan, su legado aún perdura. Judith se destacó no solo por su belleza y presencia, sino también por su sabiduría y fortaleza. Su apoyo económico fue fundamental para que Chaka pudiera llevar a cabo su ambiciosa empresa de unificar todos los reinos de Maurizanian, contribuyendo significativamente a la estabilidad y el poder del reino. Su memoria sigue viva como una figura emblemática en la historia del sultanato.",
+   "caracteristicas": "Bella, rica y ambiciosa.",
+   "rasgos": [
+    "Bella",
+    "rica",
+    "ambiciosa"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/mujer-del-sultan-judith-sundiata-fallecida.webp",
+   "pagina": 482
+  },
+  {
+   "id": "sacerdotisa-de-la-mezquita-sethmari-al-abad",
+   "nombre": "Sacerdotisa de la Mezquita Sethmari Al Abad",
+   "raza": "Humana",
+   "reino": "maurizanian",
+   "descripcion": "Sethmari Al Abad es la Sacerdotisa de la Mezquita de las 1000 Lunas, el lugar más sagrado y religioso de Maurizanian. Su rol es crucial como guía espiritual y líder en la mezquita, donde dirige y asiste a los peregrinos que deben cumplir con el rito de peregrinación, que exige a todos los habitantes de Maurizanian pasar al menos una semana en la mezquita cada 25 años para vivir de manera austera. Sethmari es conocida por su piedad, su profunda compasión y su habilidad para guiar a los peregrinos en su travesía religiosa. Su presencia en la Mezquita asegura que el santuario mantenga su sacralidad y su propósito como centro espiritual.",
+   "caracteristicas": "Piedad, Compasión, Guía espiritual de peregrinos",
+   "rasgos": [
+    "Piedad",
+    "Compasión",
+    "Guía espiritual de peregrinos"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/sacerdotisa-de-la-mezquita-sethmari-al-abad.webp",
+   "pagina": 483
+  },
+  {
+   "id": "comandante-en-jefe-de-los-shirkanes-omale-jytha",
+   "nombre": "Comandante en Jefe de los Shirkanes Omale Jytha",
+   "raza": "Reptiliano",
+   "reino": "maurizanian",
+   "descripcion": "Omale Jytha es el Comandante en Jefe de los Shirkanes, la facción élite de los soldados de Maurizanian. Es un líder militar muy atento y altamente respetado, conocido por su precaución y su lealtad inquebrantable a su pueblo. Omale no solo se distingue por su habilidad como guerrero, sino también por su compromiso con la excelencia física y mental, llevando su cuerpo y habilidades a sus límites diarios. Su figura es una inspiración para sus tropas y para el pueblo en general. Como voz del Sultán, Omale es el intermediario entre la autoridad real y el pueblo, y su palabra es considerada ley en las cuestiones relacionadas con los Shirkanes y la defensa del reino.",
+   "caracteristicas": "Hábil guerrero, Inspirador y líder físico, Voz del Sultán para el pueblo",
+   "rasgos": [
+    "Hábil guerrero",
+    "Inspirador",
+    "líder físico",
+    "Voz del Sultán para el pueblo"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/comandante-en-jefe-de-los-shirkanes-omale-jytha.webp",
+   "pagina": 483
+  },
+  {
+   "id": "jefe-revolucionario-gu-de-thom",
+   "nombre": "Jefe Revolucionario Gú de Thom",
+   "raza": "Troloide",
+   "reino": "maurizanian",
+   "descripcion": "Gú de Thom es el Jefe Revolucionario en Maurizanian, liderando un movimiento en oposición al gobierno establecido por el sultán Chaka Al Jaffar. Es conocido por su habilidad para agitar y movilizar a las masas, utilizando su carisma y ferviente oposición para desafiar el status quo. Su liderazgo está marcado por un profundo descontento con el régimen actual, y sus seguidores están motivados por recuerdos del pasado que les impulsan a luchar contra la autoridad. Gú de Thom es un líder agresivo y reivindicador, decidido a desestabilizar el orden establecido y revelar una \"verdad\" que cree que el mundo necesita conocer.",
+   "caracteristicas": "Agitador, Líder revolucionario, Ferviente opositor al régimen",
+   "rasgos": [
+    "Agitador",
+    "Líder revolucionario",
+    "Ferviente opositor al régimen"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/jefe-revolucionario-gu-de-thom.webp",
+   "pagina": 484
+  },
+  {
+   "id": "diplomatica-murundu-bellezzer",
+   "nombre": "Diplomática Murundu Bellezzer",
+   "raza": "Reptiliano",
+   "reino": "maurizanian",
+   "descripcion": "Murundu Bellezzer es una diplomática experta y representante del reino de Maurizanian, conocida por su habilidad en las negociaciones y su astucia para mantener la paz. Su calma y control emocional le permiten navegar en las aguas turbulentas de la diplomacia con una habilidad notable. Murundu se especializa en estudiar las debilidades mentales de sus objetivos para usarlas a su favor en las negociaciones, y su sonrisa, siempre presente y peculiar, es una herramienta más en su arsenal diplomático.",
+   "caracteristicas": "Promotora de la paz, Calmado y controlado emocionalmente, Sonrisa extraña",
+   "rasgos": [
+    "Promotora de la paz",
+    "Calmado",
+    "controlado emocionalmente",
+    "Sonrisa extraña"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/diplomatica-murundu-bellezzer.webp",
+   "pagina": 484
+  },
+  {
+   "id": "almirante-shundi-yata-pal-plomo-mediodia",
+   "nombre": "Almirante Shundi Yata Pal Plomo “Mediodía”",
+   "raza": "Goblin",
+   "reino": "maurizanian",
+   "descripcion": "Almirante del reino de Maurizanian, Shundi Yata Pal Plomo es un maestro naval ingenioso y líder temido. Con su complexión pequeña pero robusta, su piel verde y ojo color de la oliva, Shundi es un estratega implacable. Viste un elegante uniforme adaptado a su posición, adornada con insignias de los Argonautas. Empuña un sable curvo y un falconete. Es conocido por su astucia en el combate, y su capacidad para inspirar temor y respeto en su tripulación. Su naturaleza taimada y su enfoque meticuloso en cada detalle lo convierten en un adversario formidable.",
+   "caracteristicas": "Taimado, meticuloso",
+   "rasgos": [
+    "Taimado",
+    "meticuloso"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/almirante-shundi-yata-pal-plomo-mediodia.webp",
+   "pagina": 485
+  },
+  {
+   "id": "emperador-tulius-maximus-iii",
+   "nombre": "Emperador Tulius Maximus III",
+   "raza": "Humano",
+   "reino": "lusitanius",
+   "descripcion": "Tulius Maximus III es el Emperador del imperio de Lusitanius, un gobernante excelente con un disciplinado ejército y siempre a la vanguardia de la innovación militar. Conocido por su arrogancia y respaldado por un historial de victorias impresionantes, su soberbia es tan notable como su capacidad estratégica. Aunque a menudo está ausente de los asuntos cotidianos del imperio, su legado es indiscutible. Tulius ha logrado superar enemistades históricas, como las de los Orcos y los Troloides, tratándolos como iguales y consolidando su reinado con audacia. A pesar de su edad avanzada, sigue aprendiendo y adaptándose, lo que lo convierte en un adversario temible.",
+   "caracteristicas": "Audaz, famoso por su arrogancia y soberbia, siempre ausente",
+   "rasgos": [
+    "Audaz",
+    "famoso por su arrogancia",
+    "soberbia",
+    "siempre ausente"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/emperador-tulius-maximus-iii.webp",
+   "pagina": 485
+  },
+  {
+   "id": "hijo-del-emperador-areo-maximus",
+   "nombre": "Hijo del Emperador Areo Maximus",
+   "raza": "Humano",
+   "reino": "lusitanius",
+   "descripcion": "Areo Maximus es el hijo del Emperador Tulius Maximus III y el heredero al trono del imperio de Lusitanius. Aunque a primera vista puede parecer un joven ingenuo, es en realidad un individuo profundamente perverso y ambicioso. Sus habilidades en combate verbal y astucia política son más que notables, y su lengua viperina le permite manipular y controlar a quienes lo rodean. Areo tiene una pasión desmedida por la música y se mezcla con el populacho durante la noche para observar y aprender del pueblo. Su ambición desmesurado lo impulsa a buscar su momento de gloria como emperador, dispuesto a alcanzar sus metas por cualquier medio necesario, ya sea por las buenas o por las malas.",
+   "caracteristicas": "Manipulador, Lengua viperina, Amante de la música",
+   "rasgos": [
+    "Manipulador",
+    "Lengua viperina",
+    "Amante de la música"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/hijo-del-emperador-areo-maximus.webp",
+   "pagina": 486
+  },
+  {
+   "id": "emperatriz-andromeda-maximus",
+   "nombre": "Emperatriz Andrómeda Maximus",
+   "raza": "Humana",
+   "reino": "lusitanius",
+   "descripcion": "Andrómeda Maximus es la Emperatriz de Lusitanius, conocida por su pasividad y desconexión con los estándares sociales de su posición. Su matrimonio con el emperador Tulius Maximus III fue una unión política más que un vínculo amoroso. Aunque su rol en la corte parece meramente ceremonial, Andrómeda lleva una vida privada vibrante y controvertida. Mantiene numerosos amantes, principalmente gladiadores vencedores del coliseo, con quienes tiene relaciones apasionadas pero efímeras. Su comportamiento y elecciones amorosas son mantenidos en secreto del pueblo, y aquellos que intentan exponer sus infidelidades suelen enfrentar graves consecuencias, como ejecución o encarcelamiento",
+   "caracteristicas": "Desconectada de los estándares sociales, Pasiva, Adúltera",
+   "rasgos": [
+    "Desconectada de los estándares sociales",
+    "Pasiva",
+    "Adúltera"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/emperatriz-andromeda-maximus.webp",
+   "pagina": 486
+  },
+  {
+   "id": "general-de-los-legionarios-silcius-stavros",
+   "nombre": "General de los Legionarios Silcius Stavros",
+   "raza": "Troloide",
+   "reino": "lusitanius",
+   "descripcion": "Silcius Stavros es el General de los Legionarios en Lusitanius, una figura destacada por su habilidad disciplinaria y su liderazgo en el campo de batalla. Como uno de los dos hermanos troloides más renombrados, Silcius representa la supremacía de su raza y defiende con fervor tanto los intereses de los Troloides como los del imperio en su totalidad. Su enfoque en la lealtad y el deber es evidente en cómo inculca en sus legionarios un profundo amor por el imperio y un sentido de obligación hacia la servidumbre. Silcius es conocido por su capacidad estratégica y su habilidad para inspirar a sus tropas, manteniendo el peso del mayor poderío militar del imperio. Su influencia va más allá del campo de batalla, afectando el corazón del ejército y el imperio en su conjunto.",
+   "caracteristicas": "Hábil instructor, Defensor de su raza y el imperio, Inspirador",
+   "rasgos": [
+    "Hábil instructor",
+    "Defensor de su raza",
+    "el imperio",
+    "Inspirador"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/general-de-los-legionarios-silcius-stavros.webp",
+   "pagina": 487
+  },
+  {
+   "id": "general-de-los-jinetes-luxos-licio-stavros",
+   "nombre": "General de los Jinetes Luxos Licio Stavros",
+   "raza": "Troloide",
+   "reino": "lusitanius",
+   "descripcion": "Licio Stavros es el General de los Jinetes Luxos en Lusitanius, destacando por su valentía y su habilidad en el combate montado. Como uno de los dos hermanos troloides prominentes, Licio representa la élite de la caballería del imperio y la supremacía de su raza. Su rol es crucial en el ejército, no solo por su destreza en la batalla, sino también por su capacidad para encarnar los valores de honor y respeto hacia el imperio. Los Jinetes Luxos son conocidos por su formación rigurosa y su compromiso con la excelencia, y Licio trabaja incansablemente para llevar a su ejército a la cúspide de la gloria militar en Terratea.",
+   "caracteristicas": "Hábil jinete, Representante de la élite, Promotor del honor",
+   "rasgos": [
+    "Hábil jinete",
+    "Representante de la élite",
+    "Promotor del honor"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/general-de-los-jinetes-luxos-licio-stavros.webp",
+   "pagina": 487
+  },
+  {
+   "id": "capitan-de-la-guardia-kaseo-rossini",
+   "nombre": "Capitán de la Guardia Kaseo Rossini",
+   "raza": "Orco",
+   "reino": "lusitanius",
+   "descripcion": "Kaseo Rossini es el Capitán de la Guardia Imperial en el imperio de Lusitanius y el líder de la 1ª Legión, una posición de gran prestigio otorgada directamente por el emperador Tulius Maximus III. Este nombramiento subraya el compromiso del emperador con la integración de los orcos en la estructura imperial y la confianza en sus capacidades militares y de liderazgo. Kaseo es fundamental en la defensa de la familia real y en la protección de la capital, Adlas. Es reconocido por su lealtad inquebrantable y su profundo sentido del honor. Su habilidad en el combate es sobresaliente, ganándole el título de orco más diestro de Terratea. Además de sus responsabilidades militares, Kaseo está dedicado a impulsar a otros orcos a alcanzar sus metas dentro del imperio, promoviendo su integración y éxito.",
+   "caracteristicas": "Protector, Honorable, Diestro en combate.",
+   "rasgos": [
+    "Protector",
+    "Honorable",
+    "Diestro en combate"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/capitan-de-la-guardia-kaseo-rossini.webp",
+   "pagina": 488
+  },
+  {
+   "id": "noble-alyssa-vectoramix",
+   "nombre": "Noble Alyssa Vectoramix",
+   "raza": "Humana",
+   "reino": "lusitanius",
+   "descripcion": "Alyssa Vectoramix es una figura habitual en la corte de Lusitanius, destacada por sus intrincadas formas para persuadir con encanto y su elegancia innata. Conocida por su sofisticación, también ocupa el prestigioso cargo de directora del Teatro de Adlas, un centro cultural de renombre que atrae a una amplia gama de personas influyentes. Su habilidad para fusionar la política con su pasión por las artes la convierte en un mecenas clave, apoyando a artistas y proyectos culturales con un criterio riguroso. Alyssa es conocida por su frase: \"Para ser un verdadero artista, primero tienes que haber actuado en mi teatro\", subrayando su influencia en el mundo artístico y su compromiso con la calidad y la excelencia.",
+   "caracteristicas": "Influyente, Elegante, Mecenas.",
+   "rasgos": [
+    "Influyente",
+    "Elegante",
+    "Mecenas"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-alyssa-vectoramix.webp",
+   "pagina": 488
+  },
+  {
+   "id": "noble-calista-argos",
+   "nombre": "Noble Calista Argos",
+   "raza": "Elfo Oscuro",
+   "reino": "lusitanius",
+   "descripcion": "Calista Argos es una figura ilustre en la alta sociedad de Terratea, proveniente de una familia histórica reconocida por su pericia en la carpintería naval. Aunque su linaje fundó el grupo de cazadores de filibusteros conocido como los Argonautas, la familia ha perdido el control sobre esta organización con el tiempo. Sin embargo, su influencia económica ha crecido enormemente a través de la venta de navíos en el puerto cruzado con el devenir de las décadas. En su papel actual como noble, Calista ha cambiado su enfoque desde la construcción naval hacia la promoción de la paz y la resolución de conflictos en Terratea. Aunque su preocupación constante y ansiedad por el estado del mundo reflejan su profunda preocupación por el bienestar de su gente, ha logrado mantener una fachada de paz inmutable para no preocupar a los que la rodean.",
+   "caracteristicas": "Generosa, Preocupada y ansiosa, Fachada de paz.",
+   "rasgos": [
+    "Generosa",
+    "Preocupada",
+    "ansiosa",
+    "Fachada de paz"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-calista-argos.webp",
+   "pagina": 489
+  },
+  {
+   "id": "noble-quinto-panikouslo",
+   "nombre": "Noble Quinto Panikouslo",
+   "raza": "Semiorco",
+   "reino": "lusitanius",
+   "descripcion": "Quinto Panikouslo es una figura influyente en la corte imperial de Lusitanius, conocido por su habilidad en los negocios y su aparente preocupación por el bienestar de los demás. Aunque se le percibe como un benefactor que organiza eventos y realiza donaciones para los menos afortunados, sus acciones están cuidadosamente diseñadas para servir a sus propios intereses. A través de estas actividades, mantiene una imagen de generosidad mientras fortalece su influencia y control sobre los mercados ilegales y los bajos fondos, donde su familia ha prosperado durante generaciones. Su habilidad para manipular situaciones y personas le permite mantener un doble juego, combinando su puesto en la corte con sus actividades clandestinas de manera efectiva.",
+   "caracteristicas": "Astuto, falso altruista, Doble moral.",
+   "rasgos": [
+    "Astuto",
+    "falso altruista",
+    "Doble moral"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-quinto-panikouslo.webp",
+   "pagina": 489
+  },
+  {
+   "id": "sacerdotisa-eirat-ellen",
+   "nombre": "Sacerdotisa Eirat Ellen",
+   "raza": "Semielfo",
+   "reino": "lusitanius",
+   "descripcion": "Eirat Ellen es la líder espiritual y guía religiosa en Lusitanius, conocida por su profunda bondad, inocencia y pureza de corazón. Su fe inquebrantable en el Rey Dios Supremo la impulsa a enfrentar cualquier peligro si cree que puede ayudar a redimir a los demás. Eirat sostiene firmemente que hasta el ser más impuro puede encontrar la redención con la guía y la gracia divina. Su devoción y sabiduría la convierten en una figura central en el ámbito espiritual, y su compasión la lleva a arriesgarse en situaciones peligrosas con el propósito de salvar y proteger a los que más lo necesitan.",
+   "caracteristicas": "Ingenua, Devota, Inocente y pura",
+   "rasgos": [
+    "Ingenua",
+    "Devota",
+    "Inocente",
+    "pura"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/sacerdotisa-eirat-ellen.webp",
+   "pagina": 490
+  },
+  {
+   "id": "diplomatico-ezio-numerio",
+   "nombre": "Diplomático Ezio Numerio",
+   "raza": "Humano",
+   "reino": "lusitanius",
+   "descripcion": "Ezio Numerio es un experto en asuntos diplomáticos y relaciones exteriores en el imperio de Lusitanius. Conocido por su habilidad para mantener la paz y la estabilidad del imperio, maneja con talento las cuestiones triviales y cotidianas del imperio en ausencia del emperador Tulius Maximus III. Proveniente de una de las familias más antiguas del imperio, Ezio goza de la confianza total del emperador, que le permite actuar con libertad en sus funciones. Además de su competencia diplomática, Ezio tiene una tendencia a enseñar y transmitir valores a quienes lo rodean, contribuyendo a la formación y desarrollo de futuros líderes y diplomáticos del reino.",
+   "caracteristicas": "Hábil diplomático, Pacificador, Maestro",
+   "rasgos": [
+    "Hábil diplomático",
+    "Pacificador",
+    "Maestro"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/diplomatico-ezio-numerio.webp",
+   "pagina": 490
+  },
+  {
+   "id": "arcanista-de-la-corte-tita-sextoriu-cneo",
+   "nombre": "Arcanista de la Corte Tita Sextoriu Cneo",
+   "raza": "Gnomo",
+   "reino": "lusitanius",
+   "descripcion": "Tita Sextoriu Cneo es una experta en artes arcanas y asesora mágica de la corte imperial de Lusitanius. Conocida por su extenso dominio en magia y su papel crucial como protectora contra amenazas mágicas al reino, Tita es una figura esencial en la defensa mágica del imperio. Su personalidad sarcástica y caprichosa contrasta con su compromiso con la seguridad mágica del imperio es inquebrantable. No obstante, es bien sabido que una espina en su corazón ha hecho mella en su carácter; la falta del amor en su vida, la hace más caprichosa con la gente, utilizando a veces su estatus para solicitar necedades o cosas triviales.",
+   "caracteristicas": "Caprichosa, sarcástica, comprometida",
+   "rasgos": [
+    "Caprichosa",
+    "sarcástica",
+    "comprometida"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/arcanista-de-la-corte-tita-sextoriu-cneo.webp",
+   "pagina": 491
+  },
+  {
+   "id": "jefe-de-los-juegos-olimpicos-aurelio-mandarino",
+   "nombre": "Jefe de los Juegos Olímpicos Aurelio Mandarino",
+   "raza": "Goblin",
+   "reino": "lusitanius",
+   "descripcion": "Aurelio Mandarino es el encargado de los eventos de gladiadores y competencias deportivas en Lusitanius. Conocido por su amor por la competición y el desafío, Aurelio disfruta del espectáculo y la emoción de los juegos. Sin embargo, es infame por su injusticia y su tendencia a favorecer a ciertos participantes, manipulando resultados para su propio entretenimiento. Es muy ególatra y locuaz, siempre buscando ser el centro de atención y no perdiendo oportunidad de hablar y destacarse en cualquier situación. Siendo quien dirige el coliseo, presenta los combates y toma todas las decisiones, pues dentro del coliseo, él lo es todo.",
+   "caracteristicas": "Ególatra, Amante de la competición, Injusto",
+   "rasgos": [
+    "Ególatra",
+    "Amante de la competición",
+    "Injusto"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/jefe-de-los-juegos-olimpicos-aurelio-mandarino.webp",
+   "pagina": 491
+  },
+  {
+   "id": "arzobispo-anglos-calix-zennith",
+   "nombre": "Arzobispo Anglos Calix Zennith",
+   "raza": "Humano Renegado (Hombre-lobo)",
+   "reino": "lusitanius",
+   "descripcion": "Anglos Calix Zennith es el líder religioso de alto rango en Lusitanius, venerado por su piedad, sabiduría y dedicación a la verdad. Desde su residencia en el Castillo del imperio, proporciona guía espiritual y consejo a la corte imperial, siendo fundamental en las decisiones morales del reino. Conocido por su incansable búsqueda de la verdad, ha resuelto numerosos conflictos e intrigas en Lusitanius. Sin embargo, Anglos guarda un oscuro secreto: es un hombre-lobo. Esta doble naturaleza lo atormenta y teme ser descubierto, lo que podría destruir su estatus y reputación. Para evitar ser desenmascarado, se retira a un lugar oculto durante las noches. A pesar de esta lucha interna, mantiene una fachada de devoción y liderazgo espiritual, influyendo positivamente en el imperio.",
+   "caracteristicas": "Oculta un secreto, Piadoso, Afán por descubrir la verdad",
+   "rasgos": [
+    "Oculta un secreto",
+    "Piadoso",
+    "Afán por descubrir la verdad"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/arzobispo-anglos-calix-zennith.webp",
+   "pagina": 492
+  },
+  {
+   "id": "lider-de-los-orcos-zanma-blacktusk",
+   "nombre": "Líder de los Orcos Zanma Blacktusk",
+   "raza": "Orco",
+   "reino": "lusitanius",
+   "descripcion": "Zanma Blacktusk es el jefe respetado de la comunidad orca en la Villa Orklemó. Conocido por su fuerza y brutalidad, también es un líder que medita sus decisiones con parsimonia, buscando evitar conflictos con el imperio y mantener el pacto. Sin embargo, su liderazgo no es unánimemente aceptado; varios orcos se han sublevado contra él, buscando honor a través de la guerra. A pesar de las tensiones internas, la capacidad de Zanma para equilibrar fuerza bruta con una estrategia calculada ha asegurado la autonomía y prosperidad de su comunidad. Es una figura central en la política orca, simbolizando el equilibrio entre la ferocidad y la sabiduría.",
+   "caracteristicas": "Feroz, Poderoso, Estratega",
+   "rasgos": [
+    "Feroz",
+    "Poderoso",
+    "Estratega"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/lider-de-los-orcos-zanma-blacktusk.webp",
+   "pagina": 492
+  },
+  {
+   "id": "lider-del-consejo-citb-publio-cyrano",
+   "nombre": "Líder del Consejo CITB Publio Cyrano",
+   "raza": "Gnomo",
+   "reino": "lusitanius",
+   "descripcion": "Publio Cyrano es el líder calmado y reflexivo del Consejo de la Ciudad de Innovación y Tecnología Beimax. Conocido por su enfoque sereno en la toma de decisiones tecnológicas, Publio se destacó al inventar los catalizadores de energía, dispositivos esenciales que sirven como baterías para la mayoría de las invenciones actuales, capaces de almacenar diversos tipos de magia existenciales de manera controlada. Su liderazgo comenzó tras la retirada del anterior líder, y su capacidad para deliberar y reflexionar profundamente sobre las propuestas le ha ganado respeto dentro de la junta. En el consejo, su voto cuenta doble debido a su posición.",
+   "caracteristicas": "Sosegado, reflexivo.",
+   "rasgos": [
+    "Sosegado",
+    "reflexivo"
+   ],
+   "actitud_propuestas": "Delibera y reflexiona extensamente. (su voto cuenta doble)",
+   "imagen": "img/npcs/lider-del-consejo-citb-publio-cyrano.webp",
+   "pagina": 493
+  },
+  {
+   "id": "miembro-del-consejo-citb-zan-amancio",
+   "nombre": "Miembro del Consejo CITB Zan Amancio",
+   "raza": "Goblin",
+   "reino": "lusitanius",
+   "descripcion": "Zan Amancio es un miembro del Consejo de la Ciudad de Innovación y Tecnología Beimax. Conocido por su pasión y determinación en el avance tecnológico, Zan es el inventor de los cañones de gran calibre y de gran precisión, cruciales para las torretas de defensa marítima de los Argonautas. Su ingenio y contribuciones en el campo beligerante le aseguraron un puesto en el consejo. Zan es impetuoso y apasionado, especialmente al hablar de proyectos de gran escala relacionados con la guerra militar",
+   "caracteristicas": "Energético, Apasionado.",
+   "rasgos": [
+    "Energético",
+    "Apasionado"
+   ],
+   "actitud_propuestas": "Muy impetuoso en las propuestas.",
+   "imagen": "img/npcs/miembro-del-consejo-citb-zan-amancio.webp",
+   "pagina": 493
+  },
+  {
+   "id": "miembro-del-consejo-citb-whal-ussatoppi",
+   "nombre": "Miembro del Consejo CITB Whal Ussatoppi",
+   "raza": "Enano",
+   "reino": "lusitanius",
+   "descripcion": "Whal Ussatoppi es un miembro del Consejo de la Ciudad de Innovación y Tecnología Beimax, conocido por su habilidad en la creación de inventos y tecnología. Destaca por haber diseñado cuatro tipos de golems especiales, únicos en su ingeniería, que fueron adquiridos por los cuatro reinos para defender sus capitales. Su destacada su contribución en el campo de la ingeniería le aseguró un puesto dentro del consejo.",
+   "caracteristicas": "Hábil inventor, dedicado.",
+   "rasgos": [
+    "Hábil inventor",
+    "dedicado"
+   ],
+   "actitud_propuestas": "Secunda las propuestas.",
+   "imagen": "img/npcs/miembro-del-consejo-citb-whal-ussatoppi.webp",
+   "pagina": 494
+  },
+  {
+   "id": "miembro-del-consejo-citb-a-000001",
+   "nombre": "Miembro del Consejo CITB A.000001",
+   "raza": "Autómata",
+   "reino": "lusitanius",
+   "descripcion": "A.000001 es uno de los miembros más antiguos del Consejo de la Ciudad de Innovación y Tecnología Beimax. Destacado por su lógica y análisis detallado, A.000001 es un autómata avanzado y la creación más significativa del Gran Ingeniero Beimax, lo que le asegura un puesto perpetuo en el consejo. Su habilidad para aplicar la lógica en la toma de decisiones es fundamental, y antes de unirse al consejo, demostró su ingenio con el diseño y la fabricación de los primeros Armicorazados.",
+   "caracteristicas": "Lógica, analítica.",
+   "rasgos": [
+    "Lógica",
+    "analítica"
+   ],
+   "actitud_propuestas": "Usa la lógica en las propuestas.",
+   "imagen": "img/npcs/miembro-del-consejo-citb-a-000001.webp",
+   "pagina": 494
+  },
+  {
+   "id": "miembro-del-consejo-citb-cayo-gwensele",
+   "nombre": "Miembro del Consejo CITB Cayo Gwenselé",
+   "raza": "Humano",
+   "reino": "lusitanius",
+   "descripcion": "Cayo Gwenselé es un joven miembro del Consejo de la Ciudad de Innovación y Tecnología Beimax. Destacado por su enfoque práctico y orientado a resultados, Cayo es un prodigio y superdotado que comenzó a crear sus propias invenciones desde una edad extremadamente joven. Su habilidad le permitió ingresar al consejo como el miembro más joven en la historia. Entre sus contribuciones notables se encuentran el Primabog, el Tsebog y el Zheibog.",
+   "caracteristicas": "Pragmático, orientado a resultados.",
+   "rasgos": [
+    "Pragmático",
+    "orientado a resultados"
+   ],
+   "actitud_propuestas": "Pragmático a las propuestas.",
+   "imagen": "img/npcs/miembro-del-consejo-citb-cayo-gwensele.webp",
+   "pagina": 495
+  },
+  {
+   "id": "miembro-del-consejo-citb-ceres-azahar",
+   "nombre": "Miembro del Consejo CITB Ceres Azahar",
+   "raza": "Renegado (Hombre-Lobo)",
+   "reino": "lusitanius",
+   "descripcion": "Ceres Azahar es una miembro del Consejo de la Ciudad de Innovación y Tecnología Beimax, conocida por su capacidad para adaptarse y su naturaleza cambiante. Anteriormente, Ceres fue una Caballero de la Llama, expulsada de la orden por culpa de su maldición. Su perspectiva única y su conocimiento del ámbito sagrado le permitieron innovar con la creación de los primeros Custodios de la Llama, autómatas sagrados que fueron adoptados por los Caballeros de la Llama. Esta hazaña le aseguró un lugar en el consejo.",
+   "caracteristicas": "Voluble, adaptable.",
+   "rasgos": [
+    "Voluble",
+    "adaptable"
+   ],
+   "actitud_propuestas": "Voluble a las propuestas.",
+   "imagen": "img/npcs/miembro-del-consejo-citb-ceres-azahar.webp",
+   "pagina": 495
+  },
+  {
+   "id": "miembro-del-consejo-citb-lua-roc-sanz",
+   "nombre": "Miembro del Consejo CITB Lua Roc Sanz",
+   "raza": "Aviroide",
+   "reino": "lusitanius",
+   "descripcion": "Lua Roc Sanz es una miembro del Consejo de la Ciudad de Innovación y Tecnología Beimax, conocida por su creatividad y enfoque innovador. Su reconocimiento mundial se debe al descubrimiento del Cosmoteorito, un metal raro hallado en un meteorito, el cual ha sido incorporado en las armas de los Centinelas de Hierro. Este avance significativo en la tecnología de armamento le valió un puesto en el consejo, destacando por su habilidad para replicar y utilizar este material único.",
+   "caracteristicas": "Impredecible, creativa.",
+   "rasgos": [
+    "Impredecible",
+    "creativa"
+   ],
+   "actitud_propuestas": "Impredecible a las propuestas.",
+   "imagen": "img/npcs/miembro-del-consejo-citb-lua-roc-sanz.webp",
+   "pagina": 496
+  },
+  {
+   "id": "miembro-del-consejo-citb-eos-cariticles-severianna",
+   "nombre": "Miembro del Consejo CITB Eos Cariticles Severianna",
+   "raza": "Semielfa",
+   "reino": "lusitanius",
+   "descripcion": "Eos Cariticles Severianna es una miembro del Consejo de la Ciudad de Innovación y Tecnología Beimax, conocida por su cautela y evaluación minuciosa de nuevas tecnologías. Es la creadora de las Centinelas de Hierro, autómatas avanzados que protegen la CITB con su capacidad mecánica e inhackeable. Su enfoque reservado y meticuloso asegura que todas las propuestas sean rigurosamente evaluadas, obligando a quienes las presentan a mejorar constantemente.",
+   "caracteristicas": "Reacia, cautelosa.",
+   "rasgos": [
+    "Reacia",
+    "cautelosa"
+   ],
+   "actitud_propuestas": "Reacio a las propuestas.",
+   "imagen": "img/npcs/miembro-del-consejo-citb-eos-cariticles-severianna.webp",
+   "pagina": 496
+  },
+  {
+   "id": "miembro-del-consejo-citb-valdemira-musk",
+   "nombre": "Miembro del Consejo CITB Valdemira Musk",
+   "raza": "Semiorca",
+   "reino": "lusitanius",
+   "descripcion": "Valdemira Musk es la miembro más reciente del Consejo de la Ciudad de Innovación y Tecnología Beimax, conocida por su actitud desafiante hacia ideas preconcebidas y su enfoque en soluciones prácticas. Su habilidad para cuestionar y refutar propuestas la convierte en una de las consejeras más temidas del consejo. Como ingeniera de segunda categoría en el proyecto de la ciudad sobre el cielo, Valdemira demostró su valor al inventar el Nexus, una corriente de energía y magia perpetua e inagotable que sostiene a Overfield en el cielo. Este descubrimiento le otorgó de manera irrefutable un puesto en el consejo.",
+   "caracteristicas": "Desafiante, escéptico.",
+   "rasgos": [
+    "Desafiante",
+    "escéptico"
+   ],
+   "actitud_propuestas": "Refuta las propuestas.",
+   "imagen": "img/npcs/miembro-del-consejo-citb-valdemira-musk.webp",
+   "pagina": 497
+  },
+  {
+   "id": "almirante-somnum-etxerrerix-anochecer",
+   "nombre": "Almirante Somnum Etxerrerix “Anochecer”",
+   "raza": "Elfo Oscuro",
+   "reino": "lusitanius",
+   "descripcion": "Almirante del reino de Lusitanius, Somnum Exterrerix es una líder naval de personalidad dura y conflictiva. Con su complexión alta y esbelta, su piel azul oscura y ojos negros como el ébano, Somnum es una estratega temida y respetada. Viste una armadura de cuero elegante y funcional adaptada para la guerra naval, acompañado de un sombrero que aprecia más que a su tripulación. Empuña una espada larga y una cimitarra hecha de ébano. Es conocida por su astucia en el combate y su capacidad para imponer respeto y disciplina en su tripulación. Su carácter conflictivo y su dureza la convierten en una líder formidable, capaz de enfrentar cualquier desafío.",
+   "caracteristicas": "Dura, conflictiva",
+   "rasgos": [
+    "Dura",
+    "conflictiva"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/almirante-somnum-etxerrerix-anochecer.webp",
+   "pagina": 497
+  },
+  {
+   "id": "shogun-hiro-tanaka-fallecido",
+   "nombre": "Shogun Hiro Tanaka (Fallecido)",
+   "raza": "Humano",
+   "reino": "revelfbolth",
+   "descripcion": "Hiro Tanaka fue un líder muy querido y respetado, conocido por su dedicación plena a su pueblo y su firmeza en la toma de decisiones. Portador de la espada ancestral del reino, que simbolizaba la autoridad de reinar como Shogun. Su liderazgo llevó al reino a la prosperidad, hasta que llegó la gran Guerra. Su muerte dejó un vacío de poder, sumiendo al reino en una incertidumbre y conflicto entre los ciudadanos que apoyan, de manera dividida, al joven heredero, su viuda y su ambicioso hermano, el capitán de la guardia. A pesar de su ausencia, su legado continúa inspirando a su pueblo, siendo lo único que impide una guerra civil por el trono. Hiro fue de los cuatro gobernantes el menos interesado en la gloria de las guerras, preocupado más por mantener la paz dentro de su reino y el amor por sus congéneres.",
+   "caracteristicas": "Pacifista, Líder amado, Portador de la espada ancestral",
+   "rasgos": [
+    "Pacifista",
+    "Líder amado",
+    "Portador de la espada ancestral"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/shogun-hiro-tanaka-fallecido.webp",
+   "pagina": 498
+  },
+  {
+   "id": "hijo-del-shogun-shino-tanaka",
+   "nombre": "Hijo del Shogun Shino Tanaka",
+   "raza": "Humano",
+   "reino": "revelfbolth",
+   "descripcion": "Shino Tanaka es el infante heredero al trono, conocido por su inteligencia aguda y prodigiosa. A pesar de su corta edad, su capacidad de razonamiento y visión de futuro sorprenden a todos. Sin embargo, su heterocromía es vista como un mal presagio por parte del pueblo, lo que añade un desafío adicional a su camino hacia el liderazgo. Con el legado de su padre pesando sobre sus hombros, Shino debe demostrar que está preparado para guiar al reino hacia la prosperidad. (Apoyado por la familia Shirojakkaru)",
+   "caracteristicas": "Prodigio intelectual, Heredero del linaje, Visión de futuro",
+   "rasgos": [
+    "Prodigio intelectual",
+    "Heredero del linaje",
+    "Visión de futuro"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/hijo-del-shogun-shino-tanaka.webp",
+   "pagina": 498
+  },
+  {
+   "id": "mujer-del-shogun-midori-tanaka",
+   "nombre": "Mujer del Shogun Midori Tanaka",
+   "raza": "Humano",
+   "reino": "revelfbolth",
+   "descripcion": "Midori Tanaka es una gobernante astuta y una líder en las sombras que dirige el reino mientras su hijo, Shino, es menor de edad. Con un control férreo sobre la política y la seguridad del reino, Midori también lidera en secreto a los ninjas, utilizando sus habilidades para ejecutar acciones decisivas y, a menudo, letales. Su ambición de ser la primera mujer Shogun la impulsa a tomar decisiones sin vacilación, ya sea en la diplomacia o en el campo de batalla. Su influencia en la corte es profunda y discreta, consolidando su poder mientras prepara el camino para su propio ascenso al trono de manera perpetua. (Apoyado por la familia Aoinu)",
+   "caracteristicas": "Astucia política, Habilidades ninja, Liderazgo secreto.",
+   "rasgos": [
+    "Astucia política",
+    "Habilidades ninja",
+    "Liderazgo secreto"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/mujer-del-shogun-midori-tanaka.webp",
+   "pagina": 499
+  },
+  {
+   "id": "capitan-de-la-guardia-hiroshi-tanaka",
+   "nombre": "Capitán de la Guardia Hiroshi Tanaka",
+   "raza": "Humano",
+   "reino": "revelfbolth",
+   "descripcion": "Hiroshi Tanaka, el hermano menor del fallecido Shogun, es el Capitán de la Guardia encargado de proteger el trono. Sin embargo, su ambición desmedida lo lleva a ansiar el trono para sí mismo. Experimentado combatiente y estratega decidido, Hiroshi desafía la sucesión natural al cuestionar la legitimidad del joven heredero, Shino Tanaka. Busca imponer un gobierno autoritario basado en la ley marcial y no duda en usar la fuerza para consolidar su poder. Su objetivo es gobernar en lugar de su hermano fallecido, y su determinación lo convierte en una amenaza constante para la estabilidad del reino. (Apoyado por la familia Kurokami)",
+   "caracteristicas": "Ambición desmedida, Destreza en combate, Estratega astuto. Líder de la Familia Samurái Shirojakkaru Hiram Iroh",
+   "rasgos": [
+    "Ambición desmedida",
+    "Destreza en combate",
+    "Estratega astuto. Líder de la Familia Samurái Shirojakkaru Hiram Iroh"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/capitan-de-la-guardia-hiroshi-tanaka.webp",
+   "pagina": 499
+  },
+  {
+   "id": "lider-de-la-familia-samurai-shirojakkaru-hiram-iroh-fallecido",
+   "nombre": "Líder de la Familia Samurái Shirojakkaru Hiram Iroh (fallecido)",
+   "raza": "Humano",
+   "reino": "revelfbolth",
+   "descripcion": "Hiram Shirojakkaru, originalmente conocido como Hiram Iroh, es un héroe de guerra y líder de la familia Shirojakkaru. De ascendencia campesina, Hiram logró hazañas inhumanas en combate que lo catapultaron a la fama y le permitieron liderar su propia familia. Su pericia y destreza le ganaron la amistad íntima del anterior Shogun, Hiro Tanaka. Lo que lo llevo a ser bautizado como Hiram Shirojakkaru por orden del Shogun. Aunque, su legado se ha visto ensombrecido por acusaciones de la familia Kurokami y de Hiroshi Tanaka, quienes lo presumen como el padre biológico del joven heredero, Shino Tanaka. Tanto Hiro como Hiram murieron en circunstancias desconocidas frente a la Fuente de la Sabiduría al concluir la Gran Guerra, dejando tras de sí una historia de honor y sacrificio.",
+   "caracteristicas": "Héroe de guerra, Líder de la familia Shirojakkaru, Amigo íntimo del Shogun Hiro Tanaka.",
+   "rasgos": [
+    "Héroe de guerra",
+    "Líder de la familia Shirojakkaru",
+    "Amigo íntimo del Shogun Hiro Tanaka"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/lider-de-la-familia-samurai-shirojakkaru-hiram-iroh-fallecido.webp",
+   "pagina": 500
+  },
+  {
+   "id": "lider-de-la-familia-samurai-kurokami-odda-kurokami",
+   "nombre": "Líder de la Familia Samurái Kurokami Odda Kurokami",
+   "raza": "Humano",
+   "reino": "revelfbolth",
+   "descripcion": "Odda Kurokami es el líder de la venerable familia samurái Kurokami, la más antigua y reputada en el reino, que se jacta de ser anterior incluso a la propia consolidación del reino. Es conocido por su excepcional habilidad estratégica y su meticulosa atención a de todos los detalles, posiblemente con una memoria eidética, Odda respalda la ambición de Hiroshi Tanaka por el trono. Su lealtad a Hiroshi es firme e inquebrantable, y sus cualidades en el combate es ampliamente reconocida. El castillo de la familia Kurokami, donde reside Odda, es un reflejo de su liderazgo, cambiando el nombre de dicho castillo según el jefe de la familia actual.",
+   "caracteristicas": "Estratega agresivo, memoria eidética, Lealtad inquebrantable a Hiroshi.",
+   "rasgos": [
+    "Estratega agresivo",
+    "memoria eidética",
+    "Lealtad inquebrantable a Hiroshi"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/lider-de-la-familia-samurai-kurokami-odda-kurokami.webp",
+   "pagina": 500
+  },
+  {
+   "id": "lider-de-la-familia-samurai-aoinu-eirika-aoinu",
+   "nombre": "Líder de la Familia Samurái Aoinu Eirika Aoinu",
+   "raza": "Humano",
+   "reino": "revelfbolth",
+   "descripcion": "Eirika Aoinu es la líder de la familia samurái Aoinu y apoya firmemente a Midori Tanaka en la gestión del reino mientras su hijo Shino sigue siendo menor de edad. A pesar de su juventud, Eirika ha demostrado gran habilidad en diplomacia y una sólida estrategia enfocada en la justicia. Su padre, el anterior líder, se retiró prematuramente para cederle el puesto a su hija, y ahora actúa como consejero para ella. Eirika, fiel a Midori, se considera la salvadora de Revelfbolth y está decidida a resolver las tensiones en el reino de la manera más eficaz y altruista posible.",
+   "caracteristicas": "Altruista, Estratega defensor de la justicia, Lealtad a Midori.",
+   "rasgos": [
+    "Altruista",
+    "Estratega defensor de la justicia",
+    "Lealtad a Midori"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/lider-de-la-familia-samurai-aoinu-eirika-aoinu.webp",
+   "pagina": 501
+  },
+  {
+   "id": "nuevo-lider-de-la-familia-samurai-shirojakkaru-ryu-bao",
+   "nombre": "Nuevo Líder de la Familia Samurái Shirojakkaru Ryu Bao",
+   "raza": "Humano",
+   "reino": "revelfbolth",
+   "descripcion": "Ryu Bao ha asumido el liderazgo de la familia samurái Shirojakkaru. En cumplimiento del último deseo de Hiram, el anterior líder, Ryu apoya la investidura de Shino como Shogun. Más se enfrenta a una resistencia interna debido a que algunos samuráis, descontentos con la muerte de Hiram, no reconocen a Ryu como sucesor legítimo y se han convertido en Ronin. Ahora, Ryu se enfrenta a una familia dividida y trabaja con dedicación para demostrar su valía, tanto para su clan como para el mundo exterior, consciente de que su predecesor dejó un legado elevado.",
+   "caracteristicas": "Tradicionalista samurái, Luchador, Compromiso con la investidura de Shino",
+   "rasgos": [
+    "Tradicionalista samurái",
+    "Luchador",
+    "Compromiso con la investidura de Shino"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/nuevo-lider-de-la-familia-samurai-shirojakkaru-ryu-bao.webp",
+   "pagina": 501
+  },
+  {
+   "id": "dirigente-de-la-comuna-ronin-lin-qi-chu-huan",
+   "nombre": "Dirigente de la Comuna Ronin Lin Qi Chu Huan",
+   "raza": "Semiorca",
+   "reino": "revelfbolth",
+   "descripcion": "Lin Qi Chu Huan es la líder de la Comuna Tersuud, una comunidad formada por exiliados, en su mayoría samuráis renegados de la familia Shirojakkaru, y otros individuos en busca de un nuevo hogar. Busca igualdad y libertad para su gente, gobernando con mano dura cuando es necesario, y a veces, con una autoridad que puede parecer excesiva. Lin Qi es conocida por su comportamiento libertino y su afición por el alcohol, pero también es una figura que acoge a todos aquellos que buscan refugio y un nuevo comienzo. Su estilo de liderazgo puede ser controvertido, pero su compromiso con su gente es innegable.",
+   "caracteristicas": "Líder autoritaria y rigurosa, Comportamiento libertino, Abierta a quienes buscan refugio",
+   "rasgos": [
+    "Líder autoritaria",
+    "rigurosa",
+    "Comportamiento libertino",
+    "Abierta a quienes buscan refugio"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/dirigente-de-la-comuna-ronin-lin-qi-chu-huan.webp",
+   "pagina": 502
+  },
+  {
+   "id": "diplomatico-aaron-cnetxu",
+   "nombre": "Diplomático Aaron Cnetxu",
+   "raza": "Aviroide",
+   "reino": "revelfbolth",
+   "descripcion": "Aaron Cnetxu es un diplomático conocido por su habilidad para mantener la paz con los diferentes países y fortalecer alianzas para el reino. Trabaja incansablemente en sus funciones, destacándose no solo por su habilidad negociadora, sino también por su maña culinaria. Su método preferido de negociación implica reuniones en un entorno más cercano, a menudo durante cenas que él mismo prepara, lo que le permite establecer relaciones cercanas y efectivas con sus interlocutores. Esta práctica original le ha ganado un gran respeto y diferentes propiedades en diversos lugares.",
+   "caracteristicas": "Negociador astuto, Mediador experto, Enfoque práctico.",
+   "rasgos": [
+    "Negociador astuto",
+    "Mediador experto",
+    "Enfoque práctico"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/diplomatico-aaron-cnetxu.webp",
+   "pagina": 502
+  },
+  {
+   "id": "mistica-de-la-corte-sarangerel-genn-xin",
+   "nombre": "Mística de la Corte Sarangerel Genn-Xin",
+   "raza": "Felina",
+   "reino": "revelfbolth",
+   "descripcion": "Sarangerel Genn-Xin es la asesora mística en la corte en Wuzetang, conocida por su profundo conocimiento esotérico y la magia mística que influye en las decisiones del reino. Originaria del reino de Stungerb, Genn-Xi obtuvo su puesto gracias a la aprobación del Colegio de Magia de Terratea y el respaldo de la directora del departamento de Magia Mística, Otama Han Shawn. Su presencia es notable por su actitud alegre y su aire de misterioso, y frecuentemente se expresa con una retórica enigmática.",
+   "caracteristicas": "Conocedora esotérica, Alegre y misterioso, Retórica enigmática",
+   "rasgos": [
+    "Conocedora esotérica",
+    "Alegre",
+    "misterioso",
+    "Retórica enigmática"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/mistica-de-la-corte-sarangerel-genn-xin.webp",
+   "pagina": 503
+  },
+  {
+   "id": "sacerdotisa-yamato-no-hacchi",
+   "nombre": "Sacerdotisa Yamato No Hacchi",
+   "raza": "Sátira",
+   "reino": "revelfbolth",
+   "descripcion": "Yamato No Hacchi es la líder espiritual y guía religiosa que reside en el Retiro de los Vientos, un lugar sagrado donde la línea entre el plano espiritual y el terrenal es más tenue. Con una dilatada experiencia, Yamato entrena a las jóvenes sacerdotisas para controlar y calmar a los espíritus. Su avanzada edad le confiere una sabiduría profunda en el manejo de las energías espirituales. Habla de manera pausada y sus consejos suelen estar cargados de dobles metáforas.",
+   "caracteristicas": "Experta en control espiritual, Sabiduría avanzada, Metáforas dobles.",
+   "rasgos": [
+    "Experta en control espiritual",
+    "Sabiduría avanzada",
+    "Metáforas dobles"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/sacerdotisa-yamato-no-hacchi.webp",
+   "pagina": 503
+  },
+  {
+   "id": "noble-wen-jyro",
+   "nombre": "Noble Wen Jyro",
+   "raza": "Elfo",
+   "reino": "revelfbolth",
+   "descripcion": "Wen Jyro Lee es un miembro predominante en la nobleza que ejerce una considerable influencia en la corte. Su familia fundó la prestigiosa escuela de Mo-Lee, y aunque no recibe cuotas de inscripción, ha acumulado una gran fortuna gracias a las donaciones de antiguos pupilos leales. Wen es conocido por su carácter flemático y su habilidad para mantenerse indiferente a las emociones, una cualidad que ha sido transmitida a lo largo de generaciones en la academia familiar.",
+   "caracteristicas": "Apático, Influencia en la corte, Perspicaz.",
+   "rasgos": [
+    "Apático",
+    "Influencia en la corte",
+    "Perspicaz"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-wen-jyro.webp",
+   "pagina": 504
+  },
+  {
+   "id": "noble-syaoran-ikki",
+   "nombre": "Noble Syaoran Ikki",
+   "raza": "Semielfo",
+   "reino": "revelfbolth",
+   "descripcion": "Syaoran Ikki es una noble con destacadas conexiones comerciales, enfocada en el comercio de flores, decoración y medicina. Su carácter sentimental y empático se refleja en su enfoque hacia los negocios, donde combina su pasión por la botánica con su habilidad para crear medicinas y diseñar decoraciones únicas. Syaoran viaja con frecuencia, usando sus conocimientos en botánica para enriquecer su oferta comercial. Su fortuna aumentó notablemente tras casarse con un noble extranjero que desapareció en el mar. Que, a pesar de esta pérdida, ha continuado expandiendo su flota marítima para exportar productos de su propia cosecha.",
+   "caracteristicas": "Sentimental, Empática, Experta en botánica.",
+   "rasgos": [
+    "Sentimental",
+    "Empática",
+    "Experta en botánica"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-syaoran-ikki.webp",
+   "pagina": 504
+  },
+  {
+   "id": "noble-fuyusumari-ghexiamolin",
+   "nombre": "Noble Fuyusumari Ghexiamolin",
+   "raza": "Aviroide",
+   "reino": "revelfbolth",
+   "descripcion": "Fuyusumari Ghexiamolin es una noble apasionada por el arte de la indumentaria, destacándose en la exportación y adquisición de todo tipo de vestimentas y armaduras para el reino. Su carácter sanguíneo combina inteligencia y actividad, pero también muestra frialdad y falta de sensibilidad en sus tratos. Su enfoque en los negocios puede llevarla a utilizar mentiras y manipulaciones para lograr sus objetivos, especialmente en el competitivo mundo del comercio del comercio y glamur.",
+   "caracteristicas": "Inteligente y activo, Frío y poco sensible, Hábil en manipulaciones y mentiras en los negocios",
+   "rasgos": [
+    "Inteligente",
+    "activo",
+    "Frío",
+    "poco sensible",
+    "Hábil en manipulaciones",
+    "mentiras en los negocios"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/noble-fuyusumari-ghexiamolin.webp",
+   "pagina": 505
+  },
+  {
+   "id": "monje-supremo-del-templo-al-quein-xix",
+   "nombre": "Monje Supremo del Templo Al Quein XIX",
+   "raza": "Semielfo",
+   "reino": "revelfbolth",
+   "descripcion": "Al Quein XIX es el líder espiritual del Templo de Jade, reconocido como un Sakya, un ser que ha alcanzado la iluminación y tiene la capacidad de acceder al plano sagrado. Aunque humanoide, es considerado una figura casi divina debido a su profunda conexión con el mundo de los dioses. Su carácter es austero y reservado, prefiriendo transmitir sus enseñanzas a través de sus monjes en lugar de interactuar directamente con los visitantes. Al Quein XIX cree firmemente que la disciplina y el esfuerzo son los caminos hacia una vida correcta y valora un corazón y una conciencia sinceros.",
+   "caracteristicas": "Austero y reservado, Profunda conexión espiritual, Defensor de la disciplina y el esfuerzo.",
+   "rasgos": [
+    "Austero",
+    "reservado",
+    "Profunda conexión espiritual",
+    "Defensor de la disciplina",
+    "el esfuerzo"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/monje-supremo-del-templo-al-quein-xix.webp",
+   "pagina": 505
+  },
+  {
+   "id": "lider-de-las-amazonas-khujam-maotiki",
+   "nombre": "Líder de las Amazonas Khujam Maotiki",
+   "raza": "Jotun",
+   "reino": "revelfbolth",
+   "descripcion": "Khujam Maotiki es una guerrera feroz y la líder indiscutible de las Amazonas, conocida por su firme defensa de la naturaleza y su repudio hacia la tecnología y las grandes ciudades. Su carácter es implacable y territorial, con una aversión profunda hacia el género masculino, castigando severamente a aquellos que se atrevan a violar sus dominios. A pesar de su dura fachada, Khujam muestra un lado maternal hacia su gente y el entorno natural que protege con fervor.",
+   "caracteristicas": "Aversión a tecnología y al género masculino, Conexión con la naturaleza, Liderazgo. Santo Pontífice de la Orden de los Caballeros de la Llama",
+   "rasgos": [
+    "Aversión a tecnología",
+    "al género masculino",
+    "Conexión con la naturaleza",
+    "Liderazgo. Santo Pontífice de la Orden de los Caballeros de la Llama"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/lider-de-las-amazonas-khujam-maotiki.webp",
+   "pagina": 506
+  },
+  {
+   "id": "santo-pontifice-de-la-orden-de-los-caballeros-de-la-llama-alexandros-kloppeth-de-lafitte",
+   "nombre": "Santo Pontífice de la Orden de los Caballeros de la Llama Alexandros Kloppeth de Lafitte",
+   "raza": "Humano",
+   "reino": "revelfbolth",
+   "descripcion": "Alexandros Kloppeth de Lafitte lidera una orden de los Caballeros de la Llama, que se oculta bajo la fachada de la iglesia de Santa Helen. Defensor de una justicia extrema y ferviente en su fe, se enfrenta frecuentemente a las órdenes sagradas de Terratea debido a su actitud radical y métodos controvertidos. Su orden opera a plena vista y su influencia y demagogia le permiten imponer su visión en diversas situaciones, ganándose tanto admiradores como detractores. Su principal rival es el Santo Pontífice, quien lo considera indeseable para el poder debido a sus métodos blandos y la falta de seriedad en el trato de asuntos sagrados.",
+   "caracteristicas": "Radical en su justicia, Influyente, Secreto y estratégico.",
+   "rasgos": [
+    "Radical en su justicia",
+    "Influyente",
+    "Secreto",
+    "estratégico"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/santo-pontifice-de-la-orden-de-los-caballeros-de-la-llama-alexandros-kloppeth-de-lafitte.webp",
+   "pagina": 506
+  },
+  {
+   "id": "almirante-shusui-llum-medianoche",
+   "nombre": "Almirante Shusui Llum \"Medianoche\"",
+   "raza": "Enana",
+   "reino": "revelfbolth",
+   "descripcion": "Almirante Shusui \"Medianoche\" es una veterana de avanzada edad, conocido por su amplia experiencia y su enfoque sosegado en el liderazgo. Con su complexión esbelta y una presencia que irradia sabiduría, Shusui tiene el cabello canoso. Viste un uniforme de los Argonautas, que refleja tanto su estatus como su carácter justo. Empuña dos falcatas encantadas, símbolos de su autoridad y experiencia. Es conocido por su carácter cariñoso y justo con su tripulación, y por su enfoque equilibrado y equitativo hacia sus contrincantes, llevando siempre la justicia en el corazón de sus decisiones.",
+   "caracteristicas": "Sosegado, justo.",
+   "rasgos": [
+    "Sosegado",
+    "justo"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/almirante-shusui-llum-medianoche.webp",
+   "pagina": 507
+  },
+  {
+   "id": "el-juez-lewis-rolex",
+   "nombre": "El Juez Lewis Rolex",
+   "raza": "Humano",
+   "reino": "overfield",
+   "descripcion": "Lewis Rolex es el juez de la Ciudad Parlamento, reconocido por su imparcialidad y el respeto que inspira en toda Terratea. Su integridad y habilidad para administrar la justicia de manera equitativa lo han convertido en una figura clave para mantener el orden y la legalidad en el mundo de Terratea. Su liderazgo en el sistema judicial es esencial para la estabilidad de todo, y su influencia se extiende desde Overfield, donde se le considera posiblemente la figura más importante debido a su posición. Además, como líder judicial, tiene la responsabilidad de asegurar que la Pax Coactus, el tratado que mantiene la paz relativa entre las cuatro naciones de Terratea, sea ejecutado y respetado.",
+   "caracteristicas": "Imparcialidad, Sabiduría jurídica, Responsabilidad con la Pax Coactus.",
+   "rasgos": [
+    "Imparcialidad",
+    "Sabiduría jurídica",
+    "Responsabilidad con la Pax Coactus"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/el-juez-lewis-rolex.webp",
+   "pagina": 507
+  },
+  {
+   "id": "el-almirante-de-flota-delion-de-bazan",
+   "nombre": "El Almirante de Flota Delion de Bazán",
+   "raza": "Humano.",
+   "reino": "overfield",
+   "descripcion": "Delion de Bazán es un líder naval experimentado con una sólida reputación en estrategia militar. Como Almirante de Flota, su presencia es crucial para la gestión de asuntos marítimos y de defensa en Terratea. Dirige la Asociación de los Argonautas, una organización encargada de mantener la paz en las aguas de todo el continente. Bajo su mando se encuentra la mayor flota de naves de combate existentes en toda la historia, y que se dedica a custodiar y proteger todos los mares de Terratea. Su habilidad para planificar estrategias y su liderazgo militar son fundamentales para asegurar la estabilidad y seguridad en el ámbito marítimo.",
+   "caracteristicas": "Conocimiento naval, Habilidades estratégicas, Liderazgo militar.",
+   "rasgos": [
+    "Conocimiento naval",
+    "Habilidades estratégicas",
+    "Liderazgo militar"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/el-almirante-de-flota-delion-de-bazan.webp",
+   "pagina": 509
+  },
+  {
+   "id": "el-gerente-de-la-central-de-gremios-soreth",
+   "nombre": "El Gerente de la Central de Gremios So’reth",
+   "raza": "Desconocido.",
+   "reino": "overfield",
+   "descripcion": "So’reth es un enigmático gestor que coordina las actividades de los gremios y supervisa la delegación de sus intereses en el Parlamento. Su identidad física es un misterio, ya que nadie ha logrado verlo o interactuar con él en persona. Fundador y director de la sede de gremios de Overfield, su influencia en el sistema de gremios de Terratea es inconmensurable. Inspirado por las Aventuras de las Leyendas de Axel y Alam, ha creado un sistema que demuestra una comprensión avanzada de las estructuras y dinámicas gremiales. Su habilidad para gestionar y representar los intereses de los gremios es esencial para mantener la estabilidad y el equilibrio en todo Terratea.",
+   "caracteristicas": "Conocimiento gremial, Habilidades organizativas, enigmático.",
+   "rasgos": [
+    "Conocimiento gremial",
+    "Habilidades organizativas",
+    "enigmático"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/el-gerente-de-la-central-de-gremios-soreth.webp",
+   "pagina": 509
+  },
+  {
+   "id": "el-instructor-de-los-gremios-sylas-kinji",
+   "nombre": "El Instructor de los Gremios Sylas Kinji",
+   "raza": "Elfo Oscuro",
+   "reino": "overfield",
+   "descripcion": "Sylas Kinji es el oficial superior que recibe órdenes directas del director de la sede de gremios. A pesar de su carácter hastiado y a veces despreciable, es un profesional excepcional en su campo. Su habilidad para llevar la gestión del gremio a niveles elevados y su maestría en los oficios lo destacan como una figura clave en la educación y formación gremial. Su enfoque rigurosamente profesional y su compromiso con la excelencia del parlamento, lo convierten en un pilar fundamental para el éxito y la cohesión de los gremios.",
+   "caracteristicas": "Hastiado, despreciable, profesional.",
+   "rasgos": [
+    "Hastiado",
+    "despreciable",
+    "profesional"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/el-instructor-de-los-gremios-sylas-kinji.webp",
+   "pagina": 510
+  },
+  {
+   "id": "secretaria-del-parlamento-natastrazza-ylsera",
+   "nombre": "Secretaria del Parlamento Natastrazza Ylsera",
+   "raza": "Reptiliana",
+   "reino": "overfield",
+   "descripcion": "Natastrazza Ylsera es una imponente draconiana con escamas preciosas que destaca como la Secretaria del Parlamento. Su presencia es esencial entre los miembros del Parlamento, gracias a su agudo intelecto y habilidades verbales, que la convierten en una figura clave para la eficiencia del proceso legislativo. Su memoria hipermnesia le permite recordar cada acuerdo o propuesta presentada, lo que, junto a su archivo personal, asegura que todos los acuerdos deliberados sean fielmente documentados. Siempre presente en el Parlamento, Natastrazza proporciona testimonio confiable y detallado sobre las deliberaciones acontecidas.",
+   "caracteristicas": "memoria hipermnesia, Intelecto agudo, recolectora de toda información.",
+   "rasgos": [
+    "memoria hipermnesia",
+    "Intelecto agudo",
+    "recolectora de toda información"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/secretaria-del-parlamento-natastrazza-ylsera.webp",
+   "pagina": 510
+  },
+  {
+   "id": "jefe-de-seguridad-de-la-ciudad-de-overfield-sac-wells",
+   "nombre": "Jefe de Seguridad de la Ciudad de Overfield Sac Wells",
+   "raza": "Humano",
+   "reino": "overfield",
+   "descripcion": "Sac Wells, un humano abstemio, fornido y decidido, es el Jefe de Seguridad en el Parlamento de Overfield. Su mirada penetrante y actitud inquebrantable lo definen como un líder nato en el ámbito de la seguridad. Conocido por su ética de trabajo impecable y su habilidad para mantener la paz en situaciones desafiantes, Wells combina una presencia enérgica con una capacidad destacada para tomar decisiones rápidas y efectivas. Anteriormente, sirvió como escolta real del Jarl Olaf Balder, donde ejecutó sus deberes con absoluta diligencia y rigor. Su nombramiento para el cargo de Jefe de Seguridad fue aprobado por acuerdo del consejo, reflejando su reputación intachable y experiencia.",
+   "caracteristicas": "Ética de trabajo impecable, Habilidad en la toma de decisiones, Abstemio.",
+   "rasgos": [
+    "Ética de trabajo impecable",
+    "Habilidad en la toma de decisiones",
+    "Abstemio"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/jefe-de-seguridad-de-la-ciudad-de-overfield-sac-wells.webp",
+   "pagina": 511
+  },
+  {
+   "id": "jefe-de-correos-marlon-m-brieftrager-iii",
+   "nombre": "Jefe de Correos Marlon M. Briefträger III",
+   "raza": "Aviroide",
+   "reino": "overfield",
+   "descripcion": "Jefe de Correos Marlon M. Briefträger III es el fundador de la renombrada empresa de distribución de correspondencia de Overfield, remiten tanto el periódico \"El Trotamundos\", la correspondencia de la sede de gremios y algunos particulares con poder adquisitivo. Con su plumaje blanco inmaculado y un porte majestuoso, Marlon M. Briefträger III impone respeto y autoridad. Viste un elegante uniforme creado por sí mismo que reflejan su estatus y éxito. Es conocido por su soberbia y su habilidad para manipular situaciones a su favor, siendo terriblemente difícil de tratar debido a su actitud engreída y su maestría en dar la vuelta a las cosas para su beneficio.",
+   "caracteristicas": "Soberbio y manipulador",
+   "rasgos": [
+    "Soberbio",
+    "manipulador"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/jefe-de-correos-marlon-m-brieftrager-iii.webp",
+   "pagina": 511
+  },
+  {
+   "id": "director-de-imprenta-alaric-ravenswood",
+   "nombre": "Director de Imprenta Alaric Ravenswood",
+   "raza": "Goblin",
+   "reino": "overfield",
+   "descripcion": "Director de Imprenta Alaric Ravenswood es el fundador del periódico \"El Trotamundos\". Con una complexión muy pequeña y una expresión desgastada por la edad, Alaric tiene una piel verde oliva y ojos brillantes que reflejan su creatividad inagotable. Viste un conjunto de trabajo práctico, adornado con herramientas de impresión y detalles personales que destacan su amor por la imprenta. Su taller está lleno de manuscritos, máquinas de impresión antiguas y bocetos, evidenciando su pasión por el oficio. Es conocido por su sabiduría, imaginación desbordante y su carácter soñador, que inspira a su equipo y le permite mantener una visión innovadora en la industria de la impresión.",
+   "caracteristicas": "Imaginativo, soñador",
+   "rasgos": [
+    "Imaginativo",
+    "soñador"
+   ],
+   "actitud_propuestas": null,
+   "imagen": "img/npcs/director-de-imprenta-alaric-ravenswood.webp",
+   "pagina": 512
+  }
+ ],
+ "parlamento_overfield": {
+  "pagina": 508,
+  "nota": "Composición del Parlamento de Overfield (grupos colectivos, no personajes individuales).",
+  "grupos": [
+   {
+    "id": "alta-sociedad",
+    "miembros": [
+     "5 Senadores del Reino de Stungerb",
+     "5 Senadores del Reino de Maurizanian",
+     "5 Senadores del Reino de Lusitanius",
+     "5 Senadores del Reino de Revelfbolth",
+     "Los Cuatro Generales de los Reinos",
+     "Los Cuatro Almirantes de los Reinos",
+     "10 Aristócratas"
+    ],
+    "raza": "Principalmente humanos, pero también puede haber otras razas aristocráticas.",
+    "descripcion": "Miembros de la alta sociedad con influencia y recursos considerables. Su presencia en el Parlamento refleja la importancia de mantener la estabilidad social.",
+    "caracteristicas": "Conexiones políticas, recursos financieros, influencia social."
+   },
+   {
+    "id": "burgueses",
+    "miembros": [
+     "4 Burgueses"
+    ],
+    "raza": "Principalmente humanos, pero también puede haber otras razas de clase media.",
+    "descripcion": "Representantes de la clase media, abogando por las necesidades y preocupaciones de la población común en el Parlamento.",
+    "caracteristicas": "Conexiones con la población, perspectiva práctica, defensores de la igualdad."
+   }
+  ]
+ }
+}
