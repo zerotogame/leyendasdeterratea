@@ -15,7 +15,7 @@ Para desarrollo local, copia `backend/.env.example` a `backend/.env` y pon la co
    pg_restore --no-owner --no-acl --dbname="$env:DATABASE_URL" ".\db_backups\v0.02.sql"
    ```
 
-4. Aplica con `psql` las migraciones de texto en este orden: `v0.03_migration.sql`, `v0.04_class_cazador.sql`, `v0.05_race_elfo_oscuro.sql`, `v0.06_race_humano.sql`, `v0.07_reglas_creacion.sql`, `v0.08_columnas_fisicas.sql`, `v0.09_character_images.sql` y `v0.10_razas_clases_completas.sql`. Por ejemplo:
+4. Aplica con `psql` las migraciones de texto en este orden: `v0.03_migration.sql`, `v0.03a_class_experience.sql`, `v0.04_class_cazador.sql`, `v0.05_race_elfo_oscuro.sql`, `v0.06_race_humano.sql`, `v0.07_reglas_creacion.sql`, `v0.08_columnas_fisicas.sql`, `v0.09_character_images.sql` y `v0.10_razas_clases_completas.sql`. Por ejemplo:
 
    ```powershell
    psql "$env:DATABASE_URL" -v ON_ERROR_STOP=1 -f ".\db_backups\v0.03_migration.sql"
@@ -39,4 +39,5 @@ Para desarrollo local, copia `backend/.env.example` a `backend/.env` y pon la co
 - Usa datos de prueba. La API actual no restringe el acceso por usuario; cualquiera que tenga la URL puede llamar a sus rutas públicas.
 
 No habilites pagos automáticos para esta prueba. Si un límite gratuito se agota, deja que el servicio se suspenda en lugar de cambiarlo a un plan de pago.
+
 
