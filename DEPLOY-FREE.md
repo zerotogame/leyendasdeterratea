@@ -1,4 +1,4 @@
-﻿# Prueba gratuita durante el fin de semana
+# Prueba gratuita durante el fin de semana
 
 Esta configuración usa Render para la web estática y la API, y Neon para PostgreSQL. No requiere dejar el PC encendido.
 
@@ -15,13 +15,7 @@ Para desarrollo local, copia `backend/.env.example` a `backend/.env` y pon la co
    pg_restore --no-owner --no-acl --dbname="$env:DATABASE_URL" ".\db_backups\v0.02.sql"
    ```
 
-4. Aplica con `psql` las migraciones de texto en este orden: `v0.03_migration.sql`, `v0.03a_class_experience.sql`, `v0.04_class_cazador.sql`, `v0.05_race_elfo_oscuro.sql`, `v0.06_race_humano.sql`, `v0.07_reglas_creacion.sql`, `v0.08_columnas_fisicas.sql`, `v0.09_character_images.sql` y `v0.10_razas_clases_completas.sql`. Por ejemplo:
-
-   ```powershell
-   psql "$env:DATABASE_URL" -v ON_ERROR_STOP=1 -f ".\db_backups\v0.03_migration.sql"
-   ```
-
-   Repite el comando para cada archivo posterior, en ese orden. `v0.01.sql` es un backup anterior; no lo restaures encima de `v0.02.sql`.
+4. Las migraciones `backend/migrations/v0.03_...` en adelante **se aplican solas** al arrancar la API (`backend/migrate.js`, registradas en la tabla `schema_migrations`). Si la base ya tiene datos (Neon o local), las migraciones hasta `v0.10` se marcan como aplicadas sin ejecutarse. Para añadir una nueva, crea `backend/migrations/v0.11_descripcion.sql` (repetible: `IF NOT EXISTS`, sin `BEGIN/COMMIT`), pruébala en local y haz `git push`: se ejecuta en el próximo despliegue y, si falla, la API no arranca y Render mantiene la versión anterior. `db_backups/v0.01.sql` es un backup anterior; no lo restaures encima de `v0.02.sql`.
 
 ## 2. Crear los servicios en Render
 

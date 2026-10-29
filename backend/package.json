@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node index.jsx",
-    "start": "node index.jsx"
+    "start": "node migrate.js && node index.jsx"
   },
   "keywords": [],
   "author": "",
