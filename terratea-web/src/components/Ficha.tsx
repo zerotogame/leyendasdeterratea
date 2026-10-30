@@ -1,9 +1,10 @@
 import { armaduras, razaPorId, clasePorId, img, NOMBRE_ATRIBUTO } from '../lib/datos'
 import {
-  IDS_ATRIBUTO, aCobre, aporteCA, calcularCA, fmtCobre, fmtMod, modificador, tipoArmadura,
+  IDS_ATRIBUTO, aCobre, aporteCA, calcularCA, fmtCobre, fmtMod, modificador, tipoArmadura, vitalidadInicial,
 } from '../lib/reglas'
 import { costeCompra, nombreCompra, puntuacionesDe, type DatosFicha } from '../lib/personajes'
 import { Chip } from './Comunes'
+import HabilidadesPorNivel from './HabilidadesPorNivel'
 import { TablaSalvacion } from '../pages/DetalleRaza'
 
 export default function Ficha({ e }: { e: DatosFicha }) {
@@ -15,7 +16,7 @@ export default function Ficha({ e }: { e: DatosFicha }) {
     .filter((a) => tipoArmadura(a) || /ESCUDO/i.test(a.categoria ?? ''))
   const ca = calcularCA(piezas)
   const modCon = modificador('constitucion', puntuaciones.constitucion ?? 10)
-  const vida = e.vida != null ? Math.max(3, e.vida + modCon) : null
+  const vida = e.vida != null ? vitalidadInicial(e.vida, modCon) : null
   const gastado = e.compras.reduce((s, c) => s + (costeCompra(c) ?? 0), 0)
   const resto = e.fortuna ? aCobre(e.fortuna) - gastado : null
   const fortalezas = [...raza.fortalezas, ...(sub?.fortalezas ?? [])]
@@ -76,12 +77,8 @@ export default function Ficha({ e }: { e: DatosFicha }) {
       </div>
 
       <div className="bloque">
-        <h3>Habilidades iniciales (nivel 0–1)</h3>
-        <ul className="habilidades">
-          {clase.habilidades.filter((h) => (h.nivel ?? 99) <= 1).map((h, i) => (
-            <li key={i}><span className="nivel">Nv {h.nivel}</span><strong>{h.nombre}</strong> {h.tipo && <Chip>{h.tipo}</Chip>}<p>{h.descripcion}</p></li>
-          ))}
-        </ul>
+        <h3>Habilidades por nivel</h3>
+        <HabilidadesPorNivel habilidades={clase.habilidades} nivel={1} />
       </div>
 
       <div className="bloque">

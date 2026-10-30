@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { borrarPersonaje, listarPersonajes } from '../lib/personajes'
-import { clasePorId, razaPorId, razas, img } from '../lib/datos'
+import { clasePorId, razaPorId, razas, img, imgRaza } from '../lib/datos'
 import { borrarDeBd, listarDeBd, urlImagen, type ResumenBd } from '../lib/sync'
 
 export default function ListaPersonajes() {
@@ -44,7 +44,7 @@ export default function ListaPersonajes() {
                 <Link to={`/personajes/bd/${c.id}`} className="enlace-tarjeta">
                   {c.image
                     ? <img src={urlImagen(c.image)} alt={c.name} loading="lazy" />
-                    : raza && <img src={img(raza.imagenes.ilustraciones[0] ?? '')} alt={c.name} loading="lazy" />}
+                    : raza && <img src={img(imgRaza(raza))} alt={c.name} loading="lazy" />}
                   <h2>{c.name || 'Sin nombre'}</h2>
                   <small>{c.race} · {c.class} · Nivel {c.level}</small>
                 </Link>

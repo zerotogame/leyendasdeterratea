@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { razas, img } from '../lib/datos'
+import { razas, img, imgRaza } from '../lib/datos'
 
 export default function ListaRazas() {
   const [q, setQ] = useState('')
@@ -12,7 +12,7 @@ export default function ListaRazas() {
       <div className="tarjetas">
         {lista.map((r) => (
           <Link key={r.id} to={`/razas/${r.id}`} className="tarjeta">
-            <img src={img(r.imagenes.ilustraciones[0] ?? r.imagenes.titulo ?? '')} alt={r.nombre} loading="lazy" />
+            <img src={img(imgRaza(r))} alt={r.nombre} loading="lazy" />
             <h2>{r.nombre}</h2>
           </Link>
         ))}

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import {
-  aporteCA, calcularCA, costeEnCobre, fmtCobre, modificador, requisitosAtributo, requisitosCumplidos,
+  aporteCA, calcularCA, costeEnCobre, fmtCobre, vitalidadInicial, modificador, requisitosAtributo, requisitosCumplidos,
   requisitosTexto, tirar7, tirarFortuna, tirarVitalidad, totalSinMenor,
 } from './reglas'
 import { armaduras, clasePorId } from './datos'
@@ -101,5 +101,14 @@ describe('requisitos de clase', () => {
   })
   it('guerrero sin requisitos siempre cumple', () => {
     expect(requisitosCumplidos(clasePorId('guerrero')!, {})).toBe(true)
+  })
+})
+
+describe('vitalidadInicial', () => {
+  it('aplica el mínimo 3 al dado y luego suma el modificador de Constitución (como el backend)', () => {
+    expect(vitalidadInicial(1, -1)).toBe(2) // max(1,3) + (-1), no max(3, 1 - 1)
+    expect(vitalidadInicial(2, 0)).toBe(3)
+    expect(vitalidadInicial(8, 2)).toBe(10)
+    expect(vitalidadInicial(12, -2)).toBe(10)
   })
 })

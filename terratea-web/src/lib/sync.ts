@@ -1,5 +1,5 @@
 import { armaduras, clasePorId, razaPorId, NOMBRE_ATRIBUTO } from './datos'
-import { IDS_ATRIBUTO, aCobre, calcularCA, limpiar, modificador, tipoArmadura } from './reglas'
+import { IDS_ATRIBUTO, aCobre, calcularCA, limpiar, modificador, tipoArmadura, vitalidadInicial } from './reglas'
 import { costeCompra, itemCompra, nombreCompra, puntuacionesDe, type Personaje } from './personajes'
 import type { Arma } from '../data/types'
 
@@ -21,7 +21,7 @@ export function cuerpoBd(p: Personaje) {
     race_name: raza.nombre,
     class_name: clase.nombre,
     stats: IDS_ATRIBUTO.map((id) => ({ name: NOMBRE_ATRIBUTO[id], value: pt[id], modifier: modificador(id, pt[id] ?? 10) })),
-    hit_points: p.vida != null ? Math.max(3, p.vida + modCon) : 3,
+    hit_points: p.vida != null ? vitalidadInicial(p.vida, modCon) : 3,
     armor_class: calcularCA(piezas),
     gold: Math.floor(resto / 100), silver: Math.floor((resto % 100) / 10), copper: resto % 10,
     weapons: p.compras.filter((c) => c.tipo === 'arma').map((c) => {
@@ -61,8 +61,8 @@ export type PersonajeBd = {
   attributes: Record<string, { value: number; modifier: number }>
   rollSalvations: Record<string, number>
   rollMovements: Record<string, number>
-  inventory: { object_id: number; name: string; quantity: number; weight_kg: string | null }[]
-  weapons: { slot: number; name: string; total: string | null; special: string | null; hands: number | null; weight: string | null }[]
+  inventory: { object_id: number; name: string; quantity: number; weight_kg: string | null; note?: string | null }[]
+  weapons: { slot: number; name: string; damage?: string | null; total: string | null; special: string | null; hands: number | null; weight: string | null }[]
   specialSkills: string[]
   extraAttributes: string[]
 }
@@ -112,6 +112,19 @@ export type CambiosFicha = {
 
 export const actualizarEnBd = (id: number, cambios: CambiosFicha) =>
   pedir<PersonajeBd>(`/characters/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(cambios) })
+
+/** El backend suma la experiencia y sube de nivel solo si toca; `levels_gained` dice cuántos niveles ha subido. */
+export const darExperiencia = (id: number, amount: number) =>
+  pedir<PersonajeBd & { levels_gained: number }>(`/characters/${id}/experience`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ amount }) })
+
+/** Suma monedas a las que ya tiene (el PUT del backend solo cambia los campos que se le mandan). */
+export async function sumarMonedas(id: number, m: { oro: number; plata: number; cobre: number }) {
+  const p = await cargarDeBd(id)
+  return pedir<PersonajeBd>(`/characters/${id}`, {
+    method: 'PUT', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ gold: p.gold + m.oro, silver: p.silver + m.plata, copper: p.copper + m.cobre }),
+  })
+}
 
 export const reglasBd = () => pedir<{ alignments: string[]; sexes: string[] }>('/rules')
 

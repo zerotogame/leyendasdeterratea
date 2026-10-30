@@ -807,8 +807,8 @@ app.put("/characters/:id/items/:objectId", async (req, res) => {
     }
 
     const result = await pool.query(
-      "UPDATE public.character_object SET quantity = $1 WHERE object_id = $2 AND character_id = $3 RETURNING *",
-      [quantity, req.params.objectId, req.params.id]
+      "UPDATE public.character_object SET quantity = $1, note = CASE WHEN $4::boolean THEN $5 ELSE note END WHERE object_id = $2 AND character_id = $3 RETURNING *",
+      [quantity, req.params.objectId, req.params.id, req.body?.note !== undefined, req.body?.note || null]
     );
 
     if (!result.rowCount) {

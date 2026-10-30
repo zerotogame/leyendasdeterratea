@@ -22,12 +22,40 @@ main { max-width: 1100px; margin: 0 auto; padding: 1rem 16px 4rem; }
 .cabecera {
   display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: center; justify-content: space-between;
   padding: .75rem 16px; background: var(--panel); border-bottom: 1px solid var(--borde);
+  position: relative; z-index: 20;
 }
 .cabecera .logo { color: var(--oro); text-decoration: none; font-size: 1.3rem; }
-.cabecera nav { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
-.cabecera nav a { color: var(--texto); text-decoration: none; }
-.cabecera nav a.active { color: var(--oro); }
-.cabecera nav a.cta { border: 1px solid var(--oro); padding: .25rem .75rem; border-radius: 4px; color: var(--oro); }
+.cabecera nav { display: flex; gap: .25rem; align-items: center; }
+.cabecera nav a.cta { border: 1px solid var(--oro); padding: .3rem .8rem; border-radius: 4px; color: var(--oro); text-decoration: none; margin-left: .75rem; }
+.cabecera nav a.cta:hover, .cabecera nav a.cta.active { background: var(--oro); color: var(--bg); }
+.cabecera .grupo { position: relative; }
+.cabecera .grupo > button {
+  background: none; border: 0; color: var(--texto); font: inherit; cursor: pointer;
+  padding: .35rem .7rem; border-radius: 4px;
+}
+.cabecera .grupo > button:hover, .cabecera .grupo.abierto > button { background: var(--bg); }
+.cabecera .grupo.activo > button { color: var(--oro); }
+.cabecera .flecha { font-size: .75em; color: var(--suave); }
+.cabecera .grupo ul {
+  display: none; position: absolute; top: calc(100% + .4rem); left: 0; min-width: 270px; margin: 0; padding: .4rem;
+  list-style: none; background: var(--panel); border: 1px solid var(--borde); border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .5);
+}
+.cabecera .grupo.abierto ul { display: block; }
+.cabecera .grupo ul a { display: block; padding: .5rem .7rem; border-radius: 4px; text-decoration: none; color: var(--texto); }
+.cabecera .grupo ul a:hover, .cabecera .grupo ul a:focus-visible { background: var(--bg); }
+.cabecera .grupo ul strong { display: block; font-weight: normal; color: var(--oro); }
+.cabecera .grupo ul small { color: var(--suave); }
+.cabecera button:focus-visible, .cabecera a:focus-visible { outline: 2px solid var(--oro); outline-offset: 2px; }
+.cabecera .menu-movil { display: none; background: none; border: 1px solid var(--borde); color: var(--texto); font: inherit; padding: .3rem .8rem; border-radius: 4px; cursor: pointer; }
+@media (max-width: 800px) {
+  .cabecera .menu-movil { display: block; }
+  .cabecera nav { display: none; flex-direction: column; align-items: stretch; width: 100%; }
+  .cabecera nav.abierto { display: flex; }
+  .cabecera .grupo > button { width: 100%; text-align: left; }
+  .cabecera .grupo ul { position: static; box-shadow: none; border: 0; padding: 0 0 .25rem .75rem; }
+  .cabecera nav a.cta { margin: .5rem 0 0; text-align: center; }
+}
 
 .tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; margin: 1rem 0; }
 .tarjeta {
@@ -90,6 +118,9 @@ th { background: #2a231d; color: var(--oro); font-weight: normal; }
 .habilidades { list-style: none; padding: 0; }
 .habilidades li { border-bottom: 1px solid var(--borde); padding: .5rem 0; }
 .habilidades p { margin: .25rem 0 0; color: var(--suave); white-space: pre-line; }
+.hab-nivel { border-bottom: 1px solid var(--borde); padding: .35rem 0; }
+.hab-nivel summary { cursor: pointer; color: var(--oro); }
+.hab-nivel.bloqueado { opacity: .55; }
 .nivel { display: inline-block; min-width: 3.2rem; color: var(--oro); font-size: .85rem; }
 
 /* creador */
@@ -166,15 +197,6 @@ th { background: #2a231d; color: var(--oro); font-weight: normal; }
 .tipo-btn.activo { background: var(--oro); }
 .encuentro { display: grid; gap: 8px; margin: 1rem 0; }
 .articulo.fija { border-color: var(--oro); }
-.combate { display: grid; gap: 10px; margin-top: 1rem; }
-.combatiente { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; background: var(--panel); border: 1px solid var(--borde); border-radius: 6px; padding: 8px; }
-.combatiente.caida { opacity: .55; }
-.combatiente img { width: 64px; height: 64px; object-fit: cover; border-radius: 6px; }
-.combatiente .info { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 2px; }
-.combatiente .info small { color: var(--suave); }
-.combatiente .vida input { width: 80px; }
-.combatiente .acciones { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
-.combatiente .acciones input { width: 72px; }
 .barra { height: 8px; background: #000; border-radius: 4px; overflow: hidden; margin: 2px 0; }
 .barra span { display: block; height: 100%; background: var(--mal); }
 
@@ -222,3 +244,100 @@ th { background: #2a231d; color: var(--oro); font-weight: normal; }
 .tarjeta.objeto dt { font-weight: bold; }
 .tarjeta.objeto dd { margin: 0; text-align: right; }
 .tarjeta.objeto .tipo { align-self: center; border: 1px solid var(--borde); border-radius: 999px; padding: 0 .6rem; margin: 0 .5rem .4rem; font-size: .72rem; letter-spacing: .04em; }
+
+/* ficha de la BD */
+.fbd-cab { display: grid; grid-template-columns: 150px 1fr auto; gap: 20px; align-items: center; padding: 1rem 0 .5rem; border-bottom: 1px solid var(--borde); }
+.fbd-retrato { width: 150px; height: 190px; object-fit: cover; object-position: top; border-radius: 6px; border: 2px solid var(--oro); }
+.fbd-emblema { width: 90px; height: 115px; object-fit: cover; object-position: top; border-radius: 6px; border: 1px solid var(--borde); opacity: .9; }
+.fbd-id h2 { margin: 0; font-size: 2.2rem; color: var(--oro); line-height: 1.15; }
+.fbd-id p { margin: .2rem 0 .8rem; color: var(--suave); font-size: 1.1rem; }
+.fbd-nivel { display: grid; gap: .3rem; max-width: 420px; }
+.fbd-nivel strong { font-size: 1.3rem; }
+.fbd-nivel small { color: var(--suave); }
+.fbd-exp { height: 8px; background: var(--borde); border-radius: 4px; overflow: hidden; }
+.fbd-exp span { display: block; height: 100%; background: var(--oro); }
+.fbd-vitales { display: grid; grid-template-columns: repeat(2, minmax(120px, 1.3fr)) repeat(auto-fit, minmax(80px, 1fr)); gap: 10px; margin: 1.25rem 0; }
+.fbd-vitales > div { background: var(--panel); border: 1px solid var(--borde); border-radius: 6px; padding: .5rem; text-align: center; display: flex; flex-direction: column; }
+.fbd-vitales small, .fbd-vitales span { color: var(--suave); font-size: .8rem; }
+.fbd-vitales .vital { border-color: var(--oro); }
+.fbd-vitales .vital strong { font-size: 2.4rem; color: var(--oro); line-height: 1.1; }
+.fbd-vitales .attr strong { font-size: 1.5rem; }
+.fbd-cuerpo { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr); gap: 24px; align-items: start; }
+.fbd-cuerpo .bloque:first-child { margin-top: 0; }
+.fbd-pares { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: .3rem 1rem; }
+.fbd-pares div { display: flex; justify-content: space-between; border-bottom: 1px dotted var(--borde); }
+.fbd-pares dt { color: var(--suave); }
+.fbd-pares dd { margin: 0; }
+.fbd-tesoro { display: flex; gap: 1rem; flex-wrap: wrap; color: var(--oro); border-top: 1px solid var(--borde); padding-top: .6rem; }
+@media (max-width: 800px) {
+  .fbd-cab { grid-template-columns: 90px 1fr; }
+  .fbd-retrato { width: 90px; height: 115px; }
+  .fbd-emblema { display: none; }
+  .fbd-cuerpo { grid-template-columns: 1fr; }
+}
+
+
+.registro { list-style: none; margin: 0 0 .5rem; padding: 0; max-height: 220px; overflow: auto; font-size: .9rem; display: grid; gap: 2px; }
+
+/* combate: tarjetas por bando */
+.añadir { background: var(--panel); border: 1px solid var(--borde); border-radius: 6px; padding: 6px 10px; margin: .5rem 0 1rem; }
+.añadir summary { cursor: pointer; font-weight: 600; }
+.cc-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 16px; align-items: start; }
+.cc-lista { display: grid; gap: 10px; }
+.cc { background: var(--panel); border: 1px solid var(--borde); border-left: 4px solid var(--mal); border-radius: 8px; padding: 10px; display: grid; gap: 8px; transition: opacity .15s, box-shadow .15s; }
+.cc-cols > div:first-child .cc { border-left-color: #2f6fb3; }
+.cc.caida { opacity: .5; }
+.cc.atacante { box-shadow: 0 0 0 2px gold; }
+.cc.objetivo { box-shadow: 0 0 0 2px var(--mal); cursor: pointer; animation: late 1s ease-in-out infinite; }
+.cc.elegida { box-shadow: 0 0 0 3px var(--mal); }
+.cc.apagada { opacity: .35; }
+@keyframes late { 50% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--mal) 60%, transparent); } }
+.cc-cab { display: flex; gap: 10px; align-items: center; }
+.cc-cab img, .cc-avatar { width: 52px; height: 52px; border-radius: 8px; object-fit: cover; flex: none; }
+.cc-avatar { display: grid; place-items: center; background: #2f6fb3; color: #fff; font-weight: 700; font-size: 1.4rem; }
+.cc-nombre { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.cc-nombre small, .cc-mov small { color: var(--suave); }
+.cc-vida-num { display: flex; gap: 4px; align-items: center; justify-content: space-between; }
+.cc-vida-num button { min-width: 40px; min-height: 38px; }
+.cc-hp { display: flex; align-items: baseline; gap: 4px; }
+.cc-hp input { width: 70px; font-size: 1.3rem; font-weight: 700; text-align: center; }
+.cc-mov { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.pips { display: flex; flex-wrap: wrap; gap: 4px; }
+.pip { width: 22px; height: 22px; min-width: 0; padding: 0; border-radius: 4px; background: #3a8a4a; border: 1px solid var(--borde); }
+.pip.gastada { background: transparent; }
+.cc-pie { display: flex; gap: 8px; flex-wrap: wrap; }
+.cc-pie button { flex: 1; min-height: 38px; }
+.mini { min-width: 0; padding: 2px 8px; }
+.barra-ataque { position: sticky; top: 0; z-index: 5; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; background: var(--panel); border: 2px solid var(--mal); border-radius: 8px; padding: 10px; margin: .5rem 0 1rem; }
+.registro { list-style: none; margin: 0 0 .5rem; padding: 0; max-height: 220px; overflow: auto; font-size: .9rem; display: grid; gap: 2px; }
+
+/* panel de ataque */
+.panel-ataque { flex-direction: column; align-items: stretch; }
+.pa-titulo { display: flex; gap: 8px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.pa-fila { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.pa-etq { font-weight: 700; min-width: 7.5rem; }
+.chip { display: inline-flex; gap: 6px; align-items: center; border: 1px solid var(--borde); border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+.pa-notas { background: #0003; border-radius: 6px; padding: 4px 10px; font-size: .9rem; }
+.pa-resumen { display: flex; gap: 10px; justify-content: space-between; align-items: center; flex-wrap: wrap; border-top: 1px solid var(--borde); padding-top: 8px; }
+.pa-final { font-size: 1.4rem; color: var(--mal); }
+.cc.objetivo *, .cc.apagada * { pointer-events: none; } /* en modo «elige objetivo» toda la tarjeta es el objetivo */
+
+.cc-hab { font-size: .9rem; border-top: 1px solid var(--borde); padding-top: 6px; }
+.cc-hab summary { cursor: pointer; color: var(--suave); }
+.cc-hab ul { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 6px; }
+.cc-hab small { color: var(--suave); }
+
+/* recompensa */
+.recompensa { background: var(--panel); border: 2px solid gold; border-radius: 8px; padding: 10px; margin: .5rem 0 1rem; display: grid; gap: 8px; }
+.tabla-recompensa { width: 100%; border-collapse: collapse; }
+.tabla-recompensa th { text-align: left; color: var(--suave); font-weight: 600; }
+.tabla-recompensa td, .tabla-recompensa th { padding: 4px 6px; border-bottom: 1px solid var(--borde); vertical-align: top; }
+
+/* avisos de pasivas */
+.chip.auto { border-color: #3a8a4a; }
+.chip.revisar { border-color: gold; background: color-mix(in srgb, gold 10%, transparent); }
+.chip.no { opacity: .55; }
+.chip.suave { cursor: help; }
+.chip-nota { color: var(--suave); }
+.chip.revisar .chip-nota { color: gold; }
+.pa-desc { flex-basis: 100%; color: var(--suave); }

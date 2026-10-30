@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import MenuPrincipal from './components/MenuPrincipal'
 import Inicio from './pages/Inicio'
 import ListaRazas from './pages/ListaRazas'
 import DetalleRaza from './pages/DetalleRaza'
@@ -25,23 +26,7 @@ const Chuleta = lazy(() => import('./pages/Chuleta'))
 export default function App() {
   return (
     <>
-      <header className="cabecera">
-        <NavLink to="/" className="logo">Leyendas de Terratéa</NavLink>
-        <nav>
-          <NavLink to="/razas">Razas</NavLink>
-          <NavLink to="/clases">Clases</NavLink>
-          <NavLink to="/bestiario">Bestiario</NavLink>
-          <NavLink to="/objetos">Objetos</NavLink>
-          <NavLink to="/chuleta">Chuleta</NavLink>
-          <NavLink to="/figuras">Figuras</NavLink>
-          <NavLink to="/gremios">Gremios</NavLink>
-          <NavLink to="/panteon">Panteón</NavLink>
-          <NavLink to="/master">Máster</NavLink>
-          <NavLink to="/personajes">Mis personajes</NavLink>
-          <NavLink to="/registro">Registro</NavLink>
-          <NavLink to="/creador" className="cta">Crear personaje</NavLink>
-        </nav>
-      </header>
+      <MenuPrincipal />
       <main>
         <Suspense fallback={<p>Cargando…</p>}>
         <Routes>

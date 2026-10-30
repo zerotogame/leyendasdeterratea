@@ -12,6 +12,8 @@ export const totalSinMenor = (dados: number[]) => dados.reduce((s, x) => s + x, 
 export const tirar7 = () => Array.from({ length: 7 }, () => [d(6), d(6), d(6), d(6)])
 export const tirarFortuna = () => ({ oro: d(20), plata: d(8), cobre: d(6) })
 export const tirarVitalidad = () => d(12)
+/** Vitalidad inicial: 1D12 con mínimo 3 en el dado, más el modificador de Constitución (igual que el backend). */
+export const vitalidadInicial = (dado: number, modCon: number) => Math.max(dado, 3) + modCon
 
 // ---------- modificadores ----------
 // Las tablas de caracteristicas.json perdieron el signo «-» de las filas negativas

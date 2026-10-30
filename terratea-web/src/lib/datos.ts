@@ -13,6 +13,13 @@ export const armas = armasJson as unknown as Arma[]
 export const armaduras = armadurasJson as unknown as Armadura[]
 export const objetos = objetosJson as unknown as ObjetoBase[]
 
+/** Ilustración de una raza; si no tiene (Renegado), la de su primera subraza, y si no, el título. */
+export const imgRaza = (r: Raza) =>
+  r.imagenes.ilustraciones[0]
+  ?? r.subrazas?.find((s) => s.imagenes.ilustraciones[0])?.imagenes.ilustraciones[0]
+  ?? r.imagenes.titulo
+  ?? ''
+
 export const razaPorId = (id: string) => razas.find((r) => r.id === id)
 export const clasePorId = (id: string) => clases.find((c) => c.id === id)
 

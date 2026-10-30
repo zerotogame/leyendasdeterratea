@@ -2,12 +2,12 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
   armas, armaduras, objetos, razas, razaPorId, clasePorId, clasesParaRaza,
-  claveRaza, img, NOMBRE_ATRIBUTO,
+  claveRaza, img, imgRaza, NOMBRE_ATRIBUTO,
 } from '../lib/datos'
 import {
   IDS_ATRIBUTO, aCobre, armaduraPermitida, costeEnCobre, fmtCobre,
   fmtMod, limpiar, modificador, requisitosAtributo, requisitosCumplidos, requisitosTexto,
-  tirar7, totalSinMenor, tirarFortuna, tirarVitalidad,
+  tirar7, totalSinMenor, tirarFortuna, tirarVitalidad, vitalidadInicial,
   type Puntuaciones,
 } from '../lib/reglas'
 import { Chip } from '../components/Comunes'
@@ -199,7 +199,7 @@ function PasoRaza({ e, elegir }: { e: Estado; elegir: (razaId: string, subrazaId
       <div className="tarjetas">
         {razas.map((r) => (
           <button key={r.id} className={`tarjeta ${e.razaId === r.id ? 'elegida' : ''}`} onClick={() => abrir(r)}>
-            <img src={img(r.imagenes.ilustraciones[0] ?? '')} alt={r.nombre} loading="lazy" />
+            <img src={img(imgRaza(r))} alt={r.nombre} loading="lazy" />
             <h2>{r.nombre}</h2>
           </button>
         ))}
@@ -445,7 +445,7 @@ function PasoEquipo({ e, clase, cambiar, puntuaciones }: {
 
   const vida = e.vida
   const mod = modificador('constitucion', puntuaciones.constitucion ?? 10)
-  const vidaFinal = vida != null ? Math.max(3, vida + mod) : null
+  const vidaFinal = vida != null ? vitalidadInicial(vida, mod) : null
 
   return (
     <section>

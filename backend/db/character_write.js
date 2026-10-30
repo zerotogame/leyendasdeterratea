@@ -112,9 +112,9 @@ async function saveCharacterFull(characterId, body) {
         const quantity = Number(item.quantity) || 0;
         if (!item.object_id || quantity <= 0) continue;
         await client.query(
-          `INSERT INTO character_object (character_id, object_id, quantity) VALUES ($1, $2, $3)
-           ON CONFLICT (character_id, object_id) DO UPDATE SET quantity = EXCLUDED.quantity`,
-          [id, item.object_id, quantity]
+          `INSERT INTO character_object (character_id, object_id, quantity, note) VALUES ($1, $2, $3, $4)
+           ON CONFLICT (character_id, object_id) DO UPDATE SET quantity = EXCLUDED.quantity, note = EXCLUDED.note`,
+          [id, item.object_id, quantity, item.note || null]
         );
       }
     }

@@ -45,7 +45,8 @@ async function getCharacter(id) {
           o.price_copper AS precio_cobre,
           o.weight_kg AS peso_kg,
           o.is_unique AS es_unico,
-          co.quantity AS cantidad
+          co.quantity AS cantidad,
+          co.note AS nota
       FROM public.character_object co
       INNER JOIN public.objects o ON co.object_id = o.id
       WHERE co.character_id = $1;`,
@@ -125,7 +126,8 @@ async function getCharacter(id) {
       price_copper: item.precio_cobre,
       weight_kg: item.peso_kg,
       is_unique: item.es_unico,
-      quantity: item.cantidad
+      quantity: item.cantidad,
+      note: item.nota
     })),
     max_carry_kg: race_info.rows[0]?.max_carry_kg == null ? null : Number(race_info.rows[0].max_carry_kg),
     // Una habilidad racial que coincide con una de clase no se acumula: queda suprimida

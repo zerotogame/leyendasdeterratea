@@ -31,7 +31,7 @@ export default function DetalleCriatura() {
         <div className="stat"><small>Daño</small><strong className="pequeno">{mostrar(t.dano)}</strong></div>
         <div className="stat"><small>C.A.</small><strong>{mostrar(t.ca)}</strong></div>
         <div className="stat"><small>Vitalidad</small><strong>{mostrar(t.vitalidad)}</strong></div>
-        <div className="stat"><small>P.X.</small><strong className="pequeno">{mostrar(t.px)}</strong></div>
+        <div className="stat"><small>Exp</small><strong className="pequeno">{mostrar(t.px)}</strong></div>
         <div className="stat"><small>Movimiento en combate</small><strong className="pequeno">{mostrar(t.movimiento)}</strong></div>
         <div className="stat"><small>Rango de alcance</small><strong className="pequeno">{mostrar(t.alcance)}</strong></div>
       </div>
