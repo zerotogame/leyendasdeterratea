@@ -160,6 +160,22 @@ router.delete("/users/:id", requiere("DEVELOPER"), async (req, res) => {
 });
 
 // Personajes con su dueño, para asignarlos desde la administración.
+// Master y Programador: TODAS las fichas, con el email de su dueño (las ve la pantalla «Mis personajes»).
+router.get("/characters/all", requiere("MASTER"), async (req, res) => {
+  try {
+    const r = await pool.query(
+      `SELECT c.id, c.name, c.level, r.name AS race, cl.name AS class, u.email AS owner_email,
+         (SELECT file FROM character_images WHERE character_id = c.id ORDER BY position, id LIMIT 1) AS image
+       FROM characters c
+       JOIN races r ON r.id = c.race_id
+       JOIN classes cl ON cl.id = c.class_id
+       LEFT JOIN users u ON u.id = c.user_id
+       ORDER BY c.id DESC`
+    );
+    return res.json(r.rows);
+  } catch (e) { return fallo(res, e, "listing all characters with"); }
+});
+
 router.get("/admin/characters", requiere("DEVELOPER"), async (req, res) => {
   try {
     const r = await pool.query(

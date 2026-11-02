@@ -1,4 +1,4 @@
-import { conAuth, idUsuario } from './auth'
+import { conAuth, idUsuario, leerSesion, puede } from './auth'
 import { armaduras, clasePorId, razaPorId, NOMBRE_ATRIBUTO } from './datos'
 import { IDS_ATRIBUTO, aCobre, calcularCA, limpiar, modificador, tipoArmadura, vitalidadInicial } from './reglas'
 import { costeCompra, itemCompra, nombreCompra, puntuacionesDe, type Personaje } from './personajes'
@@ -82,11 +82,14 @@ export async function cargarDeBd(id: number): Promise<PersonajeBd> {
   return r.json()
 }
 
-export type ResumenBd = { id: number; name: string; level: number; race: string; class: string; image: string | null }
+export type ResumenBd = { id: number; name: string; level: number; race: string; class: string; image: string | null; owner_email?: string | null }
+
+/** Jugador y Líder: sus fichas. Master y Programador: todas (con el dueño). */
+export const veTodasLasFichas = () => puede(leerSesion(), 'MASTER')
 
 export async function listarDeBd(): Promise<ResumenBd[]> {
   let r: Response
-  try { r = await fetch(`${API}/users/${idUsuario()}/characters`) }
+  try { r = await fetch(veTodasLasFichas() ? `${API}/characters/all` : `${API}/users/${idUsuario()}/characters`, conAuth()) }
   catch { throw new Error('No se pudo conectar con el servidor (¿está encendido el backend en el puerto 3000?).') }
   if (!r.ok) throw new Error(`Error ${r.status}`)
   return r.json()

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { borrarPersonaje, listarPersonajes } from '../lib/personajes'
 import { clasePorId, razaPorId, razas, img, imgRaza } from '../lib/datos'
 import { useConfirmar } from '../components/Confirmar'
-import { borrarDeBd, listarDeBd, urlImagen, type ResumenBd } from '../lib/sync'
+import { borrarDeBd, listarDeBd, urlImagen, veTodasLasFichas, type ResumenBd } from '../lib/sync'
 
 export default function ListaPersonajes() {
   const [locales, setLocales] = useState(listarPersonajes)
@@ -31,7 +31,7 @@ export default function ListaPersonajes() {
 
   return (
     <>
-      <h1>Mis personajes</h1>
+      <h1>{veTodasLasFichas() ? 'Todos los personajes' : 'Mis personajes'}</h1>
       {error && <p className="nota">{error}</p>}
       {bd == null ? (
         <p>Cargando personajes…</p>
@@ -49,6 +49,7 @@ export default function ListaPersonajes() {
                     : raza && <img src={img(imgRaza(raza))} alt={c.name} loading="lazy" />}
                   <h2>{c.name || 'Sin nombre'}</h2>
                   <small>{c.race} · {c.class} · Nivel {c.level}</small>
+                  {c.owner_email && <small>Jugador: {c.owner_email}</small>}
                 </Link>
                 <button className="peligro" onClick={() => eliminarBd(c)}>Eliminar</button>
               </div>
