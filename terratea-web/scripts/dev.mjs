@@ -4,7 +4,7 @@ import net from 'node:net'
 import { fileURLToPath } from 'node:url'
 
 const raiz = fileURLToPath(new URL('..', import.meta.url))
-const backend = fileURLToPath(new URL('../../cmr/backend', import.meta.url))
+const backend = fileURLToPath(new URL('../../backend', import.meta.url))
 
 const puertoOcupado = (puerto) => new Promise((ok) => {
   const s = net.connect(puerto, '127.0.0.1')

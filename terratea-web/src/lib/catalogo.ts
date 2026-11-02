@@ -30,9 +30,9 @@ const lista = (j: unknown) => j as ObjetoBase[]
 
 export const CATALOGOS: Catalogo[] = [
   { id: 'objetos', nombre: 'Objetos', descripcion: 'Útiles para la aventura.', grupo: 'categoria', precio: 'coste',
-    campos: [c('peso', 'Peso')], items: lista(objetosJson) },
+    campos: [c('peso', 'Peso'), c('nota', 'Nota')], items: lista(objetosJson) },
   { id: 'armas', nombre: 'Armas', descripcion: 'Armas cuerpo a cuerpo, a distancia y munición.', grupo: 'tipo', precio: 'coste',
-    campos: [c('dano', 'Daño'), c('manos', 'Manos'), c('rango', 'Rango'), c('peso', 'Peso'), c('clase_peso', 'Clase')], items: lista(armasJson) },
+    campos: [c('dano', 'Daño'), c('manos', 'Manos'), c('rango', 'Rango'), c('peso', 'Peso'), c('clase_peso', 'Clase'), c('requiere', 'Requiere')], items: lista(armasJson) },
   { id: 'armaduras', nombre: 'Armaduras', descripcion: 'Armaduras ligeras, medias, pesadas y escudos.', grupo: 'categoria', precio: 'coste',
     campos: [c('clase_armadura', 'C.A.'), c('peso', 'Peso'), c('ruido', 'Ruido'), c('atributos_extra', 'Extra'), c('cantidad', 'Cantidad')], items: lista(armadurasJson) },
   { id: 'ropajes', nombre: 'Ropajes', descripcion: 'Ropa común y de viaje.', grupo: 'categoria', precio: 'coste',

@@ -18,6 +18,11 @@ async function createCharacterFromWeb(body) {
   ]);
   if (!cls.rowCount) errors.push(`La clase «${body.class_name}» no existe en la base de datos.`);
   if (!race.rowCount) errors.push(`La raza «${body.race_name}» no existe en la base de datos.`);
+  const comboId = body.combo_id == null || body.combo_id === "" ? null : String(body.combo_id);
+  if (comboId) {
+    const combo = await pool.query("SELECT 1 FROM fichas_combinaciones WHERE id = $1", [comboId]);
+    if (!combo.rowCount) errors.push(`La combinación de ficha «${comboId}» no existe.`);
+  }
   if (errors.length) throw new RuleError(errors);
 
   const c = cls.rows[0];
@@ -51,7 +56,7 @@ async function createCharacterFromWeb(body) {
 
   const id = await saveCharacterFull(null, {
     name, user_id: Number(body.user_id) || DEFAULT_USER_ID, player_name: body.player_name,
-    class_id: c.id, race_id: r.id, level: 1, exp: 0,
+    class_id: c.id, race_id: r.id, combo_id: comboId, level: 1, exp: 0,
     hit_points: Number(body.hit_points), armor_class: Number(body.armor_class),
     dodge: dex.modifier, range_reach: String(Math.max(c.range_distance ?? 1, 1)),
     gold: Number(body.gold) || 0, silver: Number(body.silver) || 0, copper: Number(body.copper) || 0,

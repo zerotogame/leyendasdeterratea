@@ -36,6 +36,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(require("./db/guilds"));
+app.use(require("./db/pets"));
 
 const allowedCharacterFields = [
   "name",
@@ -160,6 +162,24 @@ app.post("/login", (req, res) => {
 });
 
 /* GET CHARACTER */
+// Resumen ligero de TODOS los personajes (lista de terratea-web; sin login todavía)
+app.get("/characters/all", async (req, res) => {
+  try {
+    const result = await pool.query(
+      `SELECT c.id, c.name, c.level, r.name AS race, cl.name AS class,
+         (SELECT file FROM character_images WHERE character_id = c.id ORDER BY position, id LIMIT 1) AS image
+       FROM characters c
+       JOIN races r ON r.id = c.race_id
+       JOIN classes cl ON cl.id = c.class_id
+       ORDER BY c.id DESC`
+    );
+    return res.json(result.rows);
+  } catch (error) {
+    console.error("Error listing all characters", error);
+    return res.status(500).json({ error: "database error" });
+  }
+});
+
 app.get("/characters/:id", async (req, res) => {
   const char = await getCharacter(req.params.id);
   res.json(char);

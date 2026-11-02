@@ -29,7 +29,7 @@ export default function Figuras() {
         ))}
       </div>
       <input className="buscador" placeholder={`Buscar en ${info.nombre}…`} value={q} onChange={(e) => poner({ q: e.target.value })} />
-      <p className="contador">{lista.length} figuras</p>
+      <p className="contador">{lista.length ? `${lista.length} figuras` : 'Sin resultados'}</p>
 
       <div className="lista-npc">
         {lista.map((n) => (

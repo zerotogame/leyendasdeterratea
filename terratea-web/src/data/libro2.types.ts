@@ -1,4 +1,4 @@
-// Leyendas de Terratéa – Libro 2 · Interfaces de los JSON de data/
+// Leyendas de Terratea – Libro 2 · Interfaces de los JSON de data/
 // Todas las rutas de imagen son relativas a la carpeta terratea-libro2/.
 
 export type TipoCriatura =

@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { borrarPersonaje, listarPersonajes } from '../lib/personajes'
 import { clasePorId, razaPorId, razas, img, imgRaza } from '../lib/datos'
+import { useConfirmar } from '../components/Confirmar'
 import { borrarDeBd, listarDeBd, urlImagen, type ResumenBd } from '../lib/sync'
 
 export default function ListaPersonajes() {
   const [locales, setLocales] = useState(listarPersonajes)
   const [bd, setBd] = useState<ResumenBd[] | null>(null)
   const [error, setError] = useState('')
+  const confirmar = useConfirmar()
 
   useEffect(() => {
     listarDeBd().then(setBd).catch((e: Error) => { setBd([]); setError(e.message) })
@@ -18,7 +20,7 @@ export default function ListaPersonajes() {
   const total = (bd?.length ?? 0) + pendientes.length
 
   const eliminarBd = async (c: ResumenBd) => {
-    if (!confirm(`¿Eliminar a ${c.name}? Se borra de la base de datos y no se puede deshacer.`)) return
+    if (!(await confirmar(`¿Eliminar a ${c.name}? Se borra de la base de datos y no se puede deshacer.`, { aceptar: 'Eliminar', peligro: true }))) return
     try {
       await borrarDeBd(c.id)
       setBd((l) => l?.filter((x) => x.id !== c.id) ?? null)
@@ -29,7 +31,7 @@ export default function ListaPersonajes() {
 
   return (
     <>
-      <h1>Mis personajes</h1>
+      <h1>Todos los personajes</h1>
       {error && <p className="nota">{error}</p>}
       {bd == null ? (
         <p>Cargando personajes…</p>
@@ -66,8 +68,8 @@ export default function ListaPersonajes() {
                 </Link>
                 <button
                   className="peligro"
-                  onClick={() => {
-                    if (confirm(`¿Eliminar a ${p.nombre || 'este personaje'}? No se puede deshacer.`)) {
+                  onClick={async () => {
+                    if (await confirmar(`¿Eliminar a ${p.nombre || 'este personaje'}? No se puede deshacer.`, { aceptar: 'Eliminar', peligro: true })) {
                       borrarPersonaje(p.id)
                       setLocales(listarPersonajes())
                     }

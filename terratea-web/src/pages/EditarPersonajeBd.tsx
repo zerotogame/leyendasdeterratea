@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useConfirmar } from '../components/Confirmar'
 import {
   actualizarEnBd, borrarImagen, cargarDeBd, reglasBd, subirImagen, urlImagen,
   type CambiosFicha, type ImagenBd, type PersonajeBd,
@@ -12,6 +13,7 @@ const desdeFicha = (p: PersonajeBd): CambiosFicha => ({
   name: p.name, player_name: texto(p.player_name), guild: texto(p.guild), alignment: texto(p.alignment), sex: texto(p.sex),
   age: texto(p.age), height: texto(p.height), weight: texto(p.weight),
   hair: texto(p.hair), eyes: texto(p.eyes), marks: texto(p.marks),
+  lore_origin: texto(p.lore_origin), lore_trajectory: texto(p.lore_trajectory),
   armor_class: texto(p.armor_class), gold: texto(p.gold), silver: texto(p.silver), copper: texto(p.copper),
   specialSkills: p.specialSkills, extraAttributes: p.extraAttributes,
 })
@@ -19,6 +21,8 @@ const desdeFicha = (p: PersonajeBd): CambiosFicha => ({
 export default function EditarPersonajeBd() {
   const id = Number(useParams().id)
   const navegar = useNavigate()
+  const confirmar = useConfirmar()
+  const [intento, setIntento] = useState(0)
   const [f, setF] = useState<CambiosFicha | null>(null)
   const [nombre, setNombre] = useState('')
   const [imagenes, setImagenes] = useState<ImagenBd[]>([])
@@ -30,9 +34,19 @@ export default function EditarPersonajeBd() {
     Promise.all([cargarDeBd(id), reglasBd()])
       .then(([p, r]) => { setF(desdeFicha(p)); setNombre(p.name); setImagenes(p.images ?? []); setReglas(r) })
       .catch((e: Error) => setError(e.message))
-  }, [id])
+  }, [id, intento])
 
-  if (!f) return error ? <p>{error}</p> : <p>Cargando…</p>
+  if (!f) {
+    return error ? (
+      <>
+        <p>{error}</p>
+        <div className="filtros">
+          <button onClick={() => { setError(''); setIntento((n) => n + 1) }}>Reintentar</button>
+          <Link to="/personajes" className="volver">← Mis personajes</Link>
+        </div>
+      </>
+    ) : <p>Cargando…</p>
+  }
 
   const poner = (k: keyof CambiosFicha) => (e: { target: { value: string } }) =>
     setF({ ...f, [k]: k === 'specialSkills' || k === 'extraAttributes' ? lineas(e.target.value) : e.target.value })
@@ -60,7 +74,7 @@ export default function EditarPersonajeBd() {
   }
 
   const quitar = async (i: ImagenBd) => {
-    if (!confirm('¿Quitar esta imagen de la ficha?')) return
+    if (!(await confirmar('¿Quitar esta imagen de la ficha?', { aceptar: 'Quitar', peligro: true }))) return
     try { await borrarImagen(id, i.id); setImagenes((l) => l.filter((x) => x.id !== i.id)) }
     catch (e) { setError((e as Error).message) }
   }
@@ -118,6 +132,15 @@ export default function EditarPersonajeBd() {
             {campo('Pelo', 'hair')}
             {campo('Ojos', 'eyes')}
             <label className="ancho">Marcas<input value={f.marks} onChange={poner('marks')} /></label>
+          </div>
+        </div>
+
+        <div className="bloque">
+          <h3>Lore</h3>
+          <p className="nota">Lo puede leer cualquier Máster que abra la ficha.</p>
+          <div className="form-ficha">
+            <label className="ancho">Inicios<textarea rows={5} value={f.lore_origin} onChange={poner('lore_origin')} placeholder="Dónde nació, familia, infancia…" /></label>
+            <label className="ancho">Trayectoria<textarea rows={8} value={f.lore_trajectory} onChange={poner('lore_trajectory')} placeholder="Qué ha vivido hasta ahora, aliados, enemigos, logros…" /></label>
           </div>
         </div>
 

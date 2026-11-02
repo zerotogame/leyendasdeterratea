@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useConfirmar } from '../components/Confirmar'
 import { esJugador, type Combatiente } from '../lib/combate'
 import { combatienteDeFicha } from '../lib/jugadores'
 import { aplicarPremio, cantidad, hayPremio, pxDerrotados, type Premio } from '../lib/recompensa'
@@ -18,6 +19,7 @@ export default function Recompensa({ combate, actualizar, anotar, alCerrar }: Re
   anotar: (t: string) => void
   alCerrar: () => void
 }>) {
+  const confirmar = useConfirmar()
   const jugadores = combate.filter((c) => esJugador(c) && c.fichaId != null)
   const sinFicha = combate.filter((c) => esJugador(c) && c.fichaId == null)
   const [filas, setFilas] = useState<Record<string, Campos>>({})
@@ -46,7 +48,7 @@ export default function Recompensa({ combate, actualizar, anotar, alCerrar }: Re
   const guardar = async () => {
     if (pendientes.length === 0) return
     const resumen = pendientes.map(({ j, p }) => `• ${j.nombre}: ${texto(p)}`).join('\n')
-    if (!confirm(`Se guardará en las fichas (base de datos). La experiencia puede subir de nivel.\n\n${resumen}\n\n¿Confirmar?`)) return
+    if (!(await confirmar(`Se guardará en las fichas (base de datos). La experiencia puede subir de nivel.\n\n${resumen}\n\n¿Confirmar?`, { aceptar: 'Guardar en las fichas' }))) return
     setGuardando(true)
     for (const { j, p } of pendientes) {
       try {

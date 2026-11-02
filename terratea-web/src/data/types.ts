@@ -1,4 +1,4 @@
-// Tipos de los datos de Leyendas de Terratéa – Libro 1 (generados a partir del manual).
+// Tipos de los datos de Leyendas de Terratea – Libro 1 (generados a partir del manual).
 
 export type AtributoId = 'fuerza' | 'destreza' | 'constitucion' | 'inteligencia' | 'sabiduria' | 'carisma';
 
@@ -43,6 +43,7 @@ export interface Clase {
   rango_distancia: string | null;
   requisitos: ({ atributo: AtributoId; minimo: number; texto: string } | { texto: string })[];
   equipo_inicial: string[];
+  habilidad_especial: string[];
   informacion_adicional: string[];
   notas: string[];
   habilidades: Habilidad[];

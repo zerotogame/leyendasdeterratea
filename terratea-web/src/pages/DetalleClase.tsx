@@ -69,6 +69,10 @@ export default function DetalleClase() {
         </div>
       </section>
 
+      {clase.habilidad_especial.length > 0 && (
+        <section className="bloque"><h3>Habilidad especial</h3><Parrafos texto={clase.habilidad_especial} /></section>
+      )}
+
       {clase.informacion_adicional.length > 0 && (
         <section className="bloque"><h3>Información adicional</h3><Parrafos texto={clase.informacion_adicional} /></section>
       )}

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
-type Enlace = { to: string; titulo: string; ayuda: string }
+type Enlace = { seccion?: string; to: string; titulo: string; ayuda: string }
 type Grupo = { nombre: string; enlaces: Enlace[] }
 
 const GRUPOS: Grupo[] = [
@@ -17,6 +17,7 @@ const GRUPOS: Grupo[] = [
   {
     nombre: 'El mundo',
     enlaces: [
+      { to: '/mundo', titulo: 'Mundo', ayuda: 'Geografía, historia y lugares' },
       { to: '/bestiario', titulo: 'Bestiario', ayuda: 'Criaturas y monstruos' },
       { to: '/figuras', titulo: 'Figuras notables', ayuda: 'Personajes del mundo (PNJ)' },
       { to: '/gremios', titulo: 'Gremios', ayuda: 'Organizaciones y sus miembros' },
@@ -28,13 +29,16 @@ const GRUPOS: Grupo[] = [
     enlaces: [
       { to: '/personajes', titulo: 'Mis personajes', ayuda: 'Tus fichas guardadas' },
       { to: '/registro', titulo: 'Registro de jugadores', ayuda: 'Jugadores y sus personajes' },
+      { to: '/mis-mascotas', titulo: 'Mis mascotas', ayuda: 'Mascotas y monturas de tus jugadores' },
     ],
   },
   {
     nombre: 'Máster',
     enlaces: [
-      { to: '/master', titulo: 'Generador de encuentros', ayuda: 'Monstruos según nivel y terreno' },
+      { seccion: 'Encuentros', to: '/master', titulo: 'Generar', ayuda: 'Monstruos según nivel y terreno' },
       { to: '/master?tab=combate', titulo: 'Combate', ayuda: 'Turnos, vida y ataques' },
+      { seccion: 'Gremios', to: '/mis-gremios', titulo: 'Gremios de jugadores', ayuda: 'Alta, edición y baja' },
+      { to: '/torneos', titulo: 'Torneos', ayuda: 'Cuadros entre gremios: 1v1, 3v3 y estrategia' },
     ],
   },
 ]
@@ -58,7 +62,7 @@ export default function MenuPrincipal() {
 
   return (
     <header className="cabecera" ref={raiz}>
-      <NavLink to="/" className="logo">Leyendas de Terratéa</NavLink>
+      <NavLink to="/" className="logo">Leyendas de Terratea</NavLink>
       <button
         className="menu-movil"
         aria-expanded={movil}
@@ -83,6 +87,7 @@ export default function MenuPrincipal() {
               <ul id={id}>
                 {g.enlaces.map((e) => (
                   <li key={e.to}>
+                    {e.seccion && <span className="seccion">{e.seccion}</span>}
                     <Link to={e.to} onClick={cerrar}>
                       <strong>{e.titulo}</strong>
                       <small>{e.ayuda}</small>

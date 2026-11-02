@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
-  armas, armaduras, objetos, razas, razaPorId, clasePorId, clasesParaRaza,
+  armas, armaduras, razas, clases, razaPorId, clasePorId, clasesParaRaza,
   claveRaza, img, imgRaza, NOMBRE_ATRIBUTO,
 } from '../lib/datos'
 import {
@@ -14,10 +14,12 @@ import { Chip } from '../components/Comunes'
 import { Dado, FilaTirada, duracionDado } from '../components/Dados'
 import type { AtributoId, Clase } from '../data/types'
 import {
-  guardarPersonaje, marcarEnBd, itemCompra, nombreCompra, costeCompra, puntuacionesDe,
+  CATALOGO_COMPRA, precioDe, guardarPersonaje, marcarEnBd, itemCompra, nombreCompra, costeCompra, puntuacionesDe,
   type Asignacion, type Compra,
 } from '../lib/personajes'
 import Ficha from '../components/Ficha'
+import FichaConOficial from '../components/FichaConOficial'
+import { hojaDeFicha } from '../lib/hoja'
 import { guardarEnBd, subirImagen } from '../lib/sync'
 import {
   CLAVE, CLAVES_DATOS, DATOS_VACIOS, INICIAL, claveCombo, normalizarGuardado,
@@ -35,8 +37,9 @@ const cargar = (): Guardado => {
 export default function Creador() {
   const [g, setG] = useState<Guardado>(cargar)
   const [paso, setPaso] = useState(0)
+  const [sinBorrador, setSinBorrador] = useState(false)
   useEffect(() => {
-    try { localStorage.setItem(CLAVE, JSON.stringify(g)) } catch { /* sin almacenamiento */ }
+    try { localStorage.setItem(CLAVE, JSON.stringify(g)); setSinBorrador(false) } catch { setSinBorrador(true) }
   }, [g])
   const combo = claveCombo(g)
   const e: Estado = { ...g, ...(g.guardados[combo] ?? DATOS_VACIOS) }
@@ -108,6 +111,7 @@ export default function Creador() {
   return (
     <>
       <h1>Creador de personajes</h1>
+      {sinBorrador && <p className="nota" role="status">No se puede guardar el borrador en este navegador: si cierras la página se perderá.</p>}
       <ol className="pasos">
         {PASOS.map((n, i) => {
           const accesible = i === 0 || listo.slice(0, i).every(Boolean)
@@ -149,7 +153,7 @@ export default function Creador() {
             {vistaImagen && <img src={vistaImagen} alt="Vista previa" style={{ height: 64, borderRadius: 6 }} />}
             <span className="nota">{errorImagen || 'Opcional · JPG, PNG, WEBP o GIF · máx. 8 MB'}</span>
           </div>
-          <Ficha e={e} />
+          <FichaConOficial datos={hojaDeFicha(e, vistaImagen)}><Ficha e={e} /></FichaConOficial>
         </>
       )}
 
@@ -222,6 +226,12 @@ function PasoRaza({ e, elegir }: { e: Estado; elegir: (razaId: string, subrazaId
             <div><h4>Debilidades</h4><ul className="rasgos mal">{[...raza.debilidades, ...(sub?.debilidades ?? [])].map((r, i) => <li key={i}>{r.texto}</li>)}</ul></div>
           </div>
           {raza.subrazas && !sub && <p className="nota">Elige una subraza para ver sus fortalezas y debilidades propias.</p>}
+          {(!raza.subrazas || sub) && (
+            <>
+              <h4>Clases disponibles</h4>
+              <p>{clasesParaRaza(raza.id, subId).map((c) => c.nombre).join(', ') || 'Ninguna.'}</p>
+            </>
+          )}
           <p><Link to={`/razas/${raza.id}`} target="_blank">Ver ficha completa de la raza ↗</Link></p>
           <div className="navegacion">
             <button onClick={cerrar}>Cancelar</button>
@@ -239,15 +249,26 @@ function PasoRaza({ e, elegir }: { e: Estado; elegir: (razaId: string, subrazaId
 function PasoClase({ e, onElegir }: { e: Estado; onElegir: (id: string) => void }) {
   const [abierta, setAbierta] = useState('')
   const lista = clasesParaRaza(e.razaId, e.subrazaId)
+  const [soloDisponibles, setSoloDisponibles] = useState(false)
+  const permitidas = new Set(lista.map((c) => c.id))
   const clase = clasePorId(abierta)
   const cerrar = () => setAbierta('')
   return (
     <section>
       <h2>2. Elige tu clase</h2>
       <p className="contador">{lista.length} clases permitidas para {razaPorId(e.razaId)?.nombre}{e.subrazaId && ` (${claveRaza(e.razaId, e.subrazaId)})`}. Pulsa una para ver sus características.</p>
+      <div className="filtros">
+        <button className={soloDisponibles ? 'activo' : ''} onClick={() => setSoloDisponibles((v) => !v)}>Solo disponibles</button>
+      </div>
       <div className="tarjetas">
-        {lista.map((c) => (
-          <button key={c.id} className={`tarjeta ${e.claseId === c.id ? 'elegida' : ''}`} onClick={() => setAbierta(c.id)}>
+        {clases.filter((c) => !soloDisponibles || permitidas.has(c.id)).map((c) => (
+          <button
+            key={c.id}
+            className={`tarjeta ${e.claseId === c.id ? 'elegida' : ''} ${permitidas.has(c.id) ? '' : 'no-disponible'}`}
+            disabled={!permitidas.has(c.id)}
+            title={permitidas.has(c.id) ? undefined : 'No disponible para esta raza'}
+            onClick={() => setAbierta(c.id)}
+          >
             <img src={img(c.imagenes.ilustraciones[0] ?? '')} alt={c.nombre} loading="lazy" />
             <h2>{c.nombre}</h2>
             <small>{requisitosAtributo(c).map((r) => `${r.minimo} ${NOMBRE_ATRIBUTO[r.atributo].slice(0, 3)}`).join(' · ') || 'Sin requisitos'}</small>
@@ -423,6 +444,11 @@ function EstadoRequisitos({ clase, puntuaciones }: { clase: Clase; puntuaciones:
 }
 
 // ---------------------------------------------------------------- 4. EQUIPO
+const NOMBRE_TIENDA: Record<Compra['tipo'], string> = {
+  arma: 'Armas', armadura: 'Armaduras', objeto: 'Objetos', joyeria: 'Joyería', libro: 'Libros', ropaje: 'Ropajes',
+  gema: 'Gemas', metal: 'Metales', tela: 'Telas',
+}
+
 function PasoEquipo({ e, clase, cambiar, puntuaciones }: {
   e: Estado; clase: Clase; cambiar: (p: Partial<Estado>) => void; puntuaciones: Puntuaciones
 }) {
@@ -438,7 +464,7 @@ function PasoEquipo({ e, clase, cambiar, puntuaciones }: {
   const gastado = e.compras.reduce((s, c) => s + (costeCompra(c) ?? 0), 0)
   const restante = fortuna ? aCobre(fortuna) - gastado : 0
 
-  const catalogo = cat === 'arma' ? armas : cat === 'armadura' ? armaduras : objetos
+  const catalogo = CATALOGO_COMPRA[cat]
   const filtrados = catalogo
     .map((it, idx) => ({ it, idx }))
     .filter(({ it }) => it.nombre.toLowerCase().includes(q.toLowerCase()))
@@ -471,21 +497,25 @@ function PasoEquipo({ e, clase, cambiar, puntuaciones }: {
               <div className="fila-tirada"><span className="etq">Cobre (1D6)</span><Dado caras={6} valor={fortuna.cobre} retraso={500} /></div>
             </div>
           )}
-          {fortuna && !rodando.fortuna && (
-            <>
-              <p>Fortuna: <strong>{fortuna.oro} M.O. · {fortuna.plata} M.P. · {fortuna.cobre} M.C.</strong></p>
-              <p className={restante < 0 ? 'error' : ''}>Te quedan: <strong>{fmtCobre(Math.max(restante, 0))}</strong></p>
-            </>
-          )}
+          <div aria-live="polite">
+            {fortuna && !rodando.fortuna && (
+              <>
+                <p>Fortuna: <strong>{fortuna.oro} M.O. · {fortuna.plata} M.P. · {fortuna.cobre} M.C.</strong></p>
+                <p className={restante < 0 ? 'error' : ''}>Te quedan: <strong>{fmtCobre(Math.max(restante, 0))}</strong></p>
+              </>
+            )}
+          </div>
           <p>
             <button disabled={vida != null} onClick={() => { cambiar({ vida: tirarVitalidad() }); rodar('vida', duracionDado(0) + 300) }}>🎲 Tirar vitalidad (1D12 + mod. CON, mín. 3)</button>
           </p>
           {vida != null && (
             <div className="tiradas"><div className="fila-tirada"><span className="etq">Vitalidad (1D12)</span><Dado caras={12} valor={vida} /></div></div>
           )}
-          {vidaFinal != null && !rodando.vida && (
-            <p>1D12 = {vida}, CON {fmtMod(mod)} → <strong>{vidaFinal} de vitalidad</strong>{vida! + mod < 3 && ' (mínimo 3)'}</p>
-          )}
+          <div aria-live="polite">
+            {vidaFinal != null && !rodando.vida && (
+              <p>1D12 = {vida}, CON {fmtMod(mod)} → <strong>{vidaFinal} de vitalidad</strong>{vida! + mod < 3 && ' (mínimo 3)'}</p>
+            )}
+          </div>
         </div>
       </div>
 
@@ -493,16 +523,16 @@ function PasoEquipo({ e, clase, cambiar, puntuaciones }: {
         <div className="bloque">
           <h3>Tienda</h3>
           <div className="filtros">
-            {(['arma', 'armadura', 'objeto'] as const).map((t) => (
+            {(Object.keys(NOMBRE_TIENDA) as Compra['tipo'][]).map((t) => (
               <button key={t} className={cat === t ? 'activo' : ''} onClick={() => setCat(t)}>
-                {t === 'arma' ? 'Armas' : t === 'armadura' ? 'Armaduras' : 'Objetos'}
+                {NOMBRE_TIENDA[t]}
               </button>
             ))}
             <input className="buscador" placeholder="Buscar…" value={q} onChange={(ev) => setQ(ev.target.value)} />
           </div>
           <div className="tienda">
             {filtrados.map(({ it, idx }) => {
-              const coste = costeEnCobre(it.coste)
+              const coste = costeEnCobre(precioDe(it))
               const bloqueada = cat === 'armadura' && !armaduraPermitida(clase, it as typeof armaduras[number])
               const sinFondos = coste == null || coste > restante
               return (
@@ -510,7 +540,7 @@ function PasoEquipo({ e, clase, cambiar, puntuaciones }: {
                   {it.imagen && <img src={img(it.imagen)} alt="" loading="lazy" />}
                   <div>
                     <strong>{it.nombre}</strong>
-                    <small>{limpiar(it.coste)} · {limpiar(it.peso)}{cat === 'arma' && ` · ${limpiar((it as typeof armas[number]).dano)}`}{cat === 'armadura' && ` · ${limpiar((it as typeof armaduras[number]).clase_armadura)}`}</small>
+                    <small>{limpiar(precioDe(it)) || 'Sin precio en el libro'}{it.peso && ` · ${limpiar(it.peso)}`}{cat === 'arma' && ` · ${limpiar((it as typeof armas[number]).dano)}`}{cat === 'armadura' && ` · ${limpiar((it as typeof armaduras[number]).clase_armadura)}`}</small>
                     {bloqueada && <small className="error">Tu clase no puede usar este tipo de armadura</small>}
                   </div>
                   <button disabled={bloqueada || sinFondos} onClick={() => cambiar({ compras: [...e.compras, { tipo: cat, idx }] })}>Comprar</button>
@@ -524,7 +554,7 @@ function PasoEquipo({ e, clase, cambiar, puntuaciones }: {
               <ul>
                 {e.compras.map((c, i) => (
                   <li key={i}>
-                    {nombreCompra(c)} — {limpiar(itemCompra(c).coste)}{' '}
+                    {nombreCompra(c)} — {limpiar(precioDe(itemCompra(c)))}{' '}
                     <button onClick={() => cambiar({ compras: e.compras.filter((_, j) => j !== i) })}>Quitar</button>
                   </li>
                 ))}

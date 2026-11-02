@@ -1,10 +1,11 @@
+import { conAuth, idUsuario } from './auth'
 import { armaduras, clasePorId, razaPorId, NOMBRE_ATRIBUTO } from './datos'
 import { IDS_ATRIBUTO, aCobre, calcularCA, limpiar, modificador, tipoArmadura, vitalidadInicial } from './reglas'
 import { costeCompra, itemCompra, nombreCompra, puntuacionesDe, type Personaje } from './personajes'
 import type { Arma } from '../data/types'
+import { combinacion, comboId } from './fichasOficiales'
 
 const API = import.meta.env.VITE_API_URL ?? 'http://localhost:3000'
-const USER_ID = Number(import.meta.env.VITE_USER_ID ?? 7)
 
 /** Misma ficha que dibuja `Ficha`, con la forma que espera POST /characters/web del backend. */
 export function cuerpoBd(p: Personaje) {
@@ -16,10 +17,11 @@ export function cuerpoBd(p: Personaje) {
   const modCon = modificador('constitucion', pt.constitucion ?? 10)
   const resto = p.fortuna ? Math.max(0, aCobre(p.fortuna) - p.compras.reduce((s, c) => s + (costeCompra(c) ?? 0), 0)) : 0
   return {
-    user_id: USER_ID,
+    user_id: idUsuario(),
     name: p.nombre,
     race_name: raza.nombre,
     class_name: clase.nombre,
+    combo_id: combinacion(raza.id, clase.id) ? comboId(raza.id, clase.id) : undefined,
     stats: IDS_ATRIBUTO.map((id) => ({ name: NOMBRE_ATRIBUTO[id], value: pt[id], modifier: modificador(id, pt[id] ?? 10) })),
     hit_points: p.vida != null ? vitalidadInicial(p.vida, modCon) : 3,
     armor_class: calcularCA(piezas),
@@ -28,7 +30,11 @@ export function cuerpoBd(p: Personaje) {
       const a = itemCompra(c) as Arma
       return { name: nombreCompra(c), damage: limpiar(a.dano) || null, weight: a.peso ?? null, hands: Number(a.manos) || null }
     }),
-    items: p.compras.filter((c) => c.tipo === 'objeto').map(nombreCompra),
+    // Equipo inicial obligatorio de la clase (gratis) + compras; el backend solo guarda los que existen en su catálogo.
+    items: [...new Set([
+      ...clase.equipo_inicial.filter((x) => !/^ningun[oa]$/i.test(x.trim())),
+      ...p.compras.filter((c) => c.tipo !== 'arma' && c.tipo !== 'armadura').map(nombreCompra),
+    ])],
   }
 }
 
@@ -55,6 +61,7 @@ export type PersonajeBd = {
   id: number; name: string; race: string; class: string; level: number; exp: number; required_experience: number | null
   alignment?: string; player_name?: string; guild?: string; age?: number; height?: string; weight?: string
   sex?: string; hair?: string; eyes?: string; marks?: string
+  lore_origin?: string | null; lore_trajectory?: string | null
   images: ImagenBd[]
   hit_points: number; armor_class: number; dodge?: number; range_reach?: string
   gold: number; silver: number; copper: number; max_carry_kg?: number
@@ -79,7 +86,7 @@ export type ResumenBd = { id: number; name: string; level: number; race: string;
 
 export async function listarDeBd(): Promise<ResumenBd[]> {
   let r: Response
-  try { r = await fetch(`${API}/users/${USER_ID}/characters`) }
+  try { r = await fetch(`${API}/characters/all`) }
   catch { throw new Error('No se pudo conectar con el servidor (¿está encendido el backend en el puerto 3000?).') }
   if (!r.ok) throw new Error(`Error ${r.status}`)
   return r.json()
@@ -96,7 +103,7 @@ const SIN_SERVIDOR = 'No se pudo conectar con el servidor (¿está encendido el 
 
 async function pedir<T>(url: string, init?: RequestInit): Promise<T> {
   let r: Response
-  try { r = await fetch(`${API}${url}`, init) } catch { throw new Error(SIN_SERVIDOR) }
+  try { r = await fetch(`${API}${url}`, conAuth(init)) } catch { throw new Error(SIN_SERVIDOR) }
   const j = await r.json().catch(() => ({}))
   if (!r.ok) throw new Error((j.errors ?? [j.error]).filter(Boolean).join(' ') || `Error ${r.status}`)
   return j as T
@@ -106,6 +113,7 @@ async function pedir<T>(url: string, init?: RequestInit): Promise<T> {
 export type CambiosFicha = {
   name: string; player_name: string; guild: string; alignment: string; sex: string
   age: string; height: string; weight: string; hair: string; eyes: string; marks: string
+  lore_origin: string; lore_trajectory: string
   armor_class: string; gold: string; silver: string; copper: string
   specialSkills: string[]; extraAttributes: string[]
 }

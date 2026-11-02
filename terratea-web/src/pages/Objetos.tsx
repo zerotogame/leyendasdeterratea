@@ -22,7 +22,7 @@ function ObjetoTarjeta({ o, cat }: { o: ObjetoBase; cat: Catalogo }) {
       {precio && <strong className="precio">{precio}</strong>}
       <dl>
         {cat.campos.filter((f) => limpiar(o[f.clave])).map((f) => (
-          <div key={f.clave}><dt>{f.etiqueta}</dt><dd>{limpiar(o[f.clave])}</dd></div>
+          <div key={f.clave} className={f.clave === 'requiere' || f.clave === 'nota' ? 'aviso' : undefined}><dt>{f.etiqueta}</dt><dd>{limpiar(o[f.clave])}</dd></div>
         ))}
       </dl>
     </article>

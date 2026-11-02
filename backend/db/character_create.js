@@ -13,13 +13,13 @@ class RuleError extends Error {
 // Lo único que decide el jugador al crear: todo lo demás lo calcula la app
 const CREATION_FIELDS = [
   "name", "player_name", "guild", "class_id", "race_id", "alignment",
-  "height", "weight", "age", "sex", "hair", "eyes", "marks", "image", "roll_session"
+  "height", "weight", "age", "sex", "hair", "eyes", "marks", "lore_origin", "lore_trajectory", "image", "roll_session"
 ];
 
 // Lo que se puede editar después. Nivel, EXP, características, salvaciones, vitalidad,
 // movimiento, alcance, clase y raza solo cambian por las reglas.
 const EDITABLE_FIELDS = [
-  "name", "player_name", "guild", "sex", "hair", "eyes", "marks", "image", "alignment",
+  "name", "player_name", "guild", "sex", "hair", "eyes", "marks", "lore_origin", "lore_trajectory", "image", "alignment",
   "height", "weight", "age", "armor_class", "gold", "silver", "copper"
 ];
 const EDITABLE_LISTS = ["weapons", "specialSkills", "extraAttributes", "inventory"];

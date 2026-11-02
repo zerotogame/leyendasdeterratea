@@ -130,7 +130,8 @@
     "coste": "1 M.O.",
     "peso": "1 KG",
     "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
-    "imagen": "img/equipo/objetos/carcaj.webp"
+    "imagen": "img/equipo/objetos/carcaj.webp",
+    "nota": "Imprescindible para usar un arco: guarda las flechas."
   },
   {
     "nombre": "CATALEJO",
@@ -235,7 +236,8 @@
     "coste": "1 M.O.",
     "peso": "¼ KG",
     "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
-    "imagen": "img/equipo/objetos/estuche-para-virotes-o-estacas.webp"
+    "imagen": "img/equipo/objetos/estuche-para-virotes-o-estacas.webp",
+    "nota": "Imprescindible para usar una ballesta (virotes) o la estacadora (estacas)."
   },
   {
     "nombre": "FAROL DE ACEITE",
@@ -368,7 +370,8 @@
     "coste": "2 M.O.",
     "peso": "½ KG",
     "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
-    "imagen": "img/equipo/objetos/mochila-vacia.webp"
+    "imagen": "img/equipo/objetos/mochila-vacia.webp",
+    "nota": "Imprescindible para guardar los objetos."
   },
   {
     "nombre": "SILLA DE MONTAR",
@@ -508,14 +511,16 @@
     "coste": "2 M.P.",
     "peso": "½ KG",
     "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
-    "imagen": "img/equipo/objetos/saco-grande.webp"
+    "imagen": "img/equipo/objetos/saco-grande.webp",
+    "nota": "Puede funcionar de mochila hasta 25 kg."
   },
   {
     "nombre": "SACO PEQUEÑO",
     "coste": "1 M.P.",
     "peso": "¼ KG",
     "categoria": "LISTADO DE COMPRA DE OBJETOS UTILES PARA LA AVENTURA",
-    "imagen": "img/equipo/objetos/saco-pequeno.webp"
+    "imagen": "img/equipo/objetos/saco-pequeno.webp",
+    "nota": "Puede funcionar de mochila hasta 10 kg."
   },
   {
     "nombre": "SEXTANTE",
