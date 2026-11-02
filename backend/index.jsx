@@ -25,6 +25,7 @@ const {
 } = require("./rules/roll_sessions");
 
 const pool = require("./db/db");
+const { NIVEL, rolesDe, requiere } = require("./db/permisos");
 
 
 const app = express();
@@ -36,6 +37,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(require("./db/guilds"));
+app.use(require("./db/pets"));
+app.use(require("./db/roles"));
 
 const allowedCharacterFields = [
   "name",
@@ -120,43 +124,29 @@ async function getCharacterItemEntry(characterId, objectId) {
 });
 */
 
-/* REGISTRO DE JUGADORES: siempre rol PLAYER; MASTER/ADMIN no se pueden pedir desde fuera */
-app.post("/register", async (req, res) => {
-  const email = typeof req.body.email === "string" ? req.body.email.trim().toLowerCase() : "";
-  const password = typeof req.body.password === "string" ? req.body.password : "";
-
-  const at = email.indexOf("@");
-  if (at < 1 || at !== email.lastIndexOf("@") || !email.slice(at).includes(".") || /\s/.test(email) || email.length > 254) {
-    return res.status(400).json({ error: "email inválido" });
-  }
-  if (password.length < 8 || password.length > 72) {
-    return res.status(400).json({ error: "la contraseña debe tener entre 8 y 72 caracteres" });
-  }
-
-  try {
-    const hash = await bcrypt.hash(password, 10);
-    const result = await pool.query(
-      `INSERT INTO users (email, password, role) VALUES ($1, $2, 'PLAYER')
-       ON CONFLICT DO NOTHING RETURNING id, email, role`,
-      [email, hash]
-    );
-    if (!result.rows.length) return res.status(409).json({ error: "ese email ya está registrado" });
-
-    const user = result.rows[0];
-    const token = jwt.sign({ id: user.id, role: user.role }, SECRET);
-    return res.status(201).json({ token, user });
-  } catch (error) {
-    console.error("Error registering user", error);
-    return res.status(500).json({ error: "database error" });
-  }
-});
+// Token + datos públicos del usuario (con sus roles). `role` = el rol más alto, por compatibilidad con el socket.
+async function sesionDe({ id, email }) {
+  const roles = await rolesDe(id);
+  const mas_alto = roles.sort((a, b) => (NIVEL[b] || 0) - (NIVEL[a] || 0))[0] || "PLAYER";
+  return { token: jwt.sign({ id, role: mas_alto }, SECRET), user: { id, email, roles } };
+}
 
 app.use('/images', express.static('images'));
-app.post("/login", (req, res) => {
-  return res.json({ token: jwt.sign(
-    { id: 1, role: "MASTER" },
-    SECRET
-  )});
+/* LOGIN: email + contraseña; devuelve el token y los roles del usuario */
+app.post("/login", async (req, res) => {
+  const email = typeof req.body.email === "string" ? req.body.email.trim().toLowerCase() : "";
+  const password = typeof req.body.password === "string" ? req.body.password : "";
+  try {
+    const found = await pool.query("SELECT id, email, password FROM users WHERE LOWER(email) = $1", [email]);
+    const row = found.rows[0];
+    if (!row || !(await bcrypt.compare(password, row.password))) {
+      return res.status(401).json({ error: "Email o contraseña incorrectos." });
+    }
+    return res.json(await sesionDe(row));
+  } catch (error) {
+    console.error("Error logging in", error);
+    return res.status(500).json({ error: "database error" });
+  }
 });
 
 /* GET CHARACTER */
@@ -398,7 +388,7 @@ app.put("/characters/:id", async (req, res) => {
 // AÑADIR EXPERIENCIA A UN PERSONAJE
 // ============================================================
 
-app.post("/characters/:id/experience", async (req, res) => {
+app.post("/characters/:id/experience", requiere("MASTER"), async (req, res) => {
 
   const client = await pool.connect();
 

@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import { guardarSesion, puede, useSesion, type CodigoRol } from '../lib/auth'
 
-type Enlace = { to: string; titulo: string; ayuda: string }
+type Enlace = { seccion?: string; to: string; titulo: string; ayuda: string; minimo?: CodigoRol }
 type Grupo = { nombre: string; enlaces: Enlace[] }
 
 const GRUPOS: Grupo[] = [
@@ -17,6 +18,7 @@ const GRUPOS: Grupo[] = [
   {
     nombre: 'El mundo',
     enlaces: [
+      { to: '/mundo', titulo: 'Mundo', ayuda: 'Geografía, historia y lugares' },
       { to: '/bestiario', titulo: 'Bestiario', ayuda: 'Criaturas y monstruos' },
       { to: '/figuras', titulo: 'Figuras notables', ayuda: 'Personajes del mundo (PNJ)' },
       { to: '/gremios', titulo: 'Gremios', ayuda: 'Organizaciones y sus miembros' },
@@ -26,15 +28,18 @@ const GRUPOS: Grupo[] = [
   {
     nombre: 'Personajes',
     enlaces: [
-      { to: '/personajes', titulo: 'Mis personajes', ayuda: 'Tus fichas guardadas' },
-      { to: '/registro', titulo: 'Registro de jugadores', ayuda: 'Jugadores y sus personajes' },
+      { to: '/personajes', titulo: 'Mis personajes', ayuda: 'Tus fichas guardadas', minimo: 'PLAYER' },
+      { to: '/mis-mascotas', titulo: 'Mis mascotas', ayuda: 'Mascotas y monturas de tus jugadores', minimo: 'PLAYER' },
     ],
   },
   {
     nombre: 'Máster',
     enlaces: [
-      { to: '/master', titulo: 'Generador de encuentros', ayuda: 'Monstruos según nivel y terreno' },
-      { to: '/master?tab=combate', titulo: 'Combate', ayuda: 'Turnos, vida y ataques' },
+      { seccion: 'Encuentros', to: '/master', titulo: 'Generar', ayuda: 'Monstruos según nivel y terreno' , minimo: 'MASTER' },
+      { to: '/master?tab=combate', titulo: 'Combate', ayuda: 'Turnos, vida y ataques' , minimo: 'MASTER' },
+      { seccion: 'Gremios', to: '/mis-gremios', titulo: 'Gremios de jugadores', ayuda: 'Alta, edición y baja' , minimo: 'GUILD_LEADER' },
+      { to: '/torneos', titulo: 'Torneos', ayuda: 'Cuadros entre gremios: 1v1, 3v3 y estrategia' , minimo: 'MASTER' },
+      { seccion: 'Administración', to: '/usuarios', titulo: 'Usuarios y roles', ayuda: 'Asignar Jugador, Líder de gremio, Master o Programador' , minimo: 'DEVELOPER' },
     ],
   },
 ]
@@ -44,6 +49,7 @@ export default function MenuPrincipal() {
   const [abierto, setAbierto] = useState<string | null>(null)
   const [movil, setMovil] = useState(false)
   const raiz = useRef<HTMLElement>(null)
+  const sesion = useSesion()
 
   const cerrar = () => { setAbierto(null); setMovil(false) }
 
@@ -58,7 +64,7 @@ export default function MenuPrincipal() {
 
   return (
     <header className="cabecera" ref={raiz}>
-      <NavLink to="/" className="logo">Leyendas de Terratéa</NavLink>
+      <NavLink to="/" className="logo">Leyendas de Terratea</NavLink>
       <button
         className="menu-movil"
         aria-expanded={movil}
@@ -68,7 +74,9 @@ export default function MenuPrincipal() {
         {movil ? 'Cerrar' : 'Menú'}
       </button>
       <nav id="menu-principal" aria-label="Principal" className={movil ? 'abierto' : ''}>
-        {GRUPOS.map((g) => {
+        {GRUPOS.map((g0) => {
+          const g = { ...g0, enlaces: g0.enlaces.filter((e) => !e.minimo || puede(sesion, e.minimo)) }
+          if (g.enlaces.length === 0) return null
           const activo = g.enlaces.some((e) => pathname.startsWith(e.to.split('?')[0]))
           const id = `grupo-${g.nombre}`
           return (
@@ -83,6 +91,7 @@ export default function MenuPrincipal() {
               <ul id={id}>
                 {g.enlaces.map((e) => (
                   <li key={e.to}>
+                    {e.seccion && <span className="seccion">{e.seccion}</span>}
                     <Link to={e.to} onClick={cerrar}>
                       <strong>{e.titulo}</strong>
                       <small>{e.ayuda}</small>
@@ -93,6 +102,11 @@ export default function MenuPrincipal() {
             </div>
           )
         })}
+        {sesion ? (
+          <button onClick={() => { guardarSesion(null); cerrar() }} title={sesion.user.email}>Salir</button>
+        ) : (
+          <NavLink to="/login" onClick={cerrar}>Entrar</NavLink>
+        )}
         <NavLink to="/creador" className="cta" onClick={cerrar}>Crear personaje</NavLink>
       </nav>
     </header>

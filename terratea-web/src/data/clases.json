@@ -236,6 +236,7 @@
         "Juego de alquimia",
         "Guías de Alquimia"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -669,6 +670,7 @@
       "equipo_inicial": [
         "Montura"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -1115,6 +1117,7 @@
         "Brújula",
         "Sextante"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -1559,6 +1562,7 @@
         "Instrumento musical",
         "Papiro y pluma"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -2040,6 +2044,7 @@
       "equipo_inicial": [
         "Capa de Pieles de animales"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -2417,6 +2422,7 @@
         "Símbolo del pacto con espíritu oscuro",
         "Juego de Ungüentos"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [
         "Cuando el alma del personaje abandona su cuerpo, este pierde todas las bonificaciones a la esquiva y a la Clase de Armadura (CA). En tal estado, su CA se mantiene fija en 9."
       ],
@@ -2897,6 +2903,7 @@
         "El Necronomicón",
         "Bastón o Catalizador"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -3546,6 +3553,7 @@
       "equipo_inicial": [
         "Cualquier tipo de arma ignifuga"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -4015,6 +4023,7 @@
         "Espejo de Mano",
         "Guía de seres impíos"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [
         "En el libro la 3ª columna de la tabla de habilidades se titula \"ALINEACIÓN\" (A/P = activa/pasiva)."
@@ -4510,6 +4519,7 @@
       "equipo_inicial": [
         "Correa para domesticar"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -5018,6 +5028,7 @@
         "Lista de recompensas",
         "Distintivo de Cazarecompensas"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -5509,8 +5520,9 @@
       ],
       "equipo_inicial": [
         "Juego de ungüentos",
-        "Conjunto de piedras runa",
-        "HABILIDAD ESPECIAL",
+        "Conjunto de piedras runa"
+      ],
+      "habilidad_especial": [
         "Los tótems realizan acciones independientemente al chaman cada turno en combate, estos tótems tienen 4 puntos de vida y su rango de alcance es de 5"
       ],
       "informacion_adicional": [],
@@ -5997,6 +6009,7 @@
         "Símbolo sagrado",
         "Libro sagrado"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -6579,16 +6592,18 @@
         }
       ],
       "equipo_inicial": [
-        "Ninguno",
-        "HABILIDAD ESPECIAL",
-        "Los druidas no pueden realizar otros hechizos mientras estén convertidos",
+        "Ninguno"
+      ],
+      "habilidad_especial": [
+        "Los druidas no pueden realizar otros hechizos mientras estén convertidos"
+      ],
+      "informacion_adicional": [
         "Información adicional sobre la transformación del personaje:",
         "Animales Comunes: Bestias de categoría 1 o animales que no estén en el bestiario. Las estadísticas de las bestias que no están incorporadas en el bestiario, se dejan a criterio del Máster",
         "Animales Poco Comunes: Bestias de categoría 2. Se usan las estadísticas del bestiario, no obstante, la vida del druida se mantiene, además de sumarse el 5% de la vitalidad del animal que aparece en el bestiario",
         "Animales Míticos: Bestias de categoría 3. Se usan las estadísticas del bestiario, no obstante, la vida del druida se mantiene, además de sumarse el 10% de la vitalidad del animal que aparece en el bestiario",
         "Animales Legendarios: Bestias de categoría 4. Se usa las estadísticas del bestiario, no obstante, la vida del druida se mantiene, además de sumarse el 20% de la vitalidad del animal que aparece en el bestiario"
       ],
-      "informacion_adicional": [],
       "notas": [],
       "habilidades": [
         {
@@ -7027,6 +7042,7 @@
       "equipo_inicial": [
         "Cualquier tipo de arma cuerpo a cuerpo"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -7444,6 +7460,7 @@
         "Mapa",
         "Brújula"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -7962,6 +7979,7 @@
       "equipo_inicial": [
         "Ninguna"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -8421,6 +8439,7 @@
       "equipo_inicial": [
         "Ninguno"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -8842,6 +8861,7 @@
       "equipo_inicial": [
         "Arco"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -9280,6 +9300,7 @@
       "equipo_inicial": [
         "Ninguno"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [
         "Mejoras Raciales por Clase",
         "Humano:",
@@ -9707,6 +9728,7 @@
       "equipo_inicial": [
         "Tatuajes"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [
         "Mejoras Raciales por Clase",
         "Humano:",
@@ -10248,6 +10270,7 @@
       "equipo_inicial": [
         "Ninguno"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -10653,6 +10676,7 @@
         "Kit de manitas",
         "Grimorio de inventos “propios”"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [
         "Las bombas de los ingenieros dañan a cuatro casillas aliados y enemigos por igual.",
         "La dinamita daña a 9 casillas a aliados y enemigos por igual, pero no se puede lanzar.",
@@ -11082,8 +11106,9 @@
         }
       ],
       "equipo_inicial": [
-        "Báculo",
-        "HABILIDAD ESPECIAL",
+        "Báculo"
+      ],
+      "habilidad_especial": [
         "Las invocaciones poseen un máximo de nivel de 18 (Excepto el Héroe)",
         "Las estadísticas de las invocaciones son las misma que la del invocador",
         "Las vidas de las invocaciones son equivalentes a la mitad de la vida del invocador"
@@ -11550,6 +11575,7 @@
       "equipo_inicial": [
         "Montura"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -12069,6 +12095,7 @@
         "Juego de escalada",
         "Cualquier tipo de Daga"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -12607,6 +12634,7 @@
         "Escutum",
         "Pilum"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -13006,6 +13034,7 @@
       "equipo_inicial": [
         "Bastón o varita"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -13915,6 +13944,7 @@
         "Mapa de las estrellas",
         "Varita"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -14480,6 +14510,7 @@
       "equipo_inicial": [
         "Ninguno"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -14950,6 +14981,7 @@
         "Filacteria",
         "Bastón o Báculo"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -15499,6 +15531,7 @@
         "Juego de escalada",
         "Cerbatana"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -15974,6 +16007,7 @@
         "Montura",
         "Kit de Acampada del desierto"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -16400,6 +16434,7 @@
       "equipo_inicial": [
         "Símbolo sagrado"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -16951,6 +16986,7 @@
         "Brújula",
         "Sextante"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -17389,6 +17425,7 @@
       "equipo_inicial": [
         "Guante del piromántico"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -17864,6 +17901,7 @@
       "equipo_inicial": [
         "Algún tipo de katana"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [
         "El Ronin debe elegir una de las tres familias samuráis, obtendrá estas ventajas dependiendo de la selección:",
         "Ronin de la familia Shirojakkaru: tirada con ventaja en acciones de ataque.",
@@ -18284,6 +18322,7 @@
         }
       ],
       "equipo_inicial": [],
+      "habilidad_especial": [],
       "informacion_adicional": [
         "El samurái debe elegir una de las tres familias samuráis, obtendrá estas ventajas dependiendo de la selección:",
         "Familia Aoinu: Tirada de ventaja en tiradas de salvación.",
@@ -18686,6 +18725,7 @@
         "Armadura pesada",
         "Espada Curva"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [
@@ -19098,6 +19138,7 @@
       "equipo_inicial": [
         "Ninguno"
       ],
+      "habilidad_especial": [],
       "informacion_adicional": [],
       "notas": [],
       "habilidades": [

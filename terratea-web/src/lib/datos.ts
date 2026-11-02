@@ -4,6 +4,12 @@ import caracJson from '../data/caracteristicas.json'
 import armasJson from '../data/equipo/armas.json'
 import armadurasJson from '../data/equipo/armaduras.json'
 import objetosJson from '../data/equipo/objetos.json'
+import joyeriaJson from '../data/equipo/joyeria.json'
+import librosJson from '../data/equipo/libros.json'
+import ropajesJson from '../data/equipo/ropajes.json'
+import gemasJson from '../data/equipo/gemas.json'
+import metalesJson from '../data/equipo/metales.json'
+import telasJson from '../data/equipo/telas.json'
 import type { Raza, Clase, Atributo, Arma, Armadura, ObjetoBase } from '../data/types'
 
 export const razas = razasJson.razas as unknown as Raza[]
@@ -12,6 +18,12 @@ export const atributos = caracJson.atributos as unknown as Atributo[]
 export const armas = armasJson as unknown as Arma[]
 export const armaduras = armadurasJson as unknown as Armadura[]
 export const objetos = objetosJson as unknown as ObjetoBase[]
+export const joyeria = joyeriaJson as unknown as ObjetoBase[]
+export const libros = librosJson as unknown as ObjetoBase[]
+export const ropajes = ropajesJson as unknown as ObjetoBase[]
+export const gemas = gemasJson as unknown as ObjetoBase[]
+export const metales = metalesJson as unknown as ObjetoBase[]
+export const telas = telasJson as unknown as ObjetoBase[]
 
 /** Ilustración de una raza; si no tiene (Renegado), la de su primera subraza, y si no, el título. */
 export const imgRaza = (r: Raza) =>

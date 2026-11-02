@@ -10,7 +10,8 @@ import type { Criatura, TipoCriatura } from '../data/libro2.types'
 
 export default function Master() {
   const [sp, setSp] = useSearchParams()
-  const tab = sp.get('tab') === 'combate' ? 'combate' : 'encuentro'
+  const t = sp.get('tab')
+  const tab = t === 'combate' ? t : 'encuentro'
   const [combate, setCombate] = useState<Combatiente[]>(leerCombate)
   useEffect(() => guardarCombate(combate), [combate])
 
@@ -23,9 +24,8 @@ export default function Master() {
           Combate {combate.length > 0 && `(${combate.length})`}
         </button>
       </div>
-      {tab === 'encuentro'
-        ? <Encuentro alEnviar={(lista) => { setCombate((c) => añadirCombatientes(c, lista)); setSp({ tab: 'combate' }, { replace: true }) }} />
-        : <Combate combate={combate} setCombate={setCombate} />}
+      {tab === 'encuentro' && <Encuentro alEnviar={(lista) => { setCombate((c) => añadirCombatientes(c, lista)); setSp({ tab: 'combate' }, { replace: true }) }} />}
+      {tab === 'combate' && <Combate combate={combate} setCombate={setCombate} />}
     </>
   )
 }
@@ -92,7 +92,7 @@ function Encuentro({ alEnviar }: { alEnviar: (l: Criatura[]) => void }) {
           <div className="encuentro">
             {lista.map((c, i) => (
               <div key={`${c.id}-${i}`} className={`articulo ${fijas[i] ? 'fija' : ''}`}>
-                <img src={img2(c.imagen)} alt="" loading="lazy" />
+                <img src={img2(c.imagen)} alt={c.nombre} loading="lazy" />
                 <div>
                   <Link to={`/bestiario/${c.id}`}><strong>{c.nombre}</strong></Link>
                   <small>C.A. {fmtNum(c.ca)} · Vit. {fmtNum(c.vitalidad)} · P.X. {fmtNum(c.px)} · Daño {c.texto.dano ?? '¿?'}</small>

@@ -8,7 +8,8 @@
     "tipo": "ARMA A DISTANCIA",
     "rango": "MÁXIMO DEL PERSONAJE",
     "clase_peso": "ligera",
-    "imagen": "img/equipo/armas/arco-largo.webp"
+    "imagen": "img/equipo/armas/arco-largo.webp",
+    "requiere": "Carcaj para las flechas + Mochila (o saco grande/pequeño como mochila) para guardar los objetos. Sin ello no se puede usar el arma."
   },
   {
     "nombre": "ARCO CORTO",
@@ -19,7 +20,8 @@
     "tipo": "ARMA A DISTANCIA",
     "rango": "MÁXIMO DEL PERSONAJE",
     "clase_peso": "ligera",
-    "imagen": "img/equipo/armas/arco-corto.webp"
+    "imagen": "img/equipo/armas/arco-corto.webp",
+    "requiere": "Carcaj para las flechas + Mochila (o saco grande/pequeño como mochila) para guardar los objetos. Sin ello no se puede usar el arma."
   },
   {
     "nombre": "ARCO COMPUESTO",
@@ -30,7 +32,8 @@
     "tipo": "ARMA A DISTANCIA",
     "rango": "MÁXIMO DEL PERSONAJE",
     "clase_peso": "ligera",
-    "imagen": "img/equipo/armas/arco-compuesto.webp"
+    "imagen": "img/equipo/armas/arco-compuesto.webp",
+    "requiere": "Carcaj para las flechas + Mochila (o saco grande/pequeño como mochila) para guardar los objetos. Sin ello no se puede usar el arma."
   },
   {
     "nombre": "ARCO DE POLEAS",
@@ -41,7 +44,8 @@
     "tipo": "ARMA A DISTANCIA",
     "rango": "MÁXIMO DEL PERSONAJE",
     "clase_peso": "pesada",
-    "imagen": "img/equipo/armas/arco-de-poleas.webp"
+    "imagen": "img/equipo/armas/arco-de-poleas.webp",
+    "requiere": "Carcaj para las flechas + Mochila (o saco grande/pequeño como mochila) para guardar los objetos. Sin ello no se puede usar el arma."
   },
   {
     "nombre": "FLECHAS (10)",
@@ -60,7 +64,8 @@
     "tipo": "ARMA A DISTANCIA",
     "rango": "MÁXIMO DEL PERSONAJE",
     "clase_peso": "ligera",
-    "imagen": "img/equipo/armas/ballesta.webp"
+    "imagen": "img/equipo/armas/ballesta.webp",
+    "requiere": "Estuche para los virotes + Mochila (o saco grande/pequeño como mochila) para guardar los objetos. Sin ello no se puede usar el arma."
   },
   {
     "nombre": "BALLESTA COMPUESTA",
@@ -71,7 +76,8 @@
     "tipo": "ARMA A DISTANCIA",
     "rango": "MÁXIMO DEL PERSONAJE",
     "clase_peso": "ligera",
-    "imagen": "img/equipo/armas/ballesta-compuesta.webp"
+    "imagen": "img/equipo/armas/ballesta-compuesta.webp",
+    "requiere": "Estuche para los virotes + Mochila (o saco grande/pequeño como mochila) para guardar los objetos. Sin ello no se puede usar el arma."
   },
   {
     "nombre": "GASTRAFETES",
@@ -82,7 +88,8 @@
     "tipo": "ARMA A DISTANCIA",
     "rango": "MÁXIMO DEL PERSONAJE",
     "clase_peso": "pesada",
-    "imagen": "img/equipo/armas/gastrafetes.webp"
+    "imagen": "img/equipo/armas/gastrafetes.webp",
+    "requiere": "Estuche para los virotes + Mochila (o saco grande/pequeño como mochila) para guardar los objetos. Sin ello no se puede usar el arma."
   },
   {
     "nombre": "ESTACADORA",
@@ -93,7 +100,8 @@
     "tipo": "ARMA A DISTANCIA",
     "rango": "MÁXIMO DEL PERSONAJE",
     "clase_peso": "ligera",
-    "imagen": "img/equipo/armas/estacadora.webp"
+    "imagen": "img/equipo/armas/estacadora.webp",
+    "requiere": "Estuche para las estacas + Mochila (o saco grande/pequeño como mochila) para guardar los objetos. Sin ello no se puede usar el arma."
   },
   {
     "nombre": "VIROTES (10)",

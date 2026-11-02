@@ -9,6 +9,7 @@ import { actuaA0, alcanceMaximo } from '../lib/danio'
 import { combatienteDeFicha } from '../lib/jugadores'
 import { listarPersonajes } from '../lib/personajes'
 import { cargarDeBd, listarDeBd, type ResumenBd } from '../lib/sync'
+import { useConfirmar } from '../components/Confirmar'
 import PanelAtaque, { type ResultadoAtaque } from './PanelAtaque'
 import Recompensa from './Recompensa'
 import type { Criatura } from '../data/libro2.types'
@@ -27,7 +28,22 @@ export default function Combate({ combate, setCombate }: Readonly<{ combate: Com
   const [recompensa, setRecompensa] = useState(false)
   const [registro, setRegistro] = useState<string[]>(leerRegistro)
   useEffect(() => guardarRegistro(registro), [registro])
+  const pedirConfirmacion = useConfirmar()
+  const [aviso, setAviso] = useState('')
   const anotar = (texto: string) => setRegistro((r) => [...r, texto])
+  const copiarRegistro = async () => {
+    try { await navigator.clipboard.writeText(registro.join('\n')); setAviso('Copiado') }
+    catch { setAviso('No se pudo copiar') }
+    setTimeout(() => setAviso(''), 2500)
+  }
+  const descargarRegistro = () => {
+    const url = URL.createObjectURL(new Blob([registro.join('\n')], { type: 'text/plain;charset=utf-8' }))
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `registro-combate-${new Date().toISOString().slice(0, 10)}.txt`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
   const actualizar = (uid: string, f: (c: Combatiente) => Combatiente) => setCombate((l) => l.map((c) => (c.uid === uid ? f(c) : c)))
 
   const atacante = ataque ? combate.find((c) => c.uid === ataque.atacante) : undefined
@@ -89,9 +105,15 @@ export default function Combate({ combate, setCombate }: Readonly<{ combate: Com
     if (objetivo?.uid === c.uid) estado = 'elegida'
     return (
       <div key={c.uid} className={`cc ${caida ? 'caida' : ''} ${fuente} ${estado}`}
-        onClick={() => tocarTarjeta(c)} role={estado === 'objetivo' ? 'button' : undefined}>
+        onClick={() => tocarTarjeta(c)}
+        {...(estado === 'objetivo' ? {
+          role: 'button', tabIndex: 0, 'aria-label': `Atacar a ${c.nombre}`,
+          onKeyDown: (e: React.KeyboardEvent) => {
+            if (e.target === e.currentTarget && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); tocarTarjeta(c) }
+          },
+        } : {})}>
         <div className="cc-cab">
-          {cr ? <img src={img2(cr.imagen)} alt="" loading="lazy" /> : <span className="cc-avatar">{c.nombre.slice(0, 1).toUpperCase()}</span>}
+          {cr ? <img src={img2(cr.imagen)} alt={c.nombre} loading="lazy" /> : <span className="cc-avatar">{c.nombre.slice(0, 1).toUpperCase()}</span>}
           <div className="cc-nombre">
             <strong>{cr ? <Link to={`/bestiario/${cr.id}`} onClick={(e) => e.stopPropagation()}>{c.nombre}</Link> : c.nombre}</strong>
             <small>{c.clase && `${c.clase} ${c.nivel ?? ''} · `}C.A. {fmtNum(c.ca)} · Alcance {fmtNum(c.alcance)}</small>
@@ -168,7 +190,7 @@ export default function Combate({ combate, setCombate }: Readonly<{ combate: Com
         <button className="primario" onClick={() => { setCombate((l) => l.map((c) => nuevoTurno(c))); anotar('— Turno nuevo: todos recuperan movimiento y acción —') }}>⏭ Turno nuevo</button>
         <button onClick={() => setCombate((l) => l.map((c) => ({ ...c, vida: c.vidaMax ?? c.vida })))}>Curar a todos</button>
         <button onClick={() => setRecompensa((r) => !r)}>🏆 Recompensa</button>
-        <button className="peligro" onClick={() => { if (confirm('¿Vaciar el combate?')) { setCombate(() => []); cancelar() } }}>Vaciar combate</button>
+        <button className="peligro" onClick={async () => { if (await pedirConfirmacion('¿Vaciar el combate?', { aceptar: 'Vaciar', peligro: true })) { setCombate(() => []); cancelar() } }}>Vaciar combate</button>
       </div>
 
       {recompensa && <Recompensa combate={combate} actualizar={actualizar} anotar={anotar} alCerrar={() => setRecompensa(false)} />}
@@ -202,7 +224,12 @@ export default function Combate({ combate, setCombate }: Readonly<{ combate: Com
         {[...registro].reverse().map((r, i) => <li key={i}>{r}</li>)}
         {registro.length === 0 && <li className="nota">Aún no hay nada.</li>}
       </ol>
-      {registro.length > 0 && <button onClick={() => setRegistro([])}>Borrar registro</button>}
+      <div className="filtros">
+        <button disabled={registro.length === 0} onClick={copiarRegistro}>Copiar registro</button>
+        <button disabled={registro.length === 0} onClick={descargarRegistro}>Descargar .txt</button>
+        {registro.length > 0 && <button onClick={() => setRegistro([])}>Borrar registro</button>}
+        {aviso && <small className="nota" role="status">{aviso}</small>}
+      </div>
     </section>
   )
 }

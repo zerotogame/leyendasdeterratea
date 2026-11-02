@@ -2,6 +2,9 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import Ficha from '../components/Ficha'
 import FichaBd from '../components/FichaBd'
+import FichaConOficial from '../components/FichaConOficial'
+import { hojaDeBd, hojaDeFicha } from '../lib/hoja'
+import { useConfirmar } from '../components/Confirmar'
 import { borrarPersonaje, marcarEnBd, obtenerPersonaje } from '../lib/personajes'
 import { clasePorId, razaPorId } from '../lib/datos'
 import { cargarDeBd, guardarEnBd, type PersonajeBd } from '../lib/sync'
@@ -9,6 +12,7 @@ import { cargarDeBd, guardarEnBd, type PersonajeBd } from '../lib/sync'
 export default function DetallePersonaje() {
   const { id } = useParams()
   const navigate = useNavigate()
+  const confirmar = useConfirmar()
   const [version, setVersion] = useState(0) // fuerza releer el personaje local tras marcarlo en la BD
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const p = useMemo(() => obtenerPersonaje(id ?? ''), [id, version])
@@ -48,8 +52,8 @@ export default function DetallePersonaje() {
         {p.bdId != null && <Link to={`/personajes/bd/${p.bdId}/editar`} className="boton">Editar ficha</Link>}
         <button
           className="peligro"
-          onClick={() => {
-            if (confirm(`¿Eliminar a ${p.nombre}? Solo se borra de este navegador, no de la base de datos.`)) { borrarPersonaje(p.id); navigate('/personajes') }
+          onClick={async () => {
+            if (await confirmar(`¿Eliminar a ${p.nombre}? Solo se borra de este navegador, no de la base de datos.`, { aceptar: 'Eliminar', peligro: true })) { borrarPersonaje(p.id); navigate('/personajes') }
           }}
         >Eliminar</button>
       </div>
@@ -58,7 +62,7 @@ export default function DetallePersonaje() {
           Guardando en la base de datos… {errorBd} Se reintenta automáticamente; mientras tanto el personaje está guardado en este navegador.
         </p>
       )}
-      {bd ? <FichaBd p={bd} /> : <Ficha e={p} />}
+      <FichaConOficial datos={bd ? hojaDeBd(bd, clasePorId(p.claseId)) : hojaDeFicha(p)}>{bd ? <FichaBd p={bd} /> : <Ficha e={p} />}</FichaConOficial>
     </>
   )
 }

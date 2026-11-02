@@ -1149,7 +1149,9 @@
       ],
       "imagenes": {
         "titulo": "img/razas/renegado-titulo.webp",
-        "ilustraciones": []
+        "ilustraciones": [
+          "img/razas/renegado-ilustracion-1.webp"
+        ]
       },
       "subrazas": [
         {

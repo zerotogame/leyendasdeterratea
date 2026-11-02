@@ -1,12 +1,12 @@
 import { useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { guardarSesion, type Sesion } from '../lib/auth'
 
 const API = import.meta.env.VITE_API_URL ?? 'http://localhost:3000'
 
-export default function Registro() {
+export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [repetir, setRepetir] = useState('')
   const [error, setError] = useState('')
   const [enviando, setEnviando] = useState(false)
   const navegar = useNavigate()
@@ -14,22 +14,17 @@ export default function Registro() {
   const enviar = async (e: FormEvent) => {
     e.preventDefault()
     setError('')
-    if (password.length < 8) return setError('La contraseña debe tener al menos 8 caracteres.')
-    if (password !== repetir) return setError('Las contraseñas no coinciden.')
     setEnviando(true)
     try {
-      const r = await fetch(`${API}/register`, {
+      const r = await fetch(`${API}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       })
       const datos = await r.json().catch(() => ({}))
-      if (!r.ok) {
-        setError(r.status === 409 ? 'Ese email ya está registrado.' : datos.error ?? 'No se pudo completar el registro.')
-        return
-      }
-      try { localStorage.setItem('terratea-sesion', JSON.stringify(datos)) } catch { /* sin almacenamiento */ }
-      navegar('/personajes')
+      if (!r.ok) return setError(datos.error ?? 'No se pudo iniciar sesión.')
+      guardarSesion(datos as Sesion)
+      navegar('/')
     } catch {
       setError('No se pudo conectar con el servidor (¿está encendido el backend en el puerto 3000?).')
     } finally {
@@ -39,20 +34,18 @@ export default function Registro() {
 
   return (
     <div>
-      <h1>Registro de jugadores</h1>
+      <h1>Iniciar sesión</h1>
       <form className="form-ficha" onSubmit={enviar} style={{ maxWidth: 420 }}>
         <label className="ancho">Email
           <input type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
         <label className="ancho">Contraseña
-          <input type="password" required minLength={8} maxLength={72} autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" required autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
-        <label className="ancho">Repetir contraseña
-          <input type="password" required autoComplete="new-password" value={repetir} onChange={(e) => setRepetir(e.target.value)} />
-        </label>
-        {error && <p className="aviso mal ancho">{error}</p>}
-        <button type="submit" className="primario ancho" disabled={enviando}>{enviando ? 'Registrando…' : 'Registrarme'}</button>
+        {error && <p className="aviso mal ancho" role="alert">{error}</p>}
+        <button type="submit" className="primario ancho" disabled={enviando}>{enviando ? 'Entrando…' : 'Entrar'}</button>
       </form>
+      <p className="nota">¿No tienes cuenta? Pídesela al administrador.</p>
     </div>
   )
 }

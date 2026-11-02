@@ -1,6 +1,6 @@
-import { armas, armaduras, objetos, clasePorId, clasesParaRaza, razaPorId, claveRaza } from './datos'
+import { clasePorId, clasesParaRaza, razaPorId, claveRaza } from './datos'
 import { IDS_ATRIBUTO, type Monedas } from './reglas'
-import type { Asignacion, Compra } from './personajes'
+import { CATALOGO_COMPRA, type Asignacion, type Compra } from './personajes'
 
 export type Estado = {
   nombre: string
@@ -32,8 +32,6 @@ export const claveCombo = (g: Pick<Estado, 'razaId' | 'subrazaId' | 'claseId'>) 
 const entero = (x: unknown, min: number, max: number): x is number =>
   typeof x === 'number' && Number.isInteger(x) && x >= min && x <= max
 
-const catalogo = { arma: armas, armadura: armaduras, objeto: objetos }
-
 /**
  * Deja solo lo que sea posible en el juego. Todo lo guardado en el navegador puede estar
  * corrupto o venir de una versión anterior: lo inválido se descarta para que el jugador
@@ -63,7 +61,7 @@ export function validarDatos(raw: unknown): Datos {
     d.fortuna = { oro: f.oro, plata: f.plata, cobre: f.cobre }
     if (Array.isArray(r.compras)) {
       d.compras = r.compras.filter((c): c is Compra =>
-        !!c && c.tipo in catalogo && entero(c.idx, 0, catalogo[c.tipo as Compra['tipo']].length - 1))
+        !!c && c.tipo in CATALOGO_COMPRA && entero(c.idx, 0, CATALOGO_COMPRA[c.tipo as Compra['tipo']].length - 1))
     }
   }
   if (entero(r.vida, 1, 12)) d.vida = r.vida

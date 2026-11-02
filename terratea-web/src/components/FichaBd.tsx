@@ -44,6 +44,16 @@ export default function FichaBd({ p }: { p: PersonajeBd }) {
         ))}
       </div>
 
+      <div className="bloque">
+        <h3>Lore</h3>
+        {p.lore_origin || p.lore_trajectory ? (
+          <>
+            {p.lore_origin && <><h4>Inicios</h4><p className="lore">{p.lore_origin}</p></>}
+            {p.lore_trajectory && <><h4>Trayectoria</h4><p className="lore">{p.lore_trajectory}</p></>}
+          </>
+        ) : <p className="nota">Sin historia escrita todavía. Se añade en «Editar».</p>}
+      </div>
+
       <div className="fbd-cuerpo">
         <div className="fbd-principal">
           {clase && (

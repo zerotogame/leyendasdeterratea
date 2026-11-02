@@ -1,0 +1,150 @@
+{
+ "_fuente": "Libro 1, capítulo Gremio (NIVEL DE GREMIO y Ranking de Gremios). Texto copiado del libro.",
+ "ranking": {
+  "introduccion": "Terratea es un lugar para luchadores, la competencia entre gremios es tan feroz como las bestias que acechan en la oscuridad. Cada hermandad anhela destacarse y forjar su lugar en la historia. Para mantener un registro claro de las hazañas y logros de estos gremios, se ha establecido el \"Ranking de Gremios\", una clasificación dinámica que refleja la influencia y la reputación de estas poderosas hermandades.",
+  "criterios": [
+   {
+    "campo": "Éxito en Misiones",
+    "descripcion": "La cantidad y la complejidad de las misiones completadas con éxito, demostrando la habilidad y determinación del gremio."
+   },
+   {
+    "campo": "Reputación en Terratea",
+    "descripcion": "La percepción general de los ciudadanos y otras hermandades respecto a la ética y el comportamiento del gremio."
+   },
+   {
+    "campo": "Beneficios para la Comunidad",
+    "descripcion": "Las contribuciones tangibles y beneficios que el gremio aporta a las ciudades y aldeas en Terratea."
+   },
+   {
+    "campo": "Participación en Eventos Épicos",
+    "descripcion": "La asistencia y desempeño del gremio en eventos épicos que sacuden las tierras de Terratea."
+   },
+   {
+    "campo": "Innovación y Descubrimientos",
+    "descripcion": "Nuevas tecnologías, descubrimientos o contribuciones únicas que el gremio aporta al mundo."
+   },
+   {
+    "campo": "Conflictos y Diplomacia",
+    "descripcion": "La habilidad del gremio para manejar conflictos, así como sus esfuerzos diplomáticos para mantener la paz."
+   },
+   {
+    "campo": "Influencia en el Mundo",
+    "descripcion": "La extensión de la influencia del gremio en las diversas regiones de Terratea."
+   }
+  ],
+  "cierre": "Este ranking no solo es una fuente de prestigio, sino que también puede desbloquear beneficios adicionales para el gremio, brindándoles oportunidades únicas y desafíos emocionantes."
+ },
+ "niveles_introduccion": "En Terratea, a medida que un gremio aumenta su reputación, sus miembros obtienen diversas ventajas que los ayudan en sus aventuras y les otorgan mayor influencia en el mundo.",
+ "niveles": [
+  {
+   "nivel": 0,
+   "nombre": "Nuevo Gremio",
+   "descripcion": "Los miembros son aventureros que están comenzando su viaje en el gremio y aún no han establecido su reputación.",
+   "ventajas": []
+  },
+  {
+   "nivel": 1,
+   "nombre": "Gremio Novicio",
+   "descripcion": "Los miembros están en las primeras etapas de su viaje en el gremio, demostrando su compromiso y acciones básicas.",
+   "ventajas": [
+    "Los gremios novicios pueden solicitar ayuda y orientación de otros gremios a cambio de un precio."
+   ]
+  },
+  {
+   "nivel": 2,
+   "nombre": "Gremio Aprendiz",
+   "descripcion": "Los miembros están aprendiendo y desarrollando sus habilidades en el gremio, buscando alcanzar mayores logros.",
+   "ventajas": [
+    "Desarrollo de habilidades adicionales y entrenamiento avanzado en áreas de especialización (+2 a tiradas de aprendizaje para todos los miembros).",
+    "Todos los miembros del gremio reciben un tabardo del gremio y para la sede de clase 1 bandera de su gremio."
+   ]
+  },
+  {
+   "nivel": 3,
+   "nombre": "Gremio Aspirante",
+   "descripcion": "Los miembros están demostrando su dedicación y ambición, buscando avanzar en el gremio y ganar reconocimiento.",
+   "ventajas": [
+    "Bonificación del 10% en compraventa en tiendas de todas las ciudades.",
+    "Aumento del 5% en ganancias de oro en las misiones de tablón.",
+    "Reducción del 20% en el costo de uno del transporte marítimo y terrestre."
+   ]
+  },
+  {
+   "nivel": 4,
+   "nombre": "Gremio Aventureros",
+   "descripcion": "Los miembros ya son reconocidos como aventureros experimentados, listos para enfrentar desafíos mayores en Terratea.",
+   "ventajas": [
+    "Todos los miembros del gremio recibirán una piedra angular complementaria para teletransportase inmediatamente a la sede de gremio.",
+    "Aumento del 20% en beneficios y reducción del 25% en pérdidas generadas por NPJ contratados.",
+    "Reducción del 50% en compras para la sede del gremio."
+   ]
+  },
+  {
+   "nivel": 5,
+   "nombre": "Gremio Vanguardista",
+   "descripcion": "Los miembros son reconocidos como líderes y pioneros en el gremio, marcando el camino para otros aventureros o gremios.",
+   "ventajas": [
+    "Reducción del 50% en el costo de mantenimiento de NPJ contratados.",
+    "Aumento del 25% en reputación ganada durante misiones de tablón.",
+    "La Sede Central de Gremios facilitará al gremio 10 centinelas para custodiar la sede de gremio sin coste de mantenimiento."
+   ]
+  },
+  {
+   "nivel": 6,
+   "nombre": "Gremio Maestro",
+   "descripcion": "Los miembros son expertos y reconocidos cada uno en su campo, son altamente respetados por sus gestas y habilidades.",
+   "ventajas": [
+    "Aumento del 75% en experiencia generada por misiones de tablón.",
+    "El precio de amarre en el puerto o de establos en ciudades se reduce a 0.",
+    "El precio de las tabernas en las ciudades se reduce a 0.",
+    "Se aportarán de manera gratuita todos los recursos de alimentos y bebida necesarios durante las misiones, junto a un escudero que cargará con todos los recursos necesarios aportado por La Sede Central de Gremios."
+   ]
+  },
+  {
+   "nivel": 7,
+   "nombre": "Gremio Experto",
+   "descripcion": "Los miembros son reconocidos como expertos consumados en su arte y todo el mundo acuden a estos gremios para solucionar sus problemas.",
+   "ventajas": [
+    "Pueden mandar a NPJ a hacer misiones de tablón.",
+    "Pueden presentar misiones a otros gremios de categoría 4 para abajo.",
+    "Las reparaciones de los transportes son gratuitas.",
+    "Aumento de Carisma en +1 para todos los miembros."
+   ]
+  },
+  {
+   "nivel": 8,
+   "nombre": "Gremio Profesional",
+   "descripcion": "Los miembros son considerados con títulos nobiliarios o del más alto estatus social.",
+   "ventajas": [
+    "Aumento del 100% en ganancias y reducción del 50% en compras.",
+    "Concesión de una zona para construir una fortaleza en Terratea.",
+    "Eliminación del sistema de pérdidas en el comercio de NPJ.",
+    "Licencia de construcción gratuita."
+   ]
+  },
+  {
+   "nivel": 9,
+   "nombre": "Gremio de Héroes",
+   "descripcion": "Los miembros son venerados como héroes en todo el mundo de Terratea, conocidos por sus valientes hazañas y contribuciones, erigen estatuas, hacen fiestas en su honor y cantan los bardos hallan donde vayan.",
+   "ventajas": [
+    "Aumento del 150% en todas las recompensas de misiones de tablón.",
+    "Cuadros, estatuas y fiestas en honor a los miembros aparecerán por todo Terratea.",
+    "Eliminación del costo de mantenimiento de NPJ.",
+    "Adquisición de una casa para el gremio en cada una de las capitales.",
+    "Aumento de Carisma en +3 para todos los miembros."
+   ]
+  },
+  {
+   "nivel": 10,
+   "nombre": "Gremio de Leyenda",
+   "descripcion": "Los miembros han llegado a la cúspide de la epicidad son considerados leyendas vivientes, con su legado perdurando mucho después de que hayan dejado su huella en la historia de Terratea.",
+   "ventajas": [
+    "Todos los oficiales del gremio son nombrados miembros con derecho a voto en el Parlamento de Overfield.",
+    "Tienen toda la autoridad en Terratea, siempre y cuando no vaya en contra de las propuestas aprobadas en el Parlamento.",
+    "Adquisición gratuita de armas, armaduras y objetos.",
+    "Acceso ilimitado a todas las estancias de los edificios de Terratea.",
+    "Tienen gremios afiliados y acceso al poder militar de Overfield."
+   ]
+  }
+ ]
+}

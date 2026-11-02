@@ -24,8 +24,8 @@ export function Dado({ caras, valor, retraso = 0, descartado = false }: {
   }, [caras, valor, retraso])
 
   return (
-    <span className={`dado ${rodando ? 'rodando' : ''} ${!rodando && descartado ? 'descartado' : ''}`} title={`D${caras}`}>
-      {mostrado ?? '·'}
+    <span className={`dado ${rodando ? 'rodando' : ''} ${!rodando && descartado ? 'descartado' : ''}`} title={`D${caras}`} aria-live="polite">
+      <span aria-hidden={rodando}>{mostrado ?? '·'}</span>
     </span>
   )
 }
@@ -52,7 +52,7 @@ export function FilaTirada({ n, dados, retraso }: { n: number; dados: number[]; 
     <div className="fila-tirada">
       <span className="etq">Tirada {n}</span>
       {dados.map((d, i) => <Dado key={i} caras={6} valor={d} retraso={retraso + i * 80} descartado={i === menor} />)}
-      <span className="total">{listo ? `= ${total}` : ''}</span>
+      <span className="total" aria-live="polite">{listo ? `= ${total}` : ''}</span>
     </div>
   )
 }

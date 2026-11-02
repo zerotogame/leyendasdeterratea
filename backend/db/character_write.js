@@ -2,8 +2,8 @@ const pool = require("./db");
 
 const SCALAR_FIELDS = [
   "name", "class_id", "race_id", "alignment", "height", "weight", "sex", "age",
-  "hair", "eyes", "marks", "level", "exp", "image", "player_name", "guild",
-  "hit_points", "armor_class", "dodge", "range_reach", "gold", "silver", "copper", "exp_needed", "user_id"
+  "hair", "eyes", "marks", "lore_origin", "lore_trajectory", "level", "exp", "image", "player_name", "guild",
+  "hit_points", "armor_class", "dodge", "range_reach", "gold", "silver", "copper", "exp_needed", "user_id", "combo_id"
 ];
 
 // Columnas NOT NULL: un valor vacío se ignora en vez de borrarlas
