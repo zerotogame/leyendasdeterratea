@@ -13,10 +13,10 @@ services:
         value: production
       - key: DATABASE_URL
         sync: false
-      - key: JWT_SECRET        # >= 32 caracteres aleatorios; sin él la API no arranca
-        sync: false
-      - key: CORS_ORIGINS      # dominio exacto de la web, p. ej. https://terratea-web.onrender.com
-        sync: false
+      - key: JWT_SECRET        # Render lo genera una vez (aleatorio); sin él la API no arranca
+        generateValue: true
+      - key: CORS_ORIGINS      # dominio exacto de la web
+        value: https://terratea-web.onrender.com
 
   - type: web
     name: terratea-web
