@@ -35,4 +35,11 @@ const requiere = (minimo) => async (req, res, next) => {
   }
 };
 
-module.exports = { NIVEL, nivelDe, rolesDe, requiere };
+// Nivel del usuario si manda un token válido; 0 si no hay sesión (no corta la petición).
+async function nivelOpcional(req) {
+  const token = (req.headers.authorization || "").replace(/^Bearer\s+/i, "");
+  if (!token) return 0;
+  try { return nivelDe(await rolesDe(jwt.verify(token, SECRET).id)); } catch { return 0; }
+}
+
+module.exports = { NIVEL, nivelDe, rolesDe, requiere, nivelOpcional };

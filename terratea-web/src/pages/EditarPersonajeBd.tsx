@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useConfirmar } from '../components/Confirmar'
+import { puede, useSesion } from '../lib/auth'
 import {
   actualizarEnBd, borrarImagen, cargarDeBd, reglasBd, subirImagen, urlImagen,
   type CambiosFicha, type ImagenBd, type PersonajeBd,
@@ -29,6 +30,8 @@ export default function EditarPersonajeBd() {
   const [reglas, setReglas] = useState<{ alignments: string[]; sexes: string[] }>({ alignments: [], sexes: [] })
   const [error, setError] = useState('')
   const [ocupado, setOcupado] = useState(false)
+  const esMaster = puede(useSesion(), 'MASTER')
+  const [delta, setDelta] = useState({ gold: '', silver: '', copper: '' })
 
   useEffect(() => {
     Promise.all([cargarDeBd(id), reglasBd()])
@@ -54,11 +57,25 @@ export default function EditarPersonajeBd() {
     <label>{etiqueta}<input value={texto(f[k])} onChange={poner(k)} {...extra} /></label>
   )
 
+  // Monedas: el jugador solo puede gastar; el Master suma, resta o fija un valor. El servidor lo vuelve a comprobar.
+  const MONEDAS = [['gold', 'Oro'], ['silver', 'Plata'], ['copper', 'Cobre']] as const
+  const cambiarMoneda = async (k: 'gold' | 'silver' | 'copper', nuevo: number) => {
+    if (!Number.isFinite(nuevo) || nuevo < 0) { setError('La cantidad de monedas no puede ser negativa.'); return }
+    setError(''); setOcupado(true)
+    try {
+      const p = await actualizarEnBd(id, { [k]: Math.floor(nuevo) })
+      setF((g) => (g ? { ...g, [k]: texto(p[k]) } : g)); setDelta((d) => ({ ...d, [k]: '' }))
+    } catch (e) { setError((e as Error).message) }
+    setOcupado(false)
+  }
+
   const guardar = async (ev: React.FormEvent) => {
     ev.preventDefault()
     setError(''); setOcupado(true)
     try {
-      await actualizarEnBd(id, f)
+      // Las monedas se guardan al momento (con su propia regla de permisos), no con el formulario.
+      const { gold: _o, silver: _p, copper: _c, ...resto } = f
+      await actualizarEnBd(id, resto)
       navegar(`/personajes/bd/${id}`)
     } catch (e) { setError((e as Error).message); setOcupado(false) }
   }
@@ -148,9 +165,24 @@ export default function EditarPersonajeBd() {
           <h3>Defensa y tesoro</h3>
           <div className="form-ficha">
             {campo('Clase de armadura', 'armor_class', { type: 'number' })}
-            {campo('Oro', 'gold', { type: 'number' })}
-            {campo('Plata', 'silver', { type: 'number' })}
-            {campo('Cobre', 'copper', { type: 'number' })}
+          </div>
+          <p className="nota">{esMaster ? 'Como Master puedes sumar, restar o fijar las monedas. Se guardan al momento.' : 'Solo puedes gastar monedas (descontar); aumentarlas lo hace el Master. Se guarda al momento.'}</p>
+          <div className="form-ficha">
+            {MONEDAS.map(([k, nombreMoneda]) => {
+              const actual = Number(f[k]) || 0
+              const n = Number(delta[k])
+              return (
+                <div key={k}>
+                  <p>{nombreMoneda}: <strong>{actual}</strong></p>
+                  <p className="filtros">
+                    <input type="number" min={0} aria-label={`${nombreMoneda}: cantidad`} placeholder="Cantidad" value={delta[k]} onChange={(e) => setDelta({ ...delta, [k]: e.target.value })} />
+                    <button type="button" disabled={ocupado || !(n > 0) || n > actual} onClick={() => cambiarMoneda(k, actual - n)}>− {esMaster ? 'Restar' : 'Gastar'}</button>
+                    {esMaster && <button type="button" disabled={ocupado || !(n > 0)} onClick={() => cambiarMoneda(k, actual + n)}>+ Sumar</button>}
+                    {esMaster && <button type="button" disabled={ocupado || delta[k] === '' || !(n >= 0)} onClick={() => cambiarMoneda(k, n)}>Fijar en {delta[k] === '' ? '…' : n}</button>}
+                  </p>
+                </div>
+              )
+            })}
           </div>
         </div>
 

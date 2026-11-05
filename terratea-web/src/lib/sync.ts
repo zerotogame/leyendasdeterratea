@@ -42,7 +42,7 @@ export function cuerpoBd(p: Personaje) {
 export async function guardarEnBd(p: Personaje): Promise<number> {
   let r: Response
   try {
-    r = await fetch(`${API}/characters/web`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(cuerpoBd(p)) })
+    r = await fetch(`${API}/characters/web`, conAuth({ method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(cuerpoBd(p)) }))
   } catch {
     throw new Error('No se pudo conectar con el servidor (¿está encendido el backend en el puerto 3000?).')
   }
@@ -97,7 +97,7 @@ export async function listarDeBd(): Promise<ResumenBd[]> {
 
 export async function borrarDeBd(id: number): Promise<void> {
   let r: Response
-  try { r = await fetch(`${API}/characters/${id}`, { method: 'DELETE' }) }
+  try { r = await fetch(`${API}/characters/${id}`, conAuth({ method: 'DELETE' })) }
   catch { throw new Error('No se pudo conectar con el servidor.') }
   if (!r.ok && r.status !== 404) throw new Error(`Error ${r.status}`)
 }
@@ -117,11 +117,11 @@ export type CambiosFicha = {
   name: string; player_name: string; guild: string; alignment: string; sex: string
   age: string; height: string; weight: string; hair: string; eyes: string; marks: string
   lore_origin: string; lore_trajectory: string
-  armor_class: string; gold: string; silver: string; copper: string
+  armor_class: string; gold?: string; silver?: string; copper?: string
   specialSkills: string[]; extraAttributes: string[]
 }
 
-export const actualizarEnBd = (id: number, cambios: CambiosFicha) =>
+export const actualizarEnBd = (id: number, cambios: Partial<CambiosFicha> | Partial<Record<'gold' | 'silver' | 'copper', number>>) =>
   pedir<PersonajeBd>(`/characters/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(cambios) })
 
 /** El backend suma la experiencia y sube de nivel solo si toca; `levels_gained` dice cuántos niveles ha subido. */

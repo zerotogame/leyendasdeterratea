@@ -6,7 +6,7 @@ const cors = require("cors");
 const { Server } = require("socket.io");
 
 const { users, characters } = require("./data");
-const { auth, SECRET } = require("./auth");
+const { auth, SECRET, EXPIRA } = require("./auth");
 const {
   getCharacter,
   getCharacters
@@ -25,10 +25,12 @@ const {
 } = require("./rules/roll_sessions");
 
 const pool = require("./db/db");
-const { NIVEL, rolesDe, requiere } = require("./db/permisos");
+const { NIVEL, rolesDe, requiere, nivelOpcional } = require("./db/permisos");
 
 
 const app = express();
+// Detrás del proxy de Render: así el límite de /login cuenta por IP real.
+app.set("trust proxy", 1);
 
 
 // ============================================================
@@ -128,18 +130,26 @@ async function getCharacterItemEntry(characterId, objectId) {
 async function sesionDe({ id, email }) {
   const roles = await rolesDe(id);
   const mas_alto = roles.sort((a, b) => (NIVEL[b] || 0) - (NIVEL[a] || 0))[0] || "PLAYER";
-  return { token: jwt.sign({ id, role: mas_alto }, SECRET), user: { id, email, roles } };
+  return { token: jwt.sign({ id, role: mas_alto }, SECRET, { expiresIn: EXPIRA }), user: { id, email, roles } };
 }
 
 app.use('/images', express.static('images'));
 /* LOGIN: email + contraseña; devuelve el token y los roles del usuario */
-app.post("/login", async (req, res) => {
+// Frena la fuerza bruta: 10 intentos fallidos por IP cada 15 min (los logins correctos no cuentan).
+const limiteLogin = require("express-rate-limit").rateLimit({
+  windowMs: 15 * 60_000, limit: 10, skipSuccessfulRequests: true, standardHeaders: "draft-7", legacyHeaders: false,
+  message: { error: "Demasiados intentos. Espera unos minutos y vuelve a probar." }
+});
+// Hash falso para gastar el mismo tiempo cuando el email no existe (no revelar qué emails están dados de alta).
+const HASH_FALSO = bcrypt.hashSync("no-es-una-contraseña", 10);
+app.post("/login", limiteLogin, async (req, res) => {
   const email = typeof req.body.email === "string" ? req.body.email.trim().toLowerCase() : "";
-  const password = typeof req.body.password === "string" ? req.body.password : "";
+  const password = typeof req.body.password === "string" ? req.body.password.slice(0, 72) : "";
   try {
     const found = await pool.query("SELECT id, email, password FROM users WHERE LOWER(email) = $1", [email]);
     const row = found.rows[0];
-    if (!row || !(await bcrypt.compare(password, row.password))) {
+    const coincide = await bcrypt.compare(password, row ? row.password : HASH_FALSO);
+    if (!row || !coincide) {
       return res.status(401).json({ error: "Email o contraseña incorrectos." });
     }
     return res.json(await sesionDe(row));
@@ -148,6 +158,27 @@ app.post("/login", async (req, res) => {
     return res.status(500).json({ error: "database error" });
   }
 });
+
+/* PERMISOS DE PERSONAJES: sesión obligatoria; solo el dueño (o Master/Programador) toca una ficha */
+async function soloSuPersonaje(req, res, next) {
+  try {
+    if (req.user.nivel < NIVEL.MASTER && req.body && typeof req.body === "object") delete req.body.user_id; // nadie se reasigna una ficha
+    if (req.user.nivel >= NIVEL.MASTER) return next();
+    const r = await pool.query("SELECT user_id FROM public.characters WHERE id = $1", [req.params.id]);
+    if (r.rowCount && r.rows[0].user_id !== req.user.id) return res.status(403).json({ error: "Ese personaje no es tuyo." });
+    return next(); // si no existe, cada ruta responde su 404
+  } catch (e) {
+    console.error("Error comprobando dueño del personaje", e);
+    return res.status(500).json({ error: "database error" });
+  }
+}
+// Un Jugador no puede fijar el dueño ni asignarse otro: el dueño sale siempre de la sesión.
+function dueñoDeLaSesion(req, _res, next) {
+  req.body = req.body && typeof req.body === "object" ? req.body : {};
+  if (req.user.nivel < NIVEL.MASTER || !Number(req.body.user_id)) req.body.user_id = req.user.id;
+  return next();
+}
+const PLAYER = requiere("PLAYER");
 
 /* GET CHARACTER */
 app.get("/characters/:id", async (req, res) => {
@@ -183,7 +214,7 @@ app.get("/users/:userId/characters", async (req, res) => {
   }
 });
 
-app.post("/characters", async (req, res) => {
+app.post("/characters", PLAYER, dueñoDeLaSesion, async (req, res) => {
   try {
     const { id, rolls } = await createCharacterByRules(req.body || {});
     const created = await getCharacter(id);
@@ -199,7 +230,7 @@ app.post("/characters", async (req, res) => {
 });
 
 // Personajes que llegan ya tirados desde el creador de terratea-web
-app.post("/characters/web", async (req, res) => {
+app.post("/characters/web", PLAYER, dueñoDeLaSesion, async (req, res) => {
   try {
     const id = await createCharacterFromWeb(req.body || {});
     return res.status(201).json(await getCharacter(id));
@@ -213,7 +244,7 @@ app.post("/characters/web", async (req, res) => {
   }
 });
 
-app.delete("/characters/:id", async (req, res) => {
+app.delete("/characters/:id", PLAYER, soloSuPersonaje, async (req, res) => {
   try {
     await removeFilesOf(req.params.id);
     await pool.query("DELETE FROM public.character_object WHERE character_id = $1", [req.params.id]);
@@ -337,7 +368,7 @@ app.get("/objects", async (req, res) => {
 });
 
 // Imágenes de la ficha: el cuerpo es el fichero tal cual (Content-Type image/*), sin multipart
-app.post("/characters/:id/images", express.raw({ type: Object.keys(EXTENSIONS), limit: "8mb" }), async (req, res) => {
+app.post("/characters/:id/images", PLAYER, soloSuPersonaje, express.raw({ type: Object.keys(EXTENSIONS), limit: "8mb" }), async (req, res) => {
   try {
     const image = await addImage(req.params.id, req.body, req.get("content-type")?.split(";")[0]);
     return res.status(201).json(image);
@@ -348,7 +379,7 @@ app.post("/characters/:id/images", express.raw({ type: Object.keys(EXTENSIONS), 
   }
 });
 
-app.delete("/characters/:id/images/:imageId", async (req, res) => {
+app.delete("/characters/:id/images/:imageId", PLAYER, soloSuPersonaje, async (req, res) => {
   try {
     if (!(await removeImage(req.params.id, req.params.imageId))) {
       return res.status(404).json({ error: "Imagen no encontrada" });
@@ -360,8 +391,17 @@ app.delete("/characters/:id/images/:imageId", async (req, res) => {
   }
 });
 
-app.put("/characters/:id", async (req, res) => {
+app.put("/characters/:id", PLAYER, soloSuPersonaje, async (req, res) => {
   try {
+    // Monedas: el Master puede dejarlas como quiera; el resto solo puede gastar (nunca subirlas).
+    const monedas = ["gold", "silver", "copper"].filter((k) => req.body && req.body[k] !== undefined && req.body[k] !== "");
+    if (monedas.length && req.user.nivel < NIVEL.MASTER) {
+      const actual = await getCharacter(req.params.id);
+      if (!actual) return res.status(404).json({ error: "Personaje no encontrado" });
+      if (monedas.some((k) => Number(req.body[k]) > Number(actual[k]))) {
+        return res.status(403).json({ error: "Solo el Master puede aumentar las monedas; tú solo puedes gastarlas." });
+      }
+    }
     const updated = await updateCharacterByRules(req.params.id, req.body || {});
 
     if (!updated) {
@@ -607,7 +647,7 @@ app.post("/characters/:id/experience", requiere("MASTER"), async (req, res) => {
 // SUBIR NIVEL MANUALMENTE
 // ============================================================
 
-app.post("/characters/:id/level-up", async (req, res) => {
+app.post("/characters/:id/level-up", PLAYER, soloSuPersonaje, async (req, res) => {
   const client = await pool.connect();
 
   try {
@@ -670,7 +710,7 @@ app.post("/characters/:id/level-up", async (req, res) => {
 });
 
 // Reparto de los puntos de característica ganados en los niveles 10 y 20
-app.post("/characters/:id/stat-points", async (req, res) => {
+app.post("/characters/:id/stat-points", PLAYER, soloSuPersonaje, async (req, res) => {
   const client = await pool.connect();
 
   try {
@@ -700,7 +740,7 @@ app.post("/characters/:id/stat-points", async (req, res) => {
 });
 
 // Tiradas de creación: el servidor tira y recuerda el resultado para el alta
-app.post("/rolls/session", async (req, res) => {
+app.post("/rolls/session", PLAYER, async (req, res) => {
   try {
     const clase = await pool.query("SELECT id, min_stats FROM public.classes WHERE id = $1", [req.body?.class_id]);
 
@@ -715,7 +755,7 @@ app.post("/rolls/session", async (req, res) => {
   }
 });
 
-app.post("/rolls/:session/stat", async (req, res) => {
+app.post("/rolls/:session/stat", PLAYER, async (req, res) => {
   try {
     const stat = await pool.query("SELECT name FROM public.stat_definitions WHERE id = $1", [req.body?.stat_id]);
 
@@ -731,7 +771,7 @@ app.post("/rolls/:session/stat", async (req, res) => {
   }
 });
 
-app.post("/rolls/:session/vitality", (req, res) => {
+app.post("/rolls/:session/vitality", PLAYER, (req, res) => {
   try {
     res.json(rollVitalityInSession(req.params.session));
   } catch (error) {
@@ -746,7 +786,7 @@ app.get("/rules", (req, res) => {
   res.json({ alignments: rules.ALIGNMENTS, sexes: rules.SEXES });
 });
 
-app.post("/characters/:id/items", async (req, res) => {
+app.post("/characters/:id/items", PLAYER, soloSuPersonaje, async (req, res) => {
   try {
     const { object_id, objectId, name, objectName, quantity } = req.body || {};
     const resolvedObject = await resolveObjectReference(object_id ?? objectId ?? null, name ?? objectName ?? null);
@@ -784,7 +824,7 @@ app.post("/characters/:id/items", async (req, res) => {
   }
 });
 
-app.put("/characters/:id/items/:objectId", async (req, res) => {
+app.put("/characters/:id/items/:objectId", PLAYER, soloSuPersonaje, async (req, res) => {
   try {
     const quantity = Number(req.body?.quantity ?? 1);
     if (!Number.isFinite(quantity) || quantity < 0) {
@@ -813,7 +853,7 @@ app.put("/characters/:id/items/:objectId", async (req, res) => {
   }
 });
 
-app.delete("/characters/:id/items/:objectId", async (req, res) => {
+app.delete("/characters/:id/items/:objectId", PLAYER, soloSuPersonaje, async (req, res) => {
   try {
     const result = await pool.query(
       "DELETE FROM public.character_object WHERE object_id = $1 AND character_id = $2 RETURNING *",
@@ -904,8 +944,13 @@ io.use((socket, next) => {
 
 /* SOCKET EVENTS */
 io.on("connection", socket => {
-  socket.on("update-attribute", ({ charId, attr, value }) => {
+  socket.on("update-attribute", (datos) => {
+    const { charId, attr, value } = datos && typeof datos === "object" ? datos : {};
     const char = characters.find(c => c.id === charId);
+    // Entrada del cliente: el personaje debe existir, el atributo ya estar definido (nada de __proto__ ni claves nuevas)
+    // y el valor ser un número razonable.
+    if (!char || typeof attr !== "string" || !Object.hasOwn(char.attributes, attr)) return;
+    if (!Number.isFinite(value) || value < 0 || value > 99) return;
 
     const isOwner = char.ownerId === socket.user.id;
     const isMaster = socket.user.role === "MASTER";
