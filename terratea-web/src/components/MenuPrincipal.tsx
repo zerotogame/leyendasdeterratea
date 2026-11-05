@@ -38,6 +38,12 @@ const GRUPOS: Grupo[] = [
       { seccion: 'Encuentros', to: '/master', titulo: 'Generar', ayuda: 'Monstruos según nivel y terreno' },
       { to: '/master?tab=combate', titulo: 'Combate', ayuda: 'Turnos, vida y ataques' },
       { seccion: 'Gremios', to: '/mis-gremios', titulo: 'Gremios de jugadores', ayuda: 'Alta, edición y baja' },
+    ],
+  },
+  {
+    nombre: 'Gladiadores',
+    enlaces: [
+      { to: '/gladiadores', titulo: 'Juego de Gladiadores', ayuda: 'Coliseo de Adlas: historia y rankings' },
       { to: '/torneos', titulo: 'Torneos', ayuda: 'Cuadros entre gremios: 1v1, 3v3 y estrategia' },
     ],
   },

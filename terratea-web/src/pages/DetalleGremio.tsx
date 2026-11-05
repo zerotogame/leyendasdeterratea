@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useConfirmar } from '../components/Confirmar'
+import Estrellas from '../components/Estrellas'
 import HojaGremio from '../components/HojaGremio'
 import MascotasRelacionadas from '../components/MascotasRelacionadas'
-import { borrarGremio, cargarGremio, listarGremios, MAX_ESTRELLAS, type GremioBd } from '../lib/gremios'
+import { borrarGremio, cargarGremio, listarGremios, type GremioBd } from '../lib/gremios'
 import { nivelDeGremio, rankingGremios } from '../lib/nivelesGremio'
 import { urlImagen } from '../lib/sync'
 
@@ -45,9 +46,21 @@ export default function DetalleGremio() {
       {/* Al imprimir solo sale la plantilla (más abajo): todo lo marcado «no-imprimir» se oculta. */}
       <div className="no-imprimir">
         <Link to="/mis-gremios" className="volver">← Gremios</Link>
-        <h1>{g.name}</h1>
+        <header className="gremio-cabecera">
+          <span className="medallon" aria-hidden="true"><span className="inicial">{g.name.trim().charAt(0).toUpperCase()}</span></span>
+          <div>
+            <p className="gremio-rumbo">{g.location || 'Sin localización'}{g.founded ? `, fundado en ${g.founded}` : ''}</p>
+            <h1>{g.name}</h1>
+            <p className="gremio-datos">
+              <Estrellas n={g.stars} />
+              <span>Reputación {g.reputation}%</span>
+              <span>{g.members.length} miembro{g.members.length === 1 ? '' : 's'}</span>
+              {puesto != null && <span>Puesto {puesto} del ranking</span>}
+            </p>
+          </div>
+        </header>
         {error && <p className="nota" role="alert">{error}</p>}
-        <p className="filtros">
+        <p className="filtros gremio-acciones">
           <Link to={`/mis-gremios/${id}/editar`} className="boton primario">Editar gremio</Link>
           <button className="peligro" onClick={() => void eliminar()}>Eliminar gremio</button>
           <a href="#plantilla" className="boton">Ir a la plantilla</a>
@@ -55,28 +68,23 @@ export default function DetalleGremio() {
         </p>
 
         <div className="bloque">
-          <p><strong>Fundación:</strong> {g.founded || '—'} · <strong>Localización:</strong> {g.location || '—'}</p>
-          <p><strong>Reputación:</strong> {g.reputation}% · <span aria-label={`${g.stars} de ${MAX_ESTRELLAS} estrellas`}>{'★'.repeat(g.stars)}{'☆'.repeat(MAX_ESTRELLAS - g.stars)}</span></p>
-        </div>
-
-        <div className="bloque">
           <h3>Miembros</h3>
           {g.members.length ? (
-            <div className="tarjetas">
+            <div className="muro miembros">
               {g.members.map((m) => (
-                <div key={m.id} className="tarjeta">
-                  <Link to={`/personajes/bd/${m.id}`} className="enlace-tarjeta">
-                    {m.image && <img src={urlImagen(m.image)} alt={m.name} loading="lazy" />}
-                    <h2>{m.name}</h2>
-                    <small>{m.race} · {m.class} · Nivel {m.level}</small>
-                  </Link>
-                </div>
+                <Link key={m.id} to={`/personajes/bd/${m.id}`} className="figura" aria-label={`Ver a ${m.name}`}>
+                  {m.image && <img src={urlImagen(m.image)} alt="" loading="lazy" />}
+                  <span className="figura-pie">
+                    <strong>{m.name}</strong>
+                    <small>{m.race}, {m.class}, nivel {m.level}</small>
+                  </span>
+                </Link>
               ))}
             </div>
           ) : <p className="nota">Sin miembros.</p>}
         </div>
 
-        <div className="bloque">
+        <div className="bloque nivel-actual">
           <h3>Nivel {g.stars}: {nivel.nombre}</h3>
           <p>{nivel.descripcion}</p>
           {nivel.ventajas.length > 0 && <ul>{nivel.ventajas.map((v, i) => <li key={i}>{v}</li>)}</ul>}

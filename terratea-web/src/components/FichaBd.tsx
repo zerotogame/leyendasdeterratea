@@ -1,3 +1,4 @@
+import { cargaTotal } from '../lib/carga'
 import { clases, razas, img, imgRaza } from '../lib/datos'
 import HabilidadesPorNivel from './HabilidadesPorNivel'
 import { urlImagen, type PersonajeBd } from '../lib/sync'
@@ -9,8 +10,7 @@ const num = (n: number) => n.toLocaleString('es-ES')
 export default function FichaBd({ p }: { p: PersonajeBd }) {
   const raza = razas.find((r) => r.nombre === p.race)
   const clase = clases.find((c) => c.nombre.toLowerCase() === p.class.trim().toLowerCase())
-  const carga = p.inventory.reduce((s, i) => s + (Number(i.weight_kg) || 0) * i.quantity, 0)
-    + p.weapons.reduce((s, w) => s + (Number(w.weight) || 0), 0)
+  const carga = cargaTotal(p)
   const retrato = p.images?.length > 0
     ? urlImagen(p.images[0].file)
     : raza ? img(imgRaza(raza)) : null

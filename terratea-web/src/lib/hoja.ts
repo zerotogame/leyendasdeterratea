@@ -1,3 +1,4 @@
+import { cargaTotal } from './carga'
 import { armaduras, clasePorId, razaPorId } from './datos'
 import { IDS_ATRIBUTO, aCobre, calcularCA, fmtMod, limpiar, modificador, tipoArmadura, vitalidadInicial } from './reglas'
 import { costeCompra, itemCompra, nombreCompra, puntuacionesDe, type DatosFicha } from './personajes'
@@ -71,8 +72,7 @@ const lineaInventario = (i: PersonajeBd['inventory'][number]) =>
   `${i.name}${i.quantity > 1 ? ` (${i.quantity})` : ''}${i.note ? ` — ${i.note}` : ''}`
 
 export function hojaDeBd(p: PersonajeBd, clase: Clase | undefined): DatosHoja {
-  const carga = p.inventory.reduce((s, i) => s + (Number(i.weight_kg) || 0) * i.quantity, 0)
-    + p.weapons.reduce((s, w) => s + (Number(w.weight) || 0), 0)
+  const carga = cargaTotal(p)
   const a = (prefijo: string) => {
     const x = Object.entries(p.attributes).find(([k]) => norm(k).startsWith(prefijo))?.[1]
     return x ? attr(x.value, x.modifier) : ''

@@ -59,7 +59,14 @@ export const requisitosCumplidos = (c: Clase, p: Puntuaciones) =>
 export type Monedas = { oro: number; plata: number; cobre: number }
 export const aCobre = (m: Monedas) => m.oro * 100 + m.plata * 10 + m.cobre
 
-export const costeEnCobre = (coste?: string): number | null => {
+/** Resta un gasto (en cobres) al saldo y lo reparte en oro/plata/cobre; null si no alcanza. */
+export const restarMonedas = (saldo: Monedas, gastoCobre: number): Monedas | null => {
+  const resto = aCobre(saldo) - gastoCobre
+  if (resto < 0) return null
+  return { oro: Math.floor(resto / 100), plata: Math.floor((resto % 100) / 10), cobre: resto % 10 }
+}
+
+export const costeEnCobre =(coste?: string): number | null => {
   // el libro a veces omite el último punto («10 M.O»)
   // hay precios con dos monedas («7 M.O. 5 M.P.» = 750 cobres): se suman todas
   const partes = [...(coste?.replace(/\s+/g, ' ').matchAll(/(\d+)\s*M\.?([OPC])\.?/gi) ?? [])]
