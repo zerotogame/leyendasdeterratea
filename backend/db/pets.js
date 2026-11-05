@@ -3,6 +3,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const crypto = require("crypto");
 const pool = require("./db");
+const almacen = require("./almacen");
 const { EXTENSIONS, firmaValida } = require("./character_images");
 const { NIVEL, requiere } = require("./permisos");
 
@@ -119,26 +120,29 @@ const RESUMEN = `
   FROM pets p LEFT JOIN characters c ON c.id = p.owner_id LEFT JOIN guilds g ON g.id = p.guild_id`;
 
 // Una mascota solo la ven y la tocan el usuario dueño de su personaje, los Master y los Programadores.
-// Sin personaje dueño, vale quien la creó.
+// Sin personaje dueño, vale quien la creó. El líder de un gremio además VE (no edita) las de su gremio.
 const esMaster = (req) => req.user.nivel >= NIVEL.MASTER;
 const CONDICION_DUENO = "(c.user_id = $1 OR (p.owner_id IS NULL AND p.user_id = $1))";
+const CONDICION_VER = "(c.user_id = $1 OR (p.owner_id IS NULL AND p.user_id = $1) OR g.user_id = $1)";
 
-async function esDeUsuario(req, petId) {
+async function esDeUsuario(req, petId, soloVer = false) {
   if (esMaster(req)) return true;
-  const r = await pool.query(`SELECT 1 FROM pets p LEFT JOIN characters c ON c.id = p.owner_id WHERE p.id = $2 AND ${CONDICION_DUENO}`, [req.user.id, petId]);
+  const r = await pool.query(`SELECT 1 FROM pets p LEFT JOIN characters c ON c.id = p.owner_id LEFT JOIN guilds g ON g.id = p.guild_id WHERE p.id = $2 AND ${soloVer ? CONDICION_VER : CONDICION_DUENO}`, [req.user.id, petId]);
   return r.rowCount > 0;
 }
 
 // Para las rutas /pets/:id...: si la mascota existe y no es del usuario, 403 (si no existe, lo dice cada ruta con su 404).
-async function soloDueno(req, res, next) {
+const guardia = (soloVer) => async (req, res, next) => {
   try {
     const existe = await pool.query("SELECT 1 FROM pets WHERE id = $1", [req.params.id]);
-    if (existe.rowCount && !(await esDeUsuario(req, req.params.id))) {
+    if (existe.rowCount && !(await esDeUsuario(req, req.params.id, soloVer))) {
       return res.status(403).json({ error: "Esta mascota no es tuya." });
     }
     return next();
   } catch (e) { return fallo(res, e, "checking"); }
-}
+};
+const soloDueno = guardia(false);
+const puedeVer = guardia(true);
 
 // Un jugador solo puede dejar la mascota a nombre de sus propios personajes.
 async function comprobarDueno(req, p) {
@@ -149,7 +153,7 @@ async function comprobarDueno(req, p) {
 
 const listar = (req, res, filtro, valor, orden) => {
   const params = [req.user.id, valor];
-  const visible = esMaster(req) ? "" : ` AND ${CONDICION_DUENO}`;
+  const visible = esMaster(req) ? "" : ` AND ${CONDICION_VER}`;
   return pool.query(`${RESUMEN} WHERE ${filtro} = $2${visible} ORDER BY ${orden}`, params)
     .then((r) => res.json(r.rows)).catch((e) => fallo(res, e, "listing"));
 };
@@ -159,7 +163,7 @@ router.get("/users/:userId/pets", requiere("PLAYER"), async (req, res) => {
   try {
     const sql = esMaster(req)
       ? `${RESUMEN} ORDER BY p.id DESC`
-      : `${RESUMEN} WHERE ${CONDICION_DUENO} ORDER BY p.id DESC`;
+      : `${RESUMEN} WHERE ${CONDICION_VER} ORDER BY p.id DESC`;
     res.json((await pool.query(sql, esMaster(req) ? [] : [req.user.id])).rows);
   } catch (e) { fallo(res, e, "listing"); }
 });
@@ -168,7 +172,7 @@ router.get("/characters/:id/pets", requiere("PLAYER"), (req, res) => listar(req,
 
 router.get("/guilds/:id/pets", requiere("PLAYER"), (req, res) => listar(req, res, "p.guild_id", req.params.id, "p.name"));
 
-router.get("/pets/:id", requiere("PLAYER"), soloDueno, async (req, res) => {
+router.get("/pets/:id", requiere("PLAYER"), puedeVer, async (req, res) => {
   try {
     const p = await leer(req.params.id);
     return p ? res.json(p) : res.status(404).json({ error: "Mascota no encontrada" });
@@ -188,7 +192,7 @@ router.put("/pets/:id", requiere("PLAYER"), soloDueno, async (req, res) => {
   } catch (e) { fallo(res, e, "updating"); }
 });
 
-const borrarFichero = (file) => (file ? fs.unlink(path.join(IMAGES_DIR, file)).catch(() => {}) : undefined);
+const borrarFichero = (file) => (file ? Promise.all([almacen.borrar(file), fs.unlink(path.join(IMAGES_DIR, file)).catch(() => {})]) : undefined);
 
 router.delete("/pets/:id", requiere("PLAYER"), soloDueno, async (req, res) => {
   try {
@@ -210,8 +214,7 @@ router.post("/pets/:id/image", requiere("PLAYER"), soloDueno, express.raw({ type
     const actual = await pool.query("SELECT image FROM public.pets WHERE id = $1", [id]);
     if (!actual.rowCount) throw new PetError("Mascota no encontrada", 404);
     const file = `${SUBDIR}/${id}-${crypto.randomBytes(8).toString("hex")}.${ext}`;
-    await fs.mkdir(path.join(IMAGES_DIR, SUBDIR), { recursive: true });
-    await fs.writeFile(path.join(IMAGES_DIR, file), req.body);
+    await almacen.guardar(file, req.body);
     await pool.query("UPDATE public.pets SET image = $2 WHERE id = $1", [id, file]);
     await borrarFichero(actual.rows[0].image);
     return res.status(201).json({ image: file });

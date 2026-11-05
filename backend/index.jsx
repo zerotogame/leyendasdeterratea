@@ -208,6 +208,7 @@ function dueñoDeLaSesion(req, _res, next) {
 }
 const PLAYER = requiere("PLAYER");
 app.use('/images', express.static('images', { maxAge: '7d', etag: true }));
+app.use('/images', require('./db/almacen').servir);
 
 /* GET CHARACTER */
 // Resumen ligero de TODOS los personajes (lista de terratea-web; sin login todavía)

@@ -2,6 +2,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const crypto = require("crypto");
 const pool = require("./db");
+const almacen = require("./almacen");
 
 const IMAGES_DIR = path.join(__dirname, "..", "images");
 const SUBDIR = "characters";
@@ -52,8 +53,7 @@ async function addImage(characterId, buffer, mimeType) {
   if (count.rows[0].n >= MAX_IMAGES) throw new ImageError(`Máximo ${MAX_IMAGES} imágenes por personaje.`);
 
   const file = `${SUBDIR}/${characterId}-${crypto.randomBytes(8).toString("hex")}.${ext}`;
-  await fs.mkdir(path.join(IMAGES_DIR, SUBDIR), { recursive: true });
-  await fs.writeFile(path.join(IMAGES_DIR, file), buffer);
+  await almacen.guardar(file, buffer);
 
   try {
     const inserted = await pool.query(
@@ -64,10 +64,13 @@ async function addImage(characterId, buffer, mimeType) {
     );
     return inserted.rows[0];
   } catch (error) {
-    await fs.unlink(path.join(IMAGES_DIR, file)).catch(() => {});
+    await almacen.borrar(file);
     throw error;
   }
 }
+
+// Quita la imagen de la BD y, si es una antigua, también del disco.
+const borrarFichero = (file) => Promise.all([almacen.borrar(file), fs.unlink(path.join(IMAGES_DIR, file)).catch(() => {})]);
 
 async function removeImage(characterId, imageId) {
   const deleted = await pool.query(
@@ -75,14 +78,14 @@ async function removeImage(characterId, imageId) {
     [imageId, characterId]
   );
   if (!deleted.rowCount) return false;
-  await fs.unlink(path.join(IMAGES_DIR, deleted.rows[0].file)).catch(() => {});
+  await borrarFichero(deleted.rows[0].file);
   return true;
 }
 
 // Al borrar un personaje las filas caen en cascada; aquí se limpian los ficheros
 async function removeFilesOf(characterId) {
   const images = await listImages(characterId);
-  await Promise.all(images.map((i) => fs.unlink(path.join(IMAGES_DIR, i.file)).catch(() => {})));
+  await Promise.all(images.map((i) => borrarFichero(i.file)));
 }
 
 module.exports = { listImages, addImage, removeImage, removeFilesOf, ImageError, EXTENSIONS, firmaValida };
