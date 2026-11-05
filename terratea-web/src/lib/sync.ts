@@ -1,6 +1,6 @@
 import { conAuth, idUsuario, leerSesion, puede } from './auth'
 import { armaduras, clasePorId, razaPorId, NOMBRE_ATRIBUTO } from './datos'
-import { IDS_ATRIBUTO, aCobre, calcularCA, limpiar, modificador, tipoArmadura, vitalidadInicial } from './reglas'
+import { IDS_ATRIBUTO, aCobre, calcularCA, limpiar, modificador, restarMonedas, tipoArmadura, vitalidadInicial } from './reglas'
 import { costeCompra, itemCompra, nombreCompra, puntuacionesDe, type Personaje } from './personajes'
 import type { Arma } from '../data/types'
 import { combinacion, comboId } from './fichasOficiales'
@@ -69,7 +69,8 @@ export type PersonajeBd = {
   rollSalvations: Record<string, number>
   rollMovements: Record<string, number>
   inventory: { object_id: number; name: string; quantity: number; weight_kg: string | null; note?: string | null }[]
-  weapons: { slot: number; name: string; damage?: string | null; total: string | null; special: string | null; hands: number | null; weight: string | null }[]
+  weapons: ArmaBd[]
+  armors?: ArmaduraBd[]
   specialSkills: string[]
   extraAttributes: string[]
 }
@@ -113,6 +114,21 @@ async function pedir<T>(url: string, init?: RequestInit): Promise<T> {
 }
 
 /** Campos de la ficha que se pueden editar (el resto lo deciden las reglas). Vacío = borrar el dato. */
+export type ArmaBd = {
+  slot?: number; name: string; damage?: string | null; total?: string | null; special?: string | null; hands?: number | null; weight?: string | null
+  attack_magic?: number | null; attack_element?: number | null; attack_malediction?: number | null
+}
+
+export type ArmaduraBd = { slot?: number; name: string; armor_class?: string | null; weight?: string | null; noise?: string | null; special?: string | null }
+
+/** Sustituye la lista de armaduras equipadas; opcionalmente fija la C.A. en la misma llamada. */
+export const guardarArmaduras = (id: number, armors: ArmaduraBd[], armor_class?: number) =>
+  pedir<PersonajeBd>(`/characters/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ armors, ...(armor_class != null && { armor_class }) }) })
+
+/** Sustituye la lista completa de armas del personaje (el backend borra y reinserta; el orden fija el slot). */
+export const guardarArmas = (id: number, weapons: ArmaBd[]) =>
+  pedir<PersonajeBd>(`/characters/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ weapons }) })
+
 export type CambiosFicha = {
   name: string; player_name: string; guild: string; alignment: string; sex: string
   age: string; height: string; weight: string; hair: string; eyes: string; marks: string
@@ -137,7 +153,35 @@ export async function sumarMonedas(id: number, m: { oro: number; plata: number; 
   })
 }
 
-export const reglasBd = () => pedir<{ alignments: string[]; sexes: string[] }>('/rules')
+export type ObjetoCatalogo = { id: number; name: string; price_copper: number | null; weight_kg: string | null; is_unique: boolean }
+type RespuestaEquipo = { character: PersonajeBd }
+
+export const catalogoObjetos = () => pedir<ObjetoCatalogo[]>('/objects')
+
+const JSON_H = { 'Content-Type': 'application/json' }
+
+export const añadirObjeto = (id: number, objectId: number, quantity = 1) =>
+  pedir<RespuestaEquipo>(`/characters/${id}/items`, { method: 'POST', headers: JSON_H, body: JSON.stringify({ object_id: objectId, quantity }) })
+
+/** `note` undefined = no tocar la nota; '' = borrarla. */
+export const cambiarObjeto = (id: number, objectId: number, quantity: number, note?: string) =>
+  pedir<RespuestaEquipo>(`/characters/${id}/items/${objectId}`, { method: 'PUT', headers: JSON_H, body: JSON.stringify({ quantity, note }) })
+
+export const quitarObjeto = (id: number, objectId: number) =>
+  pedir<RespuestaEquipo>(`/characters/${id}/items/${objectId}`, { method: 'DELETE' })
+
+/** Descuenta un gasto (en cobres) de la ficha; falla si no hay saldo suficiente. */
+export async function gastarMonedas(id: number, gastoCobre: number) {
+  const p = await cargarDeBd(id)
+  const nuevo = restarMonedas({ oro: p.gold, plata: p.silver, cobre: p.copper }, gastoCobre)
+  if (!nuevo) throw new Error('No hay monedas suficientes')
+  return pedir<PersonajeBd>(`/characters/${id}`, {
+    method: 'PUT', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ gold: nuevo.oro, silver: nuevo.plata, copper: nuevo.cobre }),
+  })
+}
+
+export const reglasBd =() => pedir<{ alignments: string[]; sexes: string[] }>('/rules')
 
 export const subirImagen = (id: number, f: File) =>
   pedir<ImagenBd>(`/characters/${id}/images`, { method: 'POST', headers: { 'Content-Type': f.type }, body: f })

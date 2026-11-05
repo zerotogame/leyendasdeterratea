@@ -193,25 +193,26 @@ export function disponer(t: Torneo): { cajas: Map<string, Caja>; ancho: number; 
   const poner = (n: Nodo, y: number) => cajas.set(n.id, { id: n.id, x: n.columna * (ANCHO + HUECO_X), y, alto: alto(n) })
   const centro = (id: string) => { const c = cajas.get(id)!; return c.y + c.alto / 2 }
 
+  // La clasificatoria se apila primero; sus consumidores se centran entre sus dos tarjetas.
+  let y = 0
+  for (const n of t.nodos.filter(alrededor)) { poner(n, y); y += alto(n) + HUECO_Y }
+  const medioDe = (n: Nodo) => n.fuentes.reduce((s, f) => s + centro(f), 0) / n.fuentes.length
+  // Si la misma columna tiene tarjetas sueltas arriba, baja la clasificatoria para que no choquen.
+  const primero = t.nodos.find((n) => n.fuentes.some((f) => cajas.has(f)))
+  if (primero) {
+    const sueltas = t.nodos.filter((x) => x.columna === primero.columna && !x.fuentes.length)
+    const libre0 = sueltas.reduce((s, x) => s + alto(x) + HUECO_Y, 0)
+    const bajar = Math.max(0, libre0 - (medioDe(primero) - alto(primero) / 2))
+    for (const c of cajas.values()) c.y += bajar
+  }
+
   for (let col = 0; col < columnas; col++) {
     let libre = 0
     for (const n of t.nodos.filter((x) => x.columna === col && !alrededor(x))) {
-      if (n.pila || !n.fuentes.length) { poner(n, libre) }
-      else {
-        const medio = n.fuentes.reduce((s, f) => s + centro(f), 0) / n.fuentes.length
-        poner(n, Math.max(libre, medio - alto(n) / 2))
-      }
+      if (!n.fuentes.length) { poner(n, libre) }
+      else poner(n, Math.max(libre, medioDe(n) - alto(n) / 2))
       libre = cajas.get(n.id)!.y + alto(n) + HUECO_Y
     }
-  }
-  const grupos = new Map<string, Nodo[]>()
-  for (const n of t.nodos.filter(alrededor)) grupos.set(consumidor.get(n.id)!.id, [...(grupos.get(consumidor.get(n.id)!.id) ?? []), n])
-  let limite = 0
-  for (const [dest, lista] of grupos) {
-    const total = lista.reduce((s, n) => s + alto(n), 0) + HUECO_Y * (lista.length - 1)
-    let y = Math.max(limite, centro(dest) - total / 2)
-    for (const n of lista) { poner(n, y); y += alto(n) + HUECO_Y }
-    limite = y
   }
   const todas = [...cajas.values()]
   const minY = Math.min(0, ...todas.map((c) => c.y))

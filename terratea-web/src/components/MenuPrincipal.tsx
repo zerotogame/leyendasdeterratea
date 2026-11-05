@@ -38,8 +38,14 @@ const GRUPOS: Grupo[] = [
       { seccion: 'Encuentros', to: '/master', titulo: 'Generar', ayuda: 'Monstruos según nivel y terreno' , minimo: 'MASTER' },
       { to: '/master?tab=combate', titulo: 'Combate', ayuda: 'Turnos, vida y ataques' , minimo: 'MASTER' },
       { seccion: 'Gremios', to: '/mis-gremios', titulo: 'Gremios de jugadores', ayuda: 'Alta, edición y baja' , minimo: 'GUILD_LEADER' },
-      { to: '/torneos', titulo: 'Torneos', ayuda: 'Cuadros entre gremios: 1v1, 3v3 y estrategia' , minimo: 'MASTER' },
       { seccion: 'Administración', to: '/usuarios', titulo: 'Usuarios y roles', ayuda: 'Asignar Jugador, Líder de gremio, Master o Programador' , minimo: 'DEVELOPER' },
+    ],
+  },
+  {
+    nombre: 'Gladiadores',
+    enlaces: [
+      { to: '/gladiadores', titulo: 'Juego de Gladiadores', ayuda: 'Coliseo de Adlas: historia y rankings' },
+      { to: '/torneos', titulo: 'Torneos', ayuda: 'Cuadros entre gremios: 1v1, 3v3 y estrategia', minimo: 'MASTER' },
     ],
   },
 ]

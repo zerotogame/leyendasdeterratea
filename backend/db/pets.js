@@ -3,8 +3,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const crypto = require("crypto");
 const pool = require("./db");
-const { EXTENSIONS } = require("./character_images");
-
+const { EXTENSIONS, firmaValida } = require("./character_images");
 const { NIVEL, requiere } = require("./permisos");
 
 const router = express.Router();
@@ -206,6 +205,7 @@ router.post("/pets/:id/image", requiere("PLAYER"), soloDueno, express.raw({ type
     const ext = EXTENSIONS[req.get("content-type")?.split(";")[0]];
     if (!ext) throw new PetError("Formato no admitido: usa JPG, PNG, WEBP o GIF.");
     if (!Buffer.isBuffer(req.body) || !req.body.length) throw new PetError("La imagen está vacía.");
+    if (!firmaValida(req.body, req.get("content-type").split(";")[0])) throw new PetError("El archivo no es una imagen válida del formato indicado.");
     const id = Number(req.params.id);
     const actual = await pool.query("SELECT image FROM public.pets WHERE id = $1", [id]);
     if (!actual.rowCount) throw new PetError("Mascota no encontrada", 404);

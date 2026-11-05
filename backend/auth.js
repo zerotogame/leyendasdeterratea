@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 // pero los tokens dejan de valer al reiniciar. En producción define JWT_SECRET (mín. 32 caracteres).
 let SECRET = process.env.JWT_SECRET;
 if (!SECRET || SECRET.length < 32) {
+  if (process.env.NODE_ENV === "production") throw new Error("JWT_SECRET es obligatorio en producción (mín. 32 caracteres aleatorios).");
   if (SECRET) console.warn("JWT_SECRET demasiado corto (mín. 32 caracteres): se usa un secreto aleatorio.");
   else console.warn("JWT_SECRET no definido: se usa un secreto aleatorio; las sesiones se perderán al reiniciar.");
   SECRET = crypto.randomBytes(48).toString("hex");

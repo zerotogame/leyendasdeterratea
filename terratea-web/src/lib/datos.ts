@@ -51,7 +51,7 @@ export const razasParaClase = (c: Clase) =>
     enlace: r.raza.split('/')[0],
   }))
 
-export const img = (ruta: string) => `${import.meta.env.BASE_URL}${ruta}`
+export { img } from './img'
 
 export const NOMBRE_ATRIBUTO: Record<string, string> = Object.fromEntries(
   atributos.map((a) => [a.id, a.nombre]),

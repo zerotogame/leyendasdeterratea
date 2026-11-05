@@ -1,0 +1,31 @@
+{
+  "promotor": "Aurelio Mandarino",
+  "lugar": "Coliseo de Adlas",
+  "juegos": [
+    {
+      "id": "duelo-de-sangre",
+      "nombre": "Duelo de Sangre",
+      "modalidad": "1 VS 1",
+      "nuevo": false
+    },
+    {
+      "id": "triada",
+      "nombre": "Triada",
+      "modalidad": "3 VS 3",
+      "nuevo": false
+    },
+    {
+      "id": "ultimo-superviviente",
+      "nombre": "El Último Superviviente",
+      "modalidad": "Todos contra todos",
+      "nuevo": false
+    },
+    {
+      "id": "asalto-fortaleza",
+      "nombre": "Asalto a la Fortaleza",
+      "modalidad": "Estrategia",
+      "nuevo": true,
+      "desde": 3
+    }
+  ]
+}

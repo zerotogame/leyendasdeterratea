@@ -26,12 +26,12 @@ export default function Ficha({ e }: { e: DatosFicha }) {
   return (
     <section className="ficha">
       <header className="ficha-cab">
-        <img src={img((sub?.imagenes ?? raza.imagenes).ilustraciones[0] ?? '')} alt={raza.nombre} />
+        <img loading="lazy" decoding="async" src={img((sub?.imagenes ?? raza.imagenes).ilustraciones[0] ?? '')} alt={raza.nombre} />
         <div>
           <h2>{e.nombre || 'Sin nombre'}</h2>
           <p>{raza.nombre}{sub && ` · ${sub.nombre}`} · {clase.nombre} · Nivel 1</p>
         </div>
-        <img src={img(clase.imagenes.ilustraciones[0] ?? '')} alt={clase.nombre} />
+        <img loading="lazy" decoding="async" src={img(clase.imagenes.ilustraciones[0] ?? '')} alt={clase.nombre} />
       </header>
 
       <div className="stats">

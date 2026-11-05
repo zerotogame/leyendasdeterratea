@@ -2,18 +2,19 @@ import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import MenuPrincipal from './components/MenuPrincipal'
 import Inicio from './pages/Inicio'
-import ListaRazas from './pages/ListaRazas'
-import DetalleRaza from './pages/DetalleRaza'
-import ListaClases from './pages/ListaClases'
-import DetalleClase from './pages/DetalleClase'
-import Creador from './pages/Creador'
-import ListaPersonajes from './pages/ListaPersonajes'
-import DetallePersonaje from './pages/DetallePersonaje'
-import DetallePersonajeBd from './pages/DetallePersonajeBd'
-import EditarPersonajeBd from './pages/EditarPersonajeBd'
-import Mundo from './pages/Mundo'
-import Login from './pages/Login'
 import Protegido from './components/Protegido'
+
+const ListaRazas = lazy(() => import('./pages/ListaRazas'))
+const DetalleRaza = lazy(() => import('./pages/DetalleRaza'))
+const ListaClases = lazy(() => import('./pages/ListaClases'))
+const DetalleClase = lazy(() => import('./pages/DetalleClase'))
+const Creador = lazy(() => import('./pages/Creador'))
+const ListaPersonajes = lazy(() => import('./pages/ListaPersonajes'))
+const DetallePersonaje = lazy(() => import('./pages/DetallePersonaje'))
+const DetallePersonajeBd = lazy(() => import('./pages/DetallePersonajeBd'))
+const EditarPersonajeBd = lazy(() => import('./pages/EditarPersonajeBd'))
+const Mundo = lazy(() => import('./pages/Mundo'))
+const Login = lazy(() => import('./pages/Login'))
 
 // El Libro 2 (450 criaturas) va en chunks aparte para no engordar la carga inicial.
 const ListaBestiario = lazy(() => import('./pages/ListaBestiario'))
@@ -31,6 +32,7 @@ const EditorMascota = lazy(() => import('./pages/EditorMascota'))
 const ListaTorneos = lazy(() => import('./pages/ListaTorneos'))
 const DetalleTorneo = lazy(() => import('./pages/DetalleTorneo'))
 const Usuarios = lazy(() => import('./pages/Usuarios'))
+const Gladiadores = lazy(() => import('./pages/Gladiadores'))
 const Panteon = lazy(() => import('./pages/Panteon'))
 const Objetos = lazy(() => import('./pages/Objetos'))
 const Chuleta = lazy(() => import('./pages/Chuleta'))
@@ -63,6 +65,7 @@ export default function App() {
           <Route path="/mis-mascotas/nuevo" element={<Protegido minimo="PLAYER"><EditorMascota /></Protegido>} />
           <Route path="/mis-mascotas/:id/editar" element={<Protegido minimo="PLAYER"><EditorMascota /></Protegido>} />
           <Route path="/mis-mascotas/:id" element={<Protegido minimo="PLAYER"><DetalleMascota /></Protegido>} />
+          <Route path="/gladiadores" element={<Gladiadores />} />
           <Route path="/torneos" element={<Protegido minimo="MASTER"><ListaTorneos /></Protegido>} />
           <Route path="/torneos/:id" element={<Protegido minimo="MASTER"><DetalleTorneo /></Protegido>} />
           <Route path="/panteon"element={<Panteon />} />

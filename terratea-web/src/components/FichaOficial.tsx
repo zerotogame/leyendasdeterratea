@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { img } from '../lib/datos'
+import { img } from '../lib/img'
 import { combinacion } from '../lib/fichasOficiales'
 import type { DatosHoja } from '../lib/hoja'
 import { hojaImp1, hojaImp2, hojaPc, type Hoja } from '../lib/hojaLayout'

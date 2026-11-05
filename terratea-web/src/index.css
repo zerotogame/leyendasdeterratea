@@ -1,10 +1,10 @@
 :root {
-  --bg: #14110f;
-  --panel: #1f1a16;
-  --borde: #3a3028;
-  --texto: #e8dfd0;
-  --suave: #a89c88;
-  --oro: #d4a24c;
+  --bg: #17130f;
+  --panel: #201a14;
+  --borde: #4a3d2c;
+  --texto: #f1e9d6;
+  --suave: #aca698;
+  --oro: #e9b949;
   --ok: #6dbb7a;
   --mal: #d9645a;
   color-scheme: dark;
@@ -14,6 +14,12 @@ body {
   margin: 0; background: var(--bg); color: var(--texto);
   font: 16px/1.55 Georgia, 'Times New Roman', serif;
 }
+/* Grano de pergamino/cuero: rompe la lisura "digital" sin cargar imágenes */
+body::before {
+  content: ''; position: fixed; inset: 0; z-index: 1000; pointer-events: none; opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media print { body::before { display: none; } }
 a { color: var(--oro); }
 h1, h2, h3 { font-weight: normal; letter-spacing: .03em; }
 h1 { color: var(--oro); font-size: 2rem; margin: .5rem 0 1rem; }
@@ -278,6 +284,9 @@ th { background: #2a231d; color: var(--oro); font-weight: normal; }
 .fbd-pares div { display: flex; justify-content: space-between; border-bottom: 1px dotted var(--borde); }
 .fbd-pares dt { color: var(--suave); }
 .fbd-pares dd { margin: 0; }
+.descontar-oro { margin: .6rem 0; }
+.descontar-campos { display: flex; gap: .8rem; flex-wrap: wrap; align-items: center; margin-top: .4rem; }
+.descontar-campos input[type=number] { width: 5rem; margin-left: .3rem; }
 .fbd-tesoro { display: flex; gap: 1rem; flex-wrap: wrap; color: var(--oro); border-top: 1px solid var(--borde); padding-top: .6rem; }
 @media (max-width: 800px) {
   .fbd-cab { grid-template-columns: 90px 1fr; }
@@ -505,3 +514,685 @@ th { background: #2a231d; color: var(--oro); font-weight: normal; }
 /* Niveles de gremio (Libro 1) */
 .nivel-gremio.actual { border-color: var(--oro); box-shadow: 0 0 0 2px var(--oro) inset; }
 .nivel-gremio .estrellas { color: var(--oro); font-size: .8em; margin-left: .4rem; }
+
+/* impresión del cuadro de torneo: solo el diagrama, apaisado */
+@media print {
+  @page { size: landscape; }
+  body:has(.cuadro) .cabecera, body:has(.cuadro) .no-imprimir, body:has(.cuadro) .bloque:not(:has(.cuadro)),
+  body:has(.cuadro) .bloque > :not(.cuadro-scroll) { display: none !important; }
+  body:has(.cuadro) main { padding: 0 !important; max-width: none !important; margin: 0 !important; }
+  .cuadro-scroll { overflow: visible; }
+  .cuadro * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ===== Mundo ===== */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.mundo { --reino: var(--oro); }
+.mundo h1 { margin: 0; }
+
+/* Brújula: los cuatro reinos en sus rumbos y Overfield en el centro */
+.brujula {
+  position: relative; display: grid; gap: 10px; flex: none;
+  grid-template: "x1 n x2" auto "o c e" auto "x3 s x4" auto / 1fr 1.15fr 1fr;
+  width: min(100%, 430px);
+}
+.brujula::before, .brujula::after { content: ""; position: absolute; background: var(--borde); z-index: 0; }
+.brujula::before { left: 50%; top: 8%; bottom: 8%; width: 1px; }
+.brujula::after { top: 50%; left: 4%; right: 4%; height: 1px; }
+.brujula .punto {
+  position: relative; z-index: 1; display: flex; flex-direction: column; gap: 2px; justify-content: center;
+  padding: .7rem .6rem; text-align: center; text-decoration: none; color: var(--texto);
+  background: var(--panel); border: 1px solid var(--borde); border-top: 3px solid var(--reino); border-radius: 6px;
+  transition: background .15s, border-color .15s;
+}
+.brujula .punto:hover, .brujula .punto:focus-visible { background: color-mix(in srgb, var(--reino) 16%, var(--panel)); border-color: var(--reino); }
+.brujula .punto:focus-visible { outline: 2px solid var(--reino); outline-offset: 2px; }
+.brujula .punto.activo { background: color-mix(in srgb, var(--reino) 24%, var(--panel)); border-color: var(--reino); }
+.brujula .rumbo { font-size: .78rem; color: var(--suave); }
+.brujula .nombre { font-size: 1.05rem; color: var(--reino); letter-spacing: .02em; }
+.brujula .norte { grid-area: n; } .brujula .oeste { grid-area: o; } .brujula .este { grid-area: e; }
+.brujula .sur { grid-area: s; } .brujula .centro { grid-area: c; border-radius: 50%; aspect-ratio: 1; padding: .3rem; border-width: 2px; }
+
+/* Portada */
+.mundo-portada { display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.mundo-portada > div { flex: 1 1 320px; max-width: 62ch; }
+.mundo-portada h1 { font-size: 2.8rem; }
+.mundo-lema { font-size: 1.25rem; font-style: italic; color: var(--texto); margin: .25rem 0 1rem; line-height: 1.4; }
+.mundo-intro { color: var(--suave); }
+
+/* Barra de reino */
+.mundo-barra { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.mundo-volver { color: var(--suave); text-decoration: none; }
+.mundo-volver:hover { color: var(--oro); }
+.mundo-barra .brujula { width: min(100%, 380px); grid-template: "o n e" auto "x1 s x2" auto / 1fr 1fr 1fr; }
+.mundo-barra .brujula::before, .mundo-barra .brujula::after { display: none; }
+.mundo-barra .brujula .punto { padding: .35rem .3rem; border-top-width: 2px; }
+.mundo-barra .brujula .rumbo { display: none; }
+.mundo-barra .brujula .nombre { font-size: .85rem; }
+.mundo-barra .brujula .centro { grid-area: x1; border-radius: 6px; aspect-ratio: auto; border-width: 1px; border-top-width: 2px; }
+
+/* Cabecera del reino: medallón claro para que se vean los emblemas negros */
+.medallon {
+  --d: 210px; flex: none; width: var(--d); aspect-ratio: 1; border-radius: 50%; position: relative;
+  background: radial-gradient(circle at 35% 30%, #f3ead6, #cfc1a0);
+  border: 3px solid var(--reino); box-shadow: 0 0 0 5px var(--bg), 0 0 0 6px var(--borde), inset 0 0 22px rgba(90, 65, 30, .35);
+}
+.medallon img { position: absolute; inset: 15%; width: 70%; height: 70%; object-fit: contain; }
+.mundo-cabecera { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem 2rem; margin: 0 0 2rem 6px; }
+.mundo-rumbo { margin: 0 0 .2rem; color: var(--suave); font-style: italic; font-size: 1.1rem; }
+.mundo-cabecera h1 { color: var(--reino); font-size: clamp(2.6rem, 8vw, 4.6rem); line-height: 1; letter-spacing: .01em; border-bottom: 2px solid var(--reino); padding-bottom: .15em; }
+
+/* Texto */
+.mundo-bloque { margin: 0 0 2.5rem; }
+.mundo-bloque.familia { border-top: 1px solid var(--borde); padding-top: 1.5rem; }
+.mundo-fam-cab { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
+.mundo-fam-cab .medallon { --d: 110px; border-width: 2px; }
+.mundo-texto { max-width: 66ch; font-size: 1.08rem; line-height: 1.75; }
+.mundo-texto p { margin: 0 0 1.1em; }
+.mundo-subtit { color: var(--reino); font-size: 1.35rem; margin: 1.8rem 0 .6rem; }
+.mundo-fam-cab .mundo-subtit { font-size: 1.7rem; margin: 0; }
+
+/* Planos y mapas */
+.mundo-mapa { margin: 1.5rem 0 0; }
+.mundo-mapa a { display: block; }
+.mundo-mapa img { display: block; width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--borde); background: var(--panel); }
+.mundo-mapa figcaption { margin-top: .5rem; color: var(--suave); font-size: .9rem; font-style: italic; }
+
+/* Pie: reino anterior y siguiente */
+.mundo-pie { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--borde); padding-top: 1rem; }
+.mundo-pie a { color: var(--reino); text-decoration: none; font-size: 1.1rem; }
+.mundo-pie a:hover { text-decoration: underline; }
+
+@media (max-width: 520px) {
+  .mundo-texto { font-size: 1rem; }
+  .brujula .nombre { font-size: .92rem; }
+}
+@media print { .brujula, .mundo-barra, .mundo-pie { display: none; } }
+
+/* Fragmentos plegables */
+.mundo-texto { max-width: 70ch; }
+.mundo-todo { margin: 0 0 .75rem; font-size: .9rem; }
+.frag { margin: 0 0 .7rem; border-left: 3px solid var(--borde); background: var(--panel); border-radius: 0 6px 6px 0; transition: border-color .2s, background .2s; }
+.frag.abierto { border-left-color: var(--reino); }
+.frag-corto { padding: .8rem 1rem; margin: 0 0 .7rem; }
+.frag-cab { display: block; width: 100%; text-align: left; background: none; border: 0; border-radius: 0; padding: .85rem 1rem; color: var(--texto); font: inherit; cursor: pointer; }
+.frag-cab:hover .frag-mas, .frag-cab:focus-visible .frag-mas { color: var(--reino); }
+.frag-cab:focus-visible { outline: 2px solid var(--reino); outline-offset: -2px; }
+.frag-inicio { display: block; font-size: 1.15rem; line-height: 1.5; }
+.frag-mas { display: inline-block; margin-top: .35rem; font-size: .88rem; color: var(--suave); }
+.frag-mas::before { content: "▸ "; display: inline-block; transition: transform .2s; }
+.frag.abierto .frag-mas::before { transform: rotate(90deg); }
+.frag-cuerpo { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+.frag.abierto .frag-cuerpo { grid-template-rows: 1fr; }
+.frag-cuerpo > p { overflow: hidden; min-height: 0; margin: 0; padding: 0 1rem; line-height: 1.75; }
+.frag.abierto .frag-cuerpo > p { padding-bottom: 1rem; }
+/* solo el siguiente fragmento por leer: respiración muy lenta en amarillo tenue (sin parpadeo) */
+@keyframes frag-brillo {
+  0%, 100% { color: var(--suave); text-shadow: 0 0 0 transparent; }
+  50% { color: #f0d27a; text-shadow: 0 0 12px rgba(240, 210, 122, .65), 0 0 4px rgba(240, 210, 122, .45); }
+}
+.frag.siguiente .frag-mas { animation: frag-brillo 6s ease-in-out infinite; }
+.frag.siguiente .frag-cab:hover .frag-mas, .frag.siguiente .frag-cab:focus-visible .frag-mas { animation: none; }
+@media (prefers-reduced-motion: reduce) { .frag-cuerpo, .frag-mas::before { transition: none; } .frag.siguiente .frag-mas { animation: none; } }
+@media print { .frag-cuerpo { grid-template-rows: 1fr; } .frag-mas, .mundo-todo { display: none; } }
+
+/* Pines sobre el mapa del mundo */
+.mapa-pines { position: relative; }
+.pin { position: absolute; transform: translate(-50%, -50%); text-decoration: none; display: flex; align-items: center; justify-content: center; }
+.pin span {
+  white-space: nowrap; padding: .3rem .7rem; border-radius: 999px; font-size: .9rem; color: #fff;
+  background: color-mix(in srgb, var(--reino) 80%, #000); border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.6);
+  transition: transform .15s;
+}
+.pin:hover span, .pin:focus-visible span { transform: scale(1.12); }
+.pin:focus-visible { outline: none; }
+.pin:focus-visible span { outline: 2px solid #fff; outline-offset: 3px; }
+@media (max-width: 640px) { .pin span { font-size: .7rem; padding: .2rem .45rem; } }
+
+/* ===== Mundo: centrado y marcos ===== */
+.mundo { max-width: 880px; margin: 0 auto; text-align: center; }
+.mundo-texto, .mundo-subtit { margin-left: auto; margin-right: auto; text-align: left; }
+.mundo-subtit { max-width: 70ch; }
+.mundo-fam-cab .mundo-subtit { max-width: none; }
+
+.mundo-portada { flex-direction: column; justify-content: center; text-align: center; }
+.mundo-portada > div { flex: none; max-width: 62ch; }
+.mundo-barra { flex-direction: column; justify-content: center; }
+.mundo-barra .brujula { margin: 0 auto; }
+.brujula { margin: 0 auto; }
+
+.mundo-cabecera { flex-direction: column; text-align: center; margin: 0 auto 2rem; }
+.mundo-cabecera h1 { display: inline-block; }
+.mundo-todo { display: block; margin: 0 auto .9rem; }
+.mundo-fam-cab { justify-content: center; flex-direction: column; text-align: center; }
+.mundo-pie { max-width: 70ch; margin: 0 auto; }
+
+/* Marco de los mapas y planos: dorado, con doble filete y esquinas */
+.mundo-mapa a, .mapa-pines { display: block; }
+.mundo-mapa > a, .mapa-pines {
+  padding: 10px; border-radius: 4px;
+  background: linear-gradient(135deg, #8a6a2c, #e3bf6e 45%, #8a6a2c);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(0, 0, 0, .45);
+  position: relative;
+}
+.mundo-mapa > a::before, .mapa-pines::before {
+  content: ""; position: absolute; inset: 5px; border: 1px solid rgba(40, 25, 5, .65); border-radius: 2px; pointer-events: none; z-index: 1;
+}
+.mundo-mapa img { border: 2px solid #2a1d08; border-radius: 2px; }
+.mundo-mapa figcaption { text-align: center; }
+.mapa-pines > img { position: relative; }
+.pin { z-index: 2; }
+
+/* ===== Mundo: aprovechar el ancho en escritorio ===== */
+@media (min-width: 960px) {
+  .mundo { max-width: 1180px; }
+  /* portada: texto y brújula a la izquierda, mapa grande a la derecha */
+  .mundo-portada { display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 2rem 2.5rem; align-items: start; text-align: left; }
+  .mundo-portada .pcol { text-align: center; }
+  .mundo-portada > .mundo-mapa { margin: 0; }
+  .pcol .brujula { margin-top: 1.5rem; }
+  /* reino: lateral fijo con emblema, nombre y reinos; lectura a la derecha */
+  .mundo-layout { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+  .mundo-lateral { position: sticky; top: 1rem; }
+  .mundo-barra { margin-bottom: 1.5rem; }
+  .mundo-barra .brujula { width: 100%; }
+  .mundo-contenido .mundo-texto, .mundo-contenido .mundo-subtit, .mundo-contenido .mundo-pie { max-width: none; }
+  .mundo-contenido .mundo-fam-cab { flex-direction: row; justify-content: flex-start; text-align: left; }
+  .mundo-contenido .mundo-todo { margin: 0 0 .9rem; }
+}
+@media (max-width: 959px) { .mundo-lateral { position: static; } }
+@media (min-width: 960px) {
+  .mundo { max-width: none; width: min(1360px, calc(100vw - 80px)); position: relative; left: 50%; transform: translateX(-50%); }
+  .mundo-layout { grid-template-columns: 320px minmax(0, 1fr); gap: 3rem; }
+  .mundo-lateral .mundo-cabecera h1 { font-size: 2.7rem; }
+  .mundo-contenido .mundo-texto { font-size: 1.12rem; }
+  .mundo-portada { grid-template-columns: minmax(320px, 400px) 1fr; }
+}
+.mundo { overflow-x: clip; }
+@media (max-width: 959px) { .mundo { width: 100%; } }
+/* párrafos cortos (sin «Seguir leyendo»): ya están leídos, así que van marcados como abiertos */
+.frag-corto { border-left: 3px solid var(--reino); background: var(--panel); border-radius: 0 6px 6px 0; line-height: 1.7; }
+.mundo-mapa .nota { text-align: center; margin: .25rem 0 0; }
+
+/* Pines: que se note que son botones (flecha, halo que late y aviso al pasar) */
+.pin span::after { content: " ›"; font-size: 1.15em; margin-left: .15em; }
+.pin::before {
+  content: ""; position: absolute; inset: -4px; border-radius: 999px; border: 2px solid var(--reino);
+  background: color-mix(in srgb, var(--reino) 35%, transparent); animation: pin-latido 2.2s ease-out infinite; pointer-events: none;
+}
+.pin:hover::before, .pin:focus-visible::before { animation: none; opacity: 0; }
+.pin::after {
+  content: "Leer su historia"; position: absolute; top: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+  white-space: nowrap; font-size: .78rem; padding: .2rem .5rem; border-radius: 4px; background: #14110f; color: var(--texto);
+  border: 1px solid var(--reino); opacity: 0; pointer-events: none; transition: opacity .15s;
+}
+.pin:hover::after, .pin:focus-visible::after { opacity: 1; }
+@keyframes pin-latido { 0% { transform: scale(.9); opacity: .9; } 70%, 100% { transform: scale(1.35); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .pin::before { animation: none; opacity: .5; } }
+@media (hover: none) { .pin::after { display: none; } }
+/* puntito de «lugar marcado» antes del nombre */
+.pin span::before { content: ""; display: inline-block; width: .5em; height: .5em; margin-right: .45em; border-radius: 50%; background: #fff; box-shadow: 0 0 0 2px color-mix(in srgb, var(--reino) 60%, #000); vertical-align: .08em; }
+.frag { scroll-margin-top: 1.5rem; }
+
+/* ===== Rediseño: el lenguaje de Mundo para toda la web =====
+   Marco dorado para las láminas, filete lateral para el texto, pergamino para los emblemas,
+   y el color de cada reino como hilo conductor. Va al final para ganar a las reglas anteriores. */
+:root {
+  --oro-viejo: #9a7a2e;
+  --oro-claro: #f6d27a;
+  --pergamino: #f3ead6;
+  --panel-2: #262420;
+}
+body { background: radial-gradient(1000px 520px at 85% -80px, color-mix(in srgb, #c4622d 11%, transparent), transparent 70%) no-repeat, radial-gradient(900px 480px at 0 0, color-mix(in srgb, #9a7a2e 14%, transparent), transparent 70%) no-repeat, var(--bg); }
+::selection { background: color-mix(in srgb, var(--oro) 45%, transparent); }
+:focus-visible { outline: 2px solid var(--oro); outline-offset: 2px; }
+
+/* títulos: filete dorado que se desvanece */
+main h1 { font-size: clamp(2rem, 4.5vw, 2.8rem); line-height: 1.1; letter-spacing: .015em; padding-bottom: .35em; margin-bottom: 1.1rem; border-bottom: 1px solid transparent; border-image: linear-gradient(90deg, var(--oro) 0, var(--borde) 55%, transparent) 1; }
+.mundo main h1, .mundo-cabecera h1 { border-image: none; }
+main h2 { letter-spacing: .02em; }
+.lead { max-width: 62ch; font-style: italic; color: var(--suave); }
+
+/* cabecera: filete dorado y logotipo con peso */
+.cabecera { background: linear-gradient(180deg, #262420, var(--panel)); border-bottom: 0; box-shadow: 0 1px 0 var(--oro-viejo), 0 6px 18px rgba(0, 0, 0, .35); }
+.cabecera .logo { font-size: 1.35rem; letter-spacing: .04em; text-decoration: none; }
+.cabecera .grupo > button { border-radius: 999px; }
+.cabecera .grupo ul { border-top: 2px solid var(--oro); border-radius: 0 0 6px 6px; background: var(--panel-2); }
+.cabecera nav a.cta { border-radius: 999px; }
+
+/* tarjetas: láminas con marco que se enciende al elegirlas */
+.tarjeta { border-radius: 4px; background: var(--panel); transition: border-color .15s, box-shadow .15s; box-shadow: 0 2px 10px rgba(0, 0, 0, .35); }
+.tarjeta:hover, .tarjeta:focus-visible { border-color: var(--oro-claro); box-shadow: 0 0 0 1px var(--oro-viejo), 0 8px 22px rgba(0, 0, 0, .5); }
+.tarjeta h2 { letter-spacing: .03em; padding-top: .15rem; }
+.tarjeta h2::after { content: ""; display: block; width: 28px; height: 2px; margin: .4rem auto 0; background: var(--oro-viejo); }
+.tarjeta img { border-bottom: 1px solid var(--oro-viejo); }
+
+/* bloques y fichas: filete lateral como los fragmentos de Mundo */
+.bloque { border-left: 3px solid var(--oro-viejo); border-radius: 0 6px 6px 0; background: var(--panel); }
+.bloque h3 { letter-spacing: .03em; }
+.subraza { border-left-color: var(--oro); }
+.stat { border-radius: 4px; border-top: 2px solid var(--oro-viejo); background: var(--panel); }
+.aviso { border-radius: 0 6px 6px 0; }
+.tiradas { border-left: 3px solid var(--oro-viejo); border-radius: 0 6px 6px 0; }
+.articulo { border-radius: 4px; background: var(--panel); }
+.articulo:hover { border-color: var(--oro-viejo); }
+th { background: var(--panel-2); border-bottom: 2px solid var(--oro-viejo); }
+.chip { background: color-mix(in srgb, var(--panel) 80%, transparent); }
+
+/* ilustraciones: marco dorado fino */
+.galeria img, .retrato { border: 1px solid var(--oro-viejo); border-radius: 3px; padding: 4px; background: var(--panel); box-shadow: 0 6px 18px rgba(0, 0, 0, .45); }
+.ficha-cab img { border-color: var(--oro-viejo); padding: 3px; background: var(--panel); }
+
+/* botones */
+button { border-radius: 999px; transition: border-color .15s, background .15s; }
+button.activo, button.primario, .boton-oro { background: linear-gradient(180deg, var(--oro-claro), var(--oro)); color: #1a1208; border-color: var(--oro-viejo); }
+.boton-oro, .boton-borde { display: inline-block; padding: .55rem 1.3rem; border-radius: 999px; text-decoration: none; border: 1px solid var(--oro); transition: background .15s, color .15s, transform .15s; }
+.boton-oro { font-weight: bold; }
+.boton-oro:hover { filter: brightness(1.08); }
+.boton-borde { color: var(--oro); }
+.boton-borde:hover { background: color-mix(in srgb, var(--oro) 14%, transparent); }
+.buscador, select, input[type=number] { border-radius: 999px; padding-inline: .9rem; }
+.buscador:focus, select:focus, input:focus { border-color: var(--oro); outline: none; box-shadow: 0 0 0 2px color-mix(in srgb, var(--oro) 30%, transparent); }
+
+/* marco dorado reutilizable (igual que el de los mapas de Mundo) */
+.marco-oro {
+  display: block; position: relative; padding: 10px; border-radius: 4px;
+  background: linear-gradient(135deg, var(--oro-viejo), var(--oro-claro) 45%, var(--oro-viejo));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(0, 0, 0, .45);
+}
+.marco-oro::before { content: ""; position: absolute; inset: 5px; border: 1px solid rgba(40, 25, 5, .65); border-radius: 2px; pointer-events: none; }
+.marco-oro img { display: block; width: 100%; height: auto; border: 2px solid #2a1d08; border-radius: 2px; }
+
+/* ===== Inicio ===== */
+.inicio h1 { border-image: none; border-bottom: 0; padding: 0; margin: 0 0 .4rem; font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1; }
+.inicio-hero { display: grid; gap: 2rem 3rem; align-items: center; margin: 1rem 0 3rem; }
+.inicio-lema { font-size: 1.3rem; font-style: italic; line-height: 1.4; margin: 0 0 .8rem; max-width: 30ch; }
+.inicio-sub { color: var(--suave); max-width: 52ch; margin: 0 0 1.5rem; }
+.inicio-acciones { display: flex; flex-wrap: wrap; gap: .75rem; }
+.inicio-mapa { margin: 0; }
+.inicio-mapa .marco-oro { transition: transform .25s; }
+.inicio-mapa .marco-oro:hover { transform: rotate(-.6deg) scale(1.01); }
+@media (min-width: 900px) { .inicio-hero { grid-template-columns: minmax(280px, 5fr) 6fr; } }
+
+@media (prefers-reduced-motion: reduce) { .inicio-mapa .marco-oro { transition: none; } .inicio-mapa .marco-oro:hover { transform: none; } }
+@media print { .inicio { display: none; } }
+
+
+/* ===== Gremios, figuras y listados con texto ===== */
+/* emblemas negros sobre transparente: medallón de pergamino como en Mundo */
+.gremio, .npc { grid-template-columns: 190px minmax(0, 1fr); gap: 1.5rem; padding: 1.1rem 1.25rem 1.25rem; }
+.gremio .emblema {
+  width: 160px; height: 160px; margin: .5rem auto 0; padding: 22px; box-sizing: border-box; object-fit: contain; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--pergamino), #cfc1a0); border: 3px solid var(--oro-viejo);
+  box-shadow: 0 0 0 5px var(--bg), 0 0 0 6px var(--borde), inset 0 0 22px rgba(90, 65, 30, .35);
+}
+.gremio h2, .npc h2 { margin: .25rem 0 .5rem; font-size: 1.5rem; color: var(--oro); }
+.gremio > div > p, .npc > div > p { max-width: 70ch; line-height: 1.7; }
+.gremio .tabla { margin: 1rem 0 .5rem; }
+.tabla th { font-size: .85rem; color: var(--suave); background: transparent; border: 0; border-bottom: 2px solid var(--oro-viejo); }
+.tabla td { border: 0; border-bottom: 1px solid var(--borde); }
+.tabla tbody tr:hover { background: color-mix(in srgb, var(--oro) 7%, transparent); }
+.tabla td:first-child strong { color: var(--oro); font-size: 1.05rem; }
+.tabla a { text-underline-offset: 3px; }
+@media (max-width: 700px) { .gremio, .npc { grid-template-columns: 1fr; } .gremio .emblema { width: 130px; height: 130px; } }
+
+/* tarjetas de gremio de jugadores: nombre, dato en cursiva y estrellas doradas */
+.tarjeta .enlace-tarjeta { padding: .9rem .6rem .5rem; gap: .15rem; }
+.tarjeta .enlace-tarjeta h2 { margin: 0 .25rem .25rem; }
+.tarjeta .enlace-tarjeta small { font-style: italic; }
+.tarjeta .enlace-tarjeta small.estrellas { margin-top: auto; padding-top: .5rem; color: var(--oro); font-style: normal; font-size: .8rem; letter-spacing: .03em; }
+.tarjeta:has(.enlace-tarjeta):hover .enlace-tarjeta h2 { color: var(--oro); }
+.tarjetas:not(.bestiario):has(.enlace-tarjeta:only-child) { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+/* ranking: los tres primeros puestos con filete de oro, plata y bronce */
+.tabla-scroll .tabla tbody tr:nth-child(-n+3) td:first-child { border-left: 3px solid var(--oro-claro); }
+.tabla-scroll .tabla tbody tr:nth-child(2) td:first-child { border-left-color: #b9bcc2; }
+.tabla-scroll .tabla tbody tr:nth-child(3) td:first-child { border-left-color: #b9763f; }
+.tabla-scroll .tabla tbody tr:nth-child(-n+3) td { background: color-mix(in srgb, var(--oro) 5%, transparent); }
+main h2 { margin-top: 2rem; }
+.inicio h2, .camino h2, .tarjeta h2, .gremio h2, .npc h2 { margin-top: unset; }
+
+/* lectura cómoda en textos sueltos y retratos de figuras con marco dorado */
+main > p, main > .inicio-texto p { max-width: 75ch; line-height: 1.7; }
+.npc img { border: 1px solid var(--oro-viejo); padding: 3px; background: var(--panel); box-shadow: 0 6px 18px rgba(0, 0, 0, .45); }
+
+/* acciones destructivas de las tarjetas: discretas hasta que se pasa el ratón */
+.tarjeta > button.peligro { background: none; border-color: transparent; color: var(--suave); font-size: .85rem; padding: .3rem .6rem; }
+.tarjeta > button.peligro:hover:not(:disabled) { border-color: var(--mal); color: var(--mal); }
+
+/* filtro por tipo: iconos de tinta negra, así que van sobre pergamino (apagados hasta elegirlos) */
+.tipo-btn { width: 40px; height: 40px; padding: 0; justify-content: center; align-items: center; border-radius: 50%; background: #d9cdb8; border: 2px solid transparent; opacity: .6; transition: opacity .15s, border-color .15s, box-shadow .15s; }
+.tipo-btn img { width: 24px; height: 24px; object-fit: contain; }
+.tipo-btn:hover:not(:disabled) { opacity: 1; border-color: var(--oro-viejo); }
+.tipo-btn.activo { background: #f3ead6; opacity: 1; border-color: var(--oro); box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--oro); }
+@media (prefers-reduced-motion: reduce) { .tipo-btn { transition: none; } }
+
+
+/* ===== Figuras notables: muro de retratos + expediente ===== */
+.figuras-barra { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; margin: .25rem 0 1.25rem; }
+.figuras-barra .buscador { margin: 0; flex: 1 1 240px; max-width: 360px; }
+.figuras-barra .contador { margin: 0; color: var(--suave); }
+
+.muro { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 1.1rem; }
+.muro button.figura {
+  position: relative; display: block; padding: 0; overflow: hidden; aspect-ratio: 3 / 4; cursor: pointer;
+  border: 1px solid var(--oro-viejo); border-radius: 4px; background: #000; text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .45); transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.muro button.figura img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform .35s; }
+.muro button.figura:hover, .muro button.figura:focus-visible {
+  transform: translateY(-4px); border-color: var(--oro-claro); box-shadow: 0 0 0 1px var(--oro-viejo), 0 14px 28px rgba(0, 0, 0, .6);
+}
+.muro button.figura:hover img, .muro button.figura:focus-visible img { transform: scale(1.06); }
+.figura-pie {
+  position: absolute; inset: auto 0 0 0; padding: 2.8rem .75rem .65rem; color: var(--texto);
+  background: linear-gradient(180deg, transparent, rgba(12, 9, 7, .92) 62%);
+}
+.figura-pie strong { display: block; font-weight: normal; font-size: 1rem; line-height: 1.25; }
+.figura-pie small { display: block; margin-top: .15rem; color: var(--oro-claro); font-style: italic; font-size: .85rem;
+  max-height: 0; opacity: 0; transition: max-height .2s, opacity .2s; }
+.muro button.figura:hover small, .muro button.figura:focus-visible small { max-height: 2.5em; opacity: 1; }
+@media (hover: none) { .figura-pie small { max-height: 2.5em; opacity: 1; } }
+
+.expediente {
+  width: min(920px, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); padding: 0; overflow: auto;
+  color: var(--texto); background: var(--panel); border: 1px solid var(--oro-viejo); border-radius: 6px;
+  box-shadow: 0 0 0 5px var(--bg), 0 0 0 6px var(--borde), 0 30px 80px rgba(0, 0, 0, .8);
+}
+.expediente::backdrop { background: rgba(8, 6, 4, .82); }
+.expediente[open] { animation: abre-expediente .2s ease-out; }
+.expediente-cuerpo { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 1.75rem; padding: 1.5rem 1.5rem 1rem; }
+.expediente-cuerpo > * { animation: cambia-figura .25s ease-out; }
+.expediente-retrato { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border-radius: 3px; border: 1px solid var(--oro-viejo); padding: 3px; background: var(--panel-2); }
+.expediente-texto h2 { margin: 0 0 .4rem; color: var(--oro); font-size: 1.8rem; line-height: 1.15; }
+.expediente-texto p { max-width: 62ch; line-height: 1.7; }
+.actitud { margin-top: 1rem; padding: .6rem .9rem; border-left: 3px solid var(--oro); background: color-mix(in srgb, var(--oro) 7%, transparent); }
+.actitud summary { cursor: pointer; color: var(--oro); }
+.expediente-nav {
+  position: sticky; bottom: 0; display: flex; align-items: center; gap: .75rem; padding: .7rem 1.5rem;
+  background: var(--panel-2); border-top: 1px solid var(--borde);
+}
+.expediente-nav span { color: var(--suave); }
+.expediente-nav .expediente-cerrar { margin-left: auto; }
+@keyframes abre-expediente { from { opacity: 0; transform: translateY(10px) scale(.985); } }
+@keyframes cambia-figura { from { opacity: 0; } }
+@media (max-width: 700px) {
+  .expediente-cuerpo { grid-template-columns: 1fr; padding: 1rem 1rem .5rem; }
+  .expediente-retrato { max-width: 240px; margin: 0 auto; }
+  .muro { grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+}
+
+.parlamento details { margin: .5rem 0; padding: .5rem .9rem; border: 1px solid var(--borde); border-radius: 4px; background: var(--panel-2); }
+.parlamento summary { cursor: pointer; color: var(--oro); font-size: 1.05rem; }
+.parlamento details[open] { border-color: var(--oro-viejo); }
+
+@media (prefers-reduced-motion: reduce) {
+  .muro button.figura, .muro button.figura img, .figura-pie small { transition: none; }
+  .muro button.figura:hover, .muro button.figura:hover img { transform: none; }
+  .expediente[open], .expediente-cuerpo > * { animation: none; }
+}
+
+/* al cambiar de reino los retratos entran en cascada corta (el muro se remonta con key=reino) */
+.muro button.figura { animation: entra-figura .38s cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: calc(var(--i, 0) * 35ms); }
+@keyframes entra-figura { from { opacity: 0; transform: translateY(14px) scale(.97); } }
+@media (prefers-reduced-motion: reduce) { .muro button.figura { animation: none; } }
+
+
+/* ===== Gremios de jugadores: estandartes y cabecera (mismo pergamino y oro que Mundo y Figuras) ===== */
+.gremios-portada { text-align: center; margin: .5rem auto 1.5rem; }
+.gremios-portada h1 { margin: 0; font-size: clamp(2.2rem, 6vw, 3.2rem); line-height: 1.05; }
+.gremios-lema { margin: .35rem 0 .75rem; font-size: 1.2rem; font-style: italic; }
+.gremios-portada .nota { margin-inline: auto; }
+
+.medallon .inicial {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-size: calc(var(--d) * .46); line-height: 1; color: #3a2a12; text-shadow: 0 1px 0 rgba(255, 255, 255, .35);
+}
+/* Estrellas: las ganadas en oro, las que faltan en gris claro */
+.estrellas { letter-spacing: .06em; font-style: normal; white-space: nowrap; }
+.estrellas .on { color: var(--oro); }
+.estrellas .off { color: rgba(214, 208, 196, .28); }
+
+/* Estandartes: banderas colgadas con borde en V, no fichas rectangulares */
+.estandartes { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.5rem 1.25rem; margin: 1.5rem 0 2rem; align-items: start; }
+.estandarte {
+  --reino: var(--oro-viejo); --mx: 50%; --my: 0; position: relative; display: flex; flex-direction: column; min-height: 330px; text-align: center;
+  padding-bottom: 38px; border-top: 4px solid var(--reino);
+  background:
+    radial-gradient(200px circle at var(--mx) var(--my), color-mix(in srgb, var(--reino) 22%, transparent), transparent 70%),
+    linear-gradient(180deg, var(--panel), #17110d);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 34px), 50% 100%, 0 calc(100% - 34px));
+  transform-origin: 50% 0; transition: transform .25s;
+  animation: entra-figura .38s cubic-bezier(.2, .7, .3, 1) backwards; animation-delay: calc(var(--i, 0) * 35ms);
+}
+.estandarte.puesto-1 { --reino: var(--oro-claro); }
+.estandarte.puesto-2 { --reino: #b9bcc2; }
+.estandarte.puesto-3 { --reino: #b9763f; }
+.estandarte:hover, .estandarte:focus-within { transform: rotate(-1.2deg) translateY(2px); }
+.estandarte:nth-child(even):hover, .estandarte:nth-child(even):focus-within { transform: rotate(1.2deg) translateY(2px); }
+.estandarte-enlace { flex: 1; display: flex; flex-direction: column; align-items: center; gap: .3rem; padding: 1.4rem 1rem .5rem; color: var(--texto); text-decoration: none; }
+.estandarte-enlace:focus-visible { outline: 2px solid var(--oro); outline-offset: -6px; }
+.estandarte .medallon { --d: 96px; border-width: 2px; margin-bottom: .7rem; transition: transform .25s; }
+.estandarte:hover .medallon, .estandarte:focus-within .medallon { transform: scale(1.08); }
+.estandarte h2 { margin: 0; font-size: 1.35rem; line-height: 1.15; color: var(--oro); font-weight: normal; }
+.estandarte small { color: var(--suave); font-style: italic; }
+.estandarte .estrellas { margin-top: .3rem; font-size: .95rem; }
+.estandarte .reputacion { margin-top: auto; padding-top: .8rem; width: 100%; display: flex; flex-direction: column; gap: .35rem; }
+.estandarte .reputacion-barra { height: 3px; width: 60%; margin: 0 auto; background: rgba(214, 208, 196, .16); border-radius: 2px; position: relative; overflow: hidden; }
+.estandarte .reputacion-barra::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 0; background: var(--reino); transition: width .5s cubic-bezier(.2, .7, .3, 1); }
+.estandarte:hover .reputacion-barra::after, .estandarte:focus-within .reputacion-barra::after { width: var(--rep); }
+.estandarte > button.peligro {
+  position: absolute; top: .5rem; right: .5rem; margin: 0; padding: .15rem .5rem; font-size: .8rem;
+  background: none; border-color: transparent; color: var(--suave); opacity: 0; transition: opacity .15s;
+}
+.estandarte:hover > button.peligro, .estandarte > button.peligro:focus-visible { opacity: 1; }
+.estandarte > button.peligro:hover:not(:disabled) { border-color: var(--mal); color: var(--mal); }
+@media (hover: none) { .estandarte > button.peligro { opacity: 1; } .estandarte .reputacion-barra::after { width: var(--rep); } }
+
+/* filtro de nivel mínimo: clic en una estrella, el resto se enciende al pasar el ratón */
+.filtro-estrellas { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin: 0 0 .5rem; color: var(--suave); }
+.filtro-estrellas .selector { display: inline-flex; }
+.filtro-estrellas .selector button { padding: 0 .1rem; border: 0; background: none; font-size: 1.5rem; line-height: 1; color: rgba(214, 208, 196, .28); cursor: pointer; transition: color .12s, transform .12s; }
+.filtro-estrellas .selector button.on { color: var(--oro); }
+.filtro-estrellas .selector button:hover:not(:disabled) { transform: scale(1.2); }
+.filtro-estrellas .selector button:focus-visible { outline: 2px solid var(--oro); outline-offset: 2px; border-radius: 3px; }
+.filtro-estrellas .contador { margin: 0; }
+button.enlace { padding: 0; border: 0; background: none; color: var(--oro); text-decoration: underline; cursor: pointer; }
+@media (prefers-reduced-motion: reduce) {
+  .estandarte, .estandarte .medallon, .estandarte .reputacion-barra::after, .filtro-estrellas .selector button { transition: none; }
+  .estandarte:hover, .estandarte:focus-within, .estandarte:nth-child(even):hover, .estandarte:hover .medallon { transform: none; }
+}
+
+.gremio-cabecera { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem 2rem; margin: .25rem 0 1.25rem 6px; }
+.gremio-cabecera .medallon { --d: 150px; border-color: var(--oro); }
+.gremio-rumbo { margin: 0 0 .2rem; color: var(--suave); font-style: italic; font-size: 1.1rem; }
+.gremio-cabecera h1 { display: inline-block; margin: 0; font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1; border-bottom: 2px solid var(--oro); padding-bottom: .15em; }
+.gremio-datos { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: .9rem 0 0; color: var(--suave); font-style: italic; }
+
+.gremio-acciones { margin-bottom: 1.25rem; }
+
+/* miembros: muro de retratos como en Figuras notables, pero cada uno es un enlace */
+.muro.miembros { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); margin-bottom: .5rem; }
+.muro a.figura {
+  position: relative; display: block; overflow: hidden; aspect-ratio: 3 / 4; text-decoration: none;
+  border: 1px solid var(--oro-viejo); border-radius: 4px; background: #000; box-shadow: 0 6px 18px rgba(0, 0, 0, .45);
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.muro a.figura img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform .35s; }
+.muro a.figura:hover, .muro a.figura:focus-visible { transform: translateY(-4px); border-color: var(--oro-claro); box-shadow: 0 0 0 1px var(--oro-viejo), 0 14px 28px rgba(0, 0, 0, .6); }
+.muro a.figura:hover img, .muro a.figura:focus-visible img { transform: scale(1.06); }
+.muro a.figura:hover small, .muro a.figura:focus-visible small { max-height: 2.5em; opacity: 1; }
+.bloque.nivel-actual { border-left: 3px solid var(--oro); }
+
+@media (prefers-reduced-motion: reduce) {
+  .muro a.figura, .muro a.figura img { transition: none; }
+  .estandarte { animation: none; }
+  .estandarte:hover, .muro a.figura:hover, .muro a.figura:hover img { transform: none; }
+}
+@media (max-width: 600px) {
+  .gremio-cabecera { flex-direction: column; text-align: center; margin-left: 0; }
+  .gremio-datos { justify-content: center; }
+  .estandartes { grid-template-columns: 1fr 1fr; gap: .75rem; }
+  .estandarte .medallon { --d: 80px; }
+}
+@media print { .gremios-portada { display: none; } }
+
+/* ===== Panteón: reinos, tarjetas pulsables y ficha de deidad ===== */
+.colores-astrales > summary { cursor: pointer; padding: .5rem 0; color: var(--oro); }
+.chip-reino { border-left: 3px solid var(--acento); }
+.chip-reino.activo { background: var(--acento); border-color: var(--acento); }
+.reino { margin: 1.5rem 0 2rem; --acento: var(--oro); }
+.reino h2 { margin: 0 0 .75rem; font-size: 1.25rem; }
+.reino-cabecera {
+  display: flex; align-items: center; gap: .6rem; width: 100%; text-align: left;
+  background: none; border: 0; border-bottom: 2px solid var(--acento); border-radius: 0;
+  padding: .4rem 0; color: var(--acento); font: inherit; letter-spacing: .03em; cursor: pointer;
+}
+.reino-cabecera:hover:not(:disabled) { border-color: var(--acento); filter: brightness(1.15); }
+.reino-flecha { width: 1em; }
+.reino-n { margin-left: auto; color: var(--suave); font-size: .9rem; }
+.dioses { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.dios {
+  display: flex; flex-direction: column; align-items: stretch; text-align: left; gap: .15rem;
+  padding: 0 0 .7rem; overflow: hidden; border-radius: 8px; cursor: pointer;
+  background: var(--panel); border: 1px solid var(--borde); border-top: 3px solid var(--acento);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.dios:hover:not(:disabled), .dios:focus-visible { transform: translateY(-3px); border-color: var(--acento); box-shadow: 0 8px 20px rgba(0, 0, 0, .45), 0 0 0 1px var(--acento); }
+.dios:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+.dios-sello { display: block; background: #e8dfd0; overflow: hidden; }
+.dios-sello img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; padding: 14px; transition: transform .25s ease; }
+.dios:hover .dios-sello img, .dios:focus-visible .dios-sello img { transform: scale(1.08); }
+.dios-nombre { padding: .5rem .7rem 0; color: var(--texto); font-size: 1.05rem; }
+.dios-sub { padding: 0 .7rem; color: var(--acento); font-size: .85rem; }
+.dios-virtudes { padding: 0 .7rem; color: var(--suave); font-size: .85rem; }
+
+.ficha-dios {
+  width: min(680px, calc(100vw - 24px)); max-height: calc(100vh - 24px); padding: 0; overflow: auto;
+  background: var(--panel); color: var(--texto); border: 1px solid var(--acento); border-top-width: 4px; border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .7);
+}
+.ficha-dios::backdrop { background: rgba(10, 8, 6, .8); }
+.ficha-dios[open] { animation: ficha-entra .18s ease-out; }
+@keyframes ficha-entra { from { opacity: 0; transform: translateY(10px) scale(.98); } }
+.ficha-cerrar { position: absolute; top: 8px; right: 8px; z-index: 1; width: 2rem; height: 2rem; padding: 0; border-radius: 50%; }
+.ficha-cuerpo { display: grid; grid-template-columns: 240px 1fr; gap: 20px; padding: 20px; }
+.ficha-sello { background: #e8dfd0; border-radius: 8px; align-self: start; }
+.ficha-sello img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; padding: 14px; }
+.ficha-reino { margin: 0 2rem 0 0; color: var(--acento); font-size: .9rem; }
+.ficha-texto h2 { margin: .15rem 0 .25rem; font-size: 1.7rem; color: var(--texto); }
+.ficha-alin { margin: 0 0 .75rem; color: var(--suave); }
+.ficha-alin abbr { color: var(--acento); font-weight: bold; text-decoration: none; margin-right: .3rem; }
+.ficha-desc { margin: 0 0 1rem; max-width: 60ch; }
+.ficha-virtudes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: .75rem; }
+.ficha-virtudes button { border-radius: 999px; padding: .2rem .8rem; border-color: var(--acento); }
+.ficha-virtudes button:hover:not(:disabled) { background: var(--acento); color: #1a1208; }
+.ficha-nav { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 20px; border-top: 1px solid var(--borde); }
+.ficha-nav button { max-width: 38%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 600px) {
+  .ficha-cuerpo { grid-template-columns: 1fr; }
+  .ficha-sello { max-width: 200px; margin: 0 auto; }
+  .dioses { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dios, .dios-sello img { transition: none; }
+  .dios:hover:not(:disabled), .dios:focus-visible { transform: none; }
+  .dios:hover .dios-sello img, .dios:focus-visible .dios-sello img { transform: none; }
+  .ficha-dios[open] { animation: none; }
+}
+
+/* ===== Color: oro = acción principal y recompensa, turquesa = magia y descubrimiento, azul noche = marco del mapa ===== */
+:root { --arcano: #cf9a63; }
+button.primario, .cabecera nav a.cta { background: linear-gradient(180deg, var(--oro-claro), var(--oro)); color: #1a1208; border-color: var(--oro-viejo); font-weight: bold; }
+.cabecera nav a.cta:hover, .cabecera nav a.cta.active { background: var(--oro-claro); color: #1a1208; box-shadow: 0 0 18px color-mix(in srgb, var(--oro) 50%, transparent); }
+.tarjeta:hover, .tarjeta:focus-visible { border-color: var(--oro-claro); box-shadow: 0 0 0 1px var(--oro), 0 10px 26px rgba(0, 0, 0, .55), 0 0 24px color-mix(in srgb, var(--oro) 22%, transparent); }
+.tarjeta h2::after { background: var(--arcano); transition: width .2s, background .2s; }
+.tarjeta:hover h2::after { background: var(--oro-claro); width: 48px; }
+.cabecera .grupo ul { border-top-color: var(--arcano); }
+
+/* ===== Portada ===== */
+.inicio h1, .inicio-lema { font-family: 'IM Fell English', Georgia, serif; }
+.inicio h1 { color: #f6efdc; font-weight: normal; text-shadow: 0 0 30px color-mix(in srgb, var(--oro) 40%, transparent); }
+.inicio-lema { font-size: 1.45rem; color: #f6efdc; }
+.inicio-hero { margin-top: 2rem; }
+.inicio-acciones .boton-oro { background: linear-gradient(180deg, var(--oro-claro), var(--oro)); color: #1a1208; border-color: var(--oro-viejo); }
+.inicio-acciones .boton-oro:hover { box-shadow: 0 0 22px color-mix(in srgb, var(--oro) 55%, transparent); transform: translateY(-1px); }
+.inicio-acciones .boton-borde { color: var(--arcano); border-color: var(--arcano); }
+.inicio-acciones .boton-borde:hover { background: color-mix(in srgb, var(--arcano) 15%, transparent); }
+.inicio-mapa .marco-oro { box-shadow: 0 10px 40px rgba(0, 0, 0, .6), 0 0 60px color-mix(in srgb, var(--arcano) 18%, transparent); }
+
+/* entradas: cuatro puertas al mundo, con su ilustración */
+.puertas h2 { font-family: 'IM Fell English', Georgia, serif; font-size: 1.9rem; color: #f6efdc; margin: 0 0 1rem; }
+.puertas ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.puerta {
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 300px; padding: 1.1rem;
+  border: 1px solid var(--borde); border-radius: 6px; overflow: hidden; text-decoration: none; color: #f6efdc;
+  background-size: cover; background-position: center 20%; background-color: var(--panel); isolation: isolate;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.puerta::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, transparent 30%, rgba(16, 13, 20, .92) 82%); }
+.puerta strong { line-height: 1.15; margin-bottom: .35rem; font-family: 'IM Fell English', Georgia, serif; font-size: 1.5rem; font-weight: normal; }
+.puerta span { color: #dccfb8; font-size: .95rem; line-height: 1.4; }
+.puerta:hover, .puerta:focus-visible { border-color: var(--oro-claro); transform: translateY(-4px); box-shadow: 0 14px 32px rgba(0, 0, 0, .6), 0 0 26px color-mix(in srgb, var(--oro) 28%, transparent); }
+.puerta:hover strong { color: var(--oro-claro); }
+@media (prefers-reduced-motion: reduce) { .puerta, .tarjeta h2::after, .inicio-acciones .boton-oro { transition: none; } .puerta:hover, .inicio-acciones .boton-oro:hover { transform: none; } }
+
+/* la diosa es una silueta sin fondo: se pone sobre un resplandor dorado para que se vea */
+.puerta.silueta { background-size: auto 80%, cover; background-position: center 12%, center; background-repeat: no-repeat; background-color: #201a14; }
+
+/* ===== Reparto de color y tipografía =====
+   Títulos en hueso con la letra de libro; enlaces en turquesa; el oro solo en acción, marcos y recompensa. */
+:root { --suave: #cfc7b3; }
+main h1, main h2, .tarjeta h2, .cabecera .logo { font-family: 'IM Fell English', Georgia, serif; letter-spacing: .01em; }
+main h1, main h2, .tarjeta h2 { color: #f6efdc; }
+main h2 { font-size: 1.6rem; }
+.tarjeta h2 { font-size: 1.15rem; }
+a:not([class]) { color: var(--arcano); text-underline-offset: 3px; }
+a:not([class]):hover { color: #ecc08a; }
+.inicio-sub { color: #ddd6c6; }
+
+/* botón de acción: dorado con volumen (brillo arriba, borde más oscuro) */
+.cabecera nav a.cta, .inicio-acciones .boton-oro {
+  background: linear-gradient(180deg, var(--oro-claro), var(--oro) 55%, #c99a2c);
+  border: 1px solid #7a5a14; color: #1a1208;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), 0 2px 8px rgba(0, 0, 0, .4);
+}
+.cabecera nav a.cta:hover, .cabecera nav a.cta.active, .inicio-acciones .boton-oro:hover {
+  background: linear-gradient(180deg, #fbe3a0, var(--oro-claro) 55%, var(--oro));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), 0 0 20px color-mix(in srgb, var(--oro) 45%, transparent);
+}
+
+/* el dado: un momento de curiosidad, solo cuando el jugador lo pulsa */
+.tira-dado { display: grid; gap: 1.5rem 2.5rem; align-items: center; margin: 0 0 3rem; padding: 1.5rem; border: 1px solid var(--borde); border-radius: 6px; background: var(--panel); }
+.tira-dado h2 { margin: 0 0 .4rem; }
+.tira-dado p { margin: 0 0 1rem; color: #ddd6c6; max-width: 46ch; }
+.tira-dado .boton-borde { background: none; color: var(--arcano); border-color: var(--arcano); font: inherit; cursor: pointer; }
+.tira-dado .boton-borde:hover:not(:disabled) { background: color-mix(in srgb, var(--arcano) 15%, transparent); }
+.tira-dado .boton-borde:disabled { opacity: .6; cursor: progress; }
+.tira-dado-der { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; min-height: 128px; }
+.d20 { position: relative; width: 96px; height: 96px; flex: none; }
+.d20-cuerpo { position: absolute; inset: 0; display: grid; place-items: center; }
+.d20 svg { position: absolute; inset: 0; width: 100%; height: 100%; fill: color-mix(in srgb, var(--arcano) 14%, var(--bg)); stroke: var(--arcano); stroke-width: 3; stroke-linejoin: round; }
+.d20 span { position: relative; font: 1.9rem 'IM Fell English', Georgia, serif; color: #f6efdc; }
+/* la tirada: el dado entra rodando desde la izquierda, frena y rebota una vez; la sombra marca el suelo */
+.d20::after { content: ''; position: absolute; left: 14%; right: 14%; bottom: -8px; height: 8px; border-radius: 50%; background: rgb(0 0 0 / .45); filter: blur(3px); opacity: 0; }
+.d20.girando .d20-cuerpo { animation: rueda 1.2s cubic-bezier(.2, .7, .3, 1) both; }
+.d20.girando::after { animation: sombra 1.2s ease-out both; }
+@keyframes rueda {
+  0%   { transform: translate(-56px, -26px) rotate(-540deg); }
+  45%  { transform: translate(-14px, 0) rotate(-200deg); }
+  62%  { transform: translate(-6px, -16px) rotate(-90deg); }
+  80%  { transform: translate(0, 0) rotate(-14deg); }
+  90%  { transform: translate(0, -4px) rotate(5deg); }
+  100% { transform: translate(0, 0) rotate(0); }
+}
+@keyframes sombra { 0%, 62% { opacity: .5; transform: scaleX(.7); } 45% { transform: scaleX(1); } 100% { opacity: .5; transform: scaleX(1); } }
+.hallazgo { display: flex; gap: 1rem; align-items: center; flex: 1 1 260px; max-width: 460px; padding: .6rem; border: 1px solid var(--oro-viejo); border-radius: 6px; background: var(--bg); text-decoration: none; color: var(--texto); animation: aparece .35s ease-out; }
+.hallazgo img { width: 72px; height: 96px; object-fit: cover; object-position: top; border-radius: 3px; flex: none; }
+.hallazgo strong { display: block; font: 1.3rem 'IM Fell English', Georgia, serif; color: var(--oro-claro); font-weight: normal; }
+.hallazgo small { display: block; color: #ddd6c6; line-height: 1.4; margin-top: .2rem; }
+.hallazgo:hover { border-color: var(--oro-claro); }
+@keyframes aparece { from { opacity: 0; transform: translateX(-8px); } }
+@media (min-width: 900px) { .tira-dado { grid-template-columns: minmax(260px, 5fr) 6fr; } }
+@media (prefers-reduced-motion: reduce) { .d20.girando .d20-cuerpo, .d20.girando::after, .hallazgo { animation: none; } }
+@media print { .tira-dado { display: none; } }

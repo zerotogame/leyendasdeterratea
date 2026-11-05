@@ -1,10 +1,11 @@
+import { useSesion } from '../lib/auth'
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { useSesion } from '../lib/auth'
 import { gremiosData, img2 } from '../lib/mundo'
 import { RazaEnlace } from '../components/Raza'
-import { listarGremios, MAX_ESTRELLAS, type ResumenGremio } from '../lib/gremios'
+import { listarGremios, type ResumenGremio } from '../lib/gremios'
+import Estandartes from '../components/Estandartes'
 import { nivelDeGremio, rankingGremios } from '../lib/nivelesGremio'
 
 /** Enlace solo si hay destino (sin sesión no se enlaza); si no, texto plano. */
@@ -23,17 +24,8 @@ export default function Gremios() {
     <>
       <h1>Gremios</h1>
       <h2>Gremios de jugadores</h2>
-      <div className="tarjetas">
-        {propios.map((g) => (
-          <div key={g.id} className="tarjeta">
-            <EnlaceSi to={logueado && `/mis-gremios/${g.id}`} className="enlace-tarjeta">
-              <h2>{g.name}</h2>
-              <small>{g.location || 'Sin localización'} · {g.members} miembro{g.members === 1 ? '' : 's'}</small>
-              <small>Reputación {g.reputation}% · {'★'.repeat(g.stars)}{'☆'.repeat(MAX_ESTRELLAS - g.stars)}</small>
-            </EnlaceSi>
-          </div>
-        ))}
-      </div>
+      <Estandartes gremios={propios} podio />
+      {logueado && <p><Link to="/mis-gremios" className="boton">Gestionar mis gremios</Link></p>}
 
       <h2 id="ranking">Ranking de Gremios</h2>
       {propios.length === 0 ? (

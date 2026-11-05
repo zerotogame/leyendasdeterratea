@@ -3,6 +3,9 @@ const http = require("http");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
+const compression = require("compression");
+const helmet = require("helmet");
+const { rateLimit } = require("express-rate-limit");
 const { Server } = require("socket.io");
 
 const { users, characters } = require("./data");
@@ -26,6 +29,7 @@ const {
 
 const pool = require("./db/db");
 const { NIVEL, rolesDe, requiere, nivelOpcional } = require("./db/permisos");
+const { subeSaldo } = require("./db/monedas");
 
 
 const app = express();
@@ -37,11 +41,31 @@ app.set("trust proxy", 1);
 // MIDDLEWARE
 // ============================================================
 
-app.use(cors());
+// Render pone un proxy delante: sin esto todas las IP serían la misma y el límite sería global.
+app.set("trust proxy", 1);
+// CORP "cross-origin": la web (otro dominio) carga las imágenes de /images.
+app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
+// CORS: en producción define CORS_ORIGINS con el dominio de la web (varios, separados por comas).
+// Sin definir queda abierto a cualquier origen (valido solo para desarrollo).
+const origenes = (process.env.CORS_ORIGINS || "").split(",").map((o) => o.trim().replace(/\/$/, "")).filter(Boolean);
+if (!origenes.length) {
+  // En producción la API no arranca abierta a cualquier origen.
+  if (process.env.NODE_ENV === "production") throw new Error("CORS_ORIGINS es obligatorio en producción (dominio exacto de la web).");
+  console.warn("CORS_ORIGINS no definido: la API acepta peticiones de cualquier origen (solo desarrollo).");
+}
+app.use(cors(origenes.length ? { origin: origenes } : undefined));
+app.use(compression());
+
+// Límite de peticiones por IP (frena abusos y ataques simples; no sustituye a un CDN).
+const limiteGeneral = rateLimit({ windowMs: 60_000, limit: 300, standardHeaders: "draft-7", legacyHeaders: false, message: { error: "Demasiadas peticiones, espera un momento." } });
+const limiteSubidas = rateLimit({ windowMs: 10 * 60_000, limit: 20, standardHeaders: "draft-7", legacyHeaders: false, message: { error: "Demasiadas subidas de imágenes, espera unos minutos." } });
+app.use(limiteGeneral);
+app.post(["/characters/:id/images", "/pets/:id/image"], limiteSubidas);
 app.use(express.json());
 app.use(require("./db/guilds"));
 app.use(require("./db/pets"));
 app.use(require("./db/roles"));
+app.use(require("./db/gladiators"));
 
 const allowedCharacterFields = [
   "name",
@@ -61,7 +85,7 @@ const allowedCharacterFields = [
 ];
 
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
+const io = new Server(server, { cors: { origin: origenes.length ? origenes : "*" } });
 
 async function updateCharacterById(characterId, updates) {
   const validEntries = Object.entries(updates).filter(([key, value]) => {
@@ -133,7 +157,6 @@ async function sesionDe({ id, email }) {
   return { token: jwt.sign({ id, role: mas_alto }, SECRET, { expiresIn: EXPIRA }), user: { id, email, roles } };
 }
 
-app.use('/images', express.static('images'));
 /* LOGIN: email + contraseña; devuelve el token y los roles del usuario */
 // Frena la fuerza bruta: 10 intentos fallidos por IP cada 15 min (los logins correctos no cuentan).
 const limiteLogin = require("express-rate-limit").rateLimit({
@@ -179,8 +202,27 @@ function dueñoDeLaSesion(req, _res, next) {
   return next();
 }
 const PLAYER = requiere("PLAYER");
+app.use('/images', express.static('images', { maxAge: '7d', etag: true }));
 
 /* GET CHARACTER */
+// Resumen ligero de TODOS los personajes (lista de terratea-web; sin login todavía)
+app.get("/characters/all", async (req, res) => {
+  try {
+    const result = await pool.query(
+      `SELECT c.id, c.name, c.level, r.name AS race, cl.name AS class,
+         (SELECT file FROM character_images WHERE character_id = c.id ORDER BY position, id LIMIT 1) AS image
+       FROM characters c
+       JOIN races r ON r.id = c.race_id
+       JOIN classes cl ON cl.id = c.class_id
+       ORDER BY c.id DESC`
+    );
+    return res.json(result.rows);
+  } catch (error) {
+    console.error("Error listing all characters", error);
+    return res.status(500).json({ error: "database error" });
+  }
+});
+
 app.get("/characters/:id", async (req, res) => {
   const char = await getCharacter(req.params.id);
   res.json(char);
@@ -393,12 +435,11 @@ app.delete("/characters/:id/images/:imageId", PLAYER, soloSuPersonaje, async (re
 
 app.put("/characters/:id", PLAYER, soloSuPersonaje, async (req, res) => {
   try {
-    // Monedas: el Master puede dejarlas como quiera; el resto solo puede gastar (nunca subirlas).
-    const monedas = ["gold", "silver", "copper"].filter((k) => req.body && req.body[k] !== undefined && req.body[k] !== "");
-    if (monedas.length && req.user.nivel < NIVEL.MASTER) {
+    // Monedas: solo el Master puede subirlas; el resto solo gastar (nunca subirlas).
+    if (req.user.nivel < NIVEL.MASTER) {
       const actual = await getCharacter(req.params.id);
       if (!actual) return res.status(404).json({ error: "Personaje no encontrado" });
-      if (monedas.some((k) => Number(req.body[k]) > Number(actual[k]))) {
+      if (subeSaldo(req.body, actual)) {
         return res.status(403).json({ error: "Solo el Master puede aumentar las monedas; tú solo puedes gastarlas." });
       }
     }
@@ -961,6 +1002,14 @@ io.on("connection", socket => {
 
     io.emit("character-updated", char);
   });
+});
+
+// Último recurso: nunca se envían trazas ni detalles internos al cliente.
+app.use((err, req, res, next) => {
+  if (res.headersSent) return next(err);
+  const status = Number.isInteger(err?.status) && err.status >= 400 && err.status < 500 ? err.status : 500;
+  if (status === 500) console.error("Error no controlado", err);
+  res.status(status).json({ error: status === 500 ? "Error interno del servidor." : "Petición no válida." });
 });
 
 // ============================================================

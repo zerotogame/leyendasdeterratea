@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { img } from '../lib/datos'
+import { img } from '../lib/img'
 import type { Rasgo, Imagenes } from '../data/types'
 
 export function Rasgos({ titulo, rasgos, tipo }: { titulo: string; rasgos: Rasgo[]; tipo: 'bien' | 'mal' }) {
