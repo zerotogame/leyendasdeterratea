@@ -11,6 +11,18 @@ const EXTENSIONS = {
   "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif"
 };
 
+// El Content-Type lo manda el cliente y se puede falsear: se comprueban los primeros bytes del fichero.
+function firmaValida(buf, mime) {
+  if (!Buffer.isBuffer(buf) || buf.length < 12) return false;
+  switch (mime) {
+    case "image/jpeg": return buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;
+    case "image/png": return buf.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]));
+    case "image/gif": return ["GIF87a", "GIF89a"].includes(buf.subarray(0, 6).toString("latin1"));
+    case "image/webp": return buf.subarray(0, 4).toString("latin1") === "RIFF" && buf.subarray(8, 12).toString("latin1") === "WEBP";
+    default: return false;
+  }
+}
+
 class ImageError extends Error {
   constructor(message, status = 400) {
     super(message);
@@ -31,6 +43,7 @@ async function addImage(characterId, buffer, mimeType) {
   const ext = EXTENSIONS[mimeType];
   if (!ext) throw new ImageError("Formato no admitido: usa JPG, PNG, WEBP o GIF.");
   if (!Buffer.isBuffer(buffer) || !buffer.length) throw new ImageError("La imagen está vacía.");
+  if (!firmaValida(buffer, mimeType)) throw new ImageError("El archivo no es una imagen válida del formato indicado.");
 
   const owner = await pool.query("SELECT 1 FROM characters WHERE id = $1", [characterId]);
   if (!owner.rowCount) throw new ImageError("Personaje no encontrado", 404);
@@ -72,4 +85,4 @@ async function removeFilesOf(characterId) {
   await Promise.all(images.map((i) => fs.unlink(path.join(IMAGES_DIR, i.file)).catch(() => {})));
 }
 
-module.exports = { listImages, addImage, removeImage, removeFilesOf, ImageError, EXTENSIONS };
+module.exports = { listImages, addImage, removeImage, removeFilesOf, ImageError, EXTENSIONS, firmaValida };

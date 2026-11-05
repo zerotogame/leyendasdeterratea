@@ -3,6 +3,9 @@ const http = require("http");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
+const compression = require("compression");
+const helmet = require("helmet");
+const { rateLimit } = require("express-rate-limit");
 const { Server } = require("socket.io");
 
 const { users, characters } = require("./data");
@@ -25,6 +28,7 @@ const {
 } = require("./rules/roll_sessions");
 
 const pool = require("./db/db");
+const { esMaster, subeSaldo } = require("./db/monedas");
 
 
 const app = express();
@@ -34,10 +38,26 @@ const app = express();
 // MIDDLEWARE
 // ============================================================
 
-app.use(cors());
+// Render pone un proxy delante: sin esto todas las IP serían la misma y el límite sería global.
+app.set("trust proxy", 1);
+// CORP "cross-origin": la web (otro dominio) carga las imágenes de /images.
+app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
+// CORS: en producción define CORS_ORIGINS con el dominio de la web (varios, separados por comas).
+// Sin definir queda abierto a cualquier origen (valido solo para desarrollo).
+const origenes = (process.env.CORS_ORIGINS || "").split(",").map((o) => o.trim().replace(/\/$/, "")).filter(Boolean);
+if (!origenes.length) console.warn("CORS_ORIGINS no definido: la API acepta peticiones de cualquier origen.");
+app.use(cors(origenes.length ? { origin: origenes } : undefined));
+app.use(compression());
+
+// Límite de peticiones por IP (frena abusos y ataques simples; no sustituye a un CDN).
+const limiteGeneral = rateLimit({ windowMs: 60_000, limit: 300, standardHeaders: "draft-7", legacyHeaders: false, message: { error: "Demasiadas peticiones, espera un momento." } });
+const limiteSubidas = rateLimit({ windowMs: 10 * 60_000, limit: 20, standardHeaders: "draft-7", legacyHeaders: false, message: { error: "Demasiadas subidas de imágenes, espera unos minutos." } });
+app.use(limiteGeneral);
+app.post(["/characters/:id/images", "/pets/:id/image"], limiteSubidas);
 app.use(express.json());
 app.use(require("./db/guilds"));
 app.use(require("./db/pets"));
+app.use(require("./db/gladiators"));
 
 const allowedCharacterFields = [
   "name",
@@ -57,7 +77,7 @@ const allowedCharacterFields = [
 ];
 
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
+const io = new Server(server, { cors: { origin: origenes.length ? origenes : "*" } });
 
 async function updateCharacterById(characterId, updates) {
   const validEntries = Object.entries(updates).filter(([key, value]) => {
@@ -153,7 +173,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
-app.use('/images', express.static('images'));
+app.use('/images', express.static('images', { maxAge: '7d', etag: true }));
 app.post("/login", (req, res) => {
   return res.json({ token: jwt.sign(
     { id: 1, role: "MASTER" },
@@ -392,6 +412,14 @@ app.delete("/characters/:id/images/:imageId", async (req, res) => {
 
 app.put("/characters/:id", async (req, res) => {
   try {
+    // Monedas: solo el Master puede subirlas; el resto solo gastar.
+    if (!(await esMaster(req))) {
+      const actual = await getCharacter(req.params.id);
+      if (!actual) return res.status(404).json({ error: "Personaje no encontrado" });
+      if (subeSaldo(req.body, actual)) {
+        return res.status(403).json({ error: "Solo el Master puede aumentar las monedas; tú solo puedes gastarlas." });
+      }
+    }
     const updated = await updateCharacterByRules(req.params.id, req.body || {});
 
     if (!updated) {
@@ -934,8 +962,13 @@ io.use((socket, next) => {
 
 /* SOCKET EVENTS */
 io.on("connection", socket => {
-  socket.on("update-attribute", ({ charId, attr, value }) => {
+  socket.on("update-attribute", (datos) => {
+    const { charId, attr, value } = datos && typeof datos === "object" ? datos : {};
     const char = characters.find(c => c.id === charId);
+    // Entrada del cliente: el personaje debe existir, el atributo ya estar definido (nada de __proto__ ni claves nuevas)
+    // y el valor ser un número razonable.
+    if (!char || typeof attr !== "string" || !Object.hasOwn(char.attributes, attr)) return;
+    if (!Number.isFinite(value) || value < 0 || value > 99) return;
 
     const isOwner = char.ownerId === socket.user.id;
     const isMaster = socket.user.role === "MASTER";
@@ -946,6 +979,14 @@ io.on("connection", socket => {
 
     io.emit("character-updated", char);
   });
+});
+
+// Último recurso: nunca se envían trazas ni detalles internos al cliente.
+app.use((err, req, res, next) => {
+  if (res.headersSent) return next(err);
+  const status = Number.isInteger(err?.status) && err.status >= 400 && err.status < 500 ? err.status : 500;
+  if (status === 500) console.error("Error no controlado", err);
+  res.status(status).json({ error: status === 500 ? "Error interno del servidor." : "Petición no válida." });
 });
 
 // ============================================================

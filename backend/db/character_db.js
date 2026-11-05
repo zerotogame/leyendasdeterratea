@@ -67,6 +67,12 @@ async function getCharacter(id) {
     [char.rows[0].id]
   );
 
+  const armors = await pool.query(
+    `SELECT slot, name, armor_class, weight, noise, special
+    FROM character_armors WHERE character_id = $1 ORDER BY slot`,
+    [char.rows[0].id]
+  );
+
   const skills = await pool.query(
     "SELECT category, name FROM character_skills WHERE character_id = $1 ORDER BY position",
     [char.rows[0].id]
@@ -136,6 +142,7 @@ async function getCharacter(id) {
     ),
     classAbilities: classAbilities.rows,
     weapons: weapons.rows,
+    armors: armors.rows,
     specialSkills: skills.rows.filter(s => s.category === "special").map(s => s.name),
     extraAttributes: skills.rows.filter(s => s.category === "extra").map(s => s.name),
     images,
@@ -147,73 +154,46 @@ async function getCharacter(id) {
 async function getCharacters() {
   console.log("Querying all characters from database");
   const chars = await pool.query("SELECT * FROM characters");
+  if (chars.rows.length === 0) return [];
 
-  const detailedChars = await Promise.all(
-    chars.rows.map(async (char) => {
-      const attributes = await pool.query(
-        "SELECT  sd.name,  cs.value,  cs.modifier FROM character_stats cs JOIN stat_definitions sd ON sd.id = cs.stat_id WHERE cs.character_id = $1",
-        [char.id]
-      );
+  // 6 consultas fijas (antes eran 6 por personaje); se agrupan en memoria.
+  const [stats, saves, moves, races, classes, xp] = await Promise.all([
+    pool.query("SELECT cs.character_id, sd.name, cs.value, cs.modifier FROM character_stats cs JOIN stat_definitions sd ON sd.id = cs.stat_id"),
+    pool.query("SELECT cs.character_id, sd.name, cs.value FROM character_saves cs JOIN save_definitions sd ON sd.id = cs.save_id"),
+    pool.query("SELECT cm.character_id, md.name, cm.value FROM character_movement cm JOIN movement_definitions md ON md.id = cm.movement_id"),
+    pool.query("SELECT id, name FROM races"),
+    pool.query("SELECT id, name FROM classes"),
+    pool.query("SELECT class_id, level, required_experience FROM class_experience ORDER BY level DESC"),
+  ]);
 
-      const race_character = await pool.query(
-        "SELECT name FROM races WHERE id = $1",
-        [char.race_id]
-      );
-      const class_character = await pool.query(
-        "SELECT name FROM classes WHERE id = $1",
-        [char.class_id]
-      );
+  const agrupar = (rows, valor) => {
+    const m = new Map();
+    for (const r of rows) {
+      if (!m.has(r.character_id)) m.set(r.character_id, {});
+      Object.assign(m.get(r.character_id), valor(r));
+    }
+    return m;
+  };
+  const attrs = agrupar(stats.rows, (r) => ({ [r.name]: { value: r.value, modifier: r.modifier } }));
+  const salvs = agrupar(saves.rows, (r) => ({ [r.name]: r.value }));
+  const movs = agrupar(moves.rows, (r) => ({ [r.name]: r.value }));
+  const raceName = new Map(races.rows.map((r) => [r.id, r.name]));
+  const className = new Map(classes.rows.map((c) => [c.id, c.name]));
 
-      const rollSalvations = await pool.query(
-        "SELECT sd.name, cs.value FROM character_saves cs JOIN save_definitions sd ON sd.id = cs.save_id WHERE cs.character_id = $1",
-        [char.id]
-      );
-
-      const rollMovements = await pool.query(
-        "SELECT  md.name,cm.value FROM character_movement cm JOIN movement_definitions md ON md.id = cm.movement_id WHERE cm.character_id = $1",
-        [char.id]
-      );
-
-      const class_experience = await pool.query(
-        `SELECT required_experience
-      FROM class_experience
-      WHERE class_id = $1 AND level <= $2 order by level desc
-      LIMIT 1`,
-        [char.class_id, char.level]
-      );
-      let character = char;
-
-      //remover atributos race y class id
-      delete character.race_id;
-      delete character.class_id;
-
-
-
-      return {
-        ...character,
-        race: race_character.rows[0].name,
-        class: class_character.rows[0].name,
-        attributes: attributes.rows.reduce((acc, attr) => {
-          acc[attr.name] = {
-            value: attr.value,
-            modifier: attr.modifier
-          };
-          return acc;
-        }, {}),
-        rollSalvations: rollSalvations.rows.reduce((acc, save) => {
-          acc[save.name] = save.value;
-          return acc;
-        }, {}),
-        rollMovements: rollMovements.rows.reduce((acc, move) => {
-          acc[move.name] = move.value;
-          return acc;
-        }, {}),
-        // Devuelve directamente el valor
-        required_experience: class_experience.rows[0]?.required_experience ?? 0,
-      };
-    })
-  );
-  return detailedChars;
+  return chars.rows.map((char) => {
+    // xp viene ordenado por nivel desc: el primero con level <= char.level es el requerido.
+    const exp = xp.rows.find((x) => x.class_id === char.class_id && x.level <= char.level);
+    const { race_id, class_id, ...character } = char;
+    return {
+      ...character,
+      race: raceName.get(race_id),
+      class: className.get(class_id),
+      attributes: attrs.get(char.id) ?? {},
+      rollSalvations: salvs.get(char.id) ?? {},
+      rollMovements: movs.get(char.id) ?? {},
+      required_experience: exp?.required_experience ?? 0,
+    };
+  });
 }
 
 module.exports = { getCharacter, getCharacters };

@@ -91,7 +91,20 @@ async function saveCharacterFull(characterId, body) {
       }
     }
 
-    if (Array.isArray(body.specialSkills) || Array.isArray(body.extraAttributes)) {
+    if (Array.isArray(body.armors)) {
+      await client.query("DELETE FROM character_armors WHERE character_id = $1", [id]);
+      let slot = 1;
+      for (const a of body.armors) {
+        if (isBlank(a.name)) continue;
+        await client.query(
+          `INSERT INTO character_armors (character_id, slot, name, armor_class, weight, noise, special)
+           VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+          [id, slot++, a.name.trim(), a.armor_class || null, a.weight || null, a.noise || null, a.special || null]
+        );
+      }
+    }
+
+    if (Array.isArray(body.specialSkills) ||Array.isArray(body.extraAttributes)) {
       await client.query("DELETE FROM character_skills WHERE character_id = $1", [id]);
       const groups = [["special", body.specialSkills], ["extra", body.extraAttributes]];
       for (const [category, names] of groups) {

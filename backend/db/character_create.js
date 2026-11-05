@@ -22,7 +22,7 @@ const EDITABLE_FIELDS = [
   "name", "player_name", "guild", "sex", "hair", "eyes", "marks", "lore_origin", "lore_trajectory", "image", "alignment",
   "height", "weight", "age", "armor_class", "gold", "silver", "copper"
 ];
-const EDITABLE_LISTS = ["weapons", "specialSkills", "extraAttributes", "inventory"];
+const EDITABLE_LISTS = ["weapons", "armors", "specialSkills", "extraAttributes", "inventory"];
 
 const NUMERIC_FIELDS = ["height", "weight", "age", "armor_class", "gold", "silver", "copper"];
 
