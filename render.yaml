@@ -1,4 +1,4 @@
-﻿services:
+services:
   - type: web
     name: terratea-api
     runtime: node
@@ -6,8 +6,16 @@
     buildCommand: npm ci
     startCommand: npm start
     plan: free
+    autoDeploy: false          # despliegue manual: master migra la BD
+    healthCheckPath: /health
     envVars:
+      - key: NODE_ENV
+        value: production
       - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET        # >= 32 caracteres aleatorios; sin él la API no arranca
+        sync: false
+      - key: CORS_ORIGINS      # dominio exacto de la web, p. ej. https://terratea-web.onrender.com
         sync: false
 
   - type: web
@@ -16,6 +24,23 @@
     rootDir: terratea-web
     buildCommand: npm ci && npm run build
     staticPublishPath: dist
+    autoDeploy: false
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
     routes:
       - type: rewrite
         source: /*

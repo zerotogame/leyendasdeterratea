@@ -61,6 +61,11 @@ const limiteGeneral = rateLimit({ windowMs: 60_000, limit: 300, standardHeaders:
 const limiteSubidas = rateLimit({ windowMs: 10 * 60_000, limit: 20, standardHeaders: "draft-7", legacyHeaders: false, message: { error: "Demasiadas subidas de imágenes, espera unos minutos." } });
 app.use(limiteGeneral);
 app.post(["/characters/:id/images", "/pets/:id/image"], limiteSubidas);
+app.get("/health", async (_req, res) => {
+  try { await pool.query("SELECT 1"); return res.json({ ok: true }); }
+  catch { return res.status(503).json({ ok: false }); }
+});
+
 app.use(express.json());
 app.use(require("./db/guilds"));
 app.use(require("./db/pets"));
